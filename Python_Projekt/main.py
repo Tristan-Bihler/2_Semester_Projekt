@@ -23,9 +23,20 @@ def Warenkorb(Produkt_liste, menge):
     except:
         momentarer_Warenkorb[Produkt] = (Produkt_liste[Produkt][0], menge)
     
+    k = 0
+
     for i in range(len(Produkt_liste[Produkt][1])):
             Wertigkeit[i] = int(Wertigkeit[i]) + int(Produkt_liste[Produkt][1][i])
+            if Wertigkeit[i] >= k:
+                 k = Wertigkeit[i]
+                 result = i
     
+    for P in Produkt_liste:
+        if int(Produkt_liste[P][1][result]) >= 1:
+            print(P)
+            label.config(text = P)
+    
+    print(k)
     print(Wertigkeit)
     print(momentarer_Warenkorb)
 
@@ -42,4 +53,6 @@ if __name__ == "__main__":
     combo = ttk.Combobox(window, values = Auswahl)
     combo.pack()
     button = ttk.Button(text="Display selection", command = lambda: Warenkorb(Produkte ,1)).pack()
+    label = ttk.Label(text = "")
+    label.pack()
     window.mainloop()
