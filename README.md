@@ -15,12 +15,12 @@ Aufgabe:
 3. Datenspeicherung
 
 **Weritgkeitsystem:**
-| Product     | **Category(1)** | **Category(2)** | **Category(3)** | ... | **Category(N)** |
+| Produkt     | **Kategorie(1)** | **Kategorie(2)** | **Kategorie(3)** | ... | **Kategorie(N)** |
 |-------------|-----------------|-----------------|-----------------|-----|-----------------|
-| Product(1)  | 1               | 0               | 0               | ... | 0               |
-| Product(2)  | 0               | 1               | 0               | ... | 0               |
-| Product(3)  | 1               | 1               | 0               | ... | 0               |
+| Produkt(1)  | 1               | 0               | 0               | ... | 0               |
+| Produkt(2)  | 0               | 1               | 0               | ... | 0               |
+| Produkt(3)  | 1               | 1               | 0               | ... | 0               |
 | ...         | ...             | ...             | ...             | ... | ...             |
-| Product(100)| 0               | 0               | 1               | ... | 0               |
+| Produkt(100)| 0               | 0               | 1               | ... | 0               |
 
 Quellen:
