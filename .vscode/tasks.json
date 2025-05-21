@@ -10,10 +10,15 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I${env:MSYS64}/ucrt64/include", // Path to raylib C headers
+                "-I${env:USERPROFILE}/Documents/GitHub/raylib-cpp/include", // Path to raylib-cpp headers
+                "-L${env:MSYS64}/ucrt64/lib",     // Path to raylib C libraries
                 "-lraylib",
-                "-lopeng132",
+                "-lopengl32",
                 "-lgdi32",
-                "-lwinmm"
+                "-lwinmm",
+                "-lws2_32",
+                "-Wl,--subsystem,windows" // Hide console window for GUI app
             ],
             "options": {
                 "cwd": "${fileDirname}"

@@ -1,63 +1,31 @@
-#include "raylib.h"
+#include "raylib-cpp.hpp"
 
+int main() {
+    int screenWidth = 800;
+    int screenHeight = 450;
 
-typedef struct Player {
-    Vector2 position;
-    float speed;
-} Player;
-
-#define PLAYER_HOR_SPD 200.0f
-
-
-void UpdatePlayer(Player *player, float delta);
-
-int main(void)
-{
-    const int screenWidth = 800;
-    const int screenHeight = 450;
-
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+    raylib::Window window(screenWidth, screenHeight, "raylib-cpp - basic window");
+    raylib::Texture logo("raylib_logo.png");
 
     SetTargetFPS(60);
 
-    Camera2D camera = { 0 };
-    camera.zoom = 1.0f;
-
-    Player player = { 0 };
-    player.position = (Vector2){ 400, 280 };
-
-    SetTargetFPS(60);
-
-    while (!WindowShouldClose())
+    while (!window.ShouldClose())
     {
-        float deltaTime = GetFrameTime();
-
-        UpdatePlayer(&player, deltaTime);
-
         BeginDrawing();
 
-            ClearBackground(LIGHTGRAY);
+        window.ClearBackground(RAYWHITE);
 
-            BeginMode2D(camera);
+        DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 
-                Rectangle playerRect = { player.position.x - 20, player.position.y - 40, 40.0f, 40.0f };
-                DrawRectangleRec(playerRect, RED);
-                
-                DrawCircleV(player.position, 5.0f, GOLD);
+        // Object methods.
+        logo.Draw(
+            screenWidth / 2 - logo.GetWidth() / 2,
+            screenHeight / 2 - logo.GetHeight() / 2);
 
-            EndMode2D();
         EndDrawing();
     }
 
-    CloseWindow();
+    // UnloadTexture() and CloseWindow() are called automatically.
 
     return 0;
-}
-
-void UpdatePlayer(Player *player, float delta)
-{
-    if (IsKeyDown(KEY_LEFT)) player->position.x -= PLAYER_HOR_SPD*delta;
-    if (IsKeyDown(KEY_RIGHT)) player->position.x += PLAYER_HOR_SPD*delta;
-    if (IsKeyDown(KEY_UP)) player->position.y += PLAYER_HOR_SPD*delta;
-    if (IsKeyDown(KEY_DOWN)) player->position.y -= PLAYER_HOR_SPD*delta;
 }

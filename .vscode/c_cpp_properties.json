@@ -3,7 +3,9 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/",
+                "C:\\msys64\\ucrt64\\include/**",               
+                "C:\\Users\\Trist\\OneDrive\\Dokumente\\Uni\\PDF\\Informatik\\2_Semester_Projekt\\C++_Projekt\\raylib-cpp-master\\include/**"
             ],
             "defines": [
                 "_DEBUG",
