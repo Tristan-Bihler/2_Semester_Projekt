@@ -14,5 +14,13 @@ Aufgabe:
 2. User Interface
 3. Datenspeicherung
 
+**Weritgkeitsystem:**
+**Product(n)**, **Category(1)**, **Category(2)**, **Category(3)**, ..., **Category(N)**
+Product(1),1,0,0,...,0
+Product(2),0,1,0,...,0
+Product(3),1,1,0,...,0
+Product(4),0,0,0,...,1
+...
+Product(100),0,0,1,...,0
 
 Quellen:
