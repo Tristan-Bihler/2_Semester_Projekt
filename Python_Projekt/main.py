@@ -31,10 +31,13 @@ def Warenkorb(Produkt_liste, menge):
                  k = Wertigkeit[i]
                  result = i
     
+    T = "Das könnte dir auch Gefallen:\n"
     for P in Produkt_liste:
         if int(Produkt_liste[P][1][result]) >= 1:
-            print(P)
-            label.config(text = P)
+            T = T + "\n" + P
+            print(T)
+    
+    label.config(text = T)
     
     print(k)
     print(Wertigkeit)
@@ -47,12 +50,13 @@ if __name__ == "__main__":
     Auswahl = []
     
     for i in Produkte:
-        Auswahl.append((i, Produkte[i][0]))
+        Auswahl.append((str(i), Produkte[i][0]))
     
     window = tk.Tk()
+    window.geometry("400x200")
     combo = ttk.Combobox(window, values = Auswahl)
     combo.pack()
-    button = ttk.Button(text="Display selection", command = lambda: Warenkorb(Produkte ,1)).pack()
-    label = ttk.Label(text = "")
+    button = ttk.Button(window, text="Display selection", command = lambda: Warenkorb(Produkte ,1)).pack()
+    label = ttk.Label(window, text = "")
     label.pack()
     window.mainloop()

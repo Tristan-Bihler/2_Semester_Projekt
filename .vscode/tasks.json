@@ -11,7 +11,7 @@
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
                 "-I${env:MSYS64}/ucrt64/include", // Path to raylib C headers
-                "-I${env:USERPROFILE}/Documents/GitHub/raylib-cpp/include", // Path to raylib-cpp headers
+                "-I${env:USERPROFILE}\\OneDrive\\Dokumente\\Uni\\PDF\\Informatik\\2_Semester_Projekt\\C++_Projekt\\raylib-cpp-master\\include", // Path to raylib-cpp headers
                 "-L${env:MSYS64}/ucrt64/lib",     // Path to raylib C libraries
                 "-lraylib",
                 "-lopengl32",
@@ -38,7 +38,16 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I${env:MSYS64}/ucrt64/include", // Path to raylib C headers
+                "-I${env:USERPROFILE}\\OneDrive\\Dokumente\\Uni\\PDF\\Informatik\\2_Semester_Projekt\\C++_Projekt\\raylib-cpp-master\\include", // Path to raylib-cpp headers
+                "-L${env:MSYS64}/ucrt64/lib",     // Path to raylib C libraries
+                "-lraylib",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm",
+                "-lws2_32",
+                "-Wl,--subsystem,windows"
             ],
             "options": {
                 "cwd": "${fileDirname}"
