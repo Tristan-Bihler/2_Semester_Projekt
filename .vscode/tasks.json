@@ -11,8 +11,9 @@
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
                 "-I${env:MSYS64}/ucrt64/include", // Path to raylib C headers
-                "-I${env:USERPROFILE}\\OneDrive\\Dokumente\\Uni\\PDF\\Informatik\\2_Semester_Projekt\\C++_Projekt\\raylib-cpp-master\\include", // Path to raylib-cpp headers
                 "-L${env:MSYS64}/ucrt64/lib",     // Path to raylib C libraries
+                "-L${env:MSYS64}/mingw64/lib",
+                "-I${env:MSYS64}/mingw64/include",
                 "-lraylib",
                 "-lopengl32",
                 "-lgdi32",
@@ -40,8 +41,9 @@
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
                 "-I${env:MSYS64}/ucrt64/include", // Path to raylib C headers
-                "-I${env:USERPROFILE}\\OneDrive\\Dokumente\\Uni\\PDF\\Informatik\\2_Semester_Projekt\\C++_Projekt\\raylib-cpp-master\\include", // Path to raylib-cpp headers
                 "-L${env:MSYS64}/ucrt64/lib",     // Path to raylib C libraries
+                "-L${env:MSYS64}/mingw64/lib",
+                "-I${env:MSYS64}/mingw64/include",
                 "-lraylib",
                 "-lopengl32",
                 "-lgdi32",
