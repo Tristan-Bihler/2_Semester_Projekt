@@ -1,31 +1,44 @@
-#include "raylib-cpp.hpp"
+#include "raylib.h"
 
-int main() {
-    int screenWidth = 800;
-    int screenHeight = 450;
+//------------------------------------------------------------------------------------
+// Program main entry point
+//------------------------------------------------------------------------------------
+int main(void)
+{
+    // Initialization
+    //--------------------------------------------------------------------------------------
+    const int screenWidth = 800;
+    const int screenHeight = 450;
 
-    raylib::Window window(screenWidth, screenHeight, "raylib-cpp - basic window");
-    raylib::Texture logo("raylib_logo.png");
+    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
 
-    SetTargetFPS(60);
+    SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
+    //--------------------------------------------------------------------------------------
 
-    while (!window.ShouldClose())
+    // Main game loop
+    while (!WindowShouldClose())    // Detect window close button or ESC key
     {
+        // Update
+        //----------------------------------------------------------------------------------
+        // TODO: Update your variables here
+        //----------------------------------------------------------------------------------
+
+        // Draw
+        //----------------------------------------------------------------------------------
         BeginDrawing();
 
-        window.ClearBackground(RAYWHITE);
+            ClearBackground(RAYWHITE);
 
-        DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
-
-        // Object methods.
-        logo.Draw(
-            screenWidth / 2 - logo.GetWidth() / 2,
-            screenHeight / 2 - logo.GetHeight() / 2);
+            DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 
         EndDrawing();
+        //----------------------------------------------------------------------------------
     }
 
-    // UnloadTexture() and CloseWindow() are called automatically.
+    // De-Initialization
+    //--------------------------------------------------------------------------------------
+    CloseWindow();        // Close window and OpenGL context
+    //--------------------------------------------------------------------------------------
 
     return 0;
 }
