@@ -10,8 +10,6 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-I${env:MSYS64}/ucrt64/include", // Path to raylib C headers
-                "-L${env:MSYS64}/ucrt64/lib",     // Path to raylib C libraries
                 "-L${env:MSYS64}/mingw64/lib",
                 "-I${env:MSYS64}/mingw64/include",
                 "-lraylib",
@@ -40,8 +38,6 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-I${env:MSYS64}/ucrt64/include", // Path to raylib C headers
-                "-L${env:MSYS64}/ucrt64/lib",     // Path to raylib C libraries
                 "-L${env:MSYS64}/mingw64/lib",
                 "-I${env:MSYS64}/mingw64/include",
                 "-lraylib",
