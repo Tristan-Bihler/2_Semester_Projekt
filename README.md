@@ -4,6 +4,7 @@
 Aufgabe:
 >Es ist ein Spiel mithilfe C++ zu programmieren. Es soll möglich >sein ein Charakter bewegen zu und Sachen abschießen zu können. >Zudem soll es mehrere Level haben, diese zufällig generiert werden >und die Anzahl mit jedem Level erhöt werden.
 
+>Mithilfe von zwischvorschleifen können jegliche Koordinaten innerhalb einer Array gespeichert werden. Zudem 
 Quellen:
 
 
