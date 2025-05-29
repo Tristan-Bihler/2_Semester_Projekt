@@ -1,22 +1,32 @@
-#ifndef MYCLASS_H
-#define MYCLASS_H
+#pragma once
 
-#include <string> // If MyClass uses std::string
+#include "raylib.h"
+#include <vector> // For managing bullets
+#include "Bullet.hpp" // Forward declaration or include for Bullet class
 
-class MyClass {
+class Player {
 public:
-    // Constructor declaration
-    MyClass();
-    // Overloaded constructor declaration
-    MyClass(std::string name);
+    Player(float x, float y, float width, float height, Color color, int maxHealth);
 
-    // Member function declarations
-    void greet() const;
-    void setName(std::string name);
-    std::string getName() const;
+    void Update(float deltaTime); // deltaTime for consistent movement
+    void Draw();
+    void TakeDamage(int amount);
+    void Shoot(); // New method to create bullets
+
+    Rectangle GetRect() const { return rect; }
+    int GetHealth() const { return currentHealth; }
+    const std::vector<Bullet>& GetBullets() const { return bullets; } // For drawing and collision checks
+    std::vector<Bullet>& GetBulletsMutable() { return bullets; } // For modifying (removing) bullets
 
 private:
-    std::string _name; // Member variable
-};
+    Rectangle rect;
+    Color color;
+    float speed;
+    int maxHealth;
+    int currentHealth;
 
-#endif // MYCLASS_H
+    // Bullet shooting mechanics
+    float shootCooldown;
+    float currentShootCooldown;
+    std::vector<Bullet> bullets; // Player's active bullets
+};

@@ -1,25 +1,87 @@
-#include "Player.hpp" // Include the header file for MyClass
-#include <iostream>  // For std::cout
+#include "Player.hpp"
+#include "raylib.h"
+#include "Bullet.hpp" // Ensure Bullet.h is included for Bullet creation
 
-// Constructor definition
-MyClass::MyClass() : _name("DefaultName") {
-    // Constructor body
+// Constructor implementation
+Player::Player(float x, float y, float width, float height, Color color, int maxHealth)
+    : rect({x, y, width, height}), color(color), speed(200.0f), // Speed in pixels per second
+      maxHealth(maxHealth), currentHealth(maxHealth),
+      shootCooldown(0.2f), currentShootCooldown(0.0f) {
 }
 
-// Overloaded constructor definition
-MyClass::MyClass(std::string name) : _name(name) {
-    // Constructor body
+// Update method implementation (now takes deltaTime)
+void Player::Update(float deltaTime) {
+    // Movement
+    if (IsKeyDown(KEY_W)) {
+        rect.y -= speed * deltaTime;
+    }
+    if (IsKeyDown(KEY_S)) {
+        rect.y += speed * deltaTime;
+    }
+    if (IsKeyDown(KEY_A)) {
+        rect.x -= speed * deltaTime;
+    }
+    if (IsKeyDown(KEY_D)) {
+        rect.x += speed * deltaTime;
+    }
+
+    // Keep player within screen bounds (adjust if screen dimensions change)
+    const int screenWidth = 800; // Hardcoded for simplicity, pass as parameter for flexibility
+    const int screenHeight = 450;
+    if (rect.x < 0) rect.x = 0;
+    if (rect.x + rect.width > screenWidth) rect.x = screenWidth - rect.width;
+    if (rect.y < 0) rect.y = 0;
+    if (rect.y + rect.height > screenHeight) rect.y = screenHeight - rect.height;
+
+    // Shooting cooldown
+    if (currentShootCooldown > 0) {
+        currentShootCooldown -= deltaTime;
+    }
+
+    // Shoot on spacebar press
+    if (IsKeyDown(KEY_SPACE) && currentShootCooldown <= 0) {
+        Shoot();
+        currentShootCooldown = shootCooldown;
+    }
+
+    // Update active bullets
+    for (size_t i = 0; i < bullets.size(); ) {
+        bullets[i].Update(deltaTime);
+        // Remove bullets that are off-screen
+        if (bullets[i].IsOffScreen(screenWidth, screenHeight)) {
+            bullets.erase(bullets.begin() + i);
+        } else {
+            ++i;
+        }
+    }
 }
 
-// Member function definitions
-void MyClass::greet() const {
-    std::cout << "Hello from " << _name << "!" << std::endl;
+// Draw method implementation
+void Player::Draw() {
+    DrawRectangleRec(rect, color);
+
+    // Draw health bar
+    float healthBarWidth = rect.width;
+    float healthBarHeight = 5;
+    float healthPercentage = (float)currentHealth / maxHealth;
+    DrawRectangle(rect.x, rect.y - healthBarHeight - 5, healthBarWidth, healthBarHeight, RED); // Background
+    DrawRectangle(rect.x, rect.y - healthBarHeight - 5, healthBarWidth * healthPercentage, healthBarHeight, GREEN); // Fill
+
+    // Draw bullets
+    for (const auto& bullet : bullets) {
+        bullet.Draw();
+    }
 }
 
-void MyClass::setName(std::string name) {
-    _name = name;
+void Player::TakeDamage(int amount) {
+    currentHealth -= amount;
+    if (currentHealth < 0) {
+        currentHealth = 0;
+    }
+    // You might want to add a sound effect or visual feedback here
 }
 
-std::string MyClass::getName() const {
-    return _name;
+void Player::Shoot() {
+    // Create a new bullet at the player's center, moving upwards
+    bullets.emplace_back(rect.x + rect.width / 2 - 2, rect.y, 4, 10, BLUE, 400.0f);
 }
