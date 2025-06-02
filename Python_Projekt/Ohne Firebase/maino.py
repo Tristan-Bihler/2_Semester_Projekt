@@ -3,7 +3,7 @@ from tkinter import ttk
 import File_handling as fh
 
 class Einkaufshaus:
-    def __init__(self, Produkte):
+    def __init__(self):
 
         self.momentarer_Warenkorb = {}
         self.Wertigkeit = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]
