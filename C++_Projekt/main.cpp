@@ -6,23 +6,95 @@
 #include <random>
 #include <algorithm> // For std::remove_if
 
+<<<<<<< Updated upstream
 using namespace std;
 
 int main() {
+=======
+#define G 400  //Gravitaiton
+#define PLAYER_JUMP_SPD 350.0f   // Sprunghöhe
+#define PLAYER_HOR_SPD 200.0f    //Geschwindigkeit 
+
+typedef struct Player {
+    Vector2 position;
+    float speed;
+    bool canJump;
+} Player;
+
+typedef struct EnvItem {
+    Rectangle rect;
+    int blocking;
+    Color color;
+} EnvItem;
+
+//----------------------------------------------------------------------------------
+// Module functions declaration
+//----------------------------------------------------------------------------------
+void UpdatePlayer(Player *player, EnvItem *envItems, int envItemsLength, float delta);
+void UpdateCameraCenter(Camera2D *camera, Player *player, EnvItem *envItems, int envItemsLength, float delta, int width, int height);
+
+void UpdateCameraCenterInsideMap(Camera2D *camera, Player *player, EnvItem *envItems, int envItemsLength, float delta, int width, int height);
+
+//------------------------------------------------------------------------------------
+// Program main entry point
+//------------------------------------------------------------------------------------
+int main(void)
+{
+    // Initialization
+    //--------------------------------------------------------------------------------------
+>>>>>>> Stashed changes
     const int screenWidth = 800;
     const int screenHeight = 450;
 
     InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL Exams of Doom");
 
+<<<<<<< Updated upstream
     Player player(screenWidth / 2 - 25, screenHeight - 75, 50, 50, RED, 100, 10);
+=======
+    Player player = { 0 };
+    player.position = (Vector2){ 200, 280 };
+    player.speed = 0;
+    player.canJump = false;
+    EnvItem envItems[] = {
+        {{ 0, 0, 1000, 400 }, 0, LIGHTGRAY },
+        {{ 0, 400, 400, 10 }, 1, GRAY }, // Boden // { x, y, width, height }  //1 - kollidierbares Objekt
+        {{ 400, 0, 10, 400 }, 1, GRAY }, //rechter balken
+        {{ 0, 0, 10, 400 }, 1, GRAY },  //linker Blaken
+        {{ 650, 300, 100, 10 }, 1, GRAY }
+    };
+>>>>>>> Stashed changes
 
     vector<Enemy> enemies;
     float enemySpawnTimer = 0.0f;
     float enemySpawnRate = 2.0f;
 
+<<<<<<< Updated upstream
     random_device rd;
     mt19937 gen(rd());
     uniform_int_distribution<> distribX(0, screenWidth - 50);
+=======
+    Camera2D camera = { 0 };
+    camera.target = player.position;
+    camera.offset = (Vector2){ screenWidth/2.0f, screenHeight/2.0f };
+    camera.rotation = 0.0f;
+    camera.zoom = 1.0f;
+
+    // Store pointers to the multiple update camera functions
+    void (*cameraUpdaters[])(Camera2D*, Player*, EnvItem*, int, float, int, int) = {
+        UpdateCameraCenter,
+    };
+
+    int cameraOption = 0;
+    int cameraUpdatersLength = sizeof(cameraUpdaters)/sizeof(cameraUpdaters[0]);
+
+   /* char *cameraDescriptions[] = {
+        "Follow player center",
+        "Follow player center, but clamp to map edges",
+        "Follow player center; smoothed",
+        "Follow player center horizontally; update player center vertically after landing",
+        "Player push camera on getting too close to screen edge"
+    };*/
+>>>>>>> Stashed changes
 
     // Set target FPS for smooth animation
     SetTargetFPS(60);
@@ -107,8 +179,25 @@ int main() {
                 enemy.Draw();
             }
 
+<<<<<<< Updated upstream
             DrawText(TextFormat("Health: %i", player.GetHealth()), 10, 10, 20, BLACK);
             DrawText(TextFormat("Level: %i", player.GetLevel()), 500, 10, 20, BLACK);
+=======
+                Rectangle playerRect = { player.position.x - 20, player.position.y - 40, 40.0f, 40.0f };
+                DrawRectangleRec(playerRect, RED);
+                
+                DrawCircleV(player.position, 5.0f, GOLD);
+
+            EndMode2D();
+
+            DrawText("Controls:", 20, 20, 10, BLACK);
+            DrawText("- Right/Left to move", 40, 40, 10, DARKGRAY);
+            DrawText("- Space to jump", 40, 60, 10, DARKGRAY);
+            DrawText("- Mouse Wheel to Zoom in-out, R to reset zoom", 40, 80, 10, DARKGRAY);
+            DrawText("- C to change camera mode", 40, 100, 10, DARKGRAY);
+            DrawText("Current camera mode:", 20, 120, 10, BLACK);
+           // DrawText(cameraDescriptions[cameraOption], 40, 140, 10, DARKGRAY);
+>>>>>>> Stashed changes
 
         EndDrawing();
     }
@@ -116,4 +205,53 @@ int main() {
     CloseWindow();
 
     return 0;
+<<<<<<< Updated upstream
 }
+=======
+}
+
+void UpdatePlayer(Player *player, EnvItem *envItems, int envItemsLength, float delta)
+{
+    if (IsKeyDown(KEY_LEFT)) player->position.x -= PLAYER_HOR_SPD*delta;
+    if (IsKeyDown(KEY_RIGHT)) player->position.x += PLAYER_HOR_SPD*delta;
+    if (IsKeyDown(KEY_SPACE) && player->canJump)
+    {
+        player->speed = -PLAYER_JUMP_SPD;
+        player->canJump = false;
+    }
+
+   bool hitObstacle = false;
+    for (int i = 0; i < envItemsLength; i++)
+    {
+        EnvItem *ei = envItems + i;
+        Vector2 *p = &(player->position);
+           // Überprüfen, ob das Objekt ein Hindernis ist und die Spielfigur mit ihm kollidiert
+     
+    // Überprüfen, ob das Objekt ein Hindernis ist und die Spielfigur mit ihm kollidiert
+    if (ei->blocking &&
+        ei->rect.x <= p->x &&
+        ei->rect.x + ei->rect.width >= p->x &&
+        ei->rect.y >= p->y &&
+        ei->rect.y <= p->y + player->speed * delta)
+    {
+        hitObstacle = true;
+        player->speed = 0.0f;
+        p->y = ei->rect.y;
+        break; // Sobald eine Kollision erkannt wird, wird die Schleife beendet
+    }
+}
+if (!hitObstacle)
+{
+    player->position.y += player->speed * delta;
+    player->speed += G * delta;
+    player->canJump = false;
+}
+else player->canJump = true;
+}
+
+void UpdateCameraCenter(Camera2D *camera, Player *player, EnvItem *envItems, int envItemsLength, float delta, int width, int height)
+{
+    camera->offset = (Vector2){ width/2.0f, height/2.0f };
+    camera->target = player->position;
+}
+>>>>>>> Stashed changes

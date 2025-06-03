@@ -46,6 +46,8 @@ while (!WindowShouldClose()) {
         //DrawRectangleRec(player, collision ? GREEN : BLUE);
 
         if (collision) {
+            player.y -= 2;
+            player.x -= 2;
             DrawText("Kollision erkannt!", 10, 40, 20, MAROON);
         }
         
