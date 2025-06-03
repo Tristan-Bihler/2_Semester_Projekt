@@ -5,7 +5,7 @@
             "label": "C/C++: g++.exe build active file",
             "command": "g++.exe",
             "args": [
-                "main.cpp",
+                "${file}",
                 "Player.cpp",
                 "Bullet.cpp",
                 "Enemy.cpp",
