@@ -27,13 +27,13 @@ int main(){
         int nachbarn[4]; //0=oben, 1=rechts, 2=unten, 3=links, -1 keine Tür in diese Richtung
     } Room;
 
-    Room raeume [ROOM_CNT];
+    Room raeume [ROOM_CNT]{0,1};
     int currentRoom = 0;
 
 
 
     //Türen definieren
-    int doorcnt= GetRandomValue(1,5); 
+    int doorcnt= GetRandomValue(1,4); 
     Rectangle doorLeft = {0,551, 30, 100};
     Rectangle doorTop = {350, 201, 100, 30};
     Rectangle doorRight = {770,551, 30, 100};
