@@ -29,4 +29,15 @@ private:
     float shootCooldown;
     float currentShootCooldown;
     std::vector<Bullet> bullets; // Player's active bullets
+
+    // Idiotentest Mauszeiger bewegen
+    Vector2 mousePos;
+    Vector2 bulletStart;
+    Vector2 direction;
+    float length;
+    float bulletSpeed;
+    Vector2 bulletVelocity;
+
+
+
 };

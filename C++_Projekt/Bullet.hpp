@@ -4,7 +4,7 @@
 
 class Bullet {
 public:
-    Bullet(float x, float y, float width, float height, Color color, float speed);
+    Bullet(float x, float y, float width, float height, Color color,  Vector2 velocity);
 
     void Update(float deltaTime);
     void Draw() const;
@@ -15,5 +15,6 @@ public:
 private:
     Rectangle rect;
     Color color;
-    float speed;
+    //float speed;
+    Vector2 velocity;
 };

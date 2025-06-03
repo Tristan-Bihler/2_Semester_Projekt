@@ -1,6 +1,7 @@
 #include "Player.hpp"
 #include "raylib.h"
 #include "Bullet.hpp" // Ensure Bullet.h is included for Bullet creation
+#include <cmath>
 
 // Constructor implementation
 Player::Player(float x, float y, float width, float height, Color color, int maxHealth)
@@ -81,7 +82,34 @@ void Player::TakeDamage(int amount) {
     // You might want to add a sound effect or visual feedback here
 }
 
+// void Player::Shoot() {
+//     Create a new bullet at the player's center, moving upwards
+//     bullets.emplace_back(rect.x + rect.width / 2 - 2, rect.y, 4, 10, BLUE, 400.0f);
+// }
+
 void Player::Shoot() {
-    // Create a new bullet at the player's center, moving upwards
-    bullets.emplace_back(rect.x + rect.width / 2 - 2, rect.y, 4, 10, BLUE, 400.0f);
+    // Mausposition holen
+    Vector2 mousePos = GetMousePosition();
+
+    // Spielerzentrum als Ausgangspunkt für Kugel
+    Vector2 bulletStart = { rect.x + rect.width / 2, rect.y + rect.height / 2 };
+
+    // Richtungsvektor von Spieler zu Maus
+    Vector2 direction = { mousePos.x - bulletStart.x, mousePos.y - bulletStart.y };
+
+    // Länge des Vektors berechnen
+    float length = sqrt(direction.x * direction.x + direction.y * direction.y);
+    
+    // Normalisieren (damit die Geschwindigkeit konstant bleibt)
+    if (length != 0) {
+        direction.x /= length;
+        direction.y /= length;
+    }
+
+    // Geschwindigkeit der Kugel setzen
+    float bulletSpeed = 400.0f;
+    Vector2 bulletVelocity = { direction.x * bulletSpeed, direction.y * bulletSpeed };
+
+    // Kugel in Richtung der Maus feuern
+    bullets.emplace_back(bulletStart.x, bulletStart.y, 4, 10, BLUE, bulletVelocity);
 }
