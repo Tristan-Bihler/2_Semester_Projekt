@@ -40,7 +40,7 @@ void Player::Update(float deltaTime) {
     }
 
     // Shoot on spacebar press
-    if (IsKeyDown(KEY_SPACE) && currentShootCooldown <= 0) {
+    if (IsMouseButtonDown(MOUSE_BUTTON_LEFT) && currentShootCooldown <= 0) {
         Shoot();
         currentShootCooldown = shootCooldown;
     }
