@@ -5,10 +5,11 @@
             "label": "C/C++: g++.exe build active file",
             "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
             "args": [
-                "main.cpp",
+                "${file}",
                 "Player.cpp",
                 "Bullet.cpp",
                 "Enemy.cpp",
+                "-IC:/msys64/ucrt64/include",
                 "-o",
                 "main.exe",
                 "-lraylib",
