@@ -6,15 +6,18 @@
 
 class Player {
 public:
-    Player(float x, float y, float width, float height, Color color, int maxHealth);
+    Player(float x, float y, float width, float height, Color color, int maxHealth, int begining_level);
 
     void Update(float deltaTime); // deltaTime for consistent movement
     void Draw();
     void TakeDamage(int amount);
     void Shoot(); // New method to create bullets
+    void Increase_Level();
 
     Rectangle GetRect() const { return rect; }
     int GetHealth() const { return currentHealth; }
+    int GetLevel() const { return currentLevel; }
+
     const std::vector<Bullet>& GetBullets() const { return bullets; } // For drawing and collision checks
     std::vector<Bullet>& GetBulletsMutable() { return bullets; } // For modifying (removing) bullets
 
@@ -24,6 +27,7 @@ private:
     float speed;
     int maxHealth;
     int currentHealth;
+    int currentLevel;
 
     // Bullet shooting mechanics
     float shootCooldown;

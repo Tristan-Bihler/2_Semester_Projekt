@@ -21,7 +21,6 @@ void Enemy::Update(float deltaTime, Vector2 playerPosition) {
         dy /= distance;
     }
 
-    // Move towards the player
     rect.x += dx * speed * deltaTime;
     rect.y += dy * speed * deltaTime;
 }

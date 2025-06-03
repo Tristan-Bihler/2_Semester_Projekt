@@ -3,29 +3,26 @@
 #include "Enemy.hpp"
 #include "Bullet.hpp"
 #include <vector>
-#include <random> // For random enemy spawning
+#include <random>
 #include <algorithm> // For std::remove_if
 
+using namespace std;
+
 int main() {
-    // Screen dimensions
     const int screenWidth = 800;
     const int screenHeight = 450;
 
-    // Initialize Raylib window
-    InitWindow(screenWidth, screenHeight, "Player, Enemies, Bullets, Life System (C++ Class)");
+    InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL Exams of Doom");
 
-    // Create a Player object
-    Player player(screenWidth / 2 - 25, screenHeight - 75, 50, 50, RED, 100); // 100 health
+    Player player(screenWidth / 2 - 25, screenHeight - 75, 50, 50, RED, 100, 10);
 
-    // Enemy management
-    std::vector<Enemy> enemies;
+    vector<Enemy> enemies;
     float enemySpawnTimer = 0.0f;
-    float enemySpawnRate = 2.0f; // Spawn an enemy every 2 seconds
+    float enemySpawnRate = 2.0f;
 
-    // Random number generation for enemy spawning
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distribX(0, screenWidth - 50); // Enemy width is 50
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> distribX(0, screenWidth - 50);
 
     // Set target FPS for smooth animation
     SetTargetFPS(60);
@@ -53,12 +50,13 @@ int main() {
 
         // Bullet-Enemy Collision
         // Iterate through bullets and enemies for collision detection
-        std::vector<Bullet>& playerBullets = player.GetBulletsMutable();
+        vector<Bullet>& playerBullets = player.GetBulletsMutable();
         for (size_t i = 0; i < playerBullets.size(); ) {
             bool bulletHit = false;
             for (size_t j = 0; j < enemies.size(); ) {
                 if (CheckCollisionRecs(playerBullets[i].GetRect(), enemies[j].GetRect())) {
                     enemies[j].TakeDamage(20); // Bullet deals 20 damage
+                    player.Increase_Level();
                     bulletHit = true; // Mark bullet for removal
                     // If enemy is dead, remove it
                     if (!enemies[j].IsActive()) {
@@ -81,7 +79,7 @@ int main() {
         // Player-Enemy Collision (Player takes damage)
         for (auto& enemy : enemies) {
             if (enemy.IsActive() && CheckCollisionRecs(player.GetRect(), enemy.GetRect())) {
-                player.TakeDamage(1); // Player takes 1 damage per frame if colliding
+                player.TakeDamage(1 * player.GetLevel()); // Player takes 1 damage per frame if colliding
                 // Optional: Push enemy away or make it stop for a moment
             }
         }
@@ -98,29 +96,23 @@ int main() {
             TraceLog(LOG_INFO, "GAME OVER! Player defeated.");
             break; // Exit game loop
         }
-        //----------------------------------------------------------------------------------
 
-        // Draw
-        //----------------------------------------------------------------------------------
         BeginDrawing();
 
-            ClearBackground(RAYWHITE); // Clear the background each frame
+            ClearBackground(RAYWHITE);
 
-            player.Draw(); // Draw the player and their bullets
+            player.Draw(); 
 
-            // Draw enemies
             for (const auto& enemy : enemies) {
                 enemy.Draw();
             }
 
-            // Draw current health
             DrawText(TextFormat("Health: %i", player.GetHealth()), 10, 10, 20, BLACK);
+            DrawText(TextFormat("Level: %i", player.GetLevel()), 500, 10, 20, BLACK);
 
         EndDrawing();
-        //----------------------------------------------------------------------------------
     }
 
-    // Close window and free Raylib resources
     CloseWindow();
 
     return 0;

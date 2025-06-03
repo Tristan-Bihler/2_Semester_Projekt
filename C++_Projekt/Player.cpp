@@ -4,9 +4,9 @@
 #include <cmath>
 
 // Constructor implementation
-Player::Player(float x, float y, float width, float height, Color color, int maxHealth)
+Player::Player(float x, float y, float width, float height, Color color, int maxHealth, int beginning_level)
     : rect({x, y, width, height}), color(color), speed(200.0f), // Speed in pixels per second
-      maxHealth(maxHealth), currentHealth(maxHealth),
+      maxHealth(maxHealth), currentHealth(maxHealth), currentLevel(beginning_level),
       shootCooldown(0.2f), currentShootCooldown(0.0f) {
 }
 
@@ -79,7 +79,10 @@ void Player::TakeDamage(int amount) {
     if (currentHealth < 0) {
         currentHealth = 0;
     }
-    // You might want to add a sound effect or visual feedback here
+}
+
+void Player::Increase_Level() {
+    currentLevel = currentLevel + 1;
 }
 
 // void Player::Shoot() {
