@@ -9,6 +9,7 @@
                 "Player.cpp",
                 "Bullet.cpp",
                 "Enemy.cpp",
+                "-IC:/msys64/ucrt64/include",
                 "-o",
                 "main.exe",
                 "-lraylib",

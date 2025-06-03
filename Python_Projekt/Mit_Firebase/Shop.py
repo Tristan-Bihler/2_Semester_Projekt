@@ -28,10 +28,10 @@ class Login_Window(tk.Frame):
         login_label = tk.Label(self, text = "Hallo")
         login_label.pack()
 
-        login = tk.Button(self, text = "Login", command = lambda: (self.login_funktion(user, email_entry, password_entry)))
+        login = tk.Button(self, text = "Login", command = lambda: (self.login_funktion(user, email_entry, password_entry, produkt_frame)))
         login.pack()
 
-    def login_funktion(self,user, email_entry, password_entry):
+    def login_funktion(self,user, email_entry, password_entry, produkt_frame):
         email = email_entry.get()
         password = password_entry.get()
 
@@ -40,6 +40,13 @@ class Login_Window(tk.Frame):
         self.user = user
 
         print(self.user)
+
+        if user != None:
+            self.logged_in(produkt_frame)
+        
+        else:
+            pass
+
 
     def logged_in(self, produkt_frame):
         produkt_frame.pack(fill = "both", expand = True)
