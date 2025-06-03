@@ -1,80 +1,47 @@
-#include <raylib.h>
-#include <time.h>
-#define ROOM_CNT 5
+#include "raylib.h"
+
+
 
 void WechselRaum(Texture2D* background, const char* neuerRaumPfad);
 
-int main(){
-
-    //Fenstergröße & StartRaum festlegen 
-    const int screenWidth = 800;
-    const int screenHeight = 1000;
-    InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL - Exams of Doom!");
-    Texture2D startRaum = LoadTexture("C:/Users/finnes/Documents/GitHub/2_Semester_Projekt/C++_Projekt/assets/raum1.png");
-    Texture2D backround = startRaum;
-
-    //Player einfügen
-    Rectangle player = {400, 600, 50, 50};
+    Texture2D backround = LoadTexture("XXXXXXXXassets/bild.png");
+    Texture2D playerTexture = LoadTexture("XXXXXXXplayer.png");
+    Texture2D backround = LoadTexture("C:/Users/finnes/Documents/GitHub/2_Semester_Projekt/C++_Projekt/assets/raum1.png");
     Texture2D playerTexture = LoadTexture("C:/Users/finnes/Documents/GitHub/2_Semester_Projekt/C++_Projekt/assets/player.png");
-    Vector2 position = {400, 600};
-    const float speed = 4.0f;
+    Rectangle door = { 750, 450, 50, 100 }; // z. B. rechte Seite des Raums
+    Vector2 position = { 201.0f, 201.0f };
 
-    //Räume definieren
-    typedef struct Room{
-        int num;
-        const char* pfad;
-        Texture2D textur;
-        int nachbarn[4]; //0=oben, 1=rechts, 2=unten, 3=links, -1 keine Tür in diese Richtung
-    } Room;
 
-    Room raeume [ROOM_CNT]{0,1};
-    int currentRoom = 0;
+        /*if (CheckCollisionRecs(player, door)) {
+        WechselRaum(&backround, "C:/Users/finnes/Documents/GitHub/2_Semester_Projekt/C++_Projekt/assets/raum2.png");
+        player.x = 10; // Spieler neu positionieren
+        player.y = 450;*/
+
+        bool collision = CheckCollisionRecs(player, enemy);
 
 
 
-    //Türen definieren
-    int doorcnt= GetRandomValue(1,4); 
-    Rectangle doorLeft = {0,551, 30, 100};
-    Rectangle doorTop = {350, 201, 100, 30};
-    Rectangle doorRight = {770,551, 30, 100};
-    Rectangle doorBottom = {350, 970, 100, 30};
+        //DrawText("Bewege das blaue Rechteck mit den Pfeiltasten", 10, 10, 20, DARKGRAY);
+        DrawTexture(backround, 0, 201, WHITE);
+        DrawTextureEx(playerTexture, (Vector2){player.x,player.y}, 0.0f, 1.0f, WHITE);
+        DrawTextureEx(playerTexture, (Vector2){player.x,player.y}, 0.0f, 0.1f, WHITE);
+        DrawRectangleRec(enemy, RED);
+        DrawRectangleRec(door, BROWN);
 
-    SetTargetFPS(60);
-
-while(!WindowShouldClose()){
-//Anpassungen
-        // Bewegung des Spielers mit WASD
-        if (IsKeyDown(KEY_D)&& (player.x<screenWidth-player.width)) player.x += speed;
-        if (IsKeyDown(KEY_A)&& (player.x>0)) player.x -= speed;
-        if (IsKeyDown(KEY_S)&& (player.y<screenHeight-player.height)) player.y += speed;
-        if (IsKeyDown(KEY_W)&& (player.y>200)) player.y -= speed;
-
-//Zeichnen
-
-    //Fesnter Zeichnen
-    BeginDrawing();
-    ClearBackground(RAYWHITE);
-
-    //Raum zeichnen
-    DrawTexture(backround, 0, 201, WHITE);
-    DrawRectangleRec(doorLeft, BROWN);
-    DrawRectangleRec(doorTop, BROWN);
-    DrawRectangleRec(doorRight, BROWN);
-    DrawRectangleRec(doorBottom, BROWN);
-
-
-
-    //Player zeichnen
-    DrawTextureEx(playerTexture, (Vector2){player.x,player.y}, 0.0f, 0.1f, WHITE);
-
-
-
-    EndDrawing();
+        
+        if (CheckCollisionRecs(player, door)) {
+        WechselRaum(&backround, "C:/Users/finnes/Documents/GitHub/2_Semester_Projekt/C++_Projekt/assets/raum2.png");
+        player.x = 10; // Spieler neu positionieren
+        player.y = 450;
 }
-CloseWindow();
-UnloadTexture(playerTexture);
-UnloadTexture(startRaum);
-return 0;
+
+
+        EndDrawing();
+    }
+
+while (!WindowShouldClose()) {
+    UnloadTexture(backround);
+    return 0;
 }
 
 void WechselRaum(Texture2D* background, const char* neuerRaumPfad) {
