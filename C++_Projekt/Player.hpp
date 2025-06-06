@@ -6,7 +6,7 @@
 
 class Player {
 public:
-    Player(int screenWidth,int screenHeight, float width, float height, Color color, int maxHealth, int beginning_level);
+    Player(float screenWidth,float screenHeight, float width, float height, Color color, int maxHealth, int beginning_level);
 
     void Update(float deltaTime); // deltaTime for consistent movement
     void Draw();

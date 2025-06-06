@@ -4,8 +4,8 @@
 #include <cmath>
 
 // Constructor implementation
-Player::Player(int screenWidth,int screenHeight, float width, float height, Color color, int maxHealth, int beginning_level)
-    : rect({screenWidth / 2 - 25, screenHeight - 75, width, height}), screenWidth(screenWidth), screenHeight(screenHeight), color(color), speed(200.0f), // Speed in pixels per second
+Player::Player(float screenWidth,float screenHeight, float width, float height, Color color, int maxHealth, int beginning_level)
+    : rect({(screenWidth / 2 - 25), (screenHeight - 75), width, height}), screenWidth(screenWidth), screenHeight(screenHeight), color(color), speed(200.0f), // Speed in pixels per second
       maxHealth(maxHealth), currentHealth(maxHealth), currentLevel(beginning_level),
       shootCooldown(0.2f), currentShootCooldown(0.0f) {
 }

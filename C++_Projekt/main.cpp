@@ -5,7 +5,7 @@
 #include <vector>
 #include <random>
 #include <algorithm> // For std::remove_if
-
+#include <ctime>
 using namespace std;
 
 int main() {
@@ -18,21 +18,25 @@ int main() {
 
     vector<Enemy> enemies;
     float enemySpawnTimer = 0.0f;
-    float enemySpawnRate = 5.0f;
+    float enemySpawnRate = 0.5f;
 
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> distribX(player.GetPositionX() +150, screenWidth - 50);
-    uniform_int_distribution<> distribY(player.GetPositionY() +150, screenWidth - 50);
+    srand(time(0));
+    int distribX = 0;
+    int distribY = 0;
 
     // Set target FPS for smooth animation
     SetTargetFPS(60);
 
     // Game loop
     while (!WindowShouldClose()) {
+        
+        distribX = rand() % 1000 + 800;
+        distribY = rand() % 750 + 50;
+
         // Get frame time for consistent movement across different frame rates
         float deltaTime = GetFrameTime();
-
         // Update
         //----------------------------------------------------------------------------------
         player.Update(deltaTime);
