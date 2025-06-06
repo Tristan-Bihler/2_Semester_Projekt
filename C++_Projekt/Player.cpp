@@ -39,7 +39,7 @@ void Player::Update(float deltaTime) {
         currentShootCooldown -= deltaTime;
     }
 
-    // Shoot on spacebar press
+    // Shoot on Mouse Button press
     if (IsMouseButtonDown(MOUSE_BUTTON_LEFT) && currentShootCooldown <= 0) {
         Shoot();
         currentShootCooldown = shootCooldown;

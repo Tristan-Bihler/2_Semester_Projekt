@@ -1,50 +1,40 @@
-#include "raylib.h"
+#include "Rooms.hpp"
+#include <raylib.h>
+#include <string>
+#define VIS_Count 10
+
+using namespace std;
 
 
-
-void WechselRaum(Texture2D* background, const char* neuerRaumPfad);
-
-    Texture2D backround = LoadTexture("XXXXXXXXassets/bild.png");
-    Texture2D playerTexture = LoadTexture("XXXXXXXplayer.png");
-    Texture2D backround = LoadTexture("C:/Users/finnes/Documents/GitHub/2_Semester_Projekt/C++_Projekt/assets/raum1.png");
-    Texture2D playerTexture = LoadTexture("C:/Users/finnes/Documents/GitHub/2_Semester_Projekt/C++_Projekt/assets/player.png");
-    Rectangle door = { 750, 450, 50, 100 }; // z. B. rechte Seite des Raums
-    Vector2 position = { 201.0f, 201.0f };
-
-
-        /*if (CheckCollisionRecs(player, door)) {
-        WechselRaum(&backround, "C:/Users/finnes/Documents/GitHub/2_Semester_Projekt/C++_Projekt/assets/raum2.png");
-        player.x = 10; // Spieler neu positionieren
-        player.y = 450;*/
-
-        bool collision = CheckCollisionRecs(player, enemy);
-
-
-
-        //DrawText("Bewege das blaue Rechteck mit den Pfeiltasten", 10, 10, 20, DARKGRAY);
-        DrawTexture(backround, 0, 201, WHITE);
-        DrawTextureEx(playerTexture, (Vector2){player.x,player.y}, 0.0f, 1.0f, WHITE);
-        DrawTextureEx(playerTexture, (Vector2){player.x,player.y}, 0.0f, 0.1f, WHITE);
-        DrawRectangleRec(enemy, RED);
-        DrawRectangleRec(door, BROWN);
-
-        
-        if (CheckCollisionRecs(player, door)) {
-        WechselRaum(&backround, "C:/Users/finnes/Documents/GitHub/2_Semester_Projekt/C++_Projekt/assets/raum2.png");
-        player.x = 10; // Spieler neu positionieren
-        player.y = 450;
-}
-
-
-        EndDrawing();
+void Rooms::preLoadTextures(const string& pfad,Texture2D* visuals){
+    for(int i = 0; i<VIS_Count; i++){
+        string dateiname = pfad + "/raum" + to_string(i) + ".png";
+        visuals[i] = LoadTexture(dateiname.c_str());
     }
-
-while (!WindowShouldClose()) {
-    UnloadTexture(backround);
-    return 0;
 }
 
-void WechselRaum(Texture2D* background, const char* neuerRaumPfad) {
-    UnloadTexture(*background);
-    *background = LoadTexture(neuerRaumPfad);
+void Rooms::kickTextures(Texture2D* visuals){
+    for(int x = 0; x<VIS_Count; x++){
+        UnloadTexture(visuals[x]);
+    }
+}
+
+void Rooms:: setDoor(bool enemyAlive){
+    Rectangle door ={350, 201, 100, 30};
+    if (!enemyAlive){DrawRectangleRec(door, GOLD);}                //enemyAlive Variable muss noch erstellt werden
+    else {DrawRectangleRec(door, GRAY);}
+}
+
+
+void Rooms::WechselRaum(Texture2D& background, Texture2D* visuals, Rectangle& player, Rectangle door, int currentlevel) {
+    if (CheckCollisionRecs(player, door)) {
+        int raumIndex = currentlevel / 10;     //Alle 10 Level ändert sich der Hintergrund
+        if (raumIndex < VIS_Count) {           //Check das Index < 10
+            UnloadTexture(background);
+            background = visuals[raumIndex];
+        }
+        player.x = 400;                     //Respawn player
+        player.y = player.height + 35;
+        //TODO Respawn Hindernisse und Gegner
+    }
 }
