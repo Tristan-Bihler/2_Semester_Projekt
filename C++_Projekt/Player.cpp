@@ -120,5 +120,5 @@ void Player::Shoot() {
     Vector2 bulletVelocity = { direction.x * bulletSpeed, direction.y * bulletSpeed };
 
     // Kugel in Richtung der Maus feuern
-    bullets.emplace_back(bulletStart.x, bulletStart.y, 4, 10, BLUE, bulletVelocity);
+    bullets.emplace_back(bulletStart.x, bulletStart.y, 4, 10, BROWN, bulletVelocity);
 }
