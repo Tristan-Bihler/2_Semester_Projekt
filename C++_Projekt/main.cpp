@@ -12,17 +12,18 @@ int main() {
     const int screenWidth = 800;
     const int screenHeight = 450;
 
-    InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL Exams of Doom");
+    InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL! Exams of Doom");
 
     Player player(screenWidth / 2 - 25, screenHeight - 75, 50, 50, BLUE, 100, 10);
 
     vector<Enemy> enemies;
     float enemySpawnTimer = 0.0f;
-    float enemySpawnRate = 2.0f;
+    float enemySpawnRate = 5.0f;
 
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> distribX(0, screenWidth - 50);
+    uniform_int_distribution<> distribX(player.GetPositionX() +150, screenWidth - 50);
+    uniform_int_distribution<> distribY(player.GetPositionY() +150, screenWidth - 50);
 
     // Set target FPS for smooth animation
     SetTargetFPS(60);
@@ -44,7 +45,7 @@ int main() {
         // Spawn enemies
         enemySpawnTimer += deltaTime;
         if (enemySpawnTimer >= enemySpawnRate) {
-            enemies.emplace_back(distribX(gen), -50.0f, 50, 50, GREEN, 30, 100.0f); // Random X, above screen, 30 health, 100 speed
+            enemies.emplace_back(distribX, distribY, 50, 50, GREEN, 30, 100.0f); // Random X, above screen, 30 health, 100 speed
             enemySpawnTimer = 0.0f;
         }
 

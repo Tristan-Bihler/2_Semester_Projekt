@@ -17,6 +17,8 @@ public:
     Rectangle GetRect() const { return rect; }
     int GetHealth() const { return currentHealth; }
     int GetLevel() const { return currentLevel; }
+    int GetPositionX() const{ return rect.x; }
+    int GetPositionY() const{ return rect.y; }
 
     const std::vector<Bullet>& GetBullets() const { return bullets; } // For drawing and collision checks
     std::vector<Bullet>& GetBulletsMutable() { return bullets; } // For modifying (removing) bullets
