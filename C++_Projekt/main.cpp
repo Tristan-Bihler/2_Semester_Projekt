@@ -5,7 +5,7 @@
 #include <vector>
 #include <random>
 #include <algorithm> // For std::remove_if
-
+#include <ctime>
 using namespace std;
 
 int main() {
@@ -28,20 +28,33 @@ int main() {
 
     vector<Enemy> enemies;
     float enemySpawnTimer = 0.0f;
-    float enemySpawnRate = 2.0f;
+    float enemySpawnRate = 0.5f;
 
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> distribX(0, screenWidth - 50);
+    srand(time(0));
+    int distribX = 0;
+    int distribY = 0;
 
     // Set target FPS for smooth animation
     SetTargetFPS(60);
 
+    //Start mit Leertaste
+    while (!IsKeyPressed(KEY_SPACE)) {
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    DrawText("Drücke die Leertaste, um zu starten!", screenWidth / 2 - 200, screenHeight / 2, 20, BLACK);
+    EndDrawing();
+    }
+
     // Game loop
     while (!WindowShouldClose()) {
+        
+        distribX = rand() % 1000 + 800;
+        distribY = rand() % 750 + 50;
+
         // Get frame time for consistent movement across different frame rates
         float deltaTime = GetFrameTime();
-
         // Update
         //----------------------------------------------------------------------------------
         player.Update(deltaTime);
@@ -54,7 +67,7 @@ int main() {
         // Spawn enemies
         enemySpawnTimer += deltaTime;
         if (enemySpawnTimer >= enemySpawnRate) {
-            enemies.emplace_back(distribX(gen), -50.0f, 50, 50, GREEN, 30, 100.0f); // Random X, above screen, 30 health, 100 speed
+            enemies.emplace_back(distribX, distribY, 50, 50, GREEN, 30, 100.0f); // Random X, above screen, 30 health, 100 speed
             enemySpawnTimer = 0.0f;
         }
 
@@ -87,7 +100,7 @@ int main() {
         // Player-Enemy Collision (Player takes damage)
         for (auto& enemy : enemies) {
             if (enemy.IsActive() && CheckCollisionRecs(player.GetRect(), enemy.GetRect())) {
-                player.TakeDamage(1 * player.GetLevel()); // Player takes 1 damage per frame if colliding
+                player.TakeDamage(0.2 * player.GetLevel()); // Player takes 1 damage per frame if colliding
                 // Optional: Push enemy away or make it stop for a moment
             }
         }
