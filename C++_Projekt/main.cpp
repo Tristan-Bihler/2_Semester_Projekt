@@ -9,11 +9,21 @@
 using namespace std;
 
 int main() {
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    
+    int monitor = GetCurrentMonitor();                                              // Aktuellen Monitor festlegen
+    int screenWidth = 0;     
+    int screenHeight = 0;     
+    int ScreenPositionX;
+    int ScreenPositionY;
 
-    InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL Exams of Doom");
-
+    InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL Exams of Doom");           // Intialisierung notwendig, um Monitorgröße auslesen zu können
+    screenWidth = GetMonitorWidth(monitor) * 2 / 3;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
+    screenHeight = GetMonitorHeight(monitor) * 2 / 3 ;                              //Monitorhöhe auslesen mulitpliziert mit 2/3
+    ScreenPositionX = (GetMonitorWidth(monitor) - screenWidth) / 2;
+    ScreenPositionY = (GetMonitorHeight(monitor) - screenHeight) / 2;
+    SetWindowSize(screenWidth, screenHeight);                                       // Größe des Fensters setzen 2/3 des Monitors
+    SetWindowPosition(ScreenPositionX, ScreenPositionY);                            // Fenster Mittig positionieren
+    
     Player player(screenWidth / 2 - 25, screenHeight - 75, 50, 50, BLUE, 100, 10);
 
     vector<Enemy> enemies;
