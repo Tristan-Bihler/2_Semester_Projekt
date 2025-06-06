@@ -78,6 +78,23 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "barrier": "cpp",
+        "bit": "cpp",
+        "clocale": "cpp",
+        "csetjmp": "cpp",
+        "cstddef": "cpp",
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "flat_map": "cpp",
+        "flat_set": "cpp",
+        "generator": "cpp",
+        "initializer_list": "cpp",
+        "iomanip": "cpp",
+        "mutex": "cpp",
+        "numbers": "cpp",
+        "print": "cpp",
+        "scoped_allocator": "cpp",
+        "span": "cpp"
     }
 }

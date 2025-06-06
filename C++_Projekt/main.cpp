@@ -14,17 +14,13 @@ int main() {
 
     InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL! Exams of Doom");
 
+
     Player player(screenWidth ,screenHeight, 50, 50, BLUE, 100, 10);
 
     vector<Enemy> enemies;
-    float enemySpawnTimer = 0.0f;
-    float enemySpawnRate = 0.5f;
-
     random_device rd;
     mt19937 gen(rd());
     srand(time(0));
-    int distribX = 0;
-    int distribY = 0;
 
     // Set target FPS for smooth animation
     SetTargetFPS(60);
@@ -32,8 +28,7 @@ int main() {
     // Game loop
     while (!WindowShouldClose()) {
         
-        distribX = rand() % 1000 + 800;
-        distribY = rand() % 750 + 50;
+
 
         // Get frame time for consistent movement across different frame rates
         float deltaTime = GetFrameTime();
@@ -46,12 +41,12 @@ int main() {
             enemy.Update(deltaTime, {player.GetRect().x, player.GetRect().y});
         }
 
-        // Spawn enemies
+        /*// Spawn enemies
         enemySpawnTimer += deltaTime;
         if (enemySpawnTimer >= enemySpawnRate) {
             enemies.emplace_back(distribX, distribY, 50, 50, GREEN, 30, 100.0f); // Random X, above screen, 30 health, 100 speed
             enemySpawnTimer = 0.0f;
-        }
+        }*/
 
         vector<Bullet>& playerBullets = player.GetBulletsMutable();
         for (size_t i = 0; i < playerBullets.size(); ) {
