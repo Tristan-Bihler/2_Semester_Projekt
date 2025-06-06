@@ -10,7 +10,7 @@ using namespace std;
 
 int main() {
     const int screenWidth = 800;
-    const int screenHeight = 450;
+    const int screenHeight = 800;
 
     InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL Exams of Doom");
 
@@ -79,7 +79,7 @@ int main() {
         // Player-Enemy Collision (Player takes damage)
         for (auto& enemy : enemies) {
             if (enemy.IsActive() && CheckCollisionRecs(player.GetRect(), enemy.GetRect())) {
-                player.TakeDamage(1 * player.GetLevel()); // Player takes 1 damage per frame if colliding
+                player.TakeDamage(0.2 * player.GetLevel()); // Player takes 1 damage per frame if colliding
                 // Optional: Push enemy away or make it stop for a moment
             }
         }
