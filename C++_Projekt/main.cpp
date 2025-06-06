@@ -77,7 +77,7 @@ int main() {
         // Player-Enemy Collision (Player takes damage)
         for (auto& enemy : enemies) {
             if (enemy.IsActive() && CheckCollisionRecs(player.GetRect(), enemy.GetRect())) {
-                player.TakeDamage(1 * player.GetLevel()); // Player takes 1 damage per frame if colliding
+                player.TakeDamage(0.2 * player.GetLevel()); // Player takes 1 damage per frame if colliding
                 // Optional: Push enemy away or make it stop for a moment
             }
         }

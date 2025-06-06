@@ -63,11 +63,16 @@ void Player::Draw() {
     DrawRectangleRec(rect, color);
 
     // Draw health bar
-    float healthBarWidth = rect.width;
-    float healthBarHeight = 5;
+    float healthBarWidth = rect.width + 20 ;   
+    float healthBarHeight = 15;
     float healthPercentage = (float)currentHealth / maxHealth;
-    DrawRectangle(rect.x, rect.y - healthBarHeight - 5, healthBarWidth, healthBarHeight, RED); // Background
-    DrawRectangle(rect.x, rect.y - healthBarHeight - 5, healthBarWidth * healthPercentage, healthBarHeight, GREEN); // Fill
+    //DrawRectangle(rect.x, rect.y - healthBarHeight - 5, healthBarWidth, healthBarHeight, RED); // Background
+    //DrawRectangle(rect.x, rect.y - healthBarHeight - 5, healthBarWidth * healthPercentage, healthBarHeight, GREEN); // Fill
+
+    DrawRectangle(10, 60 - healthBarHeight - 5, healthBarWidth, healthBarHeight, RED); // Background
+    DrawRectangle(10, 60 - healthBarHeight - 5, healthBarWidth * healthPercentage, healthBarHeight, GREEN); // Fill
+
+    //("Health: %i", player.GetHealth()), x=10, x= 10, 20, BLACK);
 
     // Draw bullets
     for (const auto& bullet : bullets) {
