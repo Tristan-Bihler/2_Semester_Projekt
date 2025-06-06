@@ -119,3 +119,7 @@ void Player::Shoot() {
     // Kugel in Richtung der Maus feuern
     bullets.emplace_back(bulletStart.x, bulletStart.y, 10, 10, BROWN, bulletVelocity);
 }
+void Player::SetPosition(float x, float y){
+    rect.x = x;
+    rect.y = y;
+}

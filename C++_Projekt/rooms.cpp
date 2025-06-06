@@ -1,6 +1,7 @@
 #include "raylib.h"
 #include "Rooms.hpp"
 #include "Enemy.hpp"
+#include "Player.hpp"
 #include "string"
 #include <vector>
 #include <ctime>
@@ -22,23 +23,22 @@ void Rooms::kickTextures(Texture2D* visuals){
 }
 
 void Rooms:: setDoor(bool enemyAlive){
-    Rectangle door ={350, 201, 100, 30};
+    this-> door ={350, 201, 100, 30};
     if (!enemyAlive){DrawRectangleRec(door, GOLD);}                //enemyAlive Variable muss noch erstellt werden
     else {DrawRectangleRec(door, GRAY);}
 }
 
 
-void Rooms::WechselRaum(Texture2D& background, Texture2D* visuals, Rectangle& player, Rectangle door, int currentlevel) {
+void Rooms::changeRoom(Texture2D& background, Texture2D* visuals, Player& player, int currentlevel) {
     int distribX = 0;
     int distribY = 0;
-    if (CheckCollisionRecs(player, door)) {
+    if (CheckCollisionRecs(player.GetRect(), this-> door)) {
         int raumIndex = currentlevel / 10;     //Alle 10 Level ändert sich der Hintergrund
         if (raumIndex < VIS_Count) {           //Check das Index < 10
             UnloadTexture(background);
             background = visuals[raumIndex];
         }
-        player.x = 400;                         //Respawn player
-        player.y = player.height + 35;
+        player.SetPosition(400, player.GetRect().height + 35);
         
         int enemyAmount = 0;
         if(currentlevel<5){enemyAmount=2;}

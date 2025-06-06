@@ -2,10 +2,13 @@
 #include "Player.hpp"
 #include "Enemy.hpp"
 #include "Bullet.hpp"
+#include "Rooms.hpp"
 #include <vector>
 #include <random>
 #include <algorithm> // For std::remove_if
 #include <ctime>
+#define VIS_Count 10
+
 using namespace std;
 
 int main() {
@@ -15,8 +18,15 @@ int main() {
     int screenHeight = 0;     
     int ScreenPositionX;
     int ScreenPositionY;
+    Texture2D visuals [VIS_Count] = {};
+    Texture2D background;
+    Rooms lobby;
+    string pfad = ("assets");
+    lobby.preLoadTextures(pfad, visuals);
+    background = visuals[0];
 
-    InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL Exams of Doom");           // Intialisierung notwendig, um Monitorgröße auslesen zu können
+
+    InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL! Exams of Doom");          // Intialisierung notwendig, um Monitorgröße auslesen zu können
     screenWidth = GetMonitorWidth(monitor) * 2 / 3;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
     screenHeight = GetMonitorHeight(monitor) * 2 / 3 ;                              //Monitorhöhe auslesen mulitpliziert mit 2/3
     ScreenPositionX = (GetMonitorWidth(monitor) - screenWidth) / 2;
@@ -80,10 +90,10 @@ int main() {
                     if (!enemies[j].IsActive()) { 
                         enemies.erase(enemies.begin() + j);
                     } else {
-                        ++j;                                                            // Nexter Gegner
+                        ++j;                                                            // Nächster Gegner
                     }
                 } else {
-                    ++j;                                                                // Nexter Gegner
+                    ++j;                                                                // Nächster Gegner
                 }
             }
 
@@ -91,7 +101,7 @@ int main() {
             if (bulletHit) {
                 playerBullets.erase(playerBullets.begin() + i);
             } else {
-                ++i; // Nexter Schuss
+                ++i; // Nächster Schuss
             }
         }
 
@@ -107,6 +117,12 @@ int main() {
         enemies.erase(std::remove_if(enemies.begin(), enemies.end(),
                                      [](const Enemy& e){ return !e.IsActive(); }),
                       enemies.end());
+        
+        lobby.enemyAlive = !enemies.empty();
+        
+        //Raumwechsel
+        lobby.changeRoom(background, visuals, player, player.GetLevel());
+
 
         // Überprüft Spielende
         if (player.GetHealth() <= 0) {
@@ -129,7 +145,7 @@ int main() {
             //-> immer selbe Position und gleiche größe -> an bildschirm anpassen 
             // int GetScreenWidth(void);        
 
-
+            DrawTexture(background, 0,200, WHITE);
             DrawText(TextFormat("Health: %i", player.GetHealth()), screenWidth -10, screenHeight -10, 20, BLACK);
             DrawText(TextFormat("Level: %i", player.GetLevel()), 500, 10, 20, BLACK);
 

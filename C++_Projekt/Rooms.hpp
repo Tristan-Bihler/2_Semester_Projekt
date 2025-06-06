@@ -1,6 +1,7 @@
 #pragma once
 #include "raylib.h"
 #include "Enemy.hpp"
+#include "Player.hpp"
 #include "string"
 #include <vector>
 #include <ctime>
@@ -12,18 +13,18 @@ class Rooms {
 
 private:
     Rectangle door;
-    Texture2D visuals [VIS_Count] = {};
+    //Texture2D visuals [VIS_Count] = {};
     string dateiname;
     int enemyAmount;
 
 public: 
     vector<Enemy>enemies;
+    //Texture2D visuals [VIS_Count] = {};
     string pfad; 
     bool enemyAlive;
     int getEnemyAmount()const {return enemyAmount;};
     void preLoadTextures(const std::string& pfad,Texture2D* visuals);
     void kickTextures(Texture2D* visuals);
     void setDoor(bool enemyAlive);
-    void WechselRaum(Texture2D& background, Texture2D* visuals, Rectangle& player,
-         Rectangle door, int currentlevel);
+    void changeRoom(Texture2D& background, Texture2D* visuals, Player& player, int currentlevel);
 };

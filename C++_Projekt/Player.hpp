@@ -1,6 +1,6 @@
 #pragma once
 
-#include "raylib.h"
+#include "raylib.h"                //C:/Users/finnes/Documents/GitHub/2_Semester_Projekt/C++_Projekt/
 #include <vector>               // managing der Schüsse
 #include "Bullet.hpp"           // Deklarieren bzw. Einbinden der Bullet-Klasse
 
@@ -13,12 +13,13 @@ public:
     void TakeDamage(int amount);
     void Shoot();                   // Neue Methode um die Schüsse zu erstellen
     void Increase_Level();
+    void SetPosition(float x, float y);
 
     Rectangle GetRect() const { return rect; }
     int GetHealth() const { return currentHealth; }
     int GetLevel() const { return currentLevel; }
     int GetPositionX() const{ return rect.x; }
-    int GetPositionY() const{ return rect.y; }
+
 
     const std::vector<Bullet>& GetBullets() const { return bullets; }       // Zeichnungen und Kollisionsüberprüfung
     std::vector<Bullet>& GetBulletsMutable() { return bullets; }            // Ändern (modifizieren) und entfernen der Schüsse
