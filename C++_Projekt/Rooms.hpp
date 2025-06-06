@@ -1,6 +1,9 @@
 #pragma once
 #include "raylib.h"
+#include "Enemy.hpp"
 #include "string"
+#include <vector>
+#include <ctime>
 #define VIS_Count 10
 
 using namespace std;
@@ -11,10 +14,13 @@ private:
     Rectangle door;
     Texture2D visuals [VIS_Count] = {};
     string dateiname;
+    int enemyAmount;
 
 public: 
+    vector<Enemy>enemies;
     string pfad; 
     bool enemyAlive;
+    int getEnemyAmount()const {return enemyAmount;};
     void preLoadTextures(const std::string& pfad,Texture2D* visuals);
     void kickTextures(Texture2D* visuals);
     void setDoor(bool enemyAlive);

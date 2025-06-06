@@ -26,17 +26,10 @@ int main() {
     
     Player player(screenWidth, screenHeight, 50, 50, BLUE, 100, 10);
 
-    vector<Enemy> enemies;                                                          // Erstellt eine Liste von Gegnern, die im Laufe des Spiels hinzugefügt werden
-
-    float enemySpawnTimer = 0.0f;
-    float enemySpawnRate = 0.5f;                                                    // Gegner erscheinen alle 0,5 Sekunden
-
-    // Initialisiert einen Zufallszahlengenerator
+    vector<Enemy> enemies;
     random_device rd;
-    mt19937 gen(rd());                                                              // Erstellt Mersenne-Twister-Zufallsgenerator (mt19937) -> schneller alseinfacher Zufallsgenerator
-    srand(time(0));                                                                 // Setzt die Zufallszahlen basierend auf der aktuellen Zeit.
-    int distribX = 0;
-    int distribY = 0;
+    mt19937 gen(rd());
+    srand(time(0));
 
     // Setze Ziel-Frames Per Second für flüssige Animation
     SetTargetFPS(60);
@@ -51,9 +44,8 @@ int main() {
 
     // Spiel-Schleife
     while (!WindowShouldClose()) {
-        //// Erzeugt eine zufällige X- & Y-Koordinate
-        distribX = rand() % 1000 + 800;                                             // Wert liegt zwischen 800 und 1800
-        distribY = rand() % 750 + 50;
+        
+
 
         // Zeit pro Frame für gleichmäßige Bewegungen
         float deltaTime = GetFrameTime();
@@ -67,12 +59,12 @@ int main() {
             enemy.Update(deltaTime, {player.GetRect().x, player.GetRect().y});
         }
 
-        // Erzeugung Gegner
+        /* Erzeugung Gegner
         enemySpawnTimer += deltaTime;
         if (enemySpawnTimer >= enemySpawnRate) {
             enemies.emplace_back(distribX, distribY, 50, 50, GREEN, 30, 100.0f);         // Zufälliges X, oberhalb Fenster, 30 Leben, 100 Schnelligkeit
             enemySpawnTimer = 0.0f;
-        }
+        }*/
 
         // Holt eine Referenz auf die Liste der vom Spieler abgefeuerten Geschosse
         vector<Bullet>& playerBullets = player.GetBulletsMutable();

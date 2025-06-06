@@ -1,18 +1,18 @@
 #include "Player.hpp"
 #include "raylib.h"
-#include "Bullet.hpp" // Ensure Bullet.h is included for Bullet creation
+#include "Bullet.hpp" // Sicherstellen Bullet.h ist eingebunden, für Schuss Erstellung 
 #include <cmath>
 
-// Constructor implementation
+// Implementierung des Constructors
 Player::Player(float screenWidth,float screenHeight, float width, float height, Color color, int maxHealth, int beginning_level)
     : rect({(screenWidth / 2 - 25), (screenHeight - 75), width, height}), screenWidth(screenWidth), screenHeight(screenHeight), color(color), speed(200.0f), // Speed in pixels per second
       maxHealth(maxHealth), currentHealth(maxHealth), currentLevel(beginning_level),
       shootCooldown(0.2f), currentShootCooldown(0.0f) {
 }
 
-// Update method implementation (now takes deltaTime)
+// Implementierungs Methode aktualisieren (nun deltaTime)
 void Player::Update(float deltaTime) {
-    // Movement
+    // Bewegung
     if (IsKeyDown(KEY_W)) {
         rect.y -= speed * deltaTime;
     }
@@ -29,27 +29,27 @@ void Player::Update(float deltaTime) {
         ToggleFullscreen();
     }
 
-    // Keep player within screen bounds (adjust if screen dimensions change)
+    // Spiler bleibt innderhalb des Spielfensters
     if (rect.x < 0) rect.x = 0;
     if (rect.x + rect.width > screenWidth) rect.x = screenWidth - rect.width;
     if (rect.y < 0) rect.y = 0;
     if (rect.y + rect.height > screenHeight) rect.y = screenHeight - rect.height;
 
-    // Shooting cooldown
+    // Schuss-Abklingzeit
     if (currentShootCooldown > 0) {
         currentShootCooldown -= deltaTime;
     }
 
-    // Shoot on Mouse Button press
+    // Schießen mit der linken Maustaste
     if (IsMouseButtonDown(MOUSE_BUTTON_LEFT) && currentShootCooldown <= 0) {
         Shoot();
         currentShootCooldown = shootCooldown;
     }
 
-    // Update active bullets
+    // aktuelle Schüsse aktualisieren
     for (size_t i = 0; i < bullets.size(); ) {
         bullets[i].Update(deltaTime);
-        // Remove bullets that are off-screen
+        // Entfernen der Schüsse, welche außerhalb des Fensters sind
         if (bullets[i].IsOffScreen(screenWidth, screenHeight)) {
             bullets.erase(bullets.begin() + i);
         } else {
@@ -58,23 +58,23 @@ void Player::Update(float deltaTime) {
     }
 }
 
-// Draw method implementation
+// Implementierung der Zeichen-Methode
 void Player::Draw() {
     DrawRectangleRec(rect, color);
 
-    // Draw health bar
+    // Zeichnen der Lebensanzeige
     float healthBarWidth = rect.width + 20 ;   
     float healthBarHeight = 15;
     float healthPercentage = (float)currentHealth / maxHealth;
-    //DrawRectangle(rect.x, rect.y - healthBarHeight - 5, healthBarWidth, healthBarHeight, RED); // Background
-    //DrawRectangle(rect.x, rect.y - healthBarHeight - 5, healthBarWidth * healthPercentage, healthBarHeight, GREEN); // Fill
+    //DrawRectangle(rect.x, rect.y - healthBarHeight - 5, healthBarWidth, healthBarHeight, RED); // Hintergrund
+    //DrawRectangle(rect.x, rect.y - healthBarHeight - 5, healthBarWidth * healthPercentage, healthBarHeight, GREEN); // Füllung
 
-    DrawRectangle(10, 60 - healthBarHeight - 5, healthBarWidth, healthBarHeight, RED); // Background
-    DrawRectangle(10, 60 - healthBarHeight - 5, healthBarWidth * healthPercentage, healthBarHeight, GREEN); // Fill
+    DrawRectangle(10, 60 - healthBarHeight - 5, healthBarWidth, healthBarHeight, RED); // Hintergrund
+    DrawRectangle(10, 60 - healthBarHeight - 5, healthBarWidth * healthPercentage, healthBarHeight, GREEN); // Füllung
 
     //("Health: %i", player.GetHealth()), x=10, x= 10, 20, BLACK);
 
-    // Draw bullets
+    // Zeichnen der Schüsse
     for (const auto& bullet : bullets) {
         bullet.Draw();
     }
@@ -92,22 +92,19 @@ void Player::Increase_Level() {
 }
 
 // void Player::Shoot() {
-//     Create a new bullet at the player's center, moving upwards
+//     Erstellen eines neuen Schusses in der Mitte des Spielers, welcher nach oben weggeht
 //     bullets.emplace_back(rect.x + rect.width / 2 - 2, rect.y, 4, 10, BLUE, 400.0f);
 // }
 
 void Player::Shoot() {
-    // Mausposition holen
-    Vector2 mousePos = GetMousePosition();
 
-    // Spielerzentrum als Ausgangspunkt für Kugel
-    Vector2 bulletStart = { rect.x + rect.width / 2, rect.y + rect.height / 2 };
+    Vector2 mousePos = GetMousePosition();     // Mausposition holen
 
-    // Richtungsvektor von Spieler zu Maus
-    Vector2 direction = { mousePos.x - bulletStart.x, mousePos.y - bulletStart.y };
+    Vector2 bulletStart = { rect.x + rect.width / 2, rect.y + rect.height / 2 };        // Spielerzentrum als Ausgangspunkt für Kugel
 
-    // Länge des Vektors berechnen
-    float length = sqrt(direction.x * direction.x + direction.y * direction.y);
+    Vector2 direction = { mousePos.x - bulletStart.x, mousePos.y - bulletStart.y };     // Richtungsvektor von Spieler zu Maus
+
+    float length = sqrt(direction.x * direction.x + direction.y * direction.y);         // Länge des Vektors berechnen
     
     // Normalisieren (damit die Geschwindigkeit konstant bleibt)
     if (length != 0) {
