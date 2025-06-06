@@ -4,8 +4,8 @@
 #include <cmath>
 
 // Constructor implementation
-Player::Player(float x, float y, float width, float height, Color color, int maxHealth, int beginning_level)
-    : rect({x, y, width, height}), color(color), speed(200.0f), // Speed in pixels per second
+Player::Player(int screenWidth,int screenHeight, float width, float height, Color color, int maxHealth, int beginning_level)
+    : rect({screenWidth / 2 - 25, screenHeight - 75, width, height}), screenWidth(screenWidth), screenHeight(screenHeight), color(color), speed(200.0f), // Speed in pixels per second
       maxHealth(maxHealth), currentHealth(maxHealth), currentLevel(beginning_level),
       shootCooldown(0.2f), currentShootCooldown(0.0f) {
 }
@@ -25,10 +25,11 @@ void Player::Update(float deltaTime) {
     if (IsKeyDown(KEY_D)) {
         rect.x += speed * deltaTime;
     }
+    if (IsKeyDown(KEY_F2)){
+        ToggleFullscreen();
+    }
 
     // Keep player within screen bounds (adjust if screen dimensions change)
-    const int screenWidth = 800; // Hardcoded for simplicity, pass as parameter for flexibility
-    const int screenHeight = 450;
     if (rect.x < 0) rect.x = 0;
     if (rect.x + rect.width > screenWidth) rect.x = screenWidth - rect.width;
     if (rect.y < 0) rect.y = 0;
