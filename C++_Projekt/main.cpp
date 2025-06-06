@@ -14,7 +14,7 @@ int main() {
 
     InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL Exams of Doom");
 
-    Player player(screenWidth / 2 - 25, screenHeight - 75, 50, 50, RED, 100, 10);
+    Player player(screenWidth / 2 - 25, screenHeight - 75, 50, 50, BLUE, 100, 10);
 
     vector<Enemy> enemies;
     float enemySpawnTimer = 0.0f;
@@ -48,8 +48,6 @@ int main() {
             enemySpawnTimer = 0.0f;
         }
 
-        // Bullet-Enemy Collision
-        // Iterate through bullets and enemies for collision detection
         vector<Bullet>& playerBullets = player.GetBulletsMutable();
         for (size_t i = 0; i < playerBullets.size(); ) {
             bool bulletHit = false;
