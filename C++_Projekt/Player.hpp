@@ -1,17 +1,17 @@
 #pragma once
 
 #include "raylib.h"
-#include <vector> // For managing bullets
-#include "Bullet.hpp" // Forward declaration or include for Bullet class
+#include <vector>               // managing der Schüsse
+#include "Bullet.hpp"           // Deklarieren bzw. Einbinden der Bullet-Klasse
 
 class Player {
 public:
     Player(float screenWidth,float screenHeight, float width, float height, Color color, int maxHealth, int beginning_level);
 
-    void Update(float deltaTime); // deltaTime for consistent movement
+    void Update(float deltaTime);   // deltaTime für konstante Bewegung
     void Draw();
     void TakeDamage(int amount);
-    void Shoot(); // New method to create bullets
+    void Shoot();                   // Neue Methode um die Schüsse zu erstellen
     void Increase_Level();
 
     Rectangle GetRect() const { return rect; }
@@ -20,8 +20,8 @@ public:
     int GetPositionX() const{ return rect.x; }
     int GetPositionY() const{ return rect.y; }
 
-    const std::vector<Bullet>& GetBullets() const { return bullets; } // For drawing and collision checks
-    std::vector<Bullet>& GetBulletsMutable() { return bullets; } // For modifying (removing) bullets
+    const std::vector<Bullet>& GetBullets() const { return bullets; }       // Zeichnungen und Kollisionsüberprüfung
+    std::vector<Bullet>& GetBulletsMutable() { return bullets; }            // Ändern (modifizieren) und entfernen der Schüsse
 
 private:
     Rectangle rect;
@@ -33,12 +33,12 @@ private:
     int screenWidth;
     int screenHeight;
 
-    // Bullet shooting mechanics
+    // Schüsse abgeben
     float shootCooldown;
     float currentShootCooldown;
-    std::vector<Bullet> bullets; // Player's active bullets
+    std::vector<Bullet> bullets;        // Schüsse des Spielers aktiviert
 
-    // Idiotentest Mauszeiger bewegen
+    // Mauszeiger bewegen
     Vector2 mousePos;
     Vector2 bulletStart;
     Vector2 direction;
