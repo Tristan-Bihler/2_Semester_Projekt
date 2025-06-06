@@ -9,12 +9,12 @@
 using namespace std;
 
 int main() {
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    const int screenWidth = 1000;
+    const int screenHeight = 800;
 
     InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL! Exams of Doom");
 
-    Player player(screenWidth / 2 - 25, screenHeight - 75, 50, 50, BLUE, 100, 10);
+    Player player(screenWidth ,screenHeight, 50, 50, BLUE, 100, 10);
 
     vector<Enemy> enemies;
     float enemySpawnTimer = 0.0f;
@@ -78,7 +78,7 @@ int main() {
         // Player-Enemy Collision (Player takes damage)
         for (auto& enemy : enemies) {
             if (enemy.IsActive() && CheckCollisionRecs(player.GetRect(), enemy.GetRect())) {
-                player.TakeDamage(1 * player.GetLevel()); // Player takes 1 damage per frame if colliding
+                player.TakeDamage(0.2 * player.GetLevel()); // Player takes 1 damage per frame if colliding
                 // Optional: Push enemy away or make it stop for a moment
             }
         }

@@ -6,7 +6,7 @@
 
 class Player {
 public:
-    Player(float x, float y, float width, float height, Color color, int maxHealth, int begining_level);
+    Player(int screenWidth,int screenHeight, float width, float height, Color color, int maxHealth, int beginning_level);
 
     void Update(float deltaTime); // deltaTime for consistent movement
     void Draw();
@@ -30,6 +30,8 @@ private:
     int maxHealth;
     int currentHealth;
     int currentLevel;
+    int screenWidth;
+    int screenHeight;
 
     // Bullet shooting mechanics
     float shootCooldown;
