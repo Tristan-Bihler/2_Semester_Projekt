@@ -1,10 +1,6 @@
 #include "Bullet.hpp"
 #include "raylib.h"
 
-// Bullet::Bullet(float x, float y, float width, float height, Color color, float speed)
-//     : rect({x, y, width, height}), color(color), speed(speed) {
-// }
-
 Bullet::Bullet(float x, float y, float width, float height, Color color, Vector2 velocity)
     : rect({x, y, width, height}), color(color), velocity(velocity) {
 }
@@ -24,8 +20,8 @@ void Bullet::Draw() const{
     DrawRectangleRec(rect, color);
 }
 
-bool Bullet::IsOffScreen(int screenWidth, int screenHeight) const {
-    // Check if the bullet is completely outside the screen
+ //Überprüfen, ob Schüsse auserhalb des Fensters sind
+bool Bullet::IsOffScreen(int screenWidth, int screenHeight) const {                
     return rect.x < -rect.width || rect.x > screenWidth ||
            rect.y < -rect.height || rect.y > screenHeight;
 }
