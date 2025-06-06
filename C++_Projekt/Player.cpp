@@ -29,7 +29,7 @@ void Player::Update(float deltaTime) {
         ToggleFullscreen();
     }
 
-    // Spiler bleibt innderhalb des Spielfensters
+    // Spieler bleibt innderhalb des Spielfensters
     if (rect.x < 0) rect.x = 0;
     if (rect.x + rect.width > screenWidth) rect.x = screenWidth - rect.width;
     if (rect.y < 0) rect.y = 0;
@@ -117,5 +117,5 @@ void Player::Shoot() {
     Vector2 bulletVelocity = { direction.x * bulletSpeed, direction.y * bulletSpeed };
 
     // Kugel in Richtung der Maus feuern
-    bullets.emplace_back(bulletStart.x, bulletStart.y, 4, 10, BROWN, bulletVelocity);
+    bullets.emplace_back(bulletStart.x, bulletStart.y, 10, 10, BROWN, bulletVelocity);
 }

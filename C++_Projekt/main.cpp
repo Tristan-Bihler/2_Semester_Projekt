@@ -24,6 +24,7 @@ int main() {
     SetWindowSize(screenWidth, screenHeight);                                       // Größe des Fensters setzen 2/3 des Monitors
     SetWindowPosition(ScreenPositionX, ScreenPositionY);                            // Fenster Mittig positionieren
     
+    HideCursor();
     Player player(screenWidth, screenHeight, 50, 50, BLUE, 100, 10);
 
     vector<Enemy> enemies;
