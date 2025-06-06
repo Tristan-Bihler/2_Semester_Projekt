@@ -28,12 +28,15 @@ int main() {
 
     // Set target FPS for smooth animation
     SetTargetFPS(60);
+
+    //Start mit Leertaste
     while (!IsKeyPressed(KEY_SPACE)) {
     BeginDrawing();
     ClearBackground(RAYWHITE);
-    DrawText("Drücke die Leertaste, um zu starten!", screenWidth / 2 - 150, screenHeight / 2, 20, DARKGRAY);
+    DrawText("Drücke die Leertaste, um zu starten!", screenWidth / 2 - 200, screenHeight / 2, 20, BLACK);
     EndDrawing();
     }
+
     // Game loop
     while (!WindowShouldClose()) {
         
