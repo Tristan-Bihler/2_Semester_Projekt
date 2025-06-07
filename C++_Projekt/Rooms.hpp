@@ -18,7 +18,6 @@ private:
     int enemyAmount;
 
 public: 
-    vector<Enemy>enemies;
     //Texture2D visuals [VIS_Count] = {};
     string pfad; 
     bool enemyAlive;
@@ -26,5 +25,5 @@ public:
     void preLoadTextures(const std::string& pfad,Texture2D* visuals);
     void kickTextures(Texture2D* visuals);
     void setDoor(bool enemyAlive);
-    void changeRoom(Texture2D& background, Texture2D* visuals, Player& player, int currentlevel);
+    void changeRoom(Texture2D& background, Texture2D* visuals, Player& player, int currentlevel, vector<Enemy>& enemies);
 };

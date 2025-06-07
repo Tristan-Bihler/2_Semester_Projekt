@@ -3,12 +3,13 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file",
-            "command": "g++.exe",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
             "args": [
                 "${file}",
                 "Player.cpp",
                 "Bullet.cpp",
                 "Enemy.cpp",
+                "Rooms.cpp",
                 "-IC:/msys64/ucrt64/include",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",

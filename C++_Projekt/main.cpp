@@ -12,7 +12,6 @@
 using namespace std;
 
 int main() {
-    
     int monitor = GetCurrentMonitor();                                              // Aktuellen Monitor festlegen
     int screenWidth = 0;     
     int screenHeight = 0;     
@@ -22,7 +21,7 @@ int main() {
     Texture2D background;
     Rooms lobby;
     string pfad = ("assets");
-    lobby.preLoadTextures(pfad, visuals);
+    //lobby.preLoadTextures(pfad, visuals);
     background = visuals[0];
 
 
@@ -35,7 +34,7 @@ int main() {
     SetWindowPosition(ScreenPositionX, ScreenPositionY);                            // Fenster Mittig positionieren
     
     HideCursor();
-    Player player(screenWidth, screenHeight, 50, 50, BLUE, 100, 10);
+    Player player(screenWidth, screenHeight, 50, 50, BLUE, 100, 1);
 
     vector<Enemy> enemies;
     random_device rd;
@@ -66,16 +65,9 @@ int main() {
         player.Update(deltaTime);
 
         // Update Gegner
-        for (auto& enemy : enemies) {
+        for (Enemy& enemy : enemies) {
             enemy.Update(deltaTime, {player.GetRect().x, player.GetRect().y});
         }
-
-        /* Erzeugung Gegner
-        enemySpawnTimer += deltaTime;
-        if (enemySpawnTimer >= enemySpawnRate) {
-            enemies.emplace_back(distribX, distribY, 50, 50, GREEN, 30, 100.0f);         // Zufälliges X, oberhalb Fenster, 30 Leben, 100 Schnelligkeit
-            enemySpawnTimer = 0.0f;
-        }*/
 
         // Holt eine Referenz auf die Liste der vom Spieler abgefeuerten Geschosse
         vector<Bullet>& playerBullets = player.GetBulletsMutable();
@@ -84,7 +76,6 @@ int main() {
             for (size_t j = 0; j < enemies.size(); ) {
                 if (CheckCollisionRecs(playerBullets[i].GetRect(), enemies[j].GetRect())) {
                     enemies[j].TakeDamage(20);                                           // Gegner erhält 20 Schadenspunkte
-                    player.Increase_Level();
                     bulletHit = true; 
                     // Entfernt Gegner wenn getroffen
                     if (!enemies[j].IsActive()) { 
@@ -121,7 +112,10 @@ int main() {
         lobby.enemyAlive = !enemies.empty();
         
         //Raumwechsel
-        lobby.changeRoom(background, visuals, player, player.GetLevel());
+
+        lobby.setDoor(lobby.enemyAlive);
+
+        lobby.changeRoom(background, visuals, player, player.GetLevel(), enemies);
 
 
         // Überprüft Spielende
