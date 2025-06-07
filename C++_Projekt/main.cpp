@@ -140,8 +140,8 @@ int main() {
             // int GetScreenWidth(void);        
 
             DrawTexture(background, 0,200, WHITE);
-            DrawText(TextFormat("Health: %i", player.GetHealth()), screenWidth -10, screenHeight -10, 20, BLACK);
-            DrawText(TextFormat("Level: %i", player.GetLevel()), 500, 10, 20, BLACK);
+            DrawText(TextFormat("Health: %i", player.GetHealth()), GetScreenWidth() * 0.01, GetScreenHeight() * 0.01, 20, BLACK);
+            DrawText(TextFormat("Level: %i", player.GetLevel()), GetScreenWidth() * 0.5, GetScreenHeight() * 0.01, 20, BLACK);
 
         EndDrawing();
     }
