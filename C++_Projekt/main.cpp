@@ -7,7 +7,6 @@
 
 #include <vector>
 #include <random>
-#include <algorithm> // For std::remove_if
 #include <ctime>
 #define VIS_Count 10
 
@@ -30,14 +29,14 @@ int main() {
 
     InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL! Exams of Doom");          //Intialisierung notwendig, um Monitorgröße auslesen zu können
     screenWidth = GetMonitorWidth(monitor) * 2 / 3;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
-    screenHeight = GetMonitorHeight(monitor) * 2 / 3 ;                              //Monitorhöhe auslesen mulitpliziert mit 2/3
+    screenHeight = GetMonitorHeight(monitor) * 2 / 3;                               //Monitorhöhe auslesen mulitpliziert mit 2/3
     ScreenPositionX = (GetMonitorWidth(monitor) - screenWidth) / 2;
     ScreenPositionY = (GetMonitorHeight(monitor) - screenHeight) / 2;
     SetWindowSize(screenWidth, screenHeight);                                       // Größe des Fensters setzen 2/3 des Monitors
     SetWindowPosition(ScreenPositionX, ScreenPositionY);                            // Fenster Mittig positionieren
     
-    HideCursor();
-    Player player(screenWidth, screenHeight, 50, 50, BLUE, 100, 10);
+    //HideCursor();
+    Player player(screenWidth, screenHeight, 50, 50, BLUE, 100, 1);
 
     vector<Enemy> enemies;
     vector<Hindernisse> boxes;

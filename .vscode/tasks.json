@@ -9,7 +9,7 @@
                 "Player.cpp",
                 "Bullet.cpp",
                 "Enemy.cpp",
-                "rooms.cpp",
+                "Rooms.cpp",
                 "Hindernisse.cpp",
                 "-IC:/msys64/ucrt64/include",  // Path for header files
                 "-LC:/msys64/ucrt64/lib",     // Path for library files (the crucial addition!)

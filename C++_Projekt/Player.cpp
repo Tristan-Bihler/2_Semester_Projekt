@@ -33,6 +33,36 @@ void Player::Update(float deltaTime) {
     if (IsKeyDown(KEY_F2)){
         ToggleFullscreen();
     }
+    if (IsKeyPressed(KEY_F)){
+        test = test + 1;
+
+        switch (test) {
+            case 1:
+                waffe = Maschine_Gun;
+                break;
+            case 2:
+                waffe = Gun;
+                break;
+            case 3:
+                waffe = One_Schot;
+                break;
+        };
+
+        enum Inventar art = waffe;
+
+        switch (art) {
+            case 1:
+                bullet_color = BLUE;
+                break;
+            case 2:
+                bullet_color = BROWN;
+                break;
+            case 3:
+                bullet_color = BLACK;
+                test = 0;
+                break;
+        };
+    }
 
     // Spieler bleibt innderhalb des Spielfensters
     if (rect.x < 0) rect.x = 0;
@@ -122,7 +152,7 @@ void Player::Shoot() {
     Vector2 bulletVelocity = { direction.x * bulletSpeed, direction.y * bulletSpeed };
 
     // Kugel in Richtung der Maus feuern
-    bullets.emplace_back(bulletStart.x, bulletStart.y, 10, 10, BROWN, bulletVelocity);
+    bullets.emplace_back(bulletStart.x, bulletStart.y, 10, 10, bullet_color, bulletVelocity);
 }
 
 void Player::SetPosition(float x, float y){

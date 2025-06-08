@@ -58,14 +58,14 @@ void Rooms::changeRoom(Texture2D& background, Texture2D* visuals, Player& player
         if(currentlevel<5){enemyAmount=2;}
         
         for(int c= 0; c<hindernisseAmount; c++){
-            distribX = rand() % int(screenWidth / 10 * 7) + int(screenWidth / 10 * 5);
-            distribY = rand() % int(screenHeight / 10 * 9) + int(screenHeight / 10 * 1);
+            distribX = rand() % (int(screenWidth / 10 * 6) - int(screenWidth / 10 * 4)) + int(screenWidth / 10 * 4);
+            distribY = rand() % (int(screenWidth / 10 * 6) - int(screenWidth / 10 * 1)) + int(screenHeight / 10 * 1);
             boxes.emplace_back(distribX, distribY, 50, 50, BROWN);
         }
 
         for(int c=0; c<enemyAmount; c++){
-            distribX = rand() % int(screenWidth / 10 * 9) + int(screenWidth / 10 * 8);
-            distribY = rand() % int(screenHeight / 10 * 9) + int(screenHeight / 10 * 1);
+            distribX = rand() % (int(screenWidth / 10 * 8) - int(screenWidth / 10 * 7)) + int(screenWidth / 10 * 7);
+            distribY = rand() % (int(screenWidth / 10 * 6) - int(screenWidth / 10 * 1)) + int(screenHeight / 10 * 1);
             enemies.emplace_back(distribX, distribY, 50, 50, GREEN, 30, 100.0f);
         }
         }
