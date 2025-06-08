@@ -4,6 +4,7 @@
 #include "Bullet.hpp"
 #include "Rooms.hpp"
 #include "Hindernisse.hpp"
+
 #include <vector>
 #include <random>
 #include <algorithm> // For std::remove_if
@@ -18,6 +19,7 @@ int main() {
     int screenHeight = 0;     
     int ScreenPositionX;
     int ScreenPositionY;
+    
     Texture2D visuals [VIS_Count] = {};
     Texture2D background;
     Rooms lobby;
@@ -64,6 +66,7 @@ int main() {
         //----------------------------------------------------------------------------------
         player.Update(deltaTime);
 
+        //Auf Kollision prüfen
         for (auto& box : boxes) {
             bool collision = CheckCollisionRecs(player.GetRect(), box.GetRect());
 
@@ -133,7 +136,7 @@ int main() {
         }
 
         // Entferne tote Feinde 
-        for (int i = 0; i < enemies.size(); ) // Notice no increment here
+        for (int i = 0; i < int(enemies.size()); ) // Notice no increment here
         {
 
         if (!enemies[i].IsActive())
@@ -153,7 +156,7 @@ int main() {
 
         lobby.setDoor(lobby.enemyAlive);
 
-        lobby.changeRoom(background, visuals, player, player.GetLevel(), lobby.enemyAlive, enemies, boxes);
+        lobby.changeRoom(background, visuals, player, player.GetLevel(), lobby.enemyAlive, enemies, boxes, screenWidth, screenHeight);
 
 
         // Überprüft Spielende
