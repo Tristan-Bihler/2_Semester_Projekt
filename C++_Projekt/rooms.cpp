@@ -43,6 +43,12 @@ void Rooms::changeRoom(Texture2D& background, Texture2D* visuals, Player& player
         player.Increase_Level();
         player.Increase_Mental_Health_Points();
 
+        for (int i = 0; i < boxes.size(); i++) // Notice no increment here
+        {
+            boxes.erase(boxes.begin()); // Removes the element and shifts everything after it
+                                                // 'i' does not increment, as the next element slides into 'i'
+        }
+
         int enemyAmount = 0;
         int hindernisseAmount = 2;
 

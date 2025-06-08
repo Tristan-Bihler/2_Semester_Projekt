@@ -73,6 +73,19 @@ int main() {
             }
         }
 
+
+        for (auto& box : boxes) {
+            for (auto& enemy : enemies) {
+                bool collision = CheckCollisionRecs(enemy.GetRect(), box.GetRect());
+
+                if (collision)
+                {
+                    enemy.SetPosition(enemy.GetPreviousPositionX(), enemy.GetPreviousPositionY());
+                }
+            }
+        }
+
+        
         // Update Gegner
         for (Enemy& enemy : enemies) {
             enemy.Update(deltaTime, {player.GetRect().x, player.GetRect().y});
@@ -80,7 +93,7 @@ int main() {
 
         // Holt eine Referenz auf die Liste der vom Spieler abgefeuerten Geschosse
         vector<Bullet>& playerBullets = player.GetBulletsMutable();
-        for (size_t i = 0; i < playerBullets.size(); ) {                                 // Durchläuft Geschosse des Spielers, prüft Kollisionen mit Gegnern
+        for (size_t i = 0; i < playerBullets.size(); ) {                                 // Durchläuft Geschosse des Spielers, prüft Kollisionen der Schüsse mit Gegnern
             bool bulletHit = false;                                                      // Ob Geschoss einen Gegner getroffen hat
             for (size_t j = 0; j < enemies.size(); ) {
                 if (CheckCollisionRecs(playerBullets[i].GetRect(), enemies[j].GetRect())) {
@@ -120,10 +133,20 @@ int main() {
         }
 
         // Entferne tote Feinde 
-        enemies.erase(std::remove_if(enemies.begin(), enemies.end(),
-                                     [](const Enemy& e){ return !e.IsActive(); }),
-                      enemies.end());
-        
+        for (int i = 0; i < enemies.size(); ) // Notice no increment here
+        {
+
+        if (!enemies[i].IsActive())
+            {
+                enemies.erase(enemies.begin() + i); // Removes the element and shifts everything after it
+                                                // 'i' does not increment, as the next element slides into 'i'
+            }
+        else
+            {
+                i++; // Only move to the next element if the current one was kept
+            }
+        }
+
         lobby.enemyAlive = !enemies.empty();
         
         //Raumwechsel

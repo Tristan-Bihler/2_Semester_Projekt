@@ -11,6 +11,10 @@ void Enemy::Update(float deltaTime, Vector2 playerPosition) {
     if (currentHealth <= 0) return; // Don't update dead enemies
 
     // Calculate direction vector to player
+
+    previouspositionx = rect.x;
+    previouspositiony = rect.y;
+
     float dx = playerPosition.x - rect.x;
     float dy = playerPosition.y - rect.y;
 
@@ -43,4 +47,9 @@ void Enemy::TakeDamage(int amount) {
     if (currentHealth < 0) {
         currentHealth = 0;
     }
+}
+
+void Enemy::SetPosition(float x, float y){
+    rect.x = x;
+    rect.y = y;
 }
