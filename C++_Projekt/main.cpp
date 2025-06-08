@@ -8,7 +8,6 @@
 #include <vector>
 #include <random>
 #include <ctime>
-#define VIS_Count 10
 
 using namespace std;
 
@@ -17,20 +16,19 @@ int main() {
     int monitor = GetCurrentMonitor();                                              // Aktuellen Monitor festlegen     
     int screenWidth = 0;     
     int screenHeight = 0;
+    int screenWidth_o = 0;
+    int screenHeight_o = 0;
     int ScreenPositionX;
     int ScreenPositionY;
     
-    Texture2D visuals [VIS_Count] = {};
-    Texture2D background;
     Rooms lobby;
     string pfad = ("assets");
-    //lobby.preLoadTextures(pfad, visuals);
-    background = visuals[0];
-
 
     InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL! Exams of Doom");          //Intialisierung notwendig, um Monitorgröße auslesen zu können
-    screenWidth = GetMonitorWidth(monitor) * 2 / 3;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
-    screenHeight = GetMonitorHeight(monitor) * 2 / 3;                               //Monitorhöhe auslesen mulitpliziert mit 2/3
+    screenWidth_o = GetMonitorWidth(monitor) * 2 / 3;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
+    screenHeight_o = GetMonitorHeight(monitor) * 2 / 3;                               //Monitorhöhe auslesen mulitpliziert mit 2/3
+    screenWidth = screenWidth_o;
+    screenHeight = screenHeight_o;
     ScreenPositionX = (GetMonitorWidth(monitor) - screenWidth) / 2;
     ScreenPositionY = (GetMonitorHeight(monitor) - screenHeight) / 2;
     SetWindowSize(screenWidth, screenHeight);                                       // Größe des Fensters setzen 2/3 des Monitors
@@ -65,7 +63,7 @@ int main() {
 
         // Update  
         //----------------------------------------------------------------------------------
-        player.Update(deltaTime);
+        player.Update(deltaTime, screenWidth, screenHeight);
 
         //Auf Kollision prüfen
         for (auto& box : boxes) {
@@ -126,11 +124,10 @@ int main() {
             }
         }
 
-
         // Spieler - Feind Collision
         for (auto& enemy : enemies) {
             if (enemy.IsActive() && CheckCollisionRecs(player.GetRect(), enemy.GetRect())) {
-                player.TakeDamage(0.2 * player.GetLevel());                                  // Spieler verliert 1 Lebenspunkt pro Frame, wenn mit Gegner kollidiert
+                player.TakeDamage(1 + 0.2 * (player.GetLevel() - 1));                                  // Spieler verliert 1 Lebenspunkt pro Frame, wenn mit Gegner kollidiert
             }
         }
 
@@ -155,7 +152,7 @@ int main() {
 
         lobby.setDoor(lobby.enemyAlive);
 
-        lobby.changeRoom(background, visuals, player, player.GetLevel(), lobby.enemyAlive, enemies, boxes, screenWidth, screenHeight);
+        lobby.changeRoom(player, player.GetLevel(), lobby.enemyAlive, enemies, boxes, &screenWidth, &screenHeight, screenWidth_o, screenHeight_o);
 
 
         // Überprüft Spielende
@@ -183,7 +180,6 @@ int main() {
             //-> immer selbe Position und gleiche größe -> an bildschirm anpassen 
             // int GetScreenWidth(void);        
 
-            DrawTexture(background, 0,200, WHITE);
             DrawText(TextFormat("Health: %i", player.GetHealth()), GetScreenWidth() * 0.01, GetScreenHeight() * 0.01, 20, BLACK);
             DrawText(TextFormat("Level: %i", player.GetLevel()), GetScreenWidth() * 0.5, GetScreenHeight() * 0.01, 20, BLACK);
 

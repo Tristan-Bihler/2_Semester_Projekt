@@ -23,8 +23,7 @@ private:
     int currentLevel;
     Color bullet_color;
     int bullet_damage;
-    int test = 1;
-    Inventar waffe;
+    int Inventar_platz = 1;
 
     float firerate;
 
@@ -47,7 +46,7 @@ private:
 public:
     Player(float screenWidth,float screenHeight, float width, float height, Color color, int maxHealth, int beginning_level);
 
-    void Update(float deltaTime);   // deltaTime für konstante Bewegung
+    void Update(float deltaTime, float screenWidth, float screenHeight);   // deltaTime für konstante Bewegung
     void Draw();
     void TakeDamage(int amount);
     void Shoot();                   // Neue Methode um die Schüsse zu erstellen

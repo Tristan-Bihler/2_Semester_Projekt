@@ -13,22 +13,23 @@ using namespace std;
 class Rooms {
 
 private:
-    Rectangle door ={350, 201, 100, 30};
+    
     //Texture2D visuals [VIS_Count] = {};
     string dateiname;
     int enemyAmount;
-    int screenWidth;
-    int screenHeight;
-    int monitor;
+    int monitor = GetCurrentMonitor();  
+    float screenWidth = GetMonitorWidth(monitor) * 0.66f;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
+    float screenHeight = GetMonitorHeight(monitor) * 0.66f;   
+    int ScreenPositionX;
+    int ScreenPositionY;
+    Rectangle door ={screenWidth * 0.9f, screenHeight * 0.5f, 30, 100};
 
 public: 
     //Texture2D visuals [VIS_Count] = {};
     string pfad; 
     bool enemyAlive;
     int getEnemyAmount()const {return enemyAmount;};
-    void preLoadTextures(const std::string& pfad,Texture2D* visuals);
-    void kickTextures(Texture2D* visuals);
     void setDoor(bool enemyAlive);
-    void changeRoom(Texture2D& background, Texture2D* visuals, Player& player, int currentlevel, bool enemyAlve, vector<Enemy>& enemies, vector<Hindernisse>& boxes, float screenWidth, float screenHeight);
+    void changeRoom(Player& player, int currentlevel,bool enemyAlive, vector<Enemy>& enemies, vector<Hindernisse>& boxes, int* screenWidth, int* screenHeight, int screenWidth_o, int screenHeight_o);
 
 };

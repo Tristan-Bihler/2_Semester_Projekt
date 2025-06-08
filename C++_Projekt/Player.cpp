@@ -5,13 +5,13 @@
 
 // Implementierung des Constructors
 Player::Player(float screenWidth,float screenHeight, float width, float height, Color color, int maxHealth, int beginning_level)
-    : rect({(screenWidth / 2 - 25), (screenHeight - 75), width, height}), screenWidth(screenWidth), screenHeight(screenHeight), color(color), speed(200.0f), // Speed in pixels per second
+    : rect({(screenWidth / 10 * 1), (screenHeight / 10 * 5), width, height}), screenWidth(screenWidth), screenHeight(screenHeight), color(color), speed(200.0f), // Speed in pixels per second
       maxHealth(maxHealth), currentHealth(maxHealth), currentLevel(beginning_level),
       shootCooldown(0.2f), currentShootCooldown(0.0f) {
 }
 
 // Implementierungs Methode aktualisieren (nun deltaTime)
-void Player::Update(float deltaTime) {
+void Player::Update(float deltaTime, float screenWidth, float screenHeight) {
     // Bewegung
 
     previouspositionx = rect.x;
@@ -34,41 +34,27 @@ void Player::Update(float deltaTime) {
         ToggleFullscreen();
     }
     if (IsKeyPressed(KEY_F)){
-        test = test + 1;
-
-        switch (test) {
-            case 1:
-                waffe = Maschine_Gun;
-                break;
-            case 2:
-                waffe = Gun;
-                break;
-            case 3:
-                waffe = One_Schot;
-                break;
-        };
-
-        enum Inventar art = waffe;
-
-        switch (art) {
-            case 1:
-                bullet_color = BLUE;
-                firerate = 1;
-                bullet_damage = 1;
-                break;
-            case 2:
-                bullet_color = BROWN;
-                firerate = 0.5;
-                bullet_damage= 10;
-                break;
-            case 3:
-                bullet_color = BLACK;
-                firerate = 0.1;
-                bullet_damage= 50;
-                test = 0; 
-                break;
-        };
+        Inventar_platz = Inventar_platz + 1;
     }
+
+    switch (Inventar_platz) {
+        case 1:
+            bullet_color = BLUE;
+            firerate = 1;
+            bullet_damage = 1;
+            break;
+        case 2:
+            bullet_color = BROWN;
+            firerate = 0.5;
+            bullet_damage= 10;
+            break;
+        case 3:
+            bullet_color = BLACK;
+            firerate = 0.1;
+            bullet_damage= 50;
+            Inventar_platz = 0; 
+            break;
+    };
 
     // Spieler bleibt innderhalb des Spielfensters
     if (rect.x < 0) rect.x = 0;
