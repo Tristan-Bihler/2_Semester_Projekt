@@ -23,12 +23,19 @@ void Rooms::kickTextures(Texture2D* visuals){
     }
 }
 
+// void Rooms:: setDoor(bool enemyAlive){
+//     this-> door ={350, 201, 100, 30};
+//     if (!enemyAlive){DrawRectangleRec(door, GOLD);}                //enemyAlive Variable muss noch erstellt werden
+//     else {DrawRectangleRec(door, GRAY);}
+// }
+
 void Rooms:: setDoor(bool enemyAlive){
-    this-> door ={350, 201, 100, 30};
+    //printf("door.x: %d, door.y: %d\n", door.x, door.y);
+    //printf("ScreenWidth: %d, ScreenHeight: %d\n", screenWidth, screenHeight);
+        
     if (!enemyAlive){DrawRectangleRec(door, GOLD);}                //enemyAlive Variable muss noch erstellt werden
     else {DrawRectangleRec(door, GRAY);}
 }
-
 
 void Rooms::changeRoom(Texture2D& background, Texture2D* visuals, Player& player, int currentlevel,bool enemyAlive, vector<Enemy>& enemies, vector<Hindernisse>& boxes, float screenWidth, float screenHeight) {
     int distribX = 0;
@@ -42,6 +49,18 @@ void Rooms::changeRoom(Texture2D& background, Texture2D* visuals, Player& player
         player.SetPosition(400, player.GetRect().height + 35);
         player.Increase_Level();
         player.Increase_Mental_Health_Points();
+
+        int monitor = GetCurrentMonitor();                                // Muss neu ausgelesen werden, da sonst screenWidth dauerhaft 0 ist
+        int screenWidth = GetMonitorWidth(monitor);                 
+        int screenHeight = GetMonitorHeight(monitor);
+        door.x = screenWidth / 10 * 7;                                         // Tür soll immer Rechts erscheinen
+        door.y = GetRandomValue (screenHeight / 10 * 1, screenHeight / 10 *9);   // Höhe der Tür soll varieren
+        door.height = 100;
+        door.width = 30;
+        //door = {screenWidth * 0.7 , GetRandomValue (screenHeight / 10 * 1, screenHeight / 10 *9), 30, 100};
+        printf("door.x: %d, door.y: %d\n", door.x, door.y);
+        printf("ScreenWidth: %d, ScreenHeight: %d\n", screenWidth, screenHeight);
+
 
         for (int i = 0; i < int(boxes.size()); i++) // Notice no increment here
         {
