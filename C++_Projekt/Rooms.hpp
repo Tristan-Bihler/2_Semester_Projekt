@@ -17,10 +17,11 @@ private:
     int monitor = GetCurrentMonitor();  
     int ScreenPositionX;
     int ScreenPositionY;
-    Rectangle door ={900, 500, 30, 100};
+    Rectangle door;
 
-public: 
+public:
     bool enemyAlive;
+    Rooms(int screenWidth,int screenHeight);
     int getEnemyAmount()const {return enemyAmount;};
     void setDoor(bool enemyAlive);
     void changeRoom(Player& player, int currentlevel,bool enemyAlive, vector<Enemy>& enemies, vector<Hindernisse>& boxes, int* screenWidth, int* screenHeight, int screenWidth_o, int screenHeight_o);

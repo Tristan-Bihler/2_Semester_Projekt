@@ -10,6 +10,10 @@
 
 using namespace std;
 
+Rooms::Rooms(int screenWidth,int screenHeight){
+    door = {screenWidth * 0.9f, screenHeight * 0.5f, 30, 100};
+}
+
 void Rooms:: setDoor(bool enemyAlive){
     if (!enemyAlive){DrawRectangleRec(door, GOLD);}                //enemyAlive Variable muss noch erstellt werden
     else {DrawRectangleRec(door, GRAY);}
@@ -50,24 +54,23 @@ void Rooms::changeRoom(Player& player, int currentlevel,bool enemyAlive, vector<
         }
 
         int enemyAmount = 0;
-        int hindernisseAmount = 2;
+        int hindernisseAmount = 4;
 
-        if(currentlevel<20){enemyAmount=10;}
+        if(currentlevel<100){enemyAmount=10;}
         if(currentlevel<15){enemyAmount=6;}
         if(currentlevel<10){enemyAmount=4;}
         if(currentlevel<5){enemyAmount=2;}
         
-        for(int c= 0; c<hindernisseAmount; c++){
-            distribX = GetRandomValue(*screenWidth / 10 * 4, *screenWidth / 10 * 6);
-            distribY = GetRandomValue(*screenHeight / 10 * 1, *screenHeight / 10 * 9);
+        for(int c= 1; c<hindernisseAmount; c++){
+            distribX = GetRandomValue(*screenWidth * 0.4f, *screenWidth * 0.6f);
+            distribY = GetRandomValue(*screenHeight * 0.1f, *screenHeight * 0.9f);
             boxes.emplace_back(distribX, distribY, 50, 50, BROWN);
         }
 
         for(int c=0; c<enemyAmount; c++){
-            distribX = GetRandomValue(*screenWidth  / 10 * 7, *screenWidth  / 10 * 8);
-            distribY = GetRandomValue(*screenHeight / 10 * 1, *screenHeight / 10 * 9);
+            distribX = GetRandomValue(*screenWidth  * 0.7f, *screenWidth  * 0.8f);
+            distribY = GetRandomValue(*screenHeight * 0.1f, *screenHeight * 0.9f);
             enemies.emplace_back(distribX, distribY, 50, 50, GREEN, 30 + 2 * (player.GetLevel() - 1), 100.0f);
         }
-        }
-        //TODO Respawn Hindernisse
+    }
 }

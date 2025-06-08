@@ -21,9 +21,6 @@ int main() {
     int ScreenPositionX;
     int ScreenPositionY;
     
-    Rooms lobby;
-    string pfad = ("assets");
-
     InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL! Exams of Doom");          //Intialisierung notwendig, um Monitorgröße auslesen zu können
     screenWidth_o = GetMonitorWidth(monitor) * 2 / 3;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
     screenHeight_o = GetMonitorHeight(monitor) * 2 / 3;                               //Monitorhöhe auslesen mulitpliziert mit 2/3
@@ -33,9 +30,11 @@ int main() {
     ScreenPositionY = (GetMonitorHeight(monitor) - screenHeight) / 2;
     SetWindowSize(screenWidth, screenHeight);                                       // Größe des Fensters setzen 2/3 des Monitors
     SetWindowPosition(ScreenPositionX, ScreenPositionY);                            // Fenster Mittig positionieren
+
+    Rooms lobby(screenWidth, screenHeight);
     
     //HideCursor();
-    Player player(screenWidth, screenHeight, 50, 50, BLUE, 100, 1);
+    Player player(screenWidth, screenHeight, 50, 50, BLUE, 100, 98);
 
     vector<Enemy> enemies;
     vector<Hindernisse> boxes;
@@ -153,9 +152,36 @@ int main() {
 
         // Überprüft Spielende
         if (player.GetHealth() <= 0) {
-                // Spielende verwalten (z. B. Nachricht anzeigen, Spiel neu starten)  
-                // Im Moment wird einfach das Fenster geschlossen 
-            TraceLog(LOG_INFO, "GAME OVER! Player defeated.");
+            screenWidth = GetMonitorWidth(monitor) * 2 / 3;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
+            screenHeight = GetMonitorHeight(monitor) * 2 / 3;                               //Monitorhöhe auslesen mulitpliziert mit 2/3
+            ScreenPositionX = (GetMonitorWidth(monitor) - screenWidth) / 2;
+            ScreenPositionY = (GetMonitorHeight(monitor) - screenHeight) / 2;
+            SetWindowSize(screenWidth, screenHeight);                                       // Größe des Fensters setzen 2/3 des Monitors
+            SetWindowPosition(ScreenPositionX, ScreenPositionY);
+
+             while (!IsKeyPressed(KEY_SPACE) && !WindowShouldClose()) {
+                BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
+                ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
+                DrawText("Du hast Aufgegeben. Drücke die Leertaste, um das Spiel zu Verlassen!", screenWidth / 5, screenHeight / 2, 20, BLACK);
+                EndDrawing();
+            }
+            break; // beendet Spiel-Schleife
+        }
+
+        if (player.GetLevel() == 100) {
+            screenWidth = GetMonitorWidth(monitor) * 2 / 3;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
+            screenHeight = GetMonitorHeight(monitor) * 2 / 3;                               //Monitorhöhe auslesen mulitpliziert mit 2/3
+            ScreenPositionX = (GetMonitorWidth(monitor) - screenWidth) / 2;
+            ScreenPositionY = (GetMonitorHeight(monitor) - screenHeight) / 2;
+            SetWindowSize(screenWidth, screenHeight);                                       // Größe des Fensters setzen 2/3 des Monitors
+            SetWindowPosition(ScreenPositionX, ScreenPositionY);
+
+            while (!IsKeyPressed(KEY_SPACE) && !WindowShouldClose()) {
+                BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
+                ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
+                DrawText("Du hast die Klausurephase überstanden. Drücke die Leertaste, um in das echte Leben zurück zu kehren!", screenWidth / 5, screenHeight / 2, 20, BLACK);
+                EndDrawing();
+            }
             break; // beendet Spiel-Schleife
         }
 
