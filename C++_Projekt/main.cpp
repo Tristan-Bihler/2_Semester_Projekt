@@ -12,10 +12,11 @@
 
 using namespace std;
 
+
 int main() {
-    int monitor = GetCurrentMonitor();                                              // Aktuellen Monitor festlegen
+    int monitor = GetCurrentMonitor();                                              // Aktuellen Monitor festlegen     
     int screenWidth = 0;     
-    int screenHeight = 0;     
+    int screenHeight = 0;
     int ScreenPositionX;
     int ScreenPositionY;
     

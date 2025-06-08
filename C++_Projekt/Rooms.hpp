@@ -13,10 +13,13 @@ using namespace std;
 class Rooms {
 
 private:
-    Rectangle door;
+    Rectangle door ={350, 201, 100, 30};
     //Texture2D visuals [VIS_Count] = {};
     string dateiname;
     int enemyAmount;
+    int screenWidth;
+    int screenHeight;
+    int monitor;
 
 public: 
     //Texture2D visuals [VIS_Count] = {};
@@ -27,4 +30,5 @@ public:
     void kickTextures(Texture2D* visuals);
     void setDoor(bool enemyAlive);
     void changeRoom(Texture2D& background, Texture2D* visuals, Player& player, int currentlevel, bool enemyAlve, vector<Enemy>& enemies, vector<Hindernisse>& boxes, float screenWidth, float screenHeight);
+
 };

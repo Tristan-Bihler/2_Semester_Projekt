@@ -10,38 +10,35 @@
 
 using namespace std;
 
-void Rooms::preLoadTextures(const string& pfad,Texture2D* visuals){
-    for(int i = 0; i<VIS_Count; i++){
-        string dateiname = pfad + "/raum" + to_string(i) + ".png";
-        //visuals[i] = LoadTexture(dateiname.c_str());
-    }
-}
-
-void Rooms::kickTextures(Texture2D* visuals){
-    for(int x = 0; x<VIS_Count; x++){
-        //UnloadTexture(visuals[x]);
-    }
-}
-
 void Rooms:: setDoor(bool enemyAlive){
-    door ={350, 201, 100, 30};
     if (!enemyAlive){DrawRectangleRec(door, GOLD);}                //enemyAlive Variable muss noch erstellt werden
     else {DrawRectangleRec(door, GRAY);}
 }
 
-
-void Rooms::changeRoom(Texture2D& background, Texture2D* visuals, Player& player, int currentlevel,bool enemyAlive, vector<Enemy>& enemies, vector<Hindernisse>& boxes, float screenWidth, float screenHeight) {
+void Rooms::changeRoom(Player& player, int currentlevel,bool enemyAlive, vector<Enemy>& enemies, vector<Hindernisse>& boxes, int* screenWidth, int* screenHeight, int screenWidth_o, int screenHeight_o) {
     int distribX = 0;
     int distribY = 0;
     if (CheckCollisionRecs(player.GetRect(), this-> door)&&!enemyAlive) {
         int raumIndex = currentlevel / 10;     //Alle 10 Level ändert sich der Hintergrund
-        if (raumIndex < VIS_Count) {           //Check das Index < 10
-            //UnloadTexture(background);
-            //background = visuals[raumIndex];
-        }
-        player.SetPosition(400, player.GetRect().height + 35);
+
+        player.SetPosition(100, player.GetRect().height + 35);
         player.Increase_Level();
         player.Increase_Mental_Health_Points();
+
+        *screenWidth = screenWidth_o + screenWidth_o * GetRandomValue(-3, 3) / 10;
+        *screenHeight = screenHeight_o + screenHeight_o * GetRandomValue(-3, 3) / 10;
+        int monitor = GetCurrentMonitor();   
+        ScreenPositionX = (GetMonitorWidth(monitor) - *screenWidth) / 2;
+        ScreenPositionY = (GetMonitorHeight(monitor) - *screenHeight) / 2;
+
+        SetWindowSize(*screenWidth, *screenHeight);
+        SetWindowPosition(ScreenPositionX, ScreenPositionY);  
+
+        door.x = *screenWidth / 10 * 9;                                         // Tür soll immer Rechts erscheinen
+        door.y = GetRandomValue (*screenHeight / 10 * 1, *screenHeight / 10 * 9);   // Höhe der Tür soll varieren
+        door.height = 100;
+        door.width = 30;
+        //door = {screenWidth * 0.7 , GetRandomValue (screenHeight / 10 * 1, screenHeight / 10 *9), 30, 100};
 
         for (int i = 0; i < int(boxes.size()); i++) // Notice no increment here
         {
@@ -58,14 +55,14 @@ void Rooms::changeRoom(Texture2D& background, Texture2D* visuals, Player& player
         if(currentlevel<5){enemyAmount=2;}
         
         for(int c= 0; c<hindernisseAmount; c++){
-            distribX = rand() % (int(screenWidth / 10 * 6) - int(screenWidth / 10 * 4)) + int(screenWidth / 10 * 4);
-            distribY = rand() % (int(screenWidth / 10 * 6) - int(screenWidth / 10 * 1)) + int(screenHeight / 10 * 1);
+            distribX = GetRandomValue(*screenWidth / 10 * 4, *screenWidth / 10 * 6);
+            distribY = GetRandomValue(*screenHeight / 10 * 1, *screenHeight / 10 * 9);
             boxes.emplace_back(distribX, distribY, 50, 50, BROWN);
         }
 
         for(int c=0; c<enemyAmount; c++){
-            distribX = rand() % (int(screenWidth / 10 * 8) - int(screenWidth / 10 * 7)) + int(screenWidth / 10 * 7);
-            distribY = rand() % (int(screenWidth / 10 * 6) - int(screenWidth / 10 * 1)) + int(screenHeight / 10 * 1);
+            distribX = GetRandomValue(*screenWidth  / 10 * 7, *screenWidth  / 10 * 8);
+            distribY = GetRandomValue(*screenHeight / 10 * 1, *screenHeight / 10 * 9);
             enemies.emplace_back(distribX, distribY, 50, 50, GREEN, 30, 100.0f);
         }
         }
