@@ -40,10 +40,6 @@ int main() {
     vector<Enemy> enemies;
     vector<Hindernisse> boxes;
 
-    random_device rd;
-    mt19937 gen(rd());
-    srand(time(0));
-
     // Setze Ziel-Frames Per Second für flüssige Animation
     SetTargetFPS(60);
 

@@ -41,7 +41,7 @@ void Player::Update(float deltaTime, float screenWidth, float screenHeight) {
         case 1:
             bullet_color = BLUE;
             firerate = 1;
-            bullet_damage = 1;
+            bullet_damage = 3;
             break;
         case 2:
             bullet_color = BROWN;

@@ -19,8 +19,6 @@ void Rooms::changeRoom(Player& player, int currentlevel,bool enemyAlive, vector<
     int distribX = 0;
     int distribY = 0;
     if (CheckCollisionRecs(player.GetRect(), this-> door)&&!enemyAlive) {
-        int raumIndex = currentlevel / 10;     //Alle 10 Level ändert sich der Hintergrund
-
         player.SetPosition(100, player.GetRect().height + 35);
         player.Increase_Level();
         player.Increase_Mental_Health_Points();
@@ -46,6 +44,11 @@ void Rooms::changeRoom(Player& player, int currentlevel,bool enemyAlive, vector<
                                                 // 'i' does not increment, as the next element slides into 'i'
         }
 
+        vector<Bullet>& playerBullets = player.GetBulletsMutable();
+        for (size_t i = 0; i < playerBullets.size(); ) {
+            playerBullets.erase(playerBullets.begin() + i);
+        }
+
         int enemyAmount = 0;
         int hindernisseAmount = 2;
 
@@ -63,7 +66,7 @@ void Rooms::changeRoom(Player& player, int currentlevel,bool enemyAlive, vector<
         for(int c=0; c<enemyAmount; c++){
             distribX = GetRandomValue(*screenWidth  / 10 * 7, *screenWidth  / 10 * 8);
             distribY = GetRandomValue(*screenHeight / 10 * 1, *screenHeight / 10 * 9);
-            enemies.emplace_back(distribX, distribY, 50, 50, GREEN, 30, 100.0f);
+            enemies.emplace_back(distribX, distribY, 50, 50, GREEN, 30 + 2 * (player.GetLevel() - 1), 100.0f);
         }
         }
         //TODO Respawn Hindernisse
