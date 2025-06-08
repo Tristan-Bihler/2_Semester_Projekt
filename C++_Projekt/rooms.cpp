@@ -2,6 +2,7 @@
 #include "Rooms.hpp"
 #include "Enemy.hpp"
 #include "Player.hpp"
+#include "Hindernisse.hpp"
 #include "string"
 #include <vector>
 #include <ctime>
@@ -29,7 +30,7 @@ void Rooms:: setDoor(bool enemyAlive){
 }
 
 
-void Rooms::changeRoom(Texture2D& background, Texture2D* visuals, Player& player, int currentlevel,bool enemyAlive, vector<Enemy>& enemies) {
+void Rooms::changeRoom(Texture2D& background, Texture2D* visuals, Player& player, int currentlevel,bool enemyAlive, vector<Enemy>& enemies, vector<Hindernisse>& boxes) {
     int distribX = 0;
     int distribY = 0;
     if (CheckCollisionRecs(player.GetRect(), this-> door)&&!enemyAlive) {
@@ -40,18 +41,25 @@ void Rooms::changeRoom(Texture2D& background, Texture2D* visuals, Player& player
         }
         player.SetPosition(400, player.GetRect().height + 35);
         player.Increase_Level();
-        
+        player.Increase_Mental_Health_Points();
+
         int enemyAmount = 0;
+        int hindernisseAmount = 2;
+
         if(currentlevel<20){enemyAmount=10;}
         if(currentlevel<15){enemyAmount=6;}
         if(currentlevel<10){enemyAmount=4;}
         if(currentlevel<5){enemyAmount=2;}
         
+        for(int c= 0; c<hindernisseAmount; c++){
+            distribX = rand() % 1000 + 800;
+            distribY = rand() % 750 + 50;
+            boxes.emplace_back(distribX, distribY, 50, 50, BROWN);
+        }
 
         for(int c=0; c<enemyAmount; c++){
             distribX = rand() % 1000 + 800;
             distribY = rand() % 750 + 50;
-            printf("Enemy spawned");
             enemies.emplace_back(distribX, distribY, 50, 50, GREEN, 30, 100.0f);
         }
         }

@@ -2,6 +2,7 @@
 #include "raylib.h"
 #include "Enemy.hpp"
 #include "Player.hpp"
+#include "Hindernisse.hpp"
 #include "string"
 #include <vector>
 #include <ctime>
@@ -25,5 +26,5 @@ public:
     void preLoadTextures(const std::string& pfad,Texture2D* visuals);
     void kickTextures(Texture2D* visuals);
     void setDoor(bool enemyAlive);
-    void changeRoom(Texture2D& background, Texture2D* visuals, Player& player, int currentlevel, bool enemyAlve, vector<Enemy>& enemies);
+    void changeRoom(Texture2D& background, Texture2D* visuals, Player& player, int currentlevel, bool enemyAlve, vector<Enemy>& enemies, vector<Hindernisse>& boxes);
 };

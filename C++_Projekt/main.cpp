@@ -3,6 +3,7 @@
 #include "Enemy.hpp"
 #include "Bullet.hpp"
 #include "Rooms.hpp"
+#include "Hindernisse.hpp"
 #include <vector>
 #include <random>
 #include <algorithm> // For std::remove_if
@@ -34,9 +35,11 @@ int main() {
     SetWindowPosition(ScreenPositionX, ScreenPositionY);                            // Fenster Mittig positionieren
     
     HideCursor();
-    Player player(screenWidth, screenHeight, 50, 50, BLUE, 100, 1);
+    Player player(screenWidth, screenHeight, 50, 50, BLUE, 100, 10);
 
     vector<Enemy> enemies;
+    vector<Hindernisse> boxes;
+
     random_device rd;
     mt19937 gen(rd());
     srand(time(0));
@@ -45,24 +48,30 @@ int main() {
     SetTargetFPS(60);
 
     //Start mit Leertaste
-    while (!IsKeyPressed(KEY_SPACE)) {
-    BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
-    ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
-    DrawText("Drücke die Leertaste, um zu starten!", screenWidth / 2 - 200, screenHeight / 2, 20, BLACK);
-    EndDrawing();
+    while (!IsKeyPressed(KEY_SPACE) && !WindowShouldClose()) {
+        BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
+        ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
+        DrawText("Drücke die Leertaste, um zu starten!", screenWidth / 2 - 200, screenHeight / 2, 20, BLACK);
+        EndDrawing();
     }
 
     // Spiel-Schleife
     while (!WindowShouldClose()) {
-        
-
-
         // Zeit pro Frame für gleichmäßige Bewegungen
         float deltaTime = GetFrameTime();
 
-        // Update
+        // Update  
         //----------------------------------------------------------------------------------
         player.Update(deltaTime);
+
+        for (auto& box : boxes) {
+            bool collision = CheckCollisionRecs(player.GetRect(), box.GetRect());
+
+            if (collision)
+            {
+                player.SetPosition(player.GetPreviousPositionX(), player.GetPreviousPositionY());
+            }
+        }
 
         // Update Gegner
         for (Enemy& enemy : enemies) {
@@ -85,6 +94,12 @@ int main() {
                     }
                 } else {
                     ++j;                                                                // Nächster Gegner
+                }
+            }
+
+            for (size_t j = 0; j < boxes.size(); j++) {
+                if (CheckCollisionRecs(playerBullets[i].GetRect(), boxes[j].GetRect())) {
+                    bulletHit = true;
                 }
             }
 
@@ -115,7 +130,7 @@ int main() {
 
         lobby.setDoor(lobby.enemyAlive);
 
-        lobby.changeRoom(background, visuals, player, player.GetLevel(), lobby.enemyAlive, enemies);
+        lobby.changeRoom(background, visuals, player, player.GetLevel(), lobby.enemyAlive, enemies, boxes);
 
 
         // Überprüft Spielende
@@ -130,7 +145,11 @@ int main() {
 
             ClearBackground(RAYWHITE);
 
-            player.Draw();                                                             // Zeichnet den Spieler auf den Bildschirm
+            player.Draw();                                                               // Zeichnet den Spieler auf den Bildschirm
+
+            for (const auto& box : boxes) {
+                box.Draw();
+            }
 
             for (const auto& enemy : enemies) {
                 enemy.Draw();

@@ -13,11 +13,6 @@ Player::Player(float screenWidth,float screenHeight, float width, float height, 
 // Implementierungs Methode aktualisieren (nun deltaTime)
 void Player::Update(float deltaTime) {
     // Bewegung
-
-    previouspositionx = rect.x;
-    previouspositiony = rect.y;
-
-
     if (IsKeyDown(KEY_W)) {
         rect.y -= speed * deltaTime;
     }
@@ -96,10 +91,10 @@ void Player::Increase_Level() {
     currentLevel = currentLevel + 1;
 }
 
-void Player::Increase_Mental_Health_Points(){
-    maxHealth = 100 * pow((1.15), (currentLevel - 1));
-    currentHealth = maxHealth;
-}
+// void Player::Shoot() {
+//     Erstellen eines neuen Schusses in der Mitte des Spielers, welcher nach oben weggeht
+//     bullets.emplace_back(rect.x + rect.width / 2 - 2, rect.y, 4, 10, BLUE, 400.0f);
+// }
 
 void Player::Shoot() {
 
@@ -123,9 +118,4 @@ void Player::Shoot() {
 
     // Kugel in Richtung der Maus feuern
     bullets.emplace_back(bulletStart.x, bulletStart.y, 10, 10, BROWN, bulletVelocity);
-}
-
-void Player::SetPosition(float x, float y){
-    rect.x = x;
-    rect.y = y;
 }

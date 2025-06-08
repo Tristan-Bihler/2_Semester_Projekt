@@ -3,36 +3,21 @@
 #include "raylib.h"                //C:/Users/finnes/Documents/GitHub/2_Semester_Projekt/C++_Projekt/
 #include <vector>               // managing der Schüsse
 #include "Bullet.hpp"           // Deklarieren bzw. Einbinden der Bullet-Klasse
+#include "Hindernisse.hpp"
 
 class Player {
-public:
-    Player(float screenWidth,float screenHeight, float width, float height, Color color, int maxHealth, int beginning_level);
-
-    void Update(float deltaTime);   // deltaTime für konstante Bewegung
-    void Draw();
-    void TakeDamage(int amount);
-    void Shoot();                   // Neue Methode um die Schüsse zu erstellen
-    void Increase_Level();
-    void SetPosition(float x, float y);
-
-    Rectangle GetRect() const { return rect; }
-    int GetHealth() const { return currentHealth; }
-    int GetLevel() const { return currentLevel; }
-    int GetPositionX() const{ return rect.x; }
-
-
-    const std::vector<Bullet>& GetBullets() const { return bullets; }       // Zeichnungen und Kollisionsüberprüfung
-    std::vector<Bullet>& GetBulletsMutable() { return bullets; }            // Ändern (modifizieren) und entfernen der Schüsse
-
 private:
     Rectangle rect;
+    float screenWidth;
+    float screenHeight;
     Color color;
     float speed;
     int maxHealth;
     int currentHealth;
     int currentLevel;
-    int screenWidth;
-    int screenHeight;
+
+    int previouspositionx;
+    int previouspositiony;
 
     // Schüsse abgeben
     float shootCooldown;
@@ -47,6 +32,25 @@ private:
     float bulletSpeed;
     Vector2 bulletVelocity;
 
+public:
+    Player(float screenWidth,float screenHeight, float width, float height, Color color, int maxHealth, int beginning_level);
+
+    void Update(float deltaTime);   // deltaTime für konstante Bewegung
+    void Draw();
+    void TakeDamage(int amount);
+    void Shoot();                   // Neue Methode um die Schüsse zu erstellen
+    void Increase_Level();
+    void Increase_Mental_Health_Points();
+    void SetPosition(float x, float y);
+
+    Rectangle GetRect() const { return rect; }
+    int GetHealth() const { return currentHealth; }
+    int GetLevel() const { return currentLevel; }
+    int GetPositionX() const{ return rect.x; }
+    int GetPreviousPositionX() const{ return previouspositionx; }
+    int GetPreviousPositionY() const{ return previouspositiony; }
 
 
+    const std::vector<Bullet>& GetBullets() const { return bullets; }       // Zeichnungen und Kollisionsüberprüfung
+    std::vector<Bullet>& GetBulletsMutable() { return bullets; }            // Ändern (modifizieren) und entfernen der Schüsse
 };

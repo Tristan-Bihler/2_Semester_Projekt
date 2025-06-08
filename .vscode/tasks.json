@@ -10,6 +10,7 @@
                 "Bullet.cpp",
                 "Enemy.cpp",
                 "Rooms.cpp",
+                "Hindernisse.cpp",
                 "-IC:/msys64/ucrt64/include",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
