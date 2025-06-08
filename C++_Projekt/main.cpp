@@ -25,7 +25,7 @@ int main() {
     background = visuals[0];
 
 
-    InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL! Exams of Doom");          // Intialisierung notwendig, um Monitorgröße auslesen zu können
+    InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL! Exams of Doom");          //Intialisierung notwendig, um Monitorgröße auslesen zu können
     screenWidth = GetMonitorWidth(monitor) * 2 / 3;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
     screenHeight = GetMonitorHeight(monitor) * 2 / 3 ;                              //Monitorhöhe auslesen mulitpliziert mit 2/3
     ScreenPositionX = (GetMonitorWidth(monitor) - screenWidth) / 2;
@@ -115,7 +115,7 @@ int main() {
 
         lobby.setDoor(lobby.enemyAlive);
 
-        lobby.changeRoom(background, visuals, player, player.GetLevel(), enemies);
+        lobby.changeRoom(background, visuals, player, player.GetLevel(), lobby.enemyAlive, enemies);
 
 
         // Überprüft Spielende

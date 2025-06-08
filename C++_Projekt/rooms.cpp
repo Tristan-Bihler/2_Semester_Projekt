@@ -29,10 +29,10 @@ void Rooms:: setDoor(bool enemyAlive){
 }
 
 
-void Rooms::changeRoom(Texture2D& background, Texture2D* visuals, Player& player, int currentlevel, vector<Enemy>& enemies) {
+void Rooms::changeRoom(Texture2D& background, Texture2D* visuals, Player& player, int currentlevel,bool enemyAlive, vector<Enemy>& enemies) {
     int distribX = 0;
     int distribY = 0;
-    if (CheckCollisionRecs(player.GetRect(), this-> door)) {
+    if (CheckCollisionRecs(player.GetRect(), this-> door)&&!enemyAlive) {
         int raumIndex = currentlevel / 10;     //Alle 10 Level ändert sich der Hintergrund
         if (raumIndex < VIS_Count) {           //Check das Index < 10
             //UnloadTexture(background);
