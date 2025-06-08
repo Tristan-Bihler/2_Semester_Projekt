@@ -54,6 +54,7 @@ int main() {
         BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
         ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
         DrawText("Drücke die Leertaste, um zu starten!", screenWidth / 2 - 200, screenHeight / 2, 20, BLACK);
+        DrawText("F2: Spiel nach dem Start im Vollbildmodus ausführen", screenWidth / 2 - 250, screenHeight / 2 - 100, 20, BLACK);
         EndDrawing();
     }
 
