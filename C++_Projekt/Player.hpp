@@ -22,8 +22,11 @@ private:
     int currentHealth;
     int currentLevel;
     Color bullet_color;
-    int test;
+    int bullet_damage;
+    int test = 1;
     Inventar waffe;
+
+    float firerate;
 
     int previouspositionx;
     int previouspositiony;
@@ -58,6 +61,7 @@ public:
     int GetPositionX() const{ return rect.x; }
     int GetPreviousPositionX() const{ return previouspositionx; }
     int GetPreviousPositionY() const{ return previouspositiony; }
+    int GetBulletDamage() const{return bullet_damage; }
 
 
     const std::vector<Bullet>& GetBullets() const { return bullets; }       // Zeichnungen und Kollisionsüberprüfung

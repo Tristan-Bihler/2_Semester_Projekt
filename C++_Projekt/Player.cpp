@@ -53,13 +53,19 @@ void Player::Update(float deltaTime) {
         switch (art) {
             case 1:
                 bullet_color = BLUE;
+                firerate = 1;
+                bullet_damage = 1;
                 break;
             case 2:
                 bullet_color = BROWN;
+                firerate = 0.5;
+                bullet_damage= 10;
                 break;
             case 3:
                 bullet_color = BLACK;
-                test = 0;
+                firerate = 0.1;
+                bullet_damage= 50;
+                test = 0; 
                 break;
         };
     }
@@ -72,7 +78,7 @@ void Player::Update(float deltaTime) {
 
     // Schuss-Abklingzeit
     if (currentShootCooldown > 0) {
-        currentShootCooldown -= deltaTime;
+        currentShootCooldown -= deltaTime * firerate;
     }
 
     // Schießen mit der linken Maustaste

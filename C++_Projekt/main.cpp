@@ -80,14 +80,12 @@ int main() {
         for (auto& box : boxes) {
             for (auto& enemy : enemies) {
                 bool collision = CheckCollisionRecs(enemy.GetRect(), box.GetRect());
-
                 if (collision)
                 {
                     enemy.SetPosition(enemy.GetPreviousPositionX(), enemy.GetPreviousPositionY());
                 }
             }
         }
-
         
         // Update Gegner
         for (Enemy& enemy : enemies) {
@@ -100,7 +98,7 @@ int main() {
             bool bulletHit = false;                                                      // Ob Geschoss einen Gegner getroffen hat
             for (size_t j = 0; j < enemies.size(); ) {
                 if (CheckCollisionRecs(playerBullets[i].GetRect(), enemies[j].GetRect())) {
-                    enemies[j].TakeDamage(20);                                           // Gegner erhält 20 Schadenspunkte
+                    enemies[j].TakeDamage(player.GetBulletDamage());                                           // Gegner erhält 20 Schadenspunkte
                     bulletHit = true; 
                     // Entfernt Gegner wenn getroffen
                     if (!enemies[j].IsActive()) { 

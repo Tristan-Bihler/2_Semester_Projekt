@@ -24,7 +24,7 @@ void Rooms::kickTextures(Texture2D* visuals){
 }
 
 void Rooms:: setDoor(bool enemyAlive){
-    this-> door ={350, 201, 100, 30};
+    door ={350, 201, 100, 30};
     if (!enemyAlive){DrawRectangleRec(door, GOLD);}                //enemyAlive Variable muss noch erstellt werden
     else {DrawRectangleRec(door, GRAY);}
 }
