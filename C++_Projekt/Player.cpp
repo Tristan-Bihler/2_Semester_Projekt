@@ -1,6 +1,6 @@
 #include "Player.hpp"
 #include "raylib.h"
-#include "Bullet.hpp" // Sicherstellen Bullet.h ist eingebunden, für Schuss Erstellung 
+#include "Bullet.hpp" //Einbinden einer anderen Klasse um deren Funktionen nutzen zu können
 #include <cmath>
 
 // Implementierung des Constructors
