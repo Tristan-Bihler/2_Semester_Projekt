@@ -18,7 +18,7 @@ int main() {
     InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL! Exams of Doom");          //Intialisierung notwendig, um Monitorgröße auslesen zu können
     Rooms lobby;
     
-    Player player(lobby.getscreenWidth(), lobby.getscreenHeight(), 50, 50, BLUE, 100, 97);
+    Player player(lobby.getscreenWidth(), lobby.getscreenHeight(), 50, 50, BLUE, 100, 1);
 
     vector<Enemy> enemies;
     vector<Hindernisse> boxes;
@@ -92,7 +92,7 @@ int main() {
             bool bulletHit = false;                                                      // Ob Geschoss einen Gegner getroffen hat
             for (size_t j = 0; j < enemies.size(); ) {
                 if (CheckCollisionRecs(playerBullets[i].GetRect(), enemies[j].GetRect())) {
-                    enemies[j].TakeDamage(player.GetBulletDamage());                                           // Gegner erhält 20 Schadenspunkte
+                    enemies[j].TakeDamage(playerBullets[i].GetBulletDamage());                                           // Gegner erhält 20 Schadenspunkte
                     bulletHit = true; 
                     // Entfernt Gegner wenn getroffen
                     if (!enemies[j].IsActive()) { 

@@ -1,8 +1,8 @@
 #include "Bullet.hpp"
 #include "raylib.h"
 
-Bullet::Bullet(float x, float y, float width, float height, Color color, Vector2 velocity)
-    : rect({x, y, width, height}), color(color), velocity(velocity) {
+Bullet::Bullet(float x, float y, float width, float height, int bullet_damage, Color color, Vector2 velocity)
+    : rect({x, y, width, height}),bullet_damage(bullet_damage), color(color), velocity(velocity) {
 }
 
 // void Bullet::Update(float deltaTime) {
