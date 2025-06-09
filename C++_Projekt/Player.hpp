@@ -10,11 +10,6 @@ using namespace std;
 
 class Player {
 private:
-    enum Inventar{
-        Maschine_Gun = 1,
-        Gun = 2,
-        One_Schot = 3
-    };
 
     Rectangle rect;
     float screenWidth;
@@ -27,6 +22,7 @@ private:
     Color bullet_color;
     int bullet_damage;
     int Inventar_platz = 1;
+    string bohnen_art;
 
     float firerate;
 
@@ -64,7 +60,7 @@ public:
     int GetPreviousPositionX() const{ return previouspositionx; }
     int GetPreviousPositionY() const{ return previouspositiony; }
     int GetBulletDamage() const{return bullet_damage; }
-    string bohnen_art;
+    string GetBohnenArt() const{return bohnen_art;}
 
     const std::vector<Bullet>& GetBullets() const { return bullets; }       // Zeichnungen und Kollisionsüberprüfung
     std::vector<Bullet>& GetBulletsMutable() { return bullets; }            // Ändern (modifizieren) und entfernen der Schüsse

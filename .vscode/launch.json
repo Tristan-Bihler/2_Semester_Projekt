@@ -1,32 +1,32 @@
 {
-    "configurations": [
-        
+    "configurations": [ // Eine Liste von Debugging-Konfigurationen. Du kannst hier mehrere Konfigurationen für verschiedene Debugging-Szenarien haben.
         {
-            "name": "C/C++: g++.exe build and debug active file",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
-            "setupCommands": [
+            "name": "C/C++: g++.exe build and debug active file", // Ein benutzerfreundlicher Name für diese Debugging-Konfiguration, der im VS Code Debug-Dropdown angezeigt wird.
+            "type": "cppdbg", // Gibt den Typ des Debuggers an, hier den C++-Debugger von VS Code.
+            "request": "launch", // Definiert, dass dies eine "Launch"-Anfrage ist, was bedeutet, dass die Anwendung gestartet und debuggt wird. Alternativ gäbe es "attach" zum Anhängen an einen bereits laufenden Prozess.
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe", // Der vollständige Pfad zur ausführbaren Datei, die debuggt werden soll. Hier wird der Name der aktuellen Datei ohne Erweiterung und im selben Verzeichnis verwendet.
+            "args": [], // Eine Liste von Kommandozeilenargumenten, die an das Programm übergeben werden sollen, wenn es gestartet wird. Hier sind keine Argumente definiert.
+            "stopAtEntry": false, // Wenn auf 'true' gesetzt, stoppt der Debugger direkt am Einstiegspunkt des Programms (z.B. am Anfang von `main`). 'false' bedeutet, er startet ohne sofortigen Stopp.
+            "cwd": "${fileDirname}", // Setzt das aktuelle Arbeitsverzeichnis (current working directory) für die Ausführung des Programms. Hier ist es das Verzeichnis der aktuellen Datei.
+            "environment": [], // Eine Liste von Umgebungsvariablen, die für die Debug-Sitzung gesetzt werden sollen. Hier sind keine zusätzlichen Umgebungsvariablen definiert.
+            "externalConsole": false, // Wenn auf 'true' gesetzt, wird das Programm in einer externen Konsole gestartet. 'false' bedeutet, dass die integrierte Debug-Konsole von VS Code verwendet wird.
+            "MIMode": "gdb", // Gibt den Machine Interface (MI) Modus des Debuggers an. "gdb" bedeutet, dass der GNU Debugger verwendet wird.
+            "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe", // Der vollständige Pfad zur GDB-Ausführungsdatei.
+            "setupCommands": [ // Eine Liste von GDB-Befehlen, die vor dem Start des Debuggers ausgeführt werden sollen.
                 {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
+                    "description": "Enable pretty-printing for gdb", // Eine Beschreibung des Befehls.
+                    "text": "-enable-pretty-printing", // Der tatsächliche GDB-Befehl. Er verbessert die Lesbarkeit von Datenstrukturen und Objekten im Debugger.
+                    "ignoreFailures": true // Wenn auf 'true' gesetzt, ignoriert der Debugger Fehler, die bei der Ausführung dieses Befehls auftreten.
                 },
                 {
-                    "description": "Set Disassembly Flavor to Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
+                    "description": "Set Disassembly Flavor to Intel", // Eine Beschreibung des Befehls.
+                    "text": "-gdb-set disassembly-flavor intel", // Setzt den Assembler-Syntax für die Disassemblierung auf Intel-Syntax, was für viele Entwickler bevorzugt wird.
+                    "ignoreFailures": true // Ignoriert Fehler bei der Ausführung dieses Befehls.
                 }
             ],
-            "preLaunchTask": "C/C++: g++.exe build active file"
+            "preLaunchTask": "C/C++: g++.exe build active file" 
+            // Gibt eine Aufgabe an, die *vor* dem Start des Debuggers ausgeführt werden soll. Hier wird die Build-Aufgabe aus `tasks.json` aufgerufen, um sicherzustellen, dass das Programm vor dem Debuggen kompiliert wird.
         }
     ],
-    "version": "2.0.0"
+    "version": "2.0.0" // Die Version des launch.json Schemas.
 }

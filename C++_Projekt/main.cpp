@@ -13,29 +13,9 @@ using namespace std;
 
 
 int main() {
-    int monitor = GetCurrentMonitor();                                              // Aktuellen Monitor festlegen     
-    int screenWidth = 0;     
-    int screenHeight = 0;
-    int screenWidth_o = 0;
-    int screenHeight_o = 0;
-    int ScreenPositionX;
-    int ScreenPositionY;
-    string bohnen_art;
+    Rooms lobby;
     
-    InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL! Exams of Doom");          //Intialisierung notwendig, um Monitorgröße auslesen zu können
-    screenWidth_o = GetMonitorWidth(monitor) * 2 / 3;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
-    screenHeight_o = GetMonitorHeight(monitor) * 2 / 3;                               //Monitorhöhe auslesen mulitpliziert mit 2/3
-    screenWidth = screenWidth_o;
-    screenHeight = screenHeight_o;
-    ScreenPositionX = (GetMonitorWidth(monitor) - screenWidth) / 2;
-    ScreenPositionY = (GetMonitorHeight(monitor) - screenHeight) / 2;
-    SetWindowSize(screenWidth, screenHeight);                                       // Größe des Fensters setzen 2/3 des Monitors
-    SetWindowPosition(ScreenPositionX, ScreenPositionY);                            // Fenster Mittig positionieren
-    
-    Rooms lobby(screenWidth, screenHeight);
-    
-    //HideCursor();
-    Player player(screenWidth, screenHeight, 50, 50, BLUE, 100, 1);
+    Player player(lobby.getscreenWidth(), lobby.getscreenHeight(), 50, 50, BLUE, 100, 98);
 
     vector<Enemy> enemies;
     vector<Hindernisse> boxes;
@@ -47,15 +27,15 @@ int main() {
     while (!IsKeyPressed(KEY_SPACE) && !WindowShouldClose()) {
         BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
         ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
-        DrawText("Drücke die Leertaste, um zu starten!", screenWidth / 2 - 200, screenHeight / 2 + 150, 20, BLACK);
-        DrawText("Steuerung:", screenWidth / 2 - 200, screenHeight / 2 - 300, 20, BLACK);
-        DrawText("WASD:   Figur Bewegen", screenWidth / 2 - 200, screenHeight / 2 - 200, 20, BLACK);
-        DrawText("Linke Maustaste:   Schießen", screenWidth / 2 - 200, screenHeight / 2 - 150, 20, BLACK);
-        DrawText("F:   Wechseln der Monition", screenWidth / 2 - 200, screenHeight / 2 - 100, 20, BLACK);
-        DrawText("F2:   Spiel nach dem Start im Vollbildmodus ausführen", screenWidth / 2 - 200, screenHeight / 2 - 50, 20, BLACK);
+        DrawText("Drücke die Leertaste, um zu starten!", lobby.getscreenWidth() / 2 - 200, lobby.getscreenHeight() / 2 + 150, 20, BLACK);
+        DrawText("Steuerung:", lobby.getscreenWidth() / 2 - 200, lobby.getscreenHeight() / 2 - 300, 20, BLACK);
+        DrawText("WASD:   Figur Bewegen", lobby.getscreenWidth() / 2 - 200, lobby.getscreenHeight() / 2 - 200, 20, BLACK);
+        DrawText("Linke Maustaste:   Schießen", lobby.getscreenWidth() / 2 - 200, lobby.getscreenHeight() / 2 - 150, 20, BLACK);
+        DrawText("F:   Wechseln der Monition", lobby.getscreenWidth() / 2 - 200, lobby.getscreenHeight() / 2 - 100, 20, BLACK);
+        DrawText("F2:   Spiel nach dem Start im Vollbildmodus ausführen", lobby.getscreenWidth() / 2 - 200, lobby.getscreenHeight() / 2 - 50, 20, BLACK);
         EndDrawing();
     }
-
+    
 
     // Spiel-Schleife
     while (!WindowShouldClose()) {
@@ -64,7 +44,7 @@ int main() {
 
         // Update  
         //----------------------------------------------------------------------------------
-        player.Update(deltaTime, screenWidth, screenHeight);
+        player.Update(deltaTime, lobby.getscreenWidth(), lobby.getscreenHeight());
 
         //Auf Kollision prüfen
         for (auto& box : boxes) {
@@ -80,11 +60,11 @@ int main() {
         for (auto& box : boxes) {
             for (auto& enemy : enemies) {
                 bool collision = CheckCollisionRecs(enemy.GetRect(), box.GetRect());
-                if (collision && ((enemy.GetPreviousPositionY()+enemy.GetRect().height)<box.GetRect().y))
+                if (collision && (enemy.GetPreviousPositionY()<box.GetRect().y))
                 {
                     enemy.SetPosition(enemy.GetPreviousPositionX()+1, enemy.GetPreviousPositionY());
                 }
-                if (collision && (((enemy.GetPreviousPositionX()+enemy.GetRect().width)<box.GetRect().x)))
+                if (collision && ((enemy.GetPreviousPositionX()+enemy.GetRect().width)<box.GetRect().x))
                 {
                     enemy.SetPosition(enemy.GetPreviousPositionX(), enemy.GetPreviousPositionY()-1);
                 }
@@ -92,7 +72,7 @@ int main() {
                 {
                     enemy.SetPosition(enemy.GetPreviousPositionX()-1, enemy.GetPreviousPositionY());
                 }
-                if (collision && ((enemy.GetPreviousPositionX()>(box.GetRect().x+box.GetRect().width))))
+                if (collision && (enemy.GetPreviousPositionX()<(box.GetRect().x+box.GetRect().width)))
                 {
                     enemy.SetPosition(enemy.GetPreviousPositionX(), enemy.GetPreviousPositionY()+1);
                 }
@@ -136,7 +116,6 @@ int main() {
             }
         }
 
-
         // Spieler - Feind Collision
         for (auto& enemy : enemies) {
             if (enemy.IsActive() && CheckCollisionRecs(player.GetRect(), enemy.GetRect())) {
@@ -165,39 +144,30 @@ int main() {
 
         lobby.setDoor(lobby.enemyAlive);
 
-        lobby.changeRoom(player, player.GetLevel(), lobby.enemyAlive, enemies, boxes, &screenWidth, &screenHeight, screenWidth_o, screenHeight_o);
-
+        lobby.changeRoom(player, player.GetLevel(), lobby.enemyAlive, enemies, boxes);
 
         // Überprüft Spielende
         if (player.GetHealth() <= 0) {
-            screenWidth = GetMonitorWidth(monitor) * 2 / 3;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
-            screenHeight = GetMonitorHeight(monitor) * 2 / 3;                               //Monitorhöhe auslesen mulitpliziert mit 2/3
-            ScreenPositionX = (GetMonitorWidth(monitor) - screenWidth) / 2;
-            ScreenPositionY = (GetMonitorHeight(monitor) - screenHeight) / 2;
-            SetWindowSize(screenWidth, screenHeight);                                       // Größe des Fensters setzen 2/3 des Monitors
-            SetWindowPosition(ScreenPositionX, ScreenPositionY);
+            CloseWindow();
+            Rooms lobby;
 
              while (!IsKeyPressed(KEY_SPACE) && !WindowShouldClose()) {
                 BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
                 ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
-                DrawText("Du wirst Exmatrikuliert. Drücke die Leertaste, um das Spiel zu Verlassen!", screenWidth / 5, screenHeight / 2, 20, BLACK);
+                DrawText("Du wirst Exmatrikuliert. Drücke die Leertaste, um das Spiel zu Verlassen!", lobby.getscreenWidth() / 5, lobby.getscreenHeight() / 2, 20, BLACK);
                 EndDrawing();
             }
             break; // beendet Spiel-Schleife
         }
 
         if (player.GetLevel() == 100) {
-            screenWidth = GetMonitorWidth(monitor) * 2 / 3;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
-            screenHeight = GetMonitorHeight(monitor) * 2 / 3;                               //Monitorhöhe auslesen mulitpliziert mit 2/3
-            ScreenPositionX = (GetMonitorWidth(monitor) - screenWidth) / 2;
-            ScreenPositionY = (GetMonitorHeight(monitor) - screenHeight) / 2;
-            SetWindowSize(screenWidth, screenHeight);                                       // Größe des Fensters setzen 2/3 des Monitors
-            SetWindowPosition(ScreenPositionX, ScreenPositionY);
+            CloseWindow();
+            Rooms lobby;
 
             while (!IsKeyPressed(KEY_SPACE) && !WindowShouldClose()) {
                 BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
                 ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
-                DrawText("Du hast die Klausurephase überstanden. Drücke die Leertaste, um in das echte Leben zurück zu kehren!", screenWidth / 5, screenHeight / 2, 20, BLACK);
+                DrawText("Du hast die Klausurephase überstanden. Drücke die Leertaste, um in das echte Leben zurück zu kehren!", lobby.getscreenWidth() / 5, lobby.getscreenHeight() / 2, 20, BLACK);
                 EndDrawing();
             }
             break; // beendet Spiel-Schleife
@@ -215,7 +185,10 @@ int main() {
 
             for (const auto& enemy : enemies) {
                 enemy.Draw();
-            }       
+            }
+            // Zeichnet Lebensanzeige des Spielers
+            //-> immer selbe Position und gleiche größe -> an bildschirm anpassen 
+            // int GetScreenWidth(void);        
 
             DrawText(TextFormat("Health: %i", player.GetHealth()), GetScreenWidth() * 0.01, GetScreenHeight() * 0.01, 20, BLACK);
             DrawText(TextFormat("Level: %i", player.GetLevel()), GetScreenWidth() * 0.5, GetScreenHeight() * 0.01, 20, BLACK);
