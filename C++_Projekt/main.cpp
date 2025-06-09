@@ -27,12 +27,12 @@ int main() {
     while (!IsKeyPressed(KEY_SPACE) && !WindowShouldClose()) {
         BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
         ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
-        DrawText("Drücke die Leertaste, um zu starten!", screenWidth / 2 - 200, screenHeight / 2 + 150, 20, BLACK);
-        DrawText("Steuerung:", screenWidth / 2 - 200, screenHeight / 2 - 300, 20, BLACK);
-        DrawText("WASD:   Figur Bewegen", screenWidth / 2 - 200, screenHeight / 2 - 200, 20, BLACK);
-        DrawText("Linke Maustaste:   Schießen", screenWidth / 2 - 200, screenHeight / 2 - 150, 20, BLACK);
-        DrawText("F:   Wechseln der Monition", screenWidth / 2 - 200, screenHeight / 2 - 100, 20, BLACK);
-        DrawText("F2:   Spiel nach dem Start im Vollbildmodus ausführen", screenWidth / 2 - 200, screenHeight / 2 - 50, 20, BLACK);
+        DrawText("Drücke die Leertaste, um zu starten!", lobby.getscreenWidth() / 2 - 200, lobby.getscreenHeight() / 2 + 150, 20, BLACK);
+        DrawText("Steuerung:", lobby.getscreenWidth() / 2 - 200, lobby.getscreenHeight() / 2 - 300, 20, BLACK);
+        DrawText("WASD:   Figur Bewegen", lobby.getscreenWidth() / 2 - 200, lobby.getscreenHeight() / 2 - 200, 20, BLACK);
+        DrawText("Linke Maustaste:   Schießen", lobby.getscreenWidth() / 2 - 200, lobby.getscreenHeight() / 2 - 150, 20, BLACK);
+        DrawText("F:   Wechseln der Monition", lobby.getscreenWidth() / 2 - 200, lobby.getscreenHeight() / 2 - 100, 20, BLACK);
+        DrawText("F2:   Spiel nach dem Start im Vollbildmodus ausführen", lobby.getscreenWidth() / 2 - 200, lobby.getscreenHeight() / 2 - 50, 20, BLACK);
         EndDrawing();
     }
 
@@ -155,7 +155,7 @@ int main() {
              while (!IsKeyPressed(KEY_SPACE) && !WindowShouldClose()) {
                 BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
                 ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
-                DrawText("Du wirst Exmatrikuliert. Drücke die Leertaste, um das Spiel zu Verlassen!", screenWidth / 5, screenHeight / 2, 20, BLACK);
+                DrawText("Du wirst Exmatrikuliert. Drücke die Leertaste, um das Spiel zu Verlassen!", lobby.getscreenWidth() / 5, lobby.getscreenHeight() / 2, 20, BLACK);
                 EndDrawing();
             }
             break; // beendet Spiel-Schleife
@@ -190,7 +190,7 @@ int main() {
 
             DrawText(TextFormat("Health: %i", player.GetHealth()), GetScreenWidth() * 0.01, GetScreenHeight() * 0.01, 20, BLACK);
             DrawText(TextFormat("Level: %i", player.GetLevel()), GetScreenWidth() * 0.5, GetScreenHeight() * 0.01, 20, BLACK);
-            DrawText(TextFormat("Bohne: %s", bohnen_art.c_str()), GetScreenWidth() * 0.25, GetScreenHeight() * 0.01, 20, BLACK);
+            DrawText(TextFormat("Bohne: %s", player.bohnen_art.c_str()), GetScreenWidth() * 0.25, GetScreenHeight() * 0.01, 20, BLACK);
 
         EndDrawing();
     }
