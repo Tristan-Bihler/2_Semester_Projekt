@@ -59,7 +59,6 @@ public:
     int GetPositionX() const{ return rect.x; }
     int GetPreviousPositionX() const{ return previouspositionx; }
     int GetPreviousPositionY() const{ return previouspositiony; }
-    int GetBulletDamage() const{return bullet_damage; }
     string GetBohnenArt() const{return bohnen_art;}
 
     const vector<Bullet>& GetBullets() const { return bullets; }       // Zeichnungen und Kollisionsüberprüfung
