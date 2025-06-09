@@ -9,8 +9,6 @@ public:
     void Draw() const;
 
     Rectangle GetRect() const { return rect; }
-    int GetPositionX(rect.x);
-    int GetPositionY(rect.y);
 
 private:
     Rectangle rect;

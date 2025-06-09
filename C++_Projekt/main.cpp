@@ -79,19 +79,24 @@ int main() {
         for (auto& box : boxes) {
             for (auto& enemy : enemies) {
                 bool collision = CheckCollisionRecs(enemy.GetRect(), box.GetRect());
-                if (collision && (enemy.GetPreviousPositionY()>Hindernisse.GetPositionY())
+                if (collision && ((enemy.GetPreviousPositionY()+enemy.GetRect().height)<box.GetRect().y))
                 {
                     enemy.SetPosition(enemy.GetPreviousPositionX()+1, enemy.GetPreviousPositionY());
                 }
-                if (collision && (enemy.GetPreviousPositionX()> Hindernisse.GetPositionX())
+                if (collision && (((enemy.GetPreviousPositionX()+enemy.GetRect().width)<box.GetRect().x)))
                 {
-                    enemy.SetPosition(enemy.GetPreviousPositionX()+1, enemy.GetPreviousPositionY());
+                    enemy.SetPosition(enemy.GetPreviousPositionX(), enemy.GetPreviousPositionY()-1);
+                }
+                if (collision && (enemy.GetPreviousPositionY()>(box.GetRect().y+box.GetRect().height)))
+                {
+                    enemy.SetPosition(enemy.GetPreviousPositionX()-1, enemy.GetPreviousPositionY());
+                }
+                if (collision && ((enemy.GetPreviousPositionX()>(box.GetRect().x+box.GetRect().width))))
+                {
+                    enemy.SetPosition(enemy.GetPreviousPositionX(), enemy.GetPreviousPositionY()+1);
                 }
             }
         }
-       
-
-        
         // Update Gegner
         for (Enemy& enemy : enemies) {
             enemy.Update(deltaTime, {player.GetRect().x, player.GetRect().y});
