@@ -20,6 +20,7 @@ int main() {
     int screenHeight_o = 0;
     int ScreenPositionX;
     int ScreenPositionY;
+    string bohnen_art;
     
     InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL! Exams of Doom");          //Intialisierung notwendig, um Monitorgröße auslesen zu können
     screenWidth_o = GetMonitorWidth(monitor) * 2 / 3;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
@@ -30,7 +31,7 @@ int main() {
     ScreenPositionY = (GetMonitorHeight(monitor) - screenHeight) / 2;
     SetWindowSize(screenWidth, screenHeight);                                       // Größe des Fensters setzen 2/3 des Monitors
     SetWindowPosition(ScreenPositionX, ScreenPositionY);                            // Fenster Mittig positionieren
-
+    
     Rooms lobby(screenWidth, screenHeight);
     
     //HideCursor();
@@ -54,7 +55,7 @@ int main() {
         DrawText("F2:   Spiel nach dem Start im Vollbildmodus ausführen", screenWidth / 2 - 200, screenHeight / 2 - 50, 20, BLACK);
         EndDrawing();
     }
-    
+
 
     // Spiel-Schleife
     while (!WindowShouldClose()) {
@@ -135,6 +136,7 @@ int main() {
             }
         }
 
+
         // Spieler - Feind Collision
         for (auto& enemy : enemies) {
             if (enemy.IsActive() && CheckCollisionRecs(player.GetRect(), enemy.GetRect())) {
@@ -213,13 +215,11 @@ int main() {
 
             for (const auto& enemy : enemies) {
                 enemy.Draw();
-            }
-            // Zeichnet Lebensanzeige des Spielers
-            //-> immer selbe Position und gleiche größe -> an bildschirm anpassen 
-            // int GetScreenWidth(void);        
+            }       
 
             DrawText(TextFormat("Health: %i", player.GetHealth()), GetScreenWidth() * 0.01, GetScreenHeight() * 0.01, 20, BLACK);
             DrawText(TextFormat("Level: %i", player.GetLevel()), GetScreenWidth() * 0.5, GetScreenHeight() * 0.01, 20, BLACK);
+            DrawText(TextFormat("Bohne: %s", bohnen_art.c_str()), GetScreenWidth() * 0.25, GetScreenHeight() * 0.01, 20, BLACK);
 
         EndDrawing();
     }
