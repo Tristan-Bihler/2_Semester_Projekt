@@ -12,18 +12,23 @@ using namespace std;
 class Rooms {
 
 private:
-    
-    int enemyAmount;
-    int monitor = GetCurrentMonitor();  
+    int screenWidth = 0;     
+    int screenHeight = 0;
+    int screenWidth_o;
+    int screenHeight_o;
     int ScreenPositionX;
     int ScreenPositionY;
+    int enemyAmount;
+    int monitor;  
     Rectangle door;
 
 public:
     bool enemyAlive;
-    Rooms(int screenWidth,int screenHeight);
+    Rooms();
     int getEnemyAmount()const {return enemyAmount;};
+    int getscreenWidth()const {return screenWidth;};
+    int getscreenHeight()const {return screenHeight;};
     void setDoor(bool enemyAlive);
-    void changeRoom(Player& player, int currentlevel,bool enemyAlive, vector<Enemy>& enemies, vector<Hindernisse>& boxes, int* screenWidth, int* screenHeight, int screenWidth_o, int screenHeight_o);
-    
+    void changeRoom(Player& player, int currentlevel,bool enemyAlive, vector<Enemy>& enemies, vector<Hindernisse>& boxes);
+
 };

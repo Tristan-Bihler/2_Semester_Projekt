@@ -10,11 +10,6 @@ using namespace std;
 
 class Player {
 private:
-    enum Inventar{
-        Maschine_Gun = 1,
-        Gun = 2,
-        One_Schot = 3
-    };
 
     Rectangle rect;
     float screenWidth;
