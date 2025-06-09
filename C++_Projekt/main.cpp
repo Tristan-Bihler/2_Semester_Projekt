@@ -27,10 +27,15 @@ int main() {
     while (!IsKeyPressed(KEY_SPACE) && !WindowShouldClose()) {
         BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
         ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
-        DrawText("Drücke die Leertaste, um zu starten!", lobby.getscreenWidth() / 2 - 200, lobby.getscreenHeight() / 2, 20, BLACK);
-        DrawText("F2: Spiel nach dem Start im Vollbildmodus ausführen", lobby.getscreenWidth() / 2 - 250, lobby.getscreenHeight() / 2 - 100, 20, BLACK);
+        DrawText("Drücke die Leertaste, um zu starten!", screenWidth / 2 - 200, screenHeight / 2 + 150, 20, BLACK);
+        DrawText("Steuerung:", screenWidth / 2 - 200, screenHeight / 2 - 300, 20, BLACK);
+        DrawText("WASD:   Figur Bewegen", screenWidth / 2 - 200, screenHeight / 2 - 200, 20, BLACK);
+        DrawText("Linke Maustaste:   Schießen", screenWidth / 2 - 200, screenHeight / 2 - 150, 20, BLACK);
+        DrawText("F:   Wechseln der Monition", screenWidth / 2 - 200, screenHeight / 2 - 100, 20, BLACK);
+        DrawText("F2:   Spiel nach dem Start im Vollbildmodus ausführen", screenWidth / 2 - 200, screenHeight / 2 - 50, 20, BLACK);
         EndDrawing();
     }
+
 
     // Spiel-Schleife
     while (!WindowShouldClose()) {
@@ -55,13 +60,24 @@ int main() {
         for (auto& box : boxes) {
             for (auto& enemy : enemies) {
                 bool collision = CheckCollisionRecs(enemy.GetRect(), box.GetRect());
-                if (collision)
+                if (collision && ((enemy.GetPreviousPositionY()+enemy.GetRect().height)<box.GetRect().y))
                 {
-                    enemy.SetPosition(enemy.GetPreviousPositionX(), enemy.GetPreviousPositionY());
+                    enemy.SetPosition(enemy.GetPreviousPositionX()+1, enemy.GetPreviousPositionY());
+                }
+                if (collision && (((enemy.GetPreviousPositionX()+enemy.GetRect().width)<box.GetRect().x)))
+                {
+                    enemy.SetPosition(enemy.GetPreviousPositionX(), enemy.GetPreviousPositionY()-1);
+                }
+                if (collision && (enemy.GetPreviousPositionY()>(box.GetRect().y+box.GetRect().height)))
+                {
+                    enemy.SetPosition(enemy.GetPreviousPositionX()-1, enemy.GetPreviousPositionY());
+                }
+                if (collision && ((enemy.GetPreviousPositionX()>(box.GetRect().x+box.GetRect().width))))
+                {
+                    enemy.SetPosition(enemy.GetPreviousPositionX(), enemy.GetPreviousPositionY()+1);
                 }
             }
         }
-        
         // Update Gegner
         for (Enemy& enemy : enemies) {
             enemy.Update(deltaTime, {player.GetRect().x, player.GetRect().y});
@@ -99,6 +115,7 @@ int main() {
                 ++i; // Nächster Schuss
             }
         }
+
 
         // Spieler - Feind Collision
         for (auto& enemy : enemies) {
@@ -138,7 +155,7 @@ int main() {
              while (!IsKeyPressed(KEY_SPACE) && !WindowShouldClose()) {
                 BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
                 ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
-                DrawText("Du hast Aufgegeben. Drücke die Leertaste, um das Spiel zu Verlassen!", lobby.getscreenWidth() / 5, lobby.getscreenHeight() / 2, 20, BLACK);
+                DrawText("Du wirst Exmatrikuliert. Drücke die Leertaste, um das Spiel zu Verlassen!", screenWidth / 5, screenHeight / 2, 20, BLACK);
                 EndDrawing();
             }
             break; // beendet Spiel-Schleife
@@ -169,13 +186,11 @@ int main() {
 
             for (const auto& enemy : enemies) {
                 enemy.Draw();
-            }
-            // Zeichnet Lebensanzeige des Spielers
-            //-> immer selbe Position und gleiche größe -> an bildschirm anpassen 
-            // int GetScreenWidth(void);        
+            }       
 
             DrawText(TextFormat("Health: %i", player.GetHealth()), GetScreenWidth() * 0.01, GetScreenHeight() * 0.01, 20, BLACK);
             DrawText(TextFormat("Level: %i", player.GetLevel()), GetScreenWidth() * 0.5, GetScreenHeight() * 0.01, 20, BLACK);
+            DrawText(TextFormat("Bohne: %s", bohnen_art.c_str()), GetScreenWidth() * 0.25, GetScreenHeight() * 0.01, 20, BLACK);
 
         EndDrawing();
     }

@@ -42,17 +42,20 @@ void Player::Update(float deltaTime, float screenWidth, float screenHeight) {
             bullet_color = BLUE;
             firerate = 1;
             bullet_damage = 3;
+            bohnen_art = "Entkoffiniert";
             break;
         case 2:
             bullet_color = BROWN;
             firerate = 0.5;
             bullet_damage= 10;
+            bohnen_art = "Kaffee";
             break;
         case 3:
             bullet_color = BLACK;
             firerate = 0.1;
             bullet_damage= 50;
             Inventar_platz = 0; 
+            bohnen_art = "Espresso";
             break;
     };
 

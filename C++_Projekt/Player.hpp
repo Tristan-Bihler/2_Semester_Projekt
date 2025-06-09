@@ -4,6 +4,9 @@
 #include <vector>               // managing der Schüsse
 #include "Bullet.hpp"           // Deklarieren bzw. Einbinden der Bullet-Klasse
 #include "Hindernisse.hpp"
+#include <string>
+
+using namespace std; 
 
 class Player {
 private:
@@ -56,7 +59,7 @@ public:
     int GetPreviousPositionX() const{ return previouspositionx; }
     int GetPreviousPositionY() const{ return previouspositiony; }
     int GetBulletDamage() const{return bullet_damage; }
-
+    string bohnen_art;
 
     const std::vector<Bullet>& GetBullets() const { return bullets; }       // Zeichnungen und Kollisionsüberprüfung
     std::vector<Bullet>& GetBulletsMutable() { return bullets; }            // Ändern (modifizieren) und entfernen der Schüsse

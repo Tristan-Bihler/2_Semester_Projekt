@@ -56,7 +56,7 @@ void Rooms::changeRoom(Player& player, int currentlevel,bool enemyAlive, vector<
         for (int i = 0; i < int(boxes.size()); i++) // Notice no increment here
         {
             boxes.erase(boxes.begin()); // Removes the element and shifts everything after it
-                                                // 'i' does not increment, as the next element slides into 'i'
+                                        // 'i' does not increment, as the next element slides into 'i'
         }
 
         vector<Bullet>& playerBullets = player.GetBulletsMutable();
