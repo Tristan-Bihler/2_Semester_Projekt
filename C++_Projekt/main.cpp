@@ -207,10 +207,7 @@ int main() {
 
             for (const auto& enemy : enemies) {
                 enemy.Draw();
-            }
-            // Zeichnet Lebensanzeige des Spielers
-            //-> immer selbe Position und gleiche größe -> an bildschirm anpassen 
-            // int GetScreenWidth(void);        
+            }       
 
             DrawText(TextFormat("Health: %i", player.GetHealth()), GetScreenWidth() * 0.01, GetScreenHeight() * 0.01, 20, BLACK);
             DrawText(TextFormat("Level: %i", player.GetLevel()), GetScreenWidth() * 0.5, GetScreenHeight() * 0.01, 20, BLACK);
