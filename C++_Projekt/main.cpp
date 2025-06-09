@@ -180,7 +180,7 @@ int main() {
              while (!IsKeyPressed(KEY_SPACE) && !WindowShouldClose()) {
                 BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
                 ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
-                DrawText("Du hast Aufgegeben. Drücke die Leertaste, um das Spiel zu Verlassen!", screenWidth / 5, screenHeight / 2, 20, BLACK);
+                DrawText("Du wirst Exmatrikuliert. Drücke die Leertaste, um das Spiel zu Verlassen!", screenWidth / 5, screenHeight / 2, 20, BLACK);
                 EndDrawing();
             }
             break; // beendet Spiel-Schleife
