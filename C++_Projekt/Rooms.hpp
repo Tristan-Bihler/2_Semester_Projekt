@@ -25,5 +25,5 @@ public:
     int getEnemyAmount()const {return enemyAmount;};
     void setDoor(bool enemyAlive);
     void changeRoom(Player& player, int currentlevel,bool enemyAlive, vector<Enemy>& enemies, vector<Hindernisse>& boxes, int* screenWidth, int* screenHeight, int screenWidth_o, int screenHeight_o);
-
+    
 };

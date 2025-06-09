@@ -35,7 +35,7 @@ int main() {
     Rooms lobby(screenWidth, screenHeight);
     
     //HideCursor();
-    Player player(screenWidth, screenHeight, 50, 50, BLUE, 100, 98);
+    Player player(screenWidth, screenHeight, 50, 50, BLUE, 100, 1);
 
     vector<Enemy> enemies;
     vector<Hindernisse> boxes;
@@ -80,13 +80,16 @@ int main() {
         for (auto& box : boxes) {
             for (auto& enemy : enemies) {
                 bool collision = CheckCollisionRecs(enemy.GetRect(), box.GetRect());
-                if (collision)
+                if (collision && (enemy.GetPreviousPositionY()>Hindernisse.GetPositionY())
                 {
-                    enemy.SetPosition(enemy.GetPreviousPositionX(), enemy.GetPreviousPositionY());
+                    enemy.SetPosition(enemy.GetPreviousPositionX()+1, enemy.GetPreviousPositionY());
+                }
+                if (collision && (enemy.GetPreviousPositionX()> Hindernisse.GetPositionX())
+                {
+                    enemy.SetPosition(enemy.GetPreviousPositionX()+1, enemy.GetPreviousPositionY());
                 }
             }
         }
-
         // Update Gegner
         for (Enemy& enemy : enemies) {
             enemy.Update(deltaTime, {player.GetRect().x, player.GetRect().y});
