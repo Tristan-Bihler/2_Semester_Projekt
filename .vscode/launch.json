@@ -4,7 +4,8 @@
             "name": "C/C++: g++.exe build and debug active file", // Ein benutzerfreundlicher Name für diese Debugging-Konfiguration, der im VS Code Debug-Dropdown angezeigt wird.
             "type": "cppdbg", // Gibt den Typ des Debuggers an, hier den C++-Debugger von VS Code.
             "request": "launch", // Definiert, dass dies eine "Launch"-Anfrage ist, was bedeutet, dass die Anwendung gestartet und debuggt wird. Alternativ gäbe es "attach" zum Anhängen an einen bereits laufenden Prozess.
-            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe", // Der vollständige Pfad zur ausführbaren Datei, die debuggt werden soll. Hier wird der Name der aktuellen Datei ohne Erweiterung und im selben Verzeichnis verwendet.
+            //"program": "${fileDirname}\\${fileBasenameNoExtension}.exe", // Der vollständige Pfad zur ausführbaren Datei, die debuggt werden soll. Hier wird der Name der aktuellen Datei ohne Erweiterung und im selben Verzeichnis verwendet.
+            "program": "${fileDirname}\\main.exe",
             "args": [], // Eine Liste von Kommandozeilenargumenten, die an das Programm übergeben werden sollen, wenn es gestartet wird. Hier sind keine Argumente definiert.
             "stopAtEntry": false, // Wenn auf 'true' gesetzt, stoppt der Debugger direkt am Einstiegspunkt des Programms (z.B. am Anfang von `main`). 'false' bedeutet, er startet ohne sofortigen Stopp.
             "cwd": "${fileDirname}", // Setzt das aktuelle Arbeitsverzeichnis (current working directory) für die Ausführung des Programms. Hier ist es das Verzeichnis der aktuellen Datei.

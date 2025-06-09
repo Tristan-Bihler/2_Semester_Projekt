@@ -80,7 +80,7 @@ void Rooms::changeRoom(Player& player, int currentlevel,bool enemyAlive, vector<
         for(int c=0; c<enemyAmount; c++){
             distribX = GetRandomValue(screenWidth  * 0.7f, screenWidth  * 0.8f);
             distribY = GetRandomValue(screenHeight * 0.1f, screenHeight * 0.9f);
-            enemies.emplace_back(distribX, distribY, 50, 50, GREEN, 30 + 2 * (player.GetLevel() - 1), 100.0f);
+            enemies.emplace_back(distribX, distribY, 50, 50, BLACK, 30 + 2 * (player.GetLevel() - 1), 100.0f);
         }
     }
 }

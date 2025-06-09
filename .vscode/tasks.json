@@ -5,7 +5,7 @@
             "label": "C/C++: g++.exe build active file", // Ein benutzerfreundlicher Name für die Aufgabe, der in VS Code angezeigt wird.
             "command": "C:\\msys64\\ucrt64\\bin\\g++.exe", // Der Pfad zum g++ Compiler, der zum Kompilieren verwendet wird.
             "args": [ // Eine Liste von Argumenten, die an den Compiler übergeben werden.
-                //"Änderung: '${file}' wurde auskommentiert, da beim testen von jeder Datei compiliert werden kann. Allerdings kann durch das entfernen des Kommentars auch test Dateien direkt ausgeführt werden.",
+                //'${file}' wurde auskommentiert, da beim testen von jeder Datei compiliert werden kann. Allerdings kann durch das entfernen des Kommentars auch test Dateien direkt ausgeführt werden.",
                 "main.cpp", // Kompiliert die Datei main.cpp.
                 "Player.cpp", // Kompiliert die Datei Player.cpp.
                 "Bullet.cpp", // Kompiliert die Datei Bullet.cpp.
@@ -15,7 +15,8 @@
                 "-IC:/msys64/ucrt64/include",  // Gibt den Pfad für Header-Dateien an. Der Compiler sucht hier nach Includedateien.
                 "-LC:/msys64/ucrt64/lib",     // Gibt den Pfad für Bibliotheksdateien an. Dies ist entscheidend, damit der Linker die benötigten Bibliotheken findet.
                 "-o", // Gibt an, dass das nächste Argument der Name der Ausgabedatei sein wird.
-                "${fileDirname}\\${fileBasenameNoExtension}.exe", // Der Name der ausführbaren Ausgabedatei. ${fileDirname} ist der Verzeichnispfad der aktuellen Datei und ${fileBasenameNoExtension} ist der Dateiname ohne Erweiterung.
+                //"${fileDirname}\\${fileBasenameNoExtension}.exe", // Der Name der ausführbaren Ausgabedatei. ${fileDirname} ist der Verzeichnispfad der aktuellen Datei und ${fileBasenameNoExtension} ist der Dateiname ohne Erweiterung.
+                "${fileDirname}\\main.exe",
                 "-lraylib", // Linkt die raylib-Bibliothek.
                 "-lopengl32", // Linkt die opengl32-Bibliothek, oft für Grafikanwendungen benötigt.
                 "-lgdi32", // Linkt die gdi32-Bibliothek, für Windows GDI (Graphics Device Interface) Funktionen.
