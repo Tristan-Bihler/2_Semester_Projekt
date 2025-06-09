@@ -214,7 +214,7 @@ int main() {
 
             DrawText(TextFormat("Health: %i", player.GetHealth()), GetScreenWidth() * 0.01, GetScreenHeight() * 0.01, 20, BLACK);
             DrawText(TextFormat("Level: %i", player.GetLevel()), GetScreenWidth() * 0.5, GetScreenHeight() * 0.01, 20, BLACK);
-            DrawText(TextFormat("Bohne: %s", bohnen_art), GetScreenWidth() * 0.25, GetScreenHeight() * 0.01, 20, BLACK);
+            DrawText(TextFormat("Bohne: %s", bohnen_art.c_str()), GetScreenWidth() * 0.25, GetScreenHeight() * 0.01, 20, BLACK);
 
         EndDrawing();
     }

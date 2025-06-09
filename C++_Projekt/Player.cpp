@@ -48,8 +48,8 @@ void Player::Update(float deltaTime, float screenWidth, float screenHeight) {
             bullet_color = BROWN;
             firerate = 0.5;
             bullet_damage= 10;
-            break;
             bohnen_art = "Kaffee";
+            break;
         case 3:
             bullet_color = BLACK;
             firerate = 0.1;
