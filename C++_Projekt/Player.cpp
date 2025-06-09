@@ -122,7 +122,7 @@ void Player::Increase_Level() {
 }
 
 void Player::Increase_Mental_Health_Points(){
-    maxHealth = 100 * pow((1.15), (currentLevel - 1));
+    maxHealth = 100 * pow((1.015), (currentLevel - 1));
     currentHealth = maxHealth;
 }
 

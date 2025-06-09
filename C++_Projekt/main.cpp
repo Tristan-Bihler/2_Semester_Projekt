@@ -11,11 +11,14 @@
 
 using namespace std;
 
-
 int main() {
+
+    int screenWidth = 0;
+    int screenHeight = 0;
+    InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL! Exams of Doom");          //Intialisierung notwendig, um Monitorgröße auslesen zu können
     Rooms lobby;
     
-    Player player(lobby.getscreenWidth(), lobby.getscreenHeight(), 50, 50, BLUE, 100, 98);
+    Player player(lobby.getscreenWidth(), lobby.getscreenHeight(), 50, 50, BLUE, 100, 97);
 
     vector<Enemy> enemies;
     vector<Hindernisse> boxes;
@@ -148,20 +151,18 @@ int main() {
 
         // Überprüft Spielende
         if (player.GetHealth() <= 0) {
-            CloseWindow();
             Rooms lobby;
 
              while (!IsKeyPressed(KEY_SPACE) && !WindowShouldClose()) {
                 BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
                 ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
-                DrawText("Du wirst Exmatrikuliert. Drücke die Leertaste, um das Spiel zu Verlassen!", lobby.getscreenWidth() / 5, lobby.getscreenHeight() / 2, 20, BLACK);
+                DrawText("Du wirst Exmatrikuliert. Drücke die Leertaste, um das Spiel zu Verlassen!", lobby.getscreenWidth() / 3, lobby.getscreenHeight() / 2, 20, BLACK);
                 EndDrawing();
             }
             break; // beendet Spiel-Schleife
         }
 
         if (player.GetLevel() == 100) {
-            CloseWindow();
             Rooms lobby;
 
             while (!IsKeyPressed(KEY_SPACE) && !WindowShouldClose()) {

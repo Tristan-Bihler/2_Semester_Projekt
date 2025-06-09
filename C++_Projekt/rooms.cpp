@@ -13,7 +13,6 @@ using namespace std;
 Rooms::Rooms(){
     monitor = GetCurrentMonitor();                                              // Aktuellen Monitor festlegen     
     
-    InitWindow(screenWidth, screenHeight, "DHBW SURVIVAL! Exams of Doom");          //Intialisierung notwendig, um Monitorgröße auslesen zu können
     screenWidth_o = GetMonitorWidth(monitor) * 0.66f;                                 //Monitorbreite auslesen mulitpliziert mit 2/3
     screenHeight_o = GetMonitorHeight(monitor) * 0.66f;                               //Monitorhöhe auslesen mulitpliziert mit 2/3
     screenWidth = screenWidth_o;
