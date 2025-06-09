@@ -46,10 +46,15 @@ int main() {
     while (!IsKeyPressed(KEY_SPACE) && !WindowShouldClose()) {
         BeginDrawing();                                                                  // Beginnt das Zeichnen eines neuen Frames
         ClearBackground(RAYWHITE);                                                       // Setzt den Bildschirm auf WEISS
-        DrawText("Drücke die Leertaste, um zu starten!", screenWidth / 2 - 200, screenHeight / 2, 20, BLACK);
-        DrawText("F2: Spiel nach dem Start im Vollbildmodus ausführen", screenWidth / 2 - 250, screenHeight / 2 - 100, 20, BLACK);
+        DrawText("Drücke die Leertaste, um zu starten!", screenWidth / 2 - 200, screenHeight / 2 + 150, 20, BLACK);
+        DrawText("Steuerung:", screenWidth / 2 - 200, screenHeight / 2 - 300, 20, BLACK);
+        DrawText("WASD:   Figur Bewegen", screenWidth / 2 - 200, screenHeight / 2 - 200, 20, BLACK);
+        DrawText("Linke Maustaste:   Schießen", screenWidth / 2 - 200, screenHeight / 2 - 150, 20, BLACK);
+        DrawText("F:   Wechseln der Monition", screenWidth / 2 - 200, screenHeight / 2 - 100, 20, BLACK);
+        DrawText("F2:   Spiel nach dem Start im Vollbildmodus ausführen", screenWidth / 2 - 200, screenHeight / 2 - 50, 20, BLACK);
         EndDrawing();
     }
+    
 
     // Spiel-Schleife
     while (!WindowShouldClose()) {
