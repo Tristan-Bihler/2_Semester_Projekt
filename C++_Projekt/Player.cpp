@@ -128,11 +128,11 @@ void Player::Increase_Mental_Health_Points(){
 
 void Player::Shoot() {
 
-    Vector2 mousePos = GetMousePosition();     // Mausposition holen
+    mousePos = GetMousePosition();     // Mausposition holen
 
-    Vector2 bulletStart = { rect.x + rect.width / 2, rect.y + rect.height / 2 };        // Spielerzentrum als Ausgangspunkt für Kugel
+    bulletStart = { rect.x + rect.width / 2, rect.y + rect.height / 2 };        // Spielerzentrum als Ausgangspunkt für Kugel
 
-    Vector2 direction = { mousePos.x - bulletStart.x, mousePos.y - bulletStart.y };     // Richtungsvektor von Spieler zu Maus
+    direction = { mousePos.x - bulletStart.x, mousePos.y - bulletStart.y };     // Richtungsvektor von Spieler zu Maus
 
     float length = sqrt(direction.x * direction.x + direction.y * direction.y);         // Länge des Vektors berechnen
     

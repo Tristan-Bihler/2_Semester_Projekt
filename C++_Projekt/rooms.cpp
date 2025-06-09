@@ -47,7 +47,7 @@ void Rooms::changeRoom(Player& player, int currentlevel,bool enemyAlive, vector<
         SetWindowSize(screenWidth, screenHeight);
         SetWindowPosition(ScreenPositionX, ScreenPositionY);  
 
-        door.x = screenWidth / 10 * 9;                                         // Tür soll immer Rechts erscheinen
+        door.x = screenWidth / 10 * 9;                                            // Tür soll immer Rechts erscheinen
         door.y = GetRandomValue (screenHeight / 10 * 1, screenHeight / 10 * 9);   // Höhe der Tür soll varieren
         door.height = 100;
         door.width = 30;

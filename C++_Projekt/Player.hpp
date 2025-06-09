@@ -1,6 +1,6 @@
 #pragma once
 
-#include "raylib.h"                //C:/Users/finnes/Documents/GitHub/2_Semester_Projekt/C++_Projekt/
+#include "raylib.h"             
 #include <vector>               // managing der Schüsse
 #include "Bullet.hpp"           // Deklarieren bzw. Einbinden der Bullet-Klasse
 #include "Hindernisse.hpp"
@@ -32,7 +32,7 @@ private:
     // Schüsse abgeben
     float shootCooldown;
     float currentShootCooldown;
-    std::vector<Bullet> bullets;        // Schüsse des Spielers aktiviert
+    vector<Bullet> bullets;        // Schüsse des Spielers aktiviert
 
     // Mauszeiger bewegen
     Vector2 mousePos;
@@ -62,6 +62,6 @@ public:
     int GetBulletDamage() const{return bullet_damage; }
     string GetBohnenArt() const{return bohnen_art;}
 
-    const std::vector<Bullet>& GetBullets() const { return bullets; }       // Zeichnungen und Kollisionsüberprüfung
-    std::vector<Bullet>& GetBulletsMutable() { return bullets; }            // Ändern (modifizieren) und entfernen der Schüsse
+    const vector<Bullet>& GetBullets() const { return bullets; }       // Zeichnungen und Kollisionsüberprüfung
+    vector<Bullet>& GetBulletsMutable() { return bullets; }            // Ändern (modifizieren) und entfernen der Schüsse
 };
