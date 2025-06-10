@@ -5,7 +5,9 @@ import Kunde
 class Main_Window(tk.Tk):
     def __init__(self, user):
         super().__init__()
+        
         self.geometry("400x200")
+        
         Produkte = ""
 
         self.produkt_frame = Produkt_Window(Produkte)
