@@ -49,6 +49,16 @@ int main() {
         //----------------------------------------------------------------------------------
         player.Update(deltaTime, lobby.getscreenWidth(), lobby.getscreenHeight());
 
+        // Update Gegner
+        for (Enemy& enemy : enemies) {
+            enemy.Update(deltaTime, {player.GetRect().x, player.GetRect().y});
+        }
+
+
+
+
+        // Überprüfen  
+        //----------------------------------------------------------------------------------
         //Auf Kollision prüfen
         for (auto& box : boxes) {
             bool collision = CheckCollisionRecs(player.GetRect(), box.GetRect());
@@ -81,10 +91,8 @@ int main() {
                 }
             }
         }
-        // Update Gegner
-        for (Enemy& enemy : enemies) {
-            enemy.Update(deltaTime, {player.GetRect().x, player.GetRect().y});
-        }
+
+
 
         // Holt eine Referenz auf die Liste der vom Spieler abgefeuerten Geschosse
         vector<Bullet>& playerBullets = player.GetBulletsMutable();
@@ -92,7 +100,7 @@ int main() {
             bool bulletHit = false;                                                      // Ob Geschoss einen Gegner getroffen hat
             for (size_t j = 0; j < enemies.size(); ) {
                 if (CheckCollisionRecs(playerBullets[i].GetRect(), enemies[j].GetRect())) {
-                    enemies[j].TakeDamage(playerBullets[i].GetBulletDamage());                                           // Gegner erhält 20 Schadenspunkte
+                    enemies[j].TakeDamage(playerBullets[i].GetBulletDamage());           // Gegner erhält 20 Schadenspunkte
                     bulletHit = true; 
                     // Entfernt Gegner wenn getroffen
                     if (!enemies[j].IsActive()) { 
@@ -174,6 +182,10 @@ int main() {
             break; // beendet Spiel-Schleife
         }
 
+
+
+        // Anzeigen  
+        //----------------------------------------------------------------------------------
         BeginDrawing();
 
             ClearBackground(RAYWHITE);

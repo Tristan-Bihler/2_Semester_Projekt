@@ -13,7 +13,7 @@ class Kunde:
             "messagingSenderId": "340216273962",
             "appId": "1:340216273962:web:54022052951bbb678c7753",
             "measurementId": "G-C3KETBC0B2",
-            "databaseURL": "https://shop-f1cbd-default-rtdb.europe-west1.firebasedatabase.app/" # Often recommended for Pyrebase, especially for RTDB
+            "databaseURL": "https://shop-f1cbd-default-rtdb.europe-west1.firebasedatabase.app/"
         }
 
         self.fb = pyrebase.initialize_app(firebaseConfig)
@@ -54,8 +54,4 @@ class Kunde:
         self.auth.revoke_refresh_tokens(self.user)
 
     def sign_up(self, email, password):
-        pass
-
-
-    def Einlkaufwagen_inhalt():
         pass

@@ -43,6 +43,9 @@ void Rooms::changeRoom(Player& player, int currentlevel,bool enemyAlive, vector<
         ScreenPositionX = (GetMonitorWidth(monitor) - screenWidth) / 2;
         ScreenPositionY = (GetMonitorHeight(monitor) - screenHeight) / 2;
 
+        //printf("Screenwidth = %i", screenWidth);
+        //printf("Screenheight = %i", screenHeight);
+
         SetWindowSize(screenWidth, screenHeight);
         SetWindowPosition(ScreenPositionX, ScreenPositionY);  
 
