@@ -1,5 +1,6 @@
 import tkinter as tk
 import File_handling as Fh
+import Python_Projekt.Ohne_Firebase.Model as Model
 
 class ui(tk.Tk):
     def __init__(self):
@@ -65,6 +66,7 @@ class Main_Window(tk.Frame):
     def List_Produkts(self):
         Films = Fh.load(r"Python_Projekt\Ohne_Firebase\Films.txt")
         #print(Films)
+        #Hier muss der Algorythmus rein
         for Film in Films:
             Film = Film.split(",")
             Film_kachel_instance = Film_Kachel(self.films_frame, Film)
@@ -81,11 +83,22 @@ class Film_Kachel(tk.Frame):
             button = tk.Button(self, text = "Add to favroites")
             button.grid(row=0, column=2)
 
+class Liked_Film_Kachel(tk.Frame):
+        def __init__(self,master, Film):
+            super().__init__(master)
+            Film_Name = tk.Label(self, text = Film[0])
+            Film_Name.grid(row=0, column=0)
+            Film_beschreibung = tk.Label(self, text= Film[1])
+            Film_beschreibung.grid(row=0, column=1)
+            button = tk.Button(self, text = "Remove from Favorites")
+            button.grid(row=0, column=2)
+
 class Favorites_Window(tk.Frame):
     def __init__(self, master):
         super().__init__(master)
         self.Label = tk.Label(self, text = "Favorites")
         self.Label.pack()
+
         self.Button = tk.Button(self, text = "Main Window", command = lambda : master.switch_frame(Main_Window))
         self.Button.pack()
 
@@ -118,6 +131,6 @@ class Favorites_Window(tk.Frame):
         #print(Films)
         for Film in Films:
             Film = Film.split(",")
-            Film_kachel_instance = Film_Kachel(self.films_frame, Film)
+            Film_kachel_instance = Liked_Film_Kachel(self.films_frame, Film)
             Film_kachel_instance.pack()
             #print(Film[0])

@@ -1,4 +1,5 @@
-import Interface
-
+import View
+import Model 
+import 
 if __name__ == "__main__":
-    app = Interface.ui()
+    app = View.ui()
