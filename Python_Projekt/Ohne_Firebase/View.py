@@ -1,18 +1,15 @@
 import tkinter as tk
-import File_handling as Fh
-import Python_Projekt.Ohne_Firebase.Model as Model
+import Filehandler as Fh
 
-class ui(tk.Tk):
+class View(tk.Tk):
     def __init__(self):
         super().__init__()
         #Window erstellen mit der 800 pixel breite und 600 pixel höhe, sowie dem namen Film Vorschlags Applikation 
         self.geometry("800x600")
         self.title("Film Vorschlags Applikation")
-        
+        self.controller = None
         self._frame = None
         self.switch_frame(Login_Window)
-
-        #Das erstellte Window soll bei jeglicher aktivität neu laden und aktualisieren
         self.mainloop()
 
     def switch_frame(self, frame_class):
@@ -21,14 +18,57 @@ class ui(tk.Tk):
             self._frame.destroy()
         self._frame = new_frame
         self._frame.pack()
+    
 
 class Login_Window(tk.Frame):
     def __init__(self, master):
         super().__init__(master)
-        self.Label = tk.Label(self, text = "Hello")
-        self.Label.pack()
-        self.Button = tk.Button(self, text= "Login", command = lambda : master.switch_frame(Main_Window))
-        self.Button.pack()
+        self.master = master
+        self.login_Label = tk.Label(self, text = "Einloggen")
+        self.login_Label.pack()
+        self.login_Entry = tk.Entry(self, text = "Username")
+        self.login_Entry.pack()
+        self.login_button = tk.Button(self, text= "Login", command = self.login)
+        self.login_button.pack()
+        self.signup_label = tk.Label(self, text = "Signup")
+        self.signup_label.pack()
+        self.signup_Entry = tk.Entry(self, text = "SignUp")
+        self.signup_Entry.pack()
+        self.signup_button = tk.Button(self, text = "Signup", command = self.signup)
+        self.signup_button.pack()
+    
+    def login(self):
+        users = Fh.get_names_from_json(r"Python_Projekt\Ohne_Firebase\users.json")
+        for user_ls in users:
+            user = self.login_Entry.get()
+            user = user.strip().lower()
+            print(user)
+            print(str(user_ls))
+
+            if user == str(user_ls).strip():
+                self.master.switch_frame(Main_Window)
+                break
+            
+            else:
+                print("Es gibt den User nicht")
+
+    def signup(self):
+        #User muss noch der Datei beigefügt werden und nanch erfolgreichem Signup weiterleiten
+        users = Fh.get_names_from_json(r"Python_Projekt\Ohne_Firebase\users.json")
+        for user_ls in users:
+            user = self.signup_Entry.get()
+            user = user.strip().lower()
+            print(user)
+            print(str(user_ls))
+
+            if user != str(user_ls).strip():
+                pass
+                #self.master.switch_frame(Main_Window)
+            
+            else:
+                print("Es gibt den user")
+
+        
 
 class Main_Window(tk.Frame):
     def __init__(self, master):
@@ -52,8 +92,8 @@ class Main_Window(tk.Frame):
 
         self.films_frame.bind("<Configure>", self.on_frame_configure)
         self.canvas.bind_all("<MouseWheel>", self._on_mousewheel)
+        self.list_Produkts()
 
-        self.List_Produkts()
 
     def on_frame_configure(self, event):
         self.canvas.configure(scrollregion=self.canvas.bbox("all"))
@@ -63,10 +103,10 @@ class Main_Window(tk.Frame):
             self.canvas.yview_scroll(int(-1*(event.delta/120)), "units")
 
     
-    def List_Produkts(self):
-        Films = Fh.load(r"Python_Projekt\Ohne_Firebase\Films.txt")
+    def list_Produkts(self):
         #print(Films)
         #Hier muss der Algorythmus rein
+        Films = Fh.load(r"Python_Projekt\Ohne_Firebase\Films.txt")
         for Film in Films:
             Film = Film.split(",")
             Film_kachel_instance = Film_Kachel(self.films_frame, Film)
@@ -127,10 +167,11 @@ class Favorites_Window(tk.Frame):
             self.canvas.yview_scroll(int(-1*(event.delta/120)), "units")
     
     def List_Produkts(self):
-        Films = Fh.load(r"Python_Projekt\Ohne_Firebase\Films.txt")
+        pass
+        #Films = Fh.load(r"Python_Projekt\Ohne_Firebase\Films.txt")
         #print(Films)
-        for Film in Films:
-            Film = Film.split(",")
-            Film_kachel_instance = Liked_Film_Kachel(self.films_frame, Film)
-            Film_kachel_instance.pack()
-            #print(Film[0])
+        #for Film in Films:
+        #    Film = Film.split(",")
+        #    Film_kachel_instance = Liked_Film_Kachel(self.films_frame, Film)
+        #    Film_kachel_instance.pack()
+        #    #print(Film[0])

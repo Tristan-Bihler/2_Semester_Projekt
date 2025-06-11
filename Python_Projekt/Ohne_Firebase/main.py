@@ -1,5 +1,5 @@
 import View
-import Model 
-import 
+import Controller
+
 if __name__ == "__main__":
-    app = View.ui()
+    view = View.View()

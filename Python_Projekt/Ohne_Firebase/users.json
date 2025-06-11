@@ -1,0 +1,29 @@
+[
+  {
+    "id": "user001",
+    "name": "Tristan",
+    "favorite_movies": [
+      "Inception",
+      "The Matrix",
+      "Dune"
+    ]
+  },
+  {
+    "id": "user002",
+    "name": "Carina",
+    "favorite_movies": [
+      "Arrival",
+      "Interstellar",
+      "Eternal Sunshine of the Spotless Mind"
+    ]
+  },
+  {
+    "id": "user003",
+    "name": "Semian",
+    "favorite_movies": [
+      "Pulp Fiction",
+      "Forrest Gump",
+      "The Shawshank Redemption"
+    ]
+  }
+]

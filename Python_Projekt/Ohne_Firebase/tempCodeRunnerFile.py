@@ -1,1 +1,0 @@
-recomended_frame, Produkt_liste,Produkt, menge
