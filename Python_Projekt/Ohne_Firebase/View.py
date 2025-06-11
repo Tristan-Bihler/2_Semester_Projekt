@@ -68,11 +68,14 @@ class Login_Window(tk.Frame):
             else:
                 print("Es gibt den user")
 
-        
 
 class Main_Window(tk.Frame):
     def __init__(self, master):
         super().__init__(master)
+
+        self.recomended_films = None
+
+
         self.Label = tk.Label(self, text="Mainwframe")
         self.Label.pack()
         self.Button = tk.Button(self, text="Favorites", command= lambda : master.switch_frame(Favorites_Window))
@@ -102,21 +105,64 @@ class Main_Window(tk.Frame):
         if event.delta:
             self.canvas.yview_scroll(int(-1*(event.delta/120)), "units")
 
-    
-    def list_Produkts(self):
+    def list_Films(self):
         #print(Films)
-        #Hier muss der Algorythmus rein
-        Films = Fh.load(r"Python_Projekt\Ohne_Firebase\Films.txt")
-        for Film in Films:
-            Film = Film.split(",")
-            Film_kachel_instance = Film_Kachel(self.films_frame, Film)
+        Film_names = Fh.get_films_from_json(r"Python_Projekt\Ohne_Firebase\Films.json")
+        for Film_name in Film_names:
+            Film_kachel_instance = Film_Kachel(self.films_frame, Film_name)
             Film_kachel_instance.pack()
             #print(Film[0])
+    
+    def list_recommended_Films(self):
+        #print(Films)
+        #Hier muss der Algorythmus rein
+        Film_names = self.recomended_films
+        for Film_name in Film_names:
+            Film_kachel_instance = Film_Kachel(self.films_frame, Film_name)
+            Film_kachel_instance.pack()
+            #print(Film[0])
+    
+    def get_recommendations(self):
+        """
+        if not self.liked_movie_titles:
+            return [] # Keine Empfehlungen, wenn keine Filme gemocht werden
+
+        # Sammle alle Genres der gemochten Filme
+        liked_genres = []
+        for liked_title in self.liked_movie_titles:
+            for movie in self.movies_data:
+                if movie["title"] == liked_title:
+                    liked_genres.extend(movie["genres"])
+                    break
+        
+        # Zähle die Häufigkeit der Genres, um Präferenzen zu ermitteln
+        genre_counts = Counter(liked_genres)
+
+        recommendations_with_scores = {}
+        for movie in self.movies_data:
+            movie_title = movie["title"]
+            # Empfehle keine Filme, die bereits gemocht werden
+            if movie_title in self.liked_movie_titles:
+                continue
+
+            score = 0
+            # Berechne einen Score basierend auf übereinstimmenden Genres und deren Häufigkeit
+            for genre in movie["genres"]:
+                score += genre_counts.get(genre, 0) # Addiere die Häufigkeit des Genres
+
+            if score > 0: # Nur Filme mit mindestens einer Genre-Übereinstimmung hinzufügen
+                recommendations_with_scores[movie_title] = score
+        
+        # Sortiere Empfehlungen nach Score (absteigend)
+        sorted_recommendations = sorted(recommendations_with_scores.items(), key=lambda item: item[1], reverse=True)
+        
+        return [title for title, score in sorted_recommendations]
+        """
 
 class Film_Kachel(tk.Frame):
         def __init__(self,master, Film):
             super().__init__(master)
-            Film_Name = tk.Label(self, text = Film[0])
+            Film_Name = tk.Label(self, text = Film)
             Film_Name.grid(row=0, column=0)
             Film_beschreibung = tk.Label(self, text= Film[1])
             Film_beschreibung.grid(row=0, column=1)

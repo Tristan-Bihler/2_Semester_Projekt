@@ -1,0 +1,5002 @@
+[
+  {
+    "name": "Der Pakt der Seelen 560",
+    "description": "Wahres Überleben.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Echo der Vergangenheit 718",
+    "description": "Ein komplexer Fall.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Echo der Vergangenheit 128",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Im Bann der Sterne 610",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Action"
+  },
+  {
+    "name": "Der stumme Zeuge 919",
+    "description": "Die Welt retten.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der Ruf der Wildnis 28",
+    "description": "Familiendrama.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der Pfad der Erlösung 340",
+    "description": "Packender Thriller.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Der verborgene Schatz 599",
+    "description": "Ein komplexer Fall.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 798",
+    "description": "Wahres Überleben.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Wächter des Lichts 194",
+    "description": "Liebe und Verlust.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der stumme Zeuge 278",
+    "description": "Die Welt retten.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Die Schatten des Vergessens 168",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 964",
+    "description": "Familiendrama.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der goldene Kompass 315",
+    "description": "Wahres Überleben.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Wächter des Lichts 782",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Sternenlicht-Serenade 425",
+    "description": "Wahres Überleben.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Das Lied der Sirenen 628",
+    "description": "Die Welt retten.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der Pakt der Seelen 313",
+    "description": "Liebe und Verlust.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Echo der Vergangenheit 237",
+    "description": "Wahres Überleben.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Im Bann der Sterne 245",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Das Lied der Sirenen 343",
+    "description": "Die Welt retten.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 261",
+    "description": "Packender Thriller.",
+    "genre": "Western"
+  },
+  {
+    "name": "Feuer am Himmel 62",
+    "description": "Romantische Komödie.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 539",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der Pakt der Seelen 28",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Der Pfad der Erlösung 113",
+    "description": "Die Welt retten.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der letzte Atemzug 196",
+    "description": "Wahres Überleben.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Sternenlicht-Serenade 348",
+    "description": "Romantische Komödie.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Wächter des Lichts 806",
+    "description": "Romantische Komödie.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Die gefallene Stadt 811",
+    "description": "Die Welt retten.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Echo der Vergangenheit 162",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der Ruf der Wildnis 612",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der letzte Atemzug 845",
+    "description": "Packender Thriller.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Die ewige Suche 70",
+    "description": "Familiendrama.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der stumme Zeuge 614",
+    "description": "Wahres Überleben.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der Pfad der Erlösung 621",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Die ewige Suche 622",
+    "description": "Packender Thriller.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Die Tränen des Drachen 638",
+    "description": "Packender Thriller.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Flüstern im Wind 325",
+    "description": "Packender Thriller.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Das Portal ins Nichts 53",
+    "description": "Liebe und Verlust.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der stumme Zeuge 43",
+    "description": "Die Welt retten.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Echo der Vergangenheit 624",
+    "description": "Romantische Komödie.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 448",
+    "description": "Romantische Komödie.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die Tränen des Drachen 402",
+    "description": "Romantische Komödie.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Jenseits des Horizonts 347",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 265",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der stumme Zeuge 502",
+    "description": "Romantische Komödie.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der goldene Kompass 336",
+    "description": "Romantische Komödie.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 141",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Sternenlicht-Serenade 216",
+    "description": "Die Welt retten.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Die ewige Suche 942",
+    "description": "Liebe und Verlust.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der letzte Atemzug 866",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Action"
+  },
+  {
+    "name": "Flüstern im Wind 278",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der stumme Zeuge 310",
+    "description": "Wahres Überleben.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Flüstern im Wind 396",
+    "description": "Liebe und Verlust.",
+    "genre": "Action"
+  },
+  {
+    "name": "Sternenlicht-Serenade 162",
+    "description": "Liebe und Verlust.",
+    "genre": "Western"
+  },
+  {
+    "name": "Flüstern im Wind 579",
+    "description": "Die Welt retten.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 104",
+    "description": "Liebe und Verlust.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Die ewige Suche 758",
+    "description": "Familiendrama.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Wächter des Lichts 141",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Die ewige Suche 195",
+    "description": "Romantische Komödie.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Im Bann der Sterne 168",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Die gefallene Stadt 987",
+    "description": "Romantische Komödie.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Das Portal ins Nichts 314",
+    "description": "Liebe und Verlust.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Echo der Vergangenheit 412",
+    "description": "Familiendrama.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der Pakt der Seelen 339",
+    "description": "Ein komplexer Fall.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Die Brücke nach Morgen 814",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Echo der Vergangenheit 46",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der letzte Atemzug 74",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Die ewige Suche 736",
+    "description": "Liebe und Verlust.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Der Pfad der Erlösung 913",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Der Pakt der Seelen 373",
+    "description": "Packender Thriller.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 55",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Action"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 365",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Das Portal ins Nichts 492",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Der Pfad der Erlösung 784",
+    "description": "Familiendrama.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Die Brücke nach Morgen 440",
+    "description": "Die Welt retten.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Das Portal ins Nichts 361",
+    "description": "Packender Thriller.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Feuer am Himmel 851",
+    "description": "Romantische Komödie.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Zeitlose Reise 662",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Feuer am Himmel 824",
+    "description": "Romantische Komödie.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Das Portal ins Nichts 653",
+    "description": "Romantische Komödie.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Echo der Vergangenheit 68",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Action"
+  },
+  {
+    "name": "Die gefallene Stadt 877",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Der verborgene Schatz 482",
+    "description": "Wahres Überleben.",
+    "genre": "Western"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 230",
+    "description": "Wahres Überleben.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Zeitlose Reise 382",
+    "description": "Die Welt retten.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Der goldene Kompass 817",
+    "description": "Liebe und Verlust.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Die letzte Festung 425",
+    "description": "Romantische Komödie.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Das verschwundene Artefakt 888",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Western"
+  },
+  {
+    "name": "Nacht der Legenden 381",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Der Pfad der Erlösung 328",
+    "description": "Packender Thriller.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Die Schatten des Vergessens 916",
+    "description": "Ein komplexer Fall.",
+    "genre": "Action"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 843",
+    "description": "Packender Thriller.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die letzte Festung 747",
+    "description": "Packender Thriller.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Stadt der Träume 968",
+    "description": "Romantische Komödie.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Die letzte Festung 138",
+    "description": "Romantische Komödie.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Stadt der Träume 581",
+    "description": "Liebe und Verlust.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der verborgene Schatz 569",
+    "description": "Ein komplexer Fall.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Die Tränen des Drachen 319",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Das Lied der Sirenen 58",
+    "description": "Romantische Komödie.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Die Brücke nach Morgen 127",
+    "description": "Packender Thriller.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der letzte Atemzug 687",
+    "description": "Packender Thriller.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Der letzte Atemzug 53",
+    "description": "Ein komplexer Fall.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Sternenlicht-Serenade 47",
+    "description": "Wahres Überleben.",
+    "genre": "Action"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 209",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 276",
+    "description": "Die Welt retten.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Jenseits des Horizonts 699",
+    "description": "Liebe und Verlust.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 926",
+    "description": "Romantische Komödie.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Die Schatten des Vergessens 114",
+    "description": "Wahres Überleben.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Das Portal ins Nichts 720",
+    "description": "Familiendrama.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 468",
+    "description": "Romantische Komödie.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Feuer am Himmel 990",
+    "description": "Familiendrama.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Flüstern im Wind 686",
+    "description": "Wahres Überleben.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Das verschwundene Artefakt 982",
+    "description": "Die Welt retten.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Wächter des Lichts 879",
+    "description": "Ein komplexer Fall.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 136",
+    "description": "Liebe und Verlust.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Die Tränen des Drachen 895",
+    "description": "Romantische Komödie.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Wächter des Lichts 594",
+    "description": "Liebe und Verlust.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Der letzte Atemzug 999",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 179",
+    "description": "Packender Thriller.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Wächter des Lichts 508",
+    "description": "Familiendrama.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Der verborgene Schatz 291",
+    "description": "Romantische Komödie.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Jenseits des Horizonts 405",
+    "description": "Ein komplexer Fall.",
+    "genre": "Action"
+  },
+  {
+    "name": "Das verschwundene Artefakt 743",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Action"
+  },
+  {
+    "name": "Die Tränen des Drachen 241",
+    "description": "Familiendrama.",
+    "genre": "Action"
+  },
+  {
+    "name": "Der stumme Zeuge 224",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Das Lied der Sirenen 87",
+    "description": "Familiendrama.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 195",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 595",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Stadt der Träume 793",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Der goldene Kompass 532",
+    "description": "Liebe und Verlust.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Die Tränen des Drachen 182",
+    "description": "Ein komplexer Fall.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Der Ruf der Wildnis 541",
+    "description": "Familiendrama.",
+    "genre": "Action"
+  },
+  {
+    "name": "Das Lied der Sirenen 260",
+    "description": "Liebe und Verlust.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 857",
+    "description": "Ein komplexer Fall.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Die Schatten des Vergessens 43",
+    "description": "Liebe und Verlust.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 65",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der Pakt der Seelen 737",
+    "description": "Packender Thriller.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Der Ruf der Wildnis 661",
+    "description": "Familiendrama.",
+    "genre": "Action"
+  },
+  {
+    "name": "Der Ruf der Wildnis 107",
+    "description": "Familiendrama.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Stadt der Träume 267",
+    "description": "Romantische Komödie.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die Brücke nach Morgen 110",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die Brücke nach Morgen 32",
+    "description": "Liebe und Verlust.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Feuer am Himmel 149",
+    "description": "Wahres Überleben.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 386",
+    "description": "Romantische Komödie.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der Pfad der Erlösung 133",
+    "description": "Romantische Komödie.",
+    "genre": "Action"
+  },
+  {
+    "name": "Echo der Vergangenheit 725",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Flüstern im Wind 892",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Sternenlicht-Serenade 380",
+    "description": "Liebe und Verlust.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 862",
+    "description": "Romantische Komödie.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der Ruf der Wildnis 491",
+    "description": "Romantische Komödie.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Im Bann der Sterne 877",
+    "description": "Die Welt retten.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Der Pakt der Seelen 131",
+    "description": "Die Welt retten.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Der verborgene Schatz 385",
+    "description": "Familiendrama.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Im Bann der Sterne 509",
+    "description": "Packender Thriller.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der Ruf der Wildnis 244",
+    "description": "Familiendrama.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die Tränen des Drachen 652",
+    "description": "Die Welt retten.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Das Portal ins Nichts 180",
+    "description": "Familiendrama.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Das Portal ins Nichts 639",
+    "description": "Wahres Überleben.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Im Bann der Sterne 190",
+    "description": "Familiendrama.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Der verborgene Schatz 668",
+    "description": "Liebe und Verlust.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Wächter des Lichts 526",
+    "description": "Romantische Komödie.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 131",
+    "description": "Romantische Komödie.",
+    "genre": "Action"
+  },
+  {
+    "name": "Das verschwundene Artefakt 460",
+    "description": "Die Welt retten.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Echo der Vergangenheit 963",
+    "description": "Romantische Komödie.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der Pfad der Erlösung 989",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Flüstern im Wind 197",
+    "description": "Die Welt retten.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Feuer am Himmel 265",
+    "description": "Wahres Überleben.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Jenseits des Horizonts 629",
+    "description": "Liebe und Verlust.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 640",
+    "description": "Liebe und Verlust.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Die Brücke nach Morgen 383",
+    "description": "Familiendrama.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Das Lied der Sirenen 960",
+    "description": "Wahres Überleben.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Zeitlose Reise 65",
+    "description": "Packender Thriller.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der letzte Atemzug 674",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Die Brücke nach Morgen 922",
+    "description": "Die Welt retten.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Die Brücke nach Morgen 631",
+    "description": "Liebe und Verlust.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Wächter des Lichts 555",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der stumme Zeuge 381",
+    "description": "Wahres Überleben.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Die ewige Suche 679",
+    "description": "Familiendrama.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Flüstern im Wind 243",
+    "description": "Liebe und Verlust.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Das Portal ins Nichts 680",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Western"
+  },
+  {
+    "name": "Die ewige Suche 710",
+    "description": "Packender Thriller.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Das verschwundene Artefakt 403",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Im Bann der Sterne 384",
+    "description": "Familiendrama.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Der Pfad der Erlösung 527",
+    "description": "Packender Thriller.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 995",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Der Pfad der Erlösung 640",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Der Ruf der Wildnis 793",
+    "description": "Familiendrama.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Sternenlicht-Serenade 433",
+    "description": "Liebe und Verlust.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die Tränen des Drachen 337",
+    "description": "Romantische Komödie.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Das Portal ins Nichts 305",
+    "description": "Packender Thriller.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Flüstern im Wind 722",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 354",
+    "description": "Ein komplexer Fall.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Der Pakt der Seelen 851",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der letzte Atemzug 148",
+    "description": "Liebe und Verlust.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der verborgene Schatz 704",
+    "description": "Ein komplexer Fall.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Sternenlicht-Serenade 114",
+    "description": "Wahres Überleben.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Im Bann der Sterne 82",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Das Portal ins Nichts 595",
+    "description": "Romantische Komödie.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der Pfad der Erlösung 522",
+    "description": "Ein komplexer Fall.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Der Pfad der Erlösung 323",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Der letzte Atemzug 235",
+    "description": "Wahres Überleben.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 975",
+    "description": "Packender Thriller.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der letzte Atemzug 237",
+    "description": "Liebe und Verlust.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 422",
+    "description": "Packender Thriller.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die ewige Suche 532",
+    "description": "Wahres Überleben.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der Pakt der Seelen 94",
+    "description": "Romantische Komödie.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Die Tränen des Drachen 726",
+    "description": "Familiendrama.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Wächter des Lichts 286",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Der Ruf der Wildnis 997",
+    "description": "Liebe und Verlust.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Das Lied der Sirenen 375",
+    "description": "Liebe und Verlust.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Das Lied der Sirenen 428",
+    "description": "Packender Thriller.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Wächter des Lichts 225",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Das Portal ins Nichts 355",
+    "description": "Romantische Komödie.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die gefallene Stadt 895",
+    "description": "Romantische Komödie.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die Tränen des Drachen 58",
+    "description": "Liebe und Verlust.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der Pakt der Seelen 377",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der Pfad der Erlösung 888",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der Ruf der Wildnis 382",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der letzte Atemzug 930",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der Ruf der Wildnis 449",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Action"
+  },
+  {
+    "name": "Flüstern im Wind 10",
+    "description": "Liebe und Verlust.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Im Bann der Sterne 771",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 175",
+    "description": "Packender Thriller.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die ewige Suche 317",
+    "description": "Familiendrama.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Jenseits des Horizonts 527",
+    "description": "Familiendrama.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Der goldene Kompass 696",
+    "description": "Wahres Überleben.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Die Brücke nach Morgen 75",
+    "description": "Romantische Komödie.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Der stumme Zeuge 898",
+    "description": "Ein komplexer Fall.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Jenseits des Horizonts 244",
+    "description": "Packender Thriller.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der stumme Zeuge 420",
+    "description": "Die Welt retten.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der Pfad der Erlösung 237",
+    "description": "Packender Thriller.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Jenseits des Horizonts 873",
+    "description": "Ein komplexer Fall.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Flüstern im Wind 555",
+    "description": "Ein komplexer Fall.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 133",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Wächter des Lichts 347",
+    "description": "Romantische Komödie.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Echo der Vergangenheit 565",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Jenseits des Horizonts 412",
+    "description": "Familiendrama.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der Ruf der Wildnis 2",
+    "description": "Packender Thriller.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der verborgene Schatz 962",
+    "description": "Packender Thriller.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Die Tränen des Drachen 983",
+    "description": "Die Welt retten.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 752",
+    "description": "Liebe und Verlust.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Flüstern im Wind 37",
+    "description": "Die Welt retten.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Das Lied der Sirenen 855",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Die Brücke nach Morgen 406",
+    "description": "Wahres Überleben.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Stadt der Träume 141",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Echo der Vergangenheit 924",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Wächter des Lichts 437",
+    "description": "Romantische Komödie.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 621",
+    "description": "Wahres Überleben.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Wächter des Lichts 571",
+    "description": "Romantische Komödie.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Die letzte Festung 522",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Nacht der Legenden 476",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Das verschwundene Artefakt 215",
+    "description": "Ein komplexer Fall.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Feuer am Himmel 44",
+    "description": "Ein komplexer Fall.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Das Lied der Sirenen 772",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 621",
+    "description": "Familiendrama.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 757",
+    "description": "Romantische Komödie.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Das Lied der Sirenen 313",
+    "description": "Romantische Komödie.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Die ewige Suche 216",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Jenseits des Horizonts 432",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Der goldene Kompass 171",
+    "description": "Die Welt retten.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der Pfad der Erlösung 84",
+    "description": "Liebe und Verlust.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Das Portal ins Nichts 611",
+    "description": "Packender Thriller.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Der Ruf der Wildnis 38",
+    "description": "Wahres Überleben.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Der letzte Atemzug 45",
+    "description": "Wahres Überleben.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Flüstern im Wind 69",
+    "description": "Liebe und Verlust.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 191",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der Pfad der Erlösung 948",
+    "description": "Packender Thriller.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Nacht der Legenden 559",
+    "description": "Packender Thriller.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 882",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der verborgene Schatz 908",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Western"
+  },
+  {
+    "name": "Echo der Vergangenheit 551",
+    "description": "Ein komplexer Fall.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Wächter des Lichts 657",
+    "description": "Liebe und Verlust.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Echo der Vergangenheit 126",
+    "description": "Liebe und Verlust.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Im Bann der Sterne 905",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Der Pfad der Erlösung 930",
+    "description": "Packender Thriller.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der verborgene Schatz 808",
+    "description": "Familiendrama.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 936",
+    "description": "Die Welt retten.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 610",
+    "description": "Die Welt retten.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Zeitlose Reise 108",
+    "description": "Wahres Überleben.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Das Lied der Sirenen 612",
+    "description": "Wahres Überleben.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der goldene Kompass 371",
+    "description": "Liebe und Verlust.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Die Schatten des Vergessens 148",
+    "description": "Packender Thriller.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der stumme Zeuge 634",
+    "description": "Wahres Überleben.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Die Schatten des Vergessens 479",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 8",
+    "description": "Packender Thriller.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Im Bann der Sterne 849",
+    "description": "Romantische Komödie.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Die letzte Festung 902",
+    "description": "Liebe und Verlust.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Zeitlose Reise 125",
+    "description": "Packender Thriller.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die Brücke nach Morgen 213",
+    "description": "Packender Thriller.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Die letzte Festung 30",
+    "description": "Liebe und Verlust.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die gefallene Stadt 571",
+    "description": "Packender Thriller.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der Pakt der Seelen 213",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Sternenlicht-Serenade 561",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die letzte Festung 419",
+    "description": "Liebe und Verlust.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Jenseits des Horizonts 307",
+    "description": "Ein komplexer Fall.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Die Brücke nach Morgen 903",
+    "description": "Wahres Überleben.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Der Ruf der Wildnis 241",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Sternenlicht-Serenade 172",
+    "description": "Ein komplexer Fall.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Das Portal ins Nichts 194",
+    "description": "Ein komplexer Fall.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Der Pfad der Erlösung 157",
+    "description": "Packender Thriller.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Sternenlicht-Serenade 590",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Stadt der Träume 395",
+    "description": "Romantische Komödie.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der stumme Zeuge 214",
+    "description": "Familiendrama.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 262",
+    "description": "Familiendrama.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die Tränen des Drachen 142",
+    "description": "Liebe und Verlust.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Die Schatten des Vergessens 115",
+    "description": "Packender Thriller.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Die letzte Festung 304",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 768",
+    "description": "Packender Thriller.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 552",
+    "description": "Familiendrama.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 981",
+    "description": "Wahres Überleben.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Im Bann der Sterne 401",
+    "description": "Liebe und Verlust.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Im Bann der Sterne 599",
+    "description": "Wahres Überleben.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Wächter des Lichts 647",
+    "description": "Ein komplexer Fall.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Die Brücke nach Morgen 753",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Der Pfad der Erlösung 278",
+    "description": "Ein komplexer Fall.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Die ewige Suche 582",
+    "description": "Packender Thriller.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Im Bann der Sterne 898",
+    "description": "Packender Thriller.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Die gefallene Stadt 622",
+    "description": "Ein komplexer Fall.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Der Pakt der Seelen 680",
+    "description": "Packender Thriller.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Die Schatten des Vergessens 493",
+    "description": "Romantische Komödie.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Im Bann der Sterne 684",
+    "description": "Romantische Komödie.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Die Brücke nach Morgen 54",
+    "description": "Packender Thriller.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Jenseits des Horizonts 465",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der Pakt der Seelen 952",
+    "description": "Die Welt retten.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 724",
+    "description": "Die Welt retten.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Der goldene Kompass 369",
+    "description": "Die Welt retten.",
+    "genre": "Action"
+  },
+  {
+    "name": "Die Tränen des Drachen 802",
+    "description": "Romantische Komödie.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Nacht der Legenden 662",
+    "description": "Liebe und Verlust.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der Pfad der Erlösung 230",
+    "description": "Familiendrama.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der verborgene Schatz 765",
+    "description": "Romantische Komödie.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Stadt der Träume 49",
+    "description": "Romantische Komödie.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Jenseits des Horizonts 467",
+    "description": "Liebe und Verlust.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Echo der Vergangenheit 563",
+    "description": "Liebe und Verlust.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 396",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Sternenlicht-Serenade 904",
+    "description": "Romantische Komödie.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Im Bann der Sterne 725",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 586",
+    "description": "Packender Thriller.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Die Schatten des Vergessens 599",
+    "description": "Die Welt retten.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der Ruf der Wildnis 182",
+    "description": "Wahres Überleben.",
+    "genre": "Action"
+  },
+  {
+    "name": "Der stumme Zeuge 596",
+    "description": "Packender Thriller.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 885",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Flüstern im Wind 277",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die Tränen des Drachen 227",
+    "description": "Packender Thriller.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Stadt der Träume 985",
+    "description": "Packender Thriller.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Das Portal ins Nichts 670",
+    "description": "Die Welt retten.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Im Bann der Sterne 428",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der Ruf der Wildnis 873",
+    "description": "Wahres Überleben.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Die ewige Suche 314",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 69",
+    "description": "Romantische Komödie.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Das Lied der Sirenen 594",
+    "description": "Packender Thriller.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der Pfad der Erlösung 355",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Nacht der Legenden 77",
+    "description": "Familiendrama.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Nacht der Legenden 776",
+    "description": "Romantische Komödie.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Der Ruf der Wildnis 444",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der goldene Kompass 973",
+    "description": "Die Welt retten.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Flüstern im Wind 140",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Das verschwundene Artefakt 927",
+    "description": "Familiendrama.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 332",
+    "description": "Die Welt retten.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Die ewige Suche 610",
+    "description": "Familiendrama.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Die ewige Suche 838",
+    "description": "Packender Thriller.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Flüstern im Wind 949",
+    "description": "Packender Thriller.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Nacht der Legenden 126",
+    "description": "Packender Thriller.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die letzte Festung 695",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Feuer am Himmel 541",
+    "description": "Liebe und Verlust.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der letzte Atemzug 44",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Feuer am Himmel 257",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Nacht der Legenden 897",
+    "description": "Ein komplexer Fall.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Im Bann der Sterne 687",
+    "description": "Packender Thriller.",
+    "genre": "Western"
+  },
+  {
+    "name": "Stadt der Träume 510",
+    "description": "Wahres Überleben.",
+    "genre": "Action"
+  },
+  {
+    "name": "Der verborgene Schatz 185",
+    "description": "Familiendrama.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Zeitlose Reise 87",
+    "description": "Romantische Komödie.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 807",
+    "description": "Familiendrama.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Jenseits des Horizonts 224",
+    "description": "Familiendrama.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der Ruf der Wildnis 981",
+    "description": "Familiendrama.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Im Bann der Sterne 945",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Zeitlose Reise 667",
+    "description": "Packender Thriller.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der Pfad der Erlösung 493",
+    "description": "Packender Thriller.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Zeitlose Reise 557",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Der letzte Atemzug 653",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Jenseits des Horizonts 651",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Das verschwundene Artefakt 643",
+    "description": "Packender Thriller.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der letzte Atemzug 852",
+    "description": "Liebe und Verlust.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Das Portal ins Nichts 61",
+    "description": "Ein komplexer Fall.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Die ewige Suche 132",
+    "description": "Romantische Komödie.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die gefallene Stadt 684",
+    "description": "Liebe und Verlust.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Echo der Vergangenheit 656",
+    "description": "Liebe und Verlust.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Die gefallene Stadt 884",
+    "description": "Die Welt retten.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Feuer am Himmel 911",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Das verschwundene Artefakt 728",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Echo der Vergangenheit 965",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Wächter des Lichts 898",
+    "description": "Ein komplexer Fall.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Das verschwundene Artefakt 685",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Wächter des Lichts 997",
+    "description": "Liebe und Verlust.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die Brücke nach Morgen 854",
+    "description": "Ein komplexer Fall.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Die ewige Suche 924",
+    "description": "Familiendrama.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Das verschwundene Artefakt 947",
+    "description": "Wahres Überleben.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der stumme Zeuge 414",
+    "description": "Ein komplexer Fall.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Die Schatten des Vergessens 498",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der goldene Kompass 654",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Jenseits des Horizonts 528",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 768",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Feuer am Himmel 925",
+    "description": "Romantische Komödie.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 883",
+    "description": "Liebe und Verlust.",
+    "genre": "Western"
+  },
+  {
+    "name": "Die gefallene Stadt 914",
+    "description": "Liebe und Verlust.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die gefallene Stadt 680",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der Pakt der Seelen 923",
+    "description": "Ein komplexer Fall.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Feuer am Himmel 144",
+    "description": "Wahres Überleben.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Echo der Vergangenheit 936",
+    "description": "Packender Thriller.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die Tränen des Drachen 326",
+    "description": "Familiendrama.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Das Portal ins Nichts 221",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der goldene Kompass 500",
+    "description": "Wahres Überleben.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Der Pakt der Seelen 107",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 397",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Wächter des Lichts 738",
+    "description": "Romantische Komödie.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Jenseits des Horizonts 330",
+    "description": "Liebe und Verlust.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 147",
+    "description": "Familiendrama.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Echo der Vergangenheit 51",
+    "description": "Familiendrama.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Der Ruf der Wildnis 186",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Sternenlicht-Serenade 604",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der Pakt der Seelen 617",
+    "description": "Romantische Komödie.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Die Brücke nach Morgen 401",
+    "description": "Wahres Überleben.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der goldene Kompass 603",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Sternenlicht-Serenade 588",
+    "description": "Ein komplexer Fall.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 717",
+    "description": "Romantische Komödie.",
+    "genre": "Western"
+  },
+  {
+    "name": "Sternenlicht-Serenade 645",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 412",
+    "description": "Wahres Überleben.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Flüstern im Wind 935",
+    "description": "Packender Thriller.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 249",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Echo der Vergangenheit 106",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der Pakt der Seelen 52",
+    "description": "Liebe und Verlust.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 142",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Der goldene Kompass 89",
+    "description": "Wahres Überleben.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Stadt der Träume 170",
+    "description": "Ein komplexer Fall.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Wächter des Lichts 946",
+    "description": "Ein komplexer Fall.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 935",
+    "description": "Packender Thriller.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die Tränen des Drachen 145",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der verborgene Schatz 836",
+    "description": "Familiendrama.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 797",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der verborgene Schatz 736",
+    "description": "Die Welt retten.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die gefallene Stadt 51",
+    "description": "Liebe und Verlust.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Das Lied der Sirenen 768",
+    "description": "Die Welt retten.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Das verschwundene Artefakt 870",
+    "description": "Wahres Überleben.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Die ewige Suche 344",
+    "description": "Liebe und Verlust.",
+    "genre": "Western"
+  },
+  {
+    "name": "Sternenlicht-Serenade 866",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die Tränen des Drachen 914",
+    "description": "Ein komplexer Fall.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Feuer am Himmel 971",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der stumme Zeuge 250",
+    "description": "Liebe und Verlust.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Nacht der Legenden 293",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Action"
+  },
+  {
+    "name": "Die letzte Festung 40",
+    "description": "Packender Thriller.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die gefallene Stadt 173",
+    "description": "Die Welt retten.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Der letzte Atemzug 957",
+    "description": "Die Welt retten.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die ewige Suche 899",
+    "description": "Ein komplexer Fall.",
+    "genre": "Western"
+  },
+  {
+    "name": "Im Bann der Sterne 154",
+    "description": "Ein komplexer Fall.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Nacht der Legenden 643",
+    "description": "Ein komplexer Fall.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der letzte Atemzug 901",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Der Ruf der Wildnis 231",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der Pakt der Seelen 628",
+    "description": "Romantische Komödie.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Der letzte Atemzug 494",
+    "description": "Wahres Überleben.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der verborgene Schatz 892",
+    "description": "Ein komplexer Fall.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die gefallene Stadt 744",
+    "description": "Die Welt retten.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der goldene Kompass 552",
+    "description": "Ein komplexer Fall.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Sternenlicht-Serenade 308",
+    "description": "Ein komplexer Fall.",
+    "genre": "Western"
+  },
+  {
+    "name": "Die gefallene Stadt 668",
+    "description": "Ein komplexer Fall.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 868",
+    "description": "Familiendrama.",
+    "genre": "Western"
+  },
+  {
+    "name": "Stadt der Träume 986",
+    "description": "Packender Thriller.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Flüstern im Wind 799",
+    "description": "Familiendrama.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 138",
+    "description": "Romantische Komödie.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Das verschwundene Artefakt 865",
+    "description": "Ein komplexer Fall.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die Schatten des Vergessens 610",
+    "description": "Die Welt retten.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Nacht der Legenden 629",
+    "description": "Ein komplexer Fall.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Stadt der Träume 137",
+    "description": "Familiendrama.",
+    "genre": "Western"
+  },
+  {
+    "name": "Im Bann der Sterne 450",
+    "description": "Packender Thriller.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Sternenlicht-Serenade 887",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Die Schatten des Vergessens 166",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Die Tränen des Drachen 977",
+    "description": "Wahres Überleben.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Im Bann der Sterne 168",
+    "description": "Ein komplexer Fall.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 427",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 892",
+    "description": "Liebe und Verlust.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Wächter des Lichts 946",
+    "description": "Romantische Komödie.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der Pakt der Seelen 603",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Das verschwundene Artefakt 334",
+    "description": "Packender Thriller.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Feuer am Himmel 792",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Action"
+  },
+  {
+    "name": "Nacht der Legenden 478",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 418",
+    "description": "Liebe und Verlust.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 156",
+    "description": "Packender Thriller.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Der stumme Zeuge 330",
+    "description": "Liebe und Verlust.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Der goldene Kompass 256",
+    "description": "Wahres Überleben.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Die Tränen des Drachen 74",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 508",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Flüstern im Wind 821",
+    "description": "Packender Thriller.",
+    "genre": "Action"
+  },
+  {
+    "name": "Das Portal ins Nichts 222",
+    "description": "Familiendrama.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Die Schatten des Vergessens 787",
+    "description": "Die Welt retten.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der Pfad der Erlösung 251",
+    "description": "Wahres Überleben.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 17",
+    "description": "Packender Thriller.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 437",
+    "description": "Liebe und Verlust.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Nacht der Legenden 848",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Feuer am Himmel 365",
+    "description": "Romantische Komödie.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Das verschwundene Artefakt 768",
+    "description": "Wahres Überleben.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Die Schatten des Vergessens 193",
+    "description": "Liebe und Verlust.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 183",
+    "description": "Romantische Komödie.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Das Lied der Sirenen 377",
+    "description": "Liebe und Verlust.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Nacht der Legenden 924",
+    "description": "Die Welt retten.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Der Pakt der Seelen 273",
+    "description": "Die Welt retten.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der stumme Zeuge 502",
+    "description": "Romantische Komödie.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Jenseits des Horizonts 234",
+    "description": "Ein komplexer Fall.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Nacht der Legenden 694",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Die letzte Festung 413",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Das Lied der Sirenen 246",
+    "description": "Wahres Überleben.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Sternenlicht-Serenade 72",
+    "description": "Familiendrama.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die Tränen des Drachen 612",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 844",
+    "description": "Ein komplexer Fall.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die letzte Festung 850",
+    "description": "Packender Thriller.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die gefallene Stadt 549",
+    "description": "Wahres Überleben.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 747",
+    "description": "Romantische Komödie.",
+    "genre": "Action"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 802",
+    "description": "Liebe und Verlust.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Das verschwundene Artefakt 813",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 396",
+    "description": "Ein komplexer Fall.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Die letzte Festung 443",
+    "description": "Romantische Komödie.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Im Bann der Sterne 987",
+    "description": "Romantische Komödie.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 929",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Der Pakt der Seelen 874",
+    "description": "Liebe und Verlust.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der Pfad der Erlösung 907",
+    "description": "Familiendrama.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Sternenlicht-Serenade 98",
+    "description": "Wahres Überleben.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Stadt der Träume 990",
+    "description": "Romantische Komödie.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Zeitlose Reise 830",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die Brücke nach Morgen 544",
+    "description": "Wahres Überleben.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der goldene Kompass 102",
+    "description": "Wahres Überleben.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Feuer am Himmel 781",
+    "description": "Romantische Komödie.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der Ruf der Wildnis 156",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die Schatten des Vergessens 519",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Der Pfad der Erlösung 950",
+    "description": "Liebe und Verlust.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der goldene Kompass 860",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Die letzte Festung 505",
+    "description": "Familiendrama.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Im Bann der Sterne 566",
+    "description": "Die Welt retten.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 797",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der Ruf der Wildnis 107",
+    "description": "Wahres Überleben.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Stadt der Träume 900",
+    "description": "Familiendrama.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Wächter des Lichts 894",
+    "description": "Die Welt retten.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Der verborgene Schatz 645",
+    "description": "Packender Thriller.",
+    "genre": "Western"
+  },
+  {
+    "name": "Die ewige Suche 260",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Der verborgene Schatz 989",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die Schatten des Vergessens 405",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Der Pfad der Erlösung 864",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Die Schatten des Vergessens 251",
+    "description": "Die Welt retten.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Das Lied der Sirenen 561",
+    "description": "Wahres Überleben.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der stumme Zeuge 157",
+    "description": "Romantische Komödie.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Echo der Vergangenheit 634",
+    "description": "Liebe und Verlust.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der Pakt der Seelen 378",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Der Pfad der Erlösung 214",
+    "description": "Packender Thriller.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Das Lied der Sirenen 67",
+    "description": "Liebe und Verlust.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 135",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Das verschwundene Artefakt 850",
+    "description": "Liebe und Verlust.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Das Portal ins Nichts 997",
+    "description": "Romantische Komödie.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Das verschwundene Artefakt 243",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Western"
+  },
+  {
+    "name": "Jenseits des Horizonts 458",
+    "description": "Familiendrama.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 601",
+    "description": "Wahres Überleben.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 609",
+    "description": "Liebe und Verlust.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 905",
+    "description": "Liebe und Verlust.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Der verborgene Schatz 807",
+    "description": "Familiendrama.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 598",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Die ewige Suche 352",
+    "description": "Familiendrama.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Im Bann der Sterne 342",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Der Pakt der Seelen 763",
+    "description": "Wahres Überleben.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die Schatten des Vergessens 879",
+    "description": "Die Welt retten.",
+    "genre": "Action"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 753",
+    "description": "Familiendrama.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 991",
+    "description": "Wahres Überleben.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Das verschwundene Artefakt 868",
+    "description": "Wahres Überleben.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Echo der Vergangenheit 455",
+    "description": "Wahres Überleben.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Der Pfad der Erlösung 273",
+    "description": "Die Welt retten.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Jenseits des Horizonts 893",
+    "description": "Romantische Komödie.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Die gefallene Stadt 840",
+    "description": "Ein komplexer Fall.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die ewige Suche 7",
+    "description": "Die Welt retten.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Echo der Vergangenheit 738",
+    "description": "Romantische Komödie.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Stadt der Träume 610",
+    "description": "Wahres Überleben.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 89",
+    "description": "Familiendrama.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der stumme Zeuge 768",
+    "description": "Liebe und Verlust.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Die ewige Suche 63",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die ewige Suche 592",
+    "description": "Die Welt retten.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Der Pakt der Seelen 821",
+    "description": "Ein komplexer Fall.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Nacht der Legenden 291",
+    "description": "Ein komplexer Fall.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 257",
+    "description": "Familiendrama.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Wächter des Lichts 906",
+    "description": "Liebe und Verlust.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Die letzte Festung 175",
+    "description": "Wahres Überleben.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Das Portal ins Nichts 120",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Flüstern im Wind 150",
+    "description": "Wahres Überleben.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Echo der Vergangenheit 740",
+    "description": "Ein komplexer Fall.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Flüstern im Wind 122",
+    "description": "Wahres Überleben.",
+    "genre": "Western"
+  },
+  {
+    "name": "Das Lied der Sirenen 403",
+    "description": "Wahres Überleben.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Nacht der Legenden 20",
+    "description": "Packender Thriller.",
+    "genre": "Action"
+  },
+  {
+    "name": "Das Lied der Sirenen 485",
+    "description": "Ein komplexer Fall.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Feuer am Himmel 14",
+    "description": "Packender Thriller.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Sternenlicht-Serenade 631",
+    "description": "Liebe und Verlust.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Im Bann der Sterne 755",
+    "description": "Romantische Komödie.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Die gefallene Stadt 971",
+    "description": "Ein komplexer Fall.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Feuer am Himmel 781",
+    "description": "Ein komplexer Fall.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Im Bann der Sterne 232",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Das Portal ins Nichts 870",
+    "description": "Familiendrama.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Der verborgene Schatz 437",
+    "description": "Liebe und Verlust.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Der letzte Atemzug 216",
+    "description": "Wahres Überleben.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Stadt der Träume 675",
+    "description": "Familiendrama.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Feuer am Himmel 930",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Feuer am Himmel 177",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Die Tränen des Drachen 155",
+    "description": "Packender Thriller.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der verborgene Schatz 188",
+    "description": "Ein komplexer Fall.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Sternenlicht-Serenade 858",
+    "description": "Packender Thriller.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der Ruf der Wildnis 405",
+    "description": "Packender Thriller.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Der Ruf der Wildnis 127",
+    "description": "Ein komplexer Fall.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der letzte Atemzug 84",
+    "description": "Die Welt retten.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Echo der Vergangenheit 335",
+    "description": "Liebe und Verlust.",
+    "genre": "Action"
+  },
+  {
+    "name": "Die gefallene Stadt 535",
+    "description": "Familiendrama.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Nacht der Legenden 391",
+    "description": "Die Welt retten.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Feuer am Himmel 658",
+    "description": "Liebe und Verlust.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die Brücke nach Morgen 863",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die letzte Festung 133",
+    "description": "Liebe und Verlust.",
+    "genre": "Western"
+  },
+  {
+    "name": "Das Portal ins Nichts 190",
+    "description": "Die Welt retten.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Jenseits des Horizonts 11",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Echo der Vergangenheit 411",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 849",
+    "description": "Wahres Überleben.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Echo der Vergangenheit 257",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Die Schatten des Vergessens 152",
+    "description": "Wahres Überleben.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Der goldene Kompass 171",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Im Bann der Sterne 181",
+    "description": "Liebe und Verlust.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 225",
+    "description": "Wahres Überleben.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 841",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Zeitlose Reise 394",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Der Pakt der Seelen 456",
+    "description": "Ein komplexer Fall.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 976",
+    "description": "Ein komplexer Fall.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der letzte Atemzug 31",
+    "description": "Wahres Überleben.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Der Pakt der Seelen 465",
+    "description": "Liebe und Verlust.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Feuer am Himmel 62",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der letzte Atemzug 560",
+    "description": "Romantische Komödie.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der stumme Zeuge 635",
+    "description": "Familiendrama.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Jenseits des Horizonts 122",
+    "description": "Wahres Überleben.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Die Schatten des Vergessens 843",
+    "description": "Romantische Komödie.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die gefallene Stadt 782",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der stumme Zeuge 240",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die ewige Suche 664",
+    "description": "Ein komplexer Fall.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Die ewige Suche 798",
+    "description": "Liebe und Verlust.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Das verschwundene Artefakt 136",
+    "description": "Romantische Komödie.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 545",
+    "description": "Wahres Überleben.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Feuer am Himmel 598",
+    "description": "Romantische Komödie.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Die gefallene Stadt 593",
+    "description": "Familiendrama.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Das verschwundene Artefakt 757",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Die Schatten des Vergessens 367",
+    "description": "Packender Thriller.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Jenseits des Horizonts 501",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Der stumme Zeuge 666",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Sternenlicht-Serenade 518",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Das Portal ins Nichts 199",
+    "description": "Liebe und Verlust.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Nacht der Legenden 48",
+    "description": "Packender Thriller.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Echo der Vergangenheit 875",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Echo der Vergangenheit 858",
+    "description": "Wahres Überleben.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Wächter des Lichts 16",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Jenseits des Horizonts 876",
+    "description": "Packender Thriller.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Sternenlicht-Serenade 304",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der stumme Zeuge 510",
+    "description": "Ein komplexer Fall.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 922",
+    "description": "Ein komplexer Fall.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Sternenlicht-Serenade 731",
+    "description": "Die Welt retten.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Nacht der Legenden 927",
+    "description": "Ein komplexer Fall.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Sternenlicht-Serenade 392",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Jenseits des Horizonts 618",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Das Portal ins Nichts 71",
+    "description": "Die Welt retten.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die Brücke nach Morgen 820",
+    "description": "Die Welt retten.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Die ewige Suche 501",
+    "description": "Ein komplexer Fall.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Im Bann der Sterne 839",
+    "description": "Wahres Überleben.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der Ruf der Wildnis 294",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 466",
+    "description": "Wahres Überleben.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 121",
+    "description": "Packender Thriller.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 39",
+    "description": "Familiendrama.",
+    "genre": "Western"
+  },
+  {
+    "name": "Die ewige Suche 21",
+    "description": "Packender Thriller.",
+    "genre": "Action"
+  },
+  {
+    "name": "Das verschwundene Artefakt 238",
+    "description": "Liebe und Verlust.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Der letzte Atemzug 693",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Stadt der Träume 549",
+    "description": "Die Welt retten.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 860",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Der Ruf der Wildnis 304",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Flüstern im Wind 470",
+    "description": "Ein komplexer Fall.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Das Portal ins Nichts 746",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Flüstern im Wind 157",
+    "description": "Ein komplexer Fall.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Nacht der Legenden 131",
+    "description": "Wahres Überleben.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Das verschwundene Artefakt 201",
+    "description": "Familiendrama.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der letzte Atemzug 665",
+    "description": "Familiendrama.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Echo der Vergangenheit 914",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Sternenlicht-Serenade 851",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der stumme Zeuge 599",
+    "description": "Familiendrama.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die Tränen des Drachen 962",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Western"
+  },
+  {
+    "name": "Das Lied der Sirenen 991",
+    "description": "Romantische Komödie.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der Pfad der Erlösung 697",
+    "description": "Packender Thriller.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Sternenlicht-Serenade 288",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Action"
+  },
+  {
+    "name": "Die Brücke nach Morgen 221",
+    "description": "Romantische Komödie.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Feuer am Himmel 181",
+    "description": "Familiendrama.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Der goldene Kompass 796",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Das Portal ins Nichts 587",
+    "description": "Romantische Komödie.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 660",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Stadt der Träume 968",
+    "description": "Packender Thriller.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Feuer am Himmel 489",
+    "description": "Die Welt retten.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Feuer am Himmel 586",
+    "description": "Die Welt retten.",
+    "genre": "Action"
+  },
+  {
+    "name": "Die gefallene Stadt 627",
+    "description": "Liebe und Verlust.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Flüstern im Wind 239",
+    "description": "Packender Thriller.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 739",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die Brücke nach Morgen 440",
+    "description": "Familiendrama.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Jenseits des Horizonts 966",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 696",
+    "description": "Ein komplexer Fall.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Zeitlose Reise 155",
+    "description": "Die Welt retten.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Das verschwundene Artefakt 668",
+    "description": "Romantische Komödie.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Das Portal ins Nichts 731",
+    "description": "Romantische Komödie.",
+    "genre": "Western"
+  },
+  {
+    "name": "Die ewige Suche 602",
+    "description": "Familiendrama.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Die letzte Festung 388",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Nacht der Legenden 201",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Das Lied der Sirenen 443",
+    "description": "Wahres Überleben.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Wächter des Lichts 271",
+    "description": "Packender Thriller.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die ewige Suche 9",
+    "description": "Packender Thriller.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Die Schatten des Vergessens 470",
+    "description": "Liebe und Verlust.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 796",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die Schatten des Vergessens 879",
+    "description": "Packender Thriller.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 211",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der Pfad der Erlösung 513",
+    "description": "Wahres Überleben.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die gefallene Stadt 453",
+    "description": "Familiendrama.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Stadt der Träume 705",
+    "description": "Wahres Überleben.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 636",
+    "description": "Packender Thriller.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Im Bann der Sterne 916",
+    "description": "Die Welt retten.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Das verschwundene Artefakt 64",
+    "description": "Familiendrama.",
+    "genre": "Action"
+  },
+  {
+    "name": "Wächter des Lichts 247",
+    "description": "Liebe und Verlust.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 846",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Die ewige Suche 633",
+    "description": "Die Welt retten.",
+    "genre": "Action"
+  },
+  {
+    "name": "Jenseits des Horizonts 550",
+    "description": "Romantische Komödie.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die Schatten des Vergessens 108",
+    "description": "Familiendrama.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der Pakt der Seelen 72",
+    "description": "Romantische Komödie.",
+    "genre": "Action"
+  },
+  {
+    "name": "Das Portal ins Nichts 278",
+    "description": "Familiendrama.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Die Brücke nach Morgen 348",
+    "description": "Ein komplexer Fall.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 656",
+    "description": "Wahres Überleben.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der goldene Kompass 653",
+    "description": "Die Welt retten.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Wächter des Lichts 713",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Die letzte Festung 821",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die Tränen des Drachen 17",
+    "description": "Wahres Überleben.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Sternenlicht-Serenade 241",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der Ruf der Wildnis 823",
+    "description": "Romantische Komödie.",
+    "genre": "Western"
+  },
+  {
+    "name": "Die Tränen des Drachen 143",
+    "description": "Ein komplexer Fall.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Zeitlose Reise 22",
+    "description": "Ein komplexer Fall.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 693",
+    "description": "Packender Thriller.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Zeitlose Reise 17",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der goldene Kompass 463",
+    "description": "Wahres Überleben.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 331",
+    "description": "Die Welt retten.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 184",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Feuer am Himmel 871",
+    "description": "Liebe und Verlust.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Das Portal ins Nichts 341",
+    "description": "Familiendrama.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Die letzte Festung 873",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Die ewige Suche 473",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Feuer am Himmel 977",
+    "description": "Familiendrama.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Echo der Vergangenheit 683",
+    "description": "Liebe und Verlust.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die gefallene Stadt 828",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der Ruf der Wildnis 308",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Zeitlose Reise 405",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Western"
+  },
+  {
+    "name": "Die letzte Festung 85",
+    "description": "Packender Thriller.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Nacht der Legenden 477",
+    "description": "Wahres Überleben.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die gefallene Stadt 143",
+    "description": "Romantische Komödie.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Der Ruf der Wildnis 446",
+    "description": "Packender Thriller.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der goldene Kompass 45",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die gefallene Stadt 638",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Das Portal ins Nichts 714",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 436",
+    "description": "Packender Thriller.",
+    "genre": "Action"
+  },
+  {
+    "name": "Der stumme Zeuge 541",
+    "description": "Romantische Komödie.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Echo der Vergangenheit 48",
+    "description": "Die Welt retten.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Feuer am Himmel 569",
+    "description": "Liebe und Verlust.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Der goldene Kompass 689",
+    "description": "Liebe und Verlust.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Flüstern im Wind 362",
+    "description": "Die Welt retten.",
+    "genre": "Action"
+  },
+  {
+    "name": "Stadt der Träume 230",
+    "description": "Familiendrama.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der Ruf der Wildnis 658",
+    "description": "Die Welt retten.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Das Lied der Sirenen 104",
+    "description": "Packender Thriller.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Im Bann der Sterne 622",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Sternenlicht-Serenade 273",
+    "description": "Packender Thriller.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Nacht der Legenden 176",
+    "description": "Packender Thriller.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Feuer am Himmel 198",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der letzte Atemzug 554",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Action"
+  },
+  {
+    "name": "Das Portal ins Nichts 27",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Der Pfad der Erlösung 839",
+    "description": "Liebe und Verlust.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Die Schatten des Vergessens 200",
+    "description": "Ein komplexer Fall.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der Pfad der Erlösung 593",
+    "description": "Familiendrama.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Zeitlose Reise 271",
+    "description": "Die Welt retten.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der Pfad der Erlösung 390",
+    "description": "Romantische Komödie.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Jenseits des Horizonts 596",
+    "description": "Ein komplexer Fall.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Nacht der Legenden 139",
+    "description": "Packender Thriller.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Feuer am Himmel 630",
+    "description": "Ein komplexer Fall.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die ewige Suche 251",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Jenseits des Horizonts 828",
+    "description": "Packender Thriller.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Das verschwundene Artefakt 809",
+    "description": "Die Welt retten.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Die Tränen des Drachen 99",
+    "description": "Familiendrama.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Das verschwundene Artefakt 124",
+    "description": "Wahres Überleben.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Der verborgene Schatz 156",
+    "description": "Romantische Komödie.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Der Ruf der Wildnis 599",
+    "description": "Die Welt retten.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der Pakt der Seelen 434",
+    "description": "Wahres Überleben.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Im Bann der Sterne 406",
+    "description": "Romantische Komödie.",
+    "genre": "Action"
+  },
+  {
+    "name": "Der Ruf der Wildnis 640",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Stadt der Träume 57",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der goldene Kompass 894",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Im Bann der Sterne 93",
+    "description": "Liebe und Verlust.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Zeitlose Reise 567",
+    "description": "Wahres Überleben.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Feuer am Himmel 971",
+    "description": "Packender Thriller.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 273",
+    "description": "Wahres Überleben.",
+    "genre": "Action"
+  },
+  {
+    "name": "Nacht der Legenden 965",
+    "description": "Romantische Komödie.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Feuer am Himmel 626",
+    "description": "Die Welt retten.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Die Brücke nach Morgen 204",
+    "description": "Die Welt retten.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der verborgene Schatz 180",
+    "description": "Packender Thriller.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die letzte Festung 17",
+    "description": "Die Welt retten.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die ewige Suche 652",
+    "description": "Die Welt retten.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Die Schatten des Vergessens 658",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Das Portal ins Nichts 424",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Sternenlicht-Serenade 824",
+    "description": "Wahres Überleben.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der stumme Zeuge 609",
+    "description": "Die Welt retten.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Das Lied der Sirenen 683",
+    "description": "Romantische Komödie.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Jenseits des Horizonts 251",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Im Bann der Sterne 693",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Zeitlose Reise 376",
+    "description": "Liebe und Verlust.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Der goldene Kompass 305",
+    "description": "Die Welt retten.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Das Lied der Sirenen 50",
+    "description": "Familiendrama.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Sternenlicht-Serenade 707",
+    "description": "Ein komplexer Fall.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die gefallene Stadt 672",
+    "description": "Liebe und Verlust.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Die Schatten des Vergessens 772",
+    "description": "Liebe und Verlust.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der letzte Atemzug 843",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Das Portal ins Nichts 495",
+    "description": "Wahres Überleben.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Die Schatten des Vergessens 708",
+    "description": "Liebe und Verlust.",
+    "genre": "Western"
+  },
+  {
+    "name": "Nacht der Legenden 517",
+    "description": "Romantische Komödie.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Das Portal ins Nichts 142",
+    "description": "Die Welt retten.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der Pfad der Erlösung 384",
+    "description": "Ein komplexer Fall.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der stumme Zeuge 374",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Das verschwundene Artefakt 395",
+    "description": "Familiendrama.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Zeitlose Reise 586",
+    "description": "Die Welt retten.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Im Bann der Sterne 678",
+    "description": "Ein komplexer Fall.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Im Bann der Sterne 599",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Das Lied der Sirenen 607",
+    "description": "Romantische Komödie.",
+    "genre": "Western"
+  },
+  {
+    "name": "Die ewige Suche 817",
+    "description": "Familiendrama.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die Schatten des Vergessens 149",
+    "description": "Liebe und Verlust.",
+    "genre": "Action"
+  },
+  {
+    "name": "Die letzte Festung 340",
+    "description": "Ein komplexer Fall.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Die ewige Suche 521",
+    "description": "Ein komplexer Fall.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Feuer am Himmel 735",
+    "description": "Romantische Komödie.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die letzte Festung 570",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Nacht der Legenden 135",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Der letzte Atemzug 789",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Western"
+  },
+  {
+    "name": "Stadt der Träume 132",
+    "description": "Romantische Komödie.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der letzte Atemzug 472",
+    "description": "Romantische Komödie.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Stadt der Träume 865",
+    "description": "Ein komplexer Fall.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 762",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Echo der Vergangenheit 702",
+    "description": "Packender Thriller.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Jenseits des Horizonts 39",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 8",
+    "description": "Wahres Überleben.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Stadt der Träume 395",
+    "description": "Ein komplexer Fall.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Flüstern im Wind 657",
+    "description": "Romantische Komödie.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Die letzte Festung 582",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Wächter des Lichts 189",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Das Portal ins Nichts 583",
+    "description": "Ein komplexer Fall.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Die ewige Suche 456",
+    "description": "Die Welt retten.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Das verschwundene Artefakt 518",
+    "description": "Romantische Komödie.",
+    "genre": "Western"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 525",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 285",
+    "description": "Romantische Komödie.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Das Portal ins Nichts 174",
+    "description": "Liebe und Verlust.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Echo der Vergangenheit 69",
+    "description": "Romantische Komödie.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Die gefallene Stadt 546",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Die Brücke nach Morgen 842",
+    "description": "Romantische Komödie.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die Schatten des Vergessens 997",
+    "description": "Liebe und Verlust.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Die Brücke nach Morgen 942",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Zeitlose Reise 312",
+    "description": "Die Welt retten.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Das Portal ins Nichts 309",
+    "description": "Liebe und Verlust.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 854",
+    "description": "Liebe und Verlust.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Echo der Vergangenheit 127",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Western"
+  },
+  {
+    "name": "Flüstern im Wind 386",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Die Schatten des Vergessens 704",
+    "description": "Packender Thriller.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Das verschwundene Artefakt 810",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Die letzte Festung 376",
+    "description": "Packender Thriller.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 781",
+    "description": "Romantische Komödie.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die ewige Suche 273",
+    "description": "Romantische Komödie.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Stadt der Träume 858",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Feuer am Himmel 182",
+    "description": "Packender Thriller.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Das verschwundene Artefakt 498",
+    "description": "Packender Thriller.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 842",
+    "description": "Packender Thriller.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 389",
+    "description": "Romantische Komödie.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 130",
+    "description": "Romantische Komödie.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der verborgene Schatz 883",
+    "description": "Familiendrama.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 427",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Der Pakt der Seelen 310",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Flüstern im Wind 452",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Nacht der Legenden 181",
+    "description": "Liebe und Verlust.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Jenseits des Horizonts 204",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Sternenlicht-Serenade 526",
+    "description": "Liebe und Verlust.",
+    "genre": "Western"
+  },
+  {
+    "name": "Echo der Vergangenheit 498",
+    "description": "Familiendrama.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Zeitlose Reise 246",
+    "description": "Packender Thriller.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Der Pakt der Seelen 736",
+    "description": "Die Welt retten.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 128",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Echo der Vergangenheit 534",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der letzte Atemzug 84",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Western"
+  },
+  {
+    "name": "Die ewige Suche 262",
+    "description": "Die Welt retten.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Das Lied der Sirenen 14",
+    "description": "Packender Thriller.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der letzte Atemzug 591",
+    "description": "Packender Thriller.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Das Portal ins Nichts 273",
+    "description": "Wahres Überleben.",
+    "genre": "Action"
+  },
+  {
+    "name": "Feuer am Himmel 231",
+    "description": "Wahres Überleben.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Das verschwundene Artefakt 689",
+    "description": "Romantische Komödie.",
+    "genre": "Action"
+  },
+  {
+    "name": "Sternenlicht-Serenade 130",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Die Schatten des Vergessens 458",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Flüstern im Wind 306",
+    "description": "Die Welt retten.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Wächter des Lichts 234",
+    "description": "Romantische Komödie.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Echo der Vergangenheit 75",
+    "description": "Die Welt retten.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der Pfad der Erlösung 761",
+    "description": "Die Welt retten.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der Pakt der Seelen 614",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der stumme Zeuge 999",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Zeitlose Reise 751",
+    "description": "Packender Thriller.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Feuer am Himmel 438",
+    "description": "Romantische Komödie.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Die ewige Suche 302",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der verborgene Schatz 706",
+    "description": "Ein komplexer Fall.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Stadt der Träume 757",
+    "description": "Wahres Überleben.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 13",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Der letzte Atemzug 897",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 399",
+    "description": "Die Welt retten.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Im Bann der Sterne 405",
+    "description": "Familiendrama.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der stumme Zeuge 121",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die ewige Suche 504",
+    "description": "Ein komplexer Fall.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Der goldene Kompass 822",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Western"
+  },
+  {
+    "name": "Zeitlose Reise 53",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Sternenlicht-Serenade 923",
+    "description": "Ein komplexer Fall.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Der Ruf der Wildnis 195",
+    "description": "Packender Thriller.",
+    "genre": "Western"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 369",
+    "description": "Liebe und Verlust.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Die Schatten des Vergessens 446",
+    "description": "Romantische Komödie.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Im Bann der Sterne 522",
+    "description": "Wahres Überleben.",
+    "genre": "Action"
+  },
+  {
+    "name": "Flüstern im Wind 79",
+    "description": "Familiendrama.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Im Bann der Sterne 89",
+    "description": "Die Welt retten.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Das verschwundene Artefakt 338",
+    "description": "Familiendrama.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die letzte Festung 214",
+    "description": "Packender Thriller.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Zeitlose Reise 307",
+    "description": "Packender Thriller.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Der verborgene Schatz 975",
+    "description": "Romantische Komödie.",
+    "genre": "Science-Fiction"
+  },
+  {
+    "name": "Der Pfad der Erlösung 528",
+    "description": "Ein komplexer Fall.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Das Lied der Sirenen 511",
+    "description": "Wahres Überleben.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der Pakt der Seelen 51",
+    "description": "Romantische Komödie.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Feuer am Himmel 538",
+    "description": "Packender Thriller.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Das verschwundene Artefakt 65",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Die Brücke nach Morgen 371",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Western"
+  },
+  {
+    "name": "Stadt der Träume 44",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Sternenlicht-Serenade 110",
+    "description": "Romantische Komödie.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Im Bann der Sterne 493",
+    "description": "Ein komplexer Fall.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Die Schatten des Vergessens 531",
+    "description": "Liebe und Verlust.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 282",
+    "description": "Romantische Komödie.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Der verborgene Schatz 848",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Die ewige Suche 443",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Jenseits des Horizonts 818",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Wächter des Lichts 527",
+    "description": "Romantische Komödie.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Stadt der Träume 106",
+    "description": "Liebe und Verlust.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Nacht der Legenden 931",
+    "description": "Ein komplexer Fall.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Sternenlicht-Serenade 786",
+    "description": "Romantische Komödie.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Wächter des Lichts 453",
+    "description": "Die Welt retten.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 538",
+    "description": "Liebe und Verlust.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Stadt der Träume 303",
+    "description": "Liebe und Verlust.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der Pakt der Seelen 476",
+    "description": "Liebe und Verlust.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Im Bann der Sterne 366",
+    "description": "Packender Thriller.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Jenseits des Horizonts 231",
+    "description": "Die Welt retten.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Die ewige Suche 667",
+    "description": "Romantische Komödie.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der verborgene Schatz 359",
+    "description": "Die Welt retten.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Die letzte Festung 487",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Sternenlicht-Serenade 73",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Action"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 449",
+    "description": "Die Welt retten.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der stumme Zeuge 994",
+    "description": "Packender Thriller.",
+    "genre": "Historisch"
+  },
+  {
+    "name": "Flüstern im Wind 602",
+    "description": "Romantische Komödie.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Der stumme Zeuge 913",
+    "description": "Liebe und Verlust.",
+    "genre": "Komödie"
+  },
+  {
+    "name": "Die Tränen des Drachen 373",
+    "description": "Die Welt retten.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Nacht der Legenden 515",
+    "description": "Romantische Komödie.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der goldene Kompass 283",
+    "description": "Ein komplexer Fall.",
+    "genre": "Biografie"
+  },
+  {
+    "name": "Feuer am Himmel 267",
+    "description": "Wahres Überleben.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Im Bann der Sterne 951",
+    "description": "Wahres Überleben.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Wächter des Lichts 185",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Jenseits des Horizonts 938",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der letzte Atemzug 848",
+    "description": "Ein komplexer Fall.",
+    "genre": "Action"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 523",
+    "description": "Liebe und Verlust.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Die ewige Suche 336",
+    "description": "Romantische Komödie.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Zeitlose Reise 986",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Sport"
+  },
+  {
+    "name": "Flüstern im Wind 515",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Zeitlose Reise 340",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Im Bann der Sterne 328",
+    "description": "Packender Thriller.",
+    "genre": "Western"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 625",
+    "description": "Familiendrama.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Die letzte Festung 731",
+    "description": "Ein komplexer Fall.",
+    "genre": "Romantik"
+  },
+  {
+    "name": "Die letzte Festung 119",
+    "description": "Wahres Überleben.",
+    "genre": "Thriller"
+  },
+  {
+    "name": "Der Fluch der Pharaonen 927",
+    "description": "Ein komplexer Fall.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Die gefallene Stadt 261",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Wächter des Lichts 828",
+    "description": "Familiendrama.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Der letzte Atemzug 658",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Fantasy"
+  },
+  {
+    "name": "Echo der Vergangenheit 194",
+    "description": "Die Welt retten.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Die Brücke nach Morgen 741",
+    "description": "Romantische Komödie.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Der Pakt der Seelen 167",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Krimi"
+  },
+  {
+    "name": "Der Garten der Geheimnisse 352",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Horror"
+  },
+  {
+    "name": "Der Pakt der Seelen 862",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Dokumentation"
+  },
+  {
+    "name": "Der stumme Zeuge 94",
+    "description": "Familiendrama.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Das Geheimnis der alten Mühle 371",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Die gefallene Stadt 151",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Drama"
+  },
+  {
+    "name": "Zeitlose Reise 473",
+    "description": "Packender Thriller.",
+    "genre": "Abenteuer"
+  },
+  {
+    "name": "Feuer am Himmel 348",
+    "description": "Wahres Überleben.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Der goldene Kompass 939",
+    "description": "Eine unglaubliche Gabe.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Die Chroniken von Eldoria 743",
+    "description": "Sci-Fi-Epos.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Flüstern im Wind 84",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Animation"
+  },
+  {
+    "name": "Der Pakt der Seelen 684",
+    "description": "Wahres Überleben.",
+    "genre": "Mystery"
+  },
+  {
+    "name": "Der goldene Kompass 415",
+    "description": "Die Welt retten.",
+    "genre": "Krieg"
+  },
+  {
+    "name": "Der Pfad der Erlösung 465",
+    "description": "Familiendrama.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Im Bann der Sterne 653",
+    "description": "Liebe und Verlust.",
+    "genre": "Familie"
+  },
+  {
+    "name": "Die Schatten des Vergessens 7",
+    "description": "Liebe und Verlust.",
+    "genre": "Musical"
+  },
+  {
+    "name": "Wächter des Lichts 68",
+    "description": "Die Welt retten.",
+    "genre": "Western"
+  },
+  {
+    "name": "Echo der Vergangenheit 73",
+    "description": "Ein Kampf um Gerechtigkeit.",
+    "genre": "Biografie"
+  }
+]

@@ -13,16 +13,16 @@ class MovieModel:
         # Beispiel-Filmdaten mit Titel und Genres
         # In einer echten Anwendung würden diese Daten aus einer Datenbank oder API geladen
         self.movies_data = [
-            {"title": "Die Matrix", "genres": ["Action", "Sci-Fi"]},
-            {"title": "Inception", "genres": ["Sci-Fi", "Thriller", "Action"]},
-            {"title": "Interstellar", "genres": ["Sci-Fi", "Drama", "Adventure"]},
+            {"title": "Die Matrix", "genres": ["Action"]},
+            {"title": "Inception", "genres": ["Action"]},
+            {"title": "Interstellar", "genres": ["Sci-Fi"]},
             {"title": "Der Herr der Ringe: Die Gefährten", "genres": ["Fantasy", "Adventure"]},
-            {"title": "Guardians of the Galaxy", "genres": ["Action", "Sci-Fi", "Comedy"]},
+            {"title": "Guardians of the Galaxy", "genres": ["Sci-Fi"]},
             {"title": "Die Verurteilten", "genres": ["Drama"]},
             {"title": "Forrest Gump", "genres": ["Drama", "Romance"]},
             {"title": "Pulp Fiction", "genres": ["Crime", "Drama"]},
             {"title": "Titanic", "genres": ["Romance", "Drama"]},
-            {"title": "Avatar", "genres": ["Sci-Fi", "Action", "Adventure"]},
+            {"title": "Yvatar", "genres": ["Action"]},
             {"title": "Dune", "genres": ["Sci-Fi", "Adventure", "Drama"]},
             {"title": "Blade Runner 2049", "genres": ["Sci-Fi", "Drama", "Mystery"]},
             {"title": "Arrival", "genres": ["Sci-Fi", "Drama", "Mystery"]},
@@ -104,12 +104,12 @@ class MovieView(tk.Frame):
         self.master.title("Filmempfehlungssystem")
         self.controller = None # Wird später vom Controller gesetzt
         self.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
-        self.create_widgets() # Widgets erstellen
+        self.create_widgets()
 
     def set_controller(self, controller):
-        """Setzt die Referenz zum Controller und bindet die Commands."""
+        """Setzt die Referenz zum Controller und bindet die Button-Befehle."""
         self.controller = controller
-        # Commands setzen, sobald der Controller verfügbar ist
+        # Setzt die Befehle für die Buttons, nachdem der Controller verfügbar ist
         self.add_button.config(command=self.controller.add_movie)
         self.recommend_button.config(command=self.controller.show_recommendations)
 
@@ -129,8 +129,8 @@ class MovieView(tk.Frame):
         button_frame = tk.Frame(self)
         button_frame.pack(side=tk.LEFT, padx=10)
 
-        # Buttons erstellen, aber Commands erst später setzen
-        self.add_button = tk.Button(button_frame, text=">>> Film hinzufügen >>>") 
+        # Speichern Sie die Button-Referenzen, um ihre Befehle später zu konfigurieren
+        self.add_button = tk.Button(button_frame, text=">>> Film hinzufügen >>>")
         self.add_button.pack(pady=5)
 
         self.recommend_button = tk.Button(button_frame, text="Empfehlungen anzeigen")
@@ -201,7 +201,7 @@ class MovieController:
     def __init__(self, model, view):
         self.model = model
         self.view = view
-        self.view.set_controller(self) # Setzt den Controller in der View und bindet die Commands
+        self.view.set_controller(self) # Setzt den Controller in der View
         
         # Initialisiere die Listen in der View
         self._update_all_lists()
@@ -258,4 +258,3 @@ if __name__ == "__main__":
 
     # Starten der Anwendung
     controller.start()
-

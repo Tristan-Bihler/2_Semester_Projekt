@@ -35,12 +35,12 @@ class CounterModel:
         """Fügt einen Beobachter hinzu, der bei Änderungen benachrichtigt wird."""
         if observer not in self._observers:
             self._observers.append(observer)
-
+    """
     def remove_observer(self, observer):
-        """Entfernt einen Beobachter."""
+        Entfernt einen Beobachter
         if observer in self._observers:
             self._observers.remove(observer)
-
+    """
     def _notify_observers(self):
         """Benachrichtigt alle registrierten Beobachter über eine Änderung."""
         for observer in self._observers:
