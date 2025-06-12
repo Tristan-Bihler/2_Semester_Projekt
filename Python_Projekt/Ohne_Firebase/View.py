@@ -147,6 +147,8 @@ class View(tk.Tk):
             self.trailer_button = tk.Button(self.details_frame, text="Watch Trailer", command=self.perform_film_action, state=tk.DISABLED)
             self.trailer_button.grid(row=2, column=0, sticky=tk.SW, padx=10, pady=(10, 5))
 
+            self.add_film_button = tk.Button(self.details_frame, text = "add to watch_list", command = lambda : (controler.write_to_Json(user, self.film_listbox)))
+            self.add_film_button.grid(row = 2, column = 1)
             # Initial population of listboxes (assuming these methods exist)
 
             self.list_Films(self.controler.get_Json_Film_Names())
