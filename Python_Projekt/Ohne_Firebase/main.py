@@ -1,6 +1,7 @@
 import Controller
 """
-Es fehlt nur noch die untere leiste und das drop down menü
+Es fehlt nur noch das drop down menü
+Die untere Leiste ist noch fehlerhaft
 Freitag ist es noch möglich die user colabrativ Algorythmus einzubinden
 Suchfunktion muss verbessert werden
 """
