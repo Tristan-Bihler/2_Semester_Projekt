@@ -141,7 +141,7 @@ class View(tk.Tk):
             self.film_name_label = tk.Label(self.details_frame, text="Name: No Film Selected", font=("Arial", 14, "bold"))
             self.film_name_label.grid(row=0, column=0, sticky=tk.NW, padx=10, pady=(5, 0))
 
-            self.film_description_label = tk.Label(self.details_frame, text="Description: Select a film from the lists above to see its details.", font=("Arial", 10), wraplength=750, justify=tk.LEFT)
+            self.film_description_label = tk.Label(self.details_frame, text="Beschreibung: Select a film from the lists above to see its details.", font=("Arial", 10), wraplength=750, justify=tk.LEFT)
             self.film_description_label.grid(row=1, column=0, sticky=tk.NSEW, padx=10, pady=(5, 10))
 
             self.trailer_button = tk.Button(self.details_frame, text="Watch Trailer", command=self.perform_film_action, state=tk.DISABLED)
