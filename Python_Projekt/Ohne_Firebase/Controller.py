@@ -26,9 +26,17 @@ class Controler():
             
             else:
                 print("Es gibt den User nicht")
+    
+    def signup(self, signup_Entry):
+            #Es können mehrere gleiche benutzer exestieren, muss gefixt werden!!!
+            #users = self.get_Json_User_Names()
+            user = signup_Entry.get()
+            user = user.strip().lower()
+            self.model.write_to_signup_json(user)
+
 
     def get_Json(self):
-        Film_names = self.model.get_json()
+        Film_names = self.model.loaded_film_data
         return Film_names
     
     def get_Json_Film_Names(self):
@@ -41,15 +49,18 @@ class Controler():
     
     def get_Json_recommended_Film_Names(self, user):
         Film_names = self.model.get_recommendations(user)
-        print(Film_names)
         return Film_names
     
     def get_Json_user_Liked_Films(self, user):
-        Film_names = self.model.get_recommended_films_from_json(user)
-        print(Film_names)
+        Film_names = self.model.get_liked_films_from_jason(user)
         return Film_names
     
     def write_to_Json(self,user,Listbox):
         index = Listbox.curselection()
         liked_film = Listbox.get(index)
         self.model.write_to_json(user, liked_film)
+    
+    def remove_from_list(self, user, Listbox):
+        index = Listbox.curselection()
+        filename = Listbox.get(index)
+        self.model.removed_liked_films_from_jason(user, filename)
