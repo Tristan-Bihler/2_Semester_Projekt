@@ -113,6 +113,7 @@ class FilmSelectorApp:
 
     def filter_films(self, event=None):
         search_term = self.search_entry.get().lower()
+        print(self.films)
         filtered_films = [
             film for film in self.films
             if search_term in film["name"].lower() or search_term in film["description"].lower()
