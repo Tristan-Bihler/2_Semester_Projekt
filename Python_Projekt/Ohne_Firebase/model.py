@@ -172,5 +172,40 @@ class Model():
         sorted_recommendations = sorted(recommendations_with_scores.items(), key=lambda item: item[1], reverse=True)
         for movie in sorted_recommendations:
             recommended_films.append(movie[0])
-        print(recommended_films)
+        #print(recommended_films)
         return recommended_films
+    
+    def write_to_json(self, user_name_to_find, liked_movies):
+        try:
+            with open(self.user_db_path, 'r', encoding='utf-8') as f:
+                data = json.load(f) # json.load() for reading from file
+
+            user_found = False
+            # Ensure data is a list (expected format for multiple users)
+            if isinstance(data, list):
+                # 2. Find the user and 3. Modify their data
+                for user in data:
+                    if user.get("name").lower() == user_name_to_find:
+                        print(liked_movies)
+                        liked_films = list(user.get("favorite_movies"))
+                        print(liked_films)
+                        liked_films.append(liked_movies)
+                        print(liked_films)
+                        user["favorite_movies"] = liked_films # Update existing keys or add new ones
+                        user_found = True
+                        print(f"User '{user_name_to_find}' updated successfully.")
+                        break # Stop after finding and updating the first match
+                
+                if not user_found:
+                    print(f"User '{user_name_to_find}' not found in the file.")
+
+                # 4. Write the updated data back to the JSON file
+                if user_found: # Only write back if a user was actually updated
+                    with open(self.user_db_path, 'w', encoding='utf-8') as f:
+                        json.dump(data, f, ensure_ascii=False, indent=4)
+            else:
+                print(f"Error: Expected JSON data to be a list, but found type: {type(data)}")
+
+        
+        except:
+            print("Eror")

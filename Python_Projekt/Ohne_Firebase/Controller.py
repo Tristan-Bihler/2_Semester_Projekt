@@ -48,3 +48,8 @@ class Controler():
         Film_names = self.model.get_recommended_films_from_json(user)
         print(Film_names)
         return Film_names
+    
+    def write_to_Json(self,user,Listbox):
+        index = Listbox.curselection()
+        liked_film = Listbox.get(index)
+        self.model.write_to_json(user, liked_film)
