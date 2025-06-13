@@ -61,6 +61,10 @@ class Controler():
         self.model.write_to_json(user, liked_film)
     
     def remove_from_list(self, user, Listbox):
-        index = Listbox.curselection()
-        filename = Listbox.get(index)
-        self.model.removed_liked_films_from_jason(user, filename)
+        try:
+            index = Listbox.curselection()
+            filename = Listbox.get(index)
+            self.model.removed_liked_films_from_jason(user, filename)
+        
+        except Exception as e:
+            print(e)
