@@ -2,6 +2,11 @@
     {
         "id": "user001",
         "name": "Tristan",
+        "favorite_movies": []
+    },
+    {
+        "id": "user002",
+        "name": "Laura",
         "favorite_movies": [
             "Matrix",
             "Arrival",
@@ -9,7 +14,7 @@
         ]
     },
     {
-        "id": "user002",
+        "id": "user003",
         "name": "Carina",
         "favorite_movies": [
             "Arrival",
@@ -19,12 +24,19 @@
         ]
     },
     {
-        "id": "user003",
+        "id": "user004",
         "name": "Semian",
         "favorite_movies": [
             "Pulp Fiction",
             "Forrest Gump",
             "The Shawshank Redemption"
+        ]
+    },
+    {
+        "id": "user_id",
+        "name": "test",
+        "favorite_movies": [
+            "Blade Runner 2049"
         ]
     }
 ]

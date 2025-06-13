@@ -34,25 +34,8 @@ class View(tk.Tk):
             self.signup_label.pack()
             self.signup_Entry = tk.Entry(self, text = "SignUp")
             self.signup_Entry.pack()
-            self.signup_button = tk.Button(self, text = "Signup", command = lambda : (self.signup(controler)))
+            self.signup_button = tk.Button(self, text = "Signup", command = lambda : (controler.signup(self.signup_Entry)))
             self.signup_button.pack()
-            
-
-        def signup(self, controler):
-            #User muss noch der Datei beigefügt werden und nanch erfolgreichem Signup weiterleiten
-            users = controler.get_Json_User_Names()
-            for user_ls in users:
-                user = self.signup_Entry.get()
-                user = user.strip().lower()
-                print(user)
-                print(str(user_ls))
-
-                if user != str(user_ls).strip():
-                    pass
-                    #self.master.switch_frame(Main_Window)
-                
-                else:
-                    print("Es gibt den user")
 
     class Main_Window(tk.Frame):
         def __init__(self, master, controler, user):
@@ -147,11 +130,15 @@ class View(tk.Tk):
             self.trailer_button = tk.Button(self.details_frame, text="Watch Trailer", command=self.perform_film_action, state=tk.DISABLED)
             self.trailer_button.grid(row=2, column=0, sticky=tk.SW, padx=10, pady=(10, 5))
 
-            self.add_film_button = tk.Button(self.details_frame, text = "add to watch_list", command = lambda : (controler.write_to_Json(user, self.film_listbox)))
+            self.add_film_button = tk.Button(self.details_frame, text = "add to watch_list", command = lambda : (self.film_add_to_liked(user)))
             self.add_film_button.grid(row = 2, column = 1)
             # Initial population of listboxes (assuming these methods exist)
 
             self.list_Films(self.controler.get_Json_Film_Names())
+            self.list_recommended_Films(user)
+        
+        def film_add_to_liked(self, user):
+            self.controler.write_to_Json(user, self.film_listbox)
             self.list_recommended_Films(user)
 
         def perform_film_action(self):
@@ -170,6 +157,12 @@ class View(tk.Tk):
             self.search_entry.delete(0, tk.END)
             self.film_listbox(films)
             self.clear_film_details()
+        
+        def clear_film_details(self):
+            self.film_name_label.config(text="Name: ")
+            self.film_description_label.config(text="Description: ")
+            self.trailer_button.config(state=tk.DISABLED)
+            self.current_selected_film = None
 
         def filter_films(self, event = None):
             search_term = self.search_entry.get().lower()
@@ -241,8 +234,14 @@ class View(tk.Tk):
             self.recommended_listbox.grid(row=0, column=0, sticky=tk.NSEW)
             self.recommended_listbox_scrollbar.config(command=self.recommended_listbox.yview)
 
+            self.remove_liked_button = tk.Button(self, text = "Remove from List", command = lambda : (self.remove_films(user)))
+            self.remove_liked_button.grid()
+
             self.List_Produkts(user)
 
+        def remove_films(self, user):
+            self.controler.remove_from_list(user, self.recommended_listbox)
+            self.List_Produkts(user)
         
         def List_Produkts(self, user):
             self.recommended_listbox.delete(0, tk.END) # Clear existing items
