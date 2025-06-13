@@ -2,17 +2,7 @@
     {
         "id": "user001",
         "name": "Tristan",
-        "favorite_movies": [
-            "Matrix",
-            "Arrival",
-            "Get Out",
-            "Matrix",
-            "Nomadland",
-            "Nomadland",
-            "Nomadland",
-            "Nomadland",
-            "Parasite"
-        ]
+        "favorite_movies": []
     },
     {
         "id": "user002",
@@ -44,6 +34,8 @@
     {
         "id": "user_id",
         "name": "test",
-        "favorite_movies": []
+        "favorite_movies": [
+            "Blade Runner 2049"
+        ]
     }
 ]

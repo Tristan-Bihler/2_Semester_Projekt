@@ -223,6 +223,7 @@ class Model():
                 if user_found: # Only write back if a user was actually updated
                     with open(self.user_db_path, 'w', encoding='utf-8') as f:
                         json.dump(data, f, ensure_ascii=False, indent=4)
+                    self.loaded_user_data = data
             else:
                 print(f"Error: Expected JSON data to be a list, but found type: {type(data)}")
 
@@ -253,7 +254,7 @@ class Model():
             with open(self.user_db_path, 'w', encoding='utf-8') as f:
                 json.dump(data, f, ensure_ascii=False, indent=4)
             print(f"Benutzer '{user}' erfolgreich hinzugefügt.")
-
+            
         except json.JSONDecodeError:
             print(f"Fehler: Die Datei '{self.user_db_path}' ist kein gültiges JSON. Setze sie auf eine leere Liste zurück.")
         except FileNotFoundError:
