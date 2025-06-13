@@ -160,7 +160,7 @@ class View(tk.Tk):
         
         def clear_film_details(self):
             self.film_name_label.config(text="Name: ")
-            self.film_description_label.config(text="Description: ")
+            self.film_description_label.config(text="Beschreibung: ")
             self.trailer_button.config(state=tk.DISABLED)
             self.current_selected_film = None
 
