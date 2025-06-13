@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh;
+}
+
+#app-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 900px; /* Adjusted width for better layout */
+    min-height: 580px; /* Min height to match approx. 600px of Tkinter */
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    display: none; /* Hidden by default */
+    flex-grow: 1; /* Allow sections to take available space */
+}
+
+.section.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Login/Signup Styles */
+#login-section {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#login-section h2 {
+    margin-bottom: 10px;
+}
+
+#login-section input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#login-section button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#login-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Main Window Styles */
+#main-section .app-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.top-right-button {
+    align-self: flex-end; /* Pushes to the right */
+    margin-top: -40px; /* Adjust as needed to align with title */
+    padding: 8px 15px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.top-right-button:hover {
+    background-color: #5a6268;
+}
+
+.content-area {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Space between list panels */
+    flex-grow: 1; /* Allow content area to expand */
+    margin-bottom: 20px;
+}
+
+.list-panel {
+    flex: 1; /* Each panel takes equal width */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Hide overflow for lists */
+}
+
+.list-panel h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    padding: 6px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.film-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    height: 300px; /* Fixed height for lists */
+    overflow-y: auto; /* Scrollable */
+    flex-grow: 1; /* Allow list to take remaining space in panel */
+}
+
+.film-list li {
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.film-list li:last-child {
+    border-bottom: none;
+}
+
+.film-list li:hover {
+    background-color: #e9e9e9;
+}
+
+.film-list li.selected {
+    background-color: #cce0ff;
+    font-weight: bold;
+}
+
+.film-details {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    position: relative; /* For button positioning */
+    min-height: 120px; /* Ensure some height even if content is short */
+}
+
+.film-details h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.film-details p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.film-details button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.film-details button:hover {
+    background-color: #218838;
+}
+
+.film-details button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#addToWatchlistButton {
+    background-color: #ffc107;
+    color: #333;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+#addToWatchlistButton:hover {
+    background-color: #e0a800;
+}
+
+
+/* Favorites Section Styles */
+#favorites-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#favorites-section h2 {
+    margin-bottom: 20px;
+}
+
+#favorites-section .list-panel {
+    width: 60%; /* Adjust width for favorites list */
+    margin-bottom: 20px;
+}
