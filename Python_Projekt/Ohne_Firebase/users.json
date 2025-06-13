@@ -49,5 +49,18 @@
         "id": "user_id",
         "name": "user2",
         "favorite_movies": []
+    },
+    {
+        "id": "user005",
+        "name": "maaax",
+        "favorite_movies": [
+            "The Accountant 2",
+            "The Roundup: Punishment",
+            "From the World of John Wick: Ballerina",
+            "A Working Man",
+            "K.O.",
+            "K.O.",
+            "K.O."
+        ]
     }
 ]

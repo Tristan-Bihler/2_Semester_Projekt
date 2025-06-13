@@ -77,13 +77,13 @@ class View(tk.Tk):
             self.film_listbox_frame.grid_rowconfigure(3, weight=1)
             self.film_listbox_frame.grid_columnconfigure(0, weight=1)
 
-            tk.Label(self.film_listbox_frame, text="Available Films:", font=("Arial", 10, "bold")).grid(row=0, column=0, sticky=tk.NW, padx=5, pady=2)
-            tk.Label(self.film_listbox_frame, text="Search Film:").grid(row=1, column=0, sticky=tk.W, padx=5)
+            tk.Label(self.film_listbox_frame, text="Verfügbare Filme:", font=("Arial", 10, "bold")).grid(row=0, column=0, sticky=tk.NW, padx=5, pady=2)
+            tk.Label(self.film_listbox_frame, text="Filmsuche:").grid(row=1, column=0, sticky=tk.W, padx=5)
             self.search_entry = tk.Entry(self.film_listbox_frame)
             self.search_entry.grid(row=1, column=0, sticky=tk.EW, padx=80, pady=5)
             self.search_entry.bind("<KeyRelease>", self.filter_films)
 
-            self.clear_search_button = tk.Button(self.film_listbox_frame, text="Clear", command=self.clear_search)
+            self.clear_search_button = tk.Button(self.film_listbox_frame, text="Löschen", command=self.clear_search)
             self.clear_search_button.grid(row=1, column=0, sticky=tk.E, padx=5, pady=5)
 
             self.film_listbox_scrollbar = tk.Scrollbar(self.film_listbox_frame)
@@ -103,7 +103,7 @@ class View(tk.Tk):
             self.recommended_listbox_frame.grid_rowconfigure(0, weight=1)
             self.recommended_listbox_frame.grid_columnconfigure(0, weight=1)
 
-            tk.Label(self.recommended_listbox_frame, text="Recommended Films:", font=("Arial", 10, "bold")).grid(row=0, column=0, sticky=tk.NW, padx=5, pady=2)
+            tk.Label(self.recommended_listbox_frame, text="Film Empfehlungen:", font=("Arial", 10, "bold")).grid(row=0, column=0, sticky=tk.NW, padx=5, pady=2)
 
             self.recommended_listbox_scrollbar = tk.Scrollbar(self.recommended_listbox_frame)
             self.recommended_listbox_scrollbar.grid(row=0, column=1, sticky=tk.NS)
@@ -120,16 +120,16 @@ class View(tk.Tk):
             self.details_frame.grid(row=3, column=0, columnspan=2, sticky=tk.NSEW, padx=10, pady=10)
             self.details_frame.grid_rowconfigure(0, weight=1) # Allow description to expand
 
-            self.film_name_label = tk.Label(self.details_frame, text="Name: No Film Selected", font=("Arial", 14, "bold"))
+            self.film_name_label = tk.Label(self.details_frame, text="Name: Kein Film ausgewählt", font=("Arial", 14, "bold"))
             self.film_name_label.grid(row=0, column=0, sticky=tk.NW, padx=10, pady=(5, 0))
 
-            self.film_description_label = tk.Label(self.details_frame, text="Beschreibung: Select a film from the lists above to see its details.", font=("Arial", 10), wraplength=750, justify=tk.LEFT)
+            self.film_description_label = tk.Label(self.details_frame, text="Beschreibung: Wähle zuerst einen Film aus, um die Beschreibung zu sehen.", font=("Arial", 10), wraplength=750, justify=tk.LEFT)
             self.film_description_label.grid(row=1, column=0, sticky=tk.NSEW, padx=10, pady=(5, 10))
 
-            self.trailer_button = tk.Button(self.details_frame, text="Watch Trailer", command=self.perform_film_action, state=tk.DISABLED)
+            self.trailer_button = tk.Button(self.details_frame, text="Link Trailer", command=self.perform_film_action, state=tk.DISABLED)
             self.trailer_button.grid(row=2, column=0, sticky=tk.SW, padx=10, pady=(10, 5))
 
-            self.add_film_button = tk.Button(self.details_frame, text = "add to watch_list", command = lambda : (self.film_add_to_liked(user)))
+            self.add_film_button = tk.Button(self.details_frame, text = "Favoriten hinzufügen", command = lambda : (self.film_add_to_liked(user)))
             self.add_film_button.grid(row=2, column=1, sticky=tk.SE, padx=10, pady=(10, 5))
 
             self.list_Films(self.controler.get_Json_Film_Names())
@@ -192,7 +192,7 @@ class View(tk.Tk):
                 print(selected_film_data)
                 if selected_film_data:
                     self.film_name_label.config(text=f"Name: {selected_film_data['name']}")
-                    self.film_description_label.config(text=f"Description: {selected_film_data['beschreibung']}")
+                    self.film_description_label.config(text=f"Beschreibung: {selected_film_data['beschreibung']}")
                     self.trailer_button.config(state=tk.NORMAL)
                     self.current_selected_film = selected_film_data # Store for button action
                     print("test")
@@ -218,7 +218,7 @@ class View(tk.Tk):
 
                 if selected_film_data:
                     self.film_name_label.config(text=f"Name: {selected_film_data['name']}")
-                    self.film_description_label.config(text=f"Description: {selected_film_data['beschreibung']}")
+                    self.film_description_label.config(text=f"Beschreibung: {selected_film_data['beschreibung']}")
                     self.trailer_button.config(state=tk.NORMAL)
                     self.add_film_button.config(state=tk.NORMAL)
                     self.current_selected_film = selected_film_data # Store for button action
