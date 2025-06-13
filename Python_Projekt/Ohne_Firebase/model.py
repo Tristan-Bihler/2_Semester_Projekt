@@ -111,7 +111,7 @@ class Model():
                 #print(movie["name"])
                 #print(liked_title)
                 if str(movie["name"]).strip().lower() == str(liked_title).strip():
-                    liked_genres.extend(movie["genre"])
+                    liked_genres.extend(movie["genres"])
                     #print(liked_genres)
                     break
         
@@ -128,7 +128,7 @@ class Model():
 
             score = 0
             # Berechne einen Score basierend auf übereinstimmenden Genres und deren Häufigkeit
-            for genre in movie["genre"]:
+            for genre in movie["genres"]:
                 score += genre_counts.get(genre, 0) # Addiere die Häufigkeit des Genres
 
             if score > 0: # Nur Filme mit mindestens einer Genre-Übereinstimmung hinzufügen

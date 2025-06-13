@@ -2,7 +2,9 @@
     {
         "id": "user001",
         "name": "Tristan",
-        "favorite_movies": []
+        "favorite_movies": [
+            "K.O."
+        ]
     },
     {
         "id": "user002",
@@ -36,7 +38,7 @@
         "id": "user_id",
         "name": "test",
         "favorite_movies": [
-            "Guardians of the Galaxy"
+            "K.O."
         ]
     },
     {

@@ -191,7 +191,7 @@ class View(tk.Tk):
                 print(selected_film_data)
                 if selected_film_data:
                     self.film_name_label.config(text=f"Name: {selected_film_data['name']}")
-                    self.film_description_label.config(text=f"Description: {selected_film_data['description']}")
+                    self.film_description_label.config(text=f"Description: {selected_film_data['beschreibung']}")
                     self.trailer_button.config(state=tk.NORMAL)
                     self.current_selected_film = selected_film_data # Store for button action
                     print("test")
@@ -213,7 +213,7 @@ class View(tk.Tk):
 
                 if selected_film_data:
                     self.film_name_label.config(text=f"Name: {selected_film_data['name']}")
-                    self.film_description_label.config(text=f"Description: {selected_film_data['description']}")
+                    self.film_description_label.config(text=f"Description: {selected_film_data['beschreibung']}")
                     self.trailer_button.config(state=tk.NORMAL)
                     self.current_selected_film = selected_film_data # Store for button action
                 else:
