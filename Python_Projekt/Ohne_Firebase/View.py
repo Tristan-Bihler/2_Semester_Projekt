@@ -26,11 +26,11 @@ class View(tk.Tk):
             self.master = master
             self.login_Label = tk.Label(self, text = "Einloggen")
             self.login_Label.pack()
-            self.login_Entry = tk.Entry(self, text = "Username")
+            self.login_Entry = tk.Entry(self, text = "Benutzername")
             self.login_Entry.pack()
             self.login_button = tk.Button(self, text= "Login", command = lambda : (controler.login(self.login_Entry, self.master)))
             self.login_button.pack()
-            self.signup_label = tk.Label(self, text = "Signup")
+            self.signup_label = tk.Label(self, text = "Registrieren")
             self.signup_label.pack()
             self.signup_Entry = tk.Entry(self, text = "SignUp")
             self.signup_Entry.pack()
