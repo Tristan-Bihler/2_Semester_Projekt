@@ -102,9 +102,8 @@ class Model():
             print(f"Ein unerwarteter Fehler ist aufgetreten: {e}")
 
         if not favorite_movies_names:
-            return [] # Keine Empfehlungen, wenn keine Filme gemocht werden
+            return []
 
-        # Sammle alle Genres der gemochten Filme
         liked_genres = []
         for liked_title in favorite_movies_names:
             for movie in self.loaded_film_data:
@@ -115,26 +114,22 @@ class Model():
                     #print(liked_genres)
                     break
         
-        # Zähle die Häufigkeit der Genres, um Präferenzen zu ermitteln
         genre_counts = Counter(liked_genres)
 
         recommendations_with_scores = {}
         recommended_films = []
         for movie in self.loaded_film_data:
             movie_title = movie["name"]
-            # Empfehle keine Filme, die bereits gemocht werden
             if movie_title in favorite_movies_names:
                 continue
 
             score = 0
-            # Berechne einen Score basierend auf übereinstimmenden Genres und deren Häufigkeit
             for genre in movie["genres"]:
-                score += genre_counts.get(genre, 0) # Addiere die Häufigkeit des Genres
+                score += genre_counts.get(genre, 0)
 
-            if score > 0: # Nur Filme mit mindestens einer Genre-Übereinstimmung hinzufügen
+            if score > 0:
                 recommendations_with_scores[movie_title] = score
         
-        # Sortiere Empfehlungen nach Score (absteigend)
         sorted_recommendations = sorted(recommendations_with_scores.items(), key=lambda item: item[1], reverse=True)
         #print(sorted_recommendations)
         for movie in sorted_recommendations:
@@ -147,16 +142,10 @@ class Model():
         movie_deleted = False
 
         try:
-            # Iterate through the list of user dictionaries
             for user_ls in self.loaded_user_data:
-                # Check if the current user dictionary matches the target user
                 if str(user).lower().strip() == str(user_ls.get('name', '')).lower().strip():
                     found_user = True
-                    # Check if 'favorite_movies' key exists and is a list
                     if 'favorite_movies' in user_ls and isinstance(user_ls['favorite_movies'], list):
-                        # Use a temporary list comprehension to create a new list
-                        # without the item to be removed. This is safer than .remove()
-                        # especially if 'filename' might not exist in the list.
                         initial_count = len(user_ls['favorite_movies'])
                         user_ls['favorite_movies'] = [
                             movie for movie in user_ls['favorite_movies']
@@ -169,18 +158,16 @@ class Model():
                             print(f"Movie '{filename}' not found in {user}'s favorites.")
                     else:
                         print(f"User '{user}' has no 'favorite_movies' list or it's malformed.")
-                    break # Exit the loop once the user is found and processed
+                    break
             
             if not found_user:
                 print(f"User '{user}' not found in the database.")
-                return False # Indicate user not found
+                return False
 
-            # Only save if something was potentially changed (user found, and movie might have been deleted)
-            if movie_deleted: # Only save if a movie was actually deleted
+            if movie_deleted:
                 with open(self.user_db_path, 'w', encoding='utf-8') as f:
                     json.dump(self.loaded_user_data, f, ensure_ascii=False, indent=4)
-                # After direct save, also update the in-memory loaded_user_data for consistency
-                return True # Indicate successful deletion
+                return True
             else:
                 return False
 
@@ -198,12 +185,10 @@ class Model():
     def write_to_json(self, user_name_to_find, liked_movies):
         try:
             with open(self.user_db_path, 'r', encoding='utf-8') as f:
-                data = json.load(f) # json.load() for reading from file
+                data = json.load(f)
 
             user_found = False
-            # Ensure data is a list (expected format for multiple users)
             if isinstance(data, list):
-                # 2. Find the user and 3. Modify their data
                 for user in data:
                     if user.get("name").lower() == user_name_to_find:
                         #print(liked_movies)
@@ -211,23 +196,21 @@ class Model():
                         #print(liked_films)
                         liked_films.append(liked_movies)
                         #print(liked_films)
-                        user["favorite_movies"] = liked_films # Update existing keys or add new ones
+                        user["favorite_movies"] = liked_films
                         user_found = True
                         print(f"User '{user_name_to_find}' updated successfully.")
-                        break # Stop after finding and updating the first match
+                        break
                 
                 if not user_found:
                     print(f"User '{user_name_to_find}' not found in the file.")
 
-                # 4. Write the updated data back to the JSON file
-                if user_found: # Only write back if a user was actually updated
+                if user_found:
                     with open(self.user_db_path, 'w', encoding='utf-8') as f:
                         json.dump(data, f, ensure_ascii=False, indent=4)
                     self.loaded_user_data = data
             else:
                 print(f"Error: Expected JSON data to be a list, but found type: {type(data)}")
-
-        
+                
         except:
             print("Eror")
     
@@ -238,19 +221,15 @@ class Model():
             "favorite_movies": []
         }
         try:
-            # 1. Daten laden
             with open(self.user_db_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
 
-            # Sicherstellen, dass 'data' eine Liste ist
             if not isinstance(data, list):
                 print(f"Warnung: Die Datei '{self.user_db_path}' enthält keine JSON-Liste. Initialisiere als leere Liste.")
                 data = []
 
-            # 2. Neuen Benutzer hinzufügen
             data.append(new_user)
 
-            # 3. Daten speichern
             with open(self.user_db_path, 'w', encoding='utf-8') as f:
                 json.dump(data, f, ensure_ascii=False, indent=4)
             print(f"Benutzer '{user}' erfolgreich hinzugefügt.")

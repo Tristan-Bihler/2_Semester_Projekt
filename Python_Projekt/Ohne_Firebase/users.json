@@ -38,12 +38,19 @@
         "id": "user_id",
         "name": "test",
         "favorite_movies": [
-            "K.O."
+            "The Roundup: Punishment"
         ]
     },
     {
         "id": "user_id",
         "name": "",
+        "favorite_movies": [
+            "లైలా"
+        ]
+    },
+    {
+        "id": "user_id",
+        "name": "user2",
         "favorite_movies": []
     }
 ]

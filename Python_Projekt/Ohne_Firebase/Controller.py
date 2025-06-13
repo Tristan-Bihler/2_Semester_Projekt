@@ -29,8 +29,11 @@ class Controler():
     
     def signup(self, signup_Entry):
             #Es können mehrere gleiche benutzer exestieren, muss gefixt werden!!!
-            #users = self.get_Json_User_Names()
             user = signup_Entry.get()
+            for user_ls in self.get_Json_User_Names():
+                if user_ls == user:
+                    raise ValueError("Error")
+            
             user = user.strip().lower()
             self.model.write_to_signup_json(user)
 
