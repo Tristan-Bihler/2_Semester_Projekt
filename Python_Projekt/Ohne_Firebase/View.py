@@ -26,15 +26,15 @@ class View(tk.Tk):
             self.master = master
             self.login_Label = tk.Label(self, text = "Einloggen")
             self.login_Label.pack()
-            self.login_Entry = tk.Entry(self, text = "Username")
+            self.login_Entry = tk.Entry(self, text = "Benutzername")
             self.login_Entry.pack()
             self.login_button = tk.Button(self, text= "Login", command = lambda : (controler.login(self.login_Entry, self.master)))
             self.login_button.pack()
-            self.signup_label = tk.Label(self, text = "Signup")
+            self.signup_label = tk.Label(self, text = "Registrieren")
             self.signup_label.pack()
-            self.signup_Entry = tk.Entry(self, text = "SignUp")
+            self.signup_Entry = tk.Entry(self, text = "Registrieren")
             self.signup_Entry.pack()
-            self.signup_button = tk.Button(self, text = "Signup", command = lambda : (controler.signup(self.signup_Entry)))
+            self.signup_button = tk.Button(self, text = "Registrieren", command = lambda : (controler.signup(self.signup_Entry)))
             self.signup_button.pack()
 
     class Main_Window(tk.Frame):
@@ -59,12 +59,12 @@ class View(tk.Tk):
             self.grid_columnconfigure(1, weight=1) # Right column for right listbox
 
             # --- 1. Title (Top Centered) ---
-            self.Label = tk.Label(self, text="Movie Recommender", font=("Arial", 16, "bold"))
+            self.Label = tk.Label(self, text="Film-Empfehlungen", font=("Arial", 16, "bold"))
             # Use columnspan=2 to center it across both main columns
             self.Label.grid(row=0, column=0, columnspan=2, pady=10)
 
             # --- 2. Favorites Button (Top Right) ---
-            self.favorites_button = tk.Button(self, text="Favorites", command=lambda: master.switch_frame(master.Favorites_Window, controler, user))
+            self.favorites_button = tk.Button(self, text="Favoriten", command=lambda: master.switch_frame(master.Favorites_Window, controler, user))
             # Place it in the top right, spanning only the right column effectively
             # sticky=tk.NE pushes it to the North-East (top-right)
             self.favorites_button.grid(row=1, column=1, padx=10, pady=5, sticky=tk.NE)
