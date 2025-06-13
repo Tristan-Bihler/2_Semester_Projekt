@@ -38,5 +38,10 @@
         "favorite_movies": [
             "Blade Runner 2049"
         ]
+    },
+    {
+        "id": "user_id",
+        "name": "",
+        "favorite_movies": []
     }
 ]
