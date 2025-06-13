@@ -8,10 +8,11 @@ class View(tk.Tk):
         self.geometry("1000x800")
         self.title("Film Vorschlags Applikation")
         self.controller = controler
+        #Wechseln in das Login Fenster
         self._frame = None
         self.switch_frame(self.Login_Window, controler, None)
         
-
+    #Die Wechselfunktion für das Wechseln verschiedener ansichts Bereiche
     def switch_frame(self, frame_class, controler, user):
         new_frame = frame_class(self, controler, user)
         if self._frame is not None:
@@ -19,7 +20,13 @@ class View(tk.Tk):
         self._frame = new_frame
         self._frame.pack()
     
-
+    """
+    Die Visuelle übersicht für das Login fenster mit verschiedenen Elementen
+    Der Loginbereich besteht aus zwei Labels für jeweils Einloggen und Registrieren,
+    Zwei entry inwelchem der benutzer sein namen eingeben kann 
+    und Zwei Buttons für jeweils dem ausführen der Einloggen oder Registrieren Funktion.
+    Diese Funktionen liegen in der Controler Datei
+    """
     class Login_Window(tk.Frame):
         def __init__(self, master, controler, user):
             super().__init__(master)
@@ -36,6 +43,12 @@ class View(tk.Tk):
             self.signup_Entry.pack()
             self.signup_button = tk.Button(self, text = "Registrieren", command = lambda : (controler.signup(self.signup_Entry)))
             self.signup_button.pack()
+    
+    """
+    Die Visuelle übersicht für das Generelle Übersichtsfenster mit einer Listbox das alle Filme der Datenbank beinhaltet und
+    der anderen Listbox die die vorgeschlagenen Filme beinhaltet. Über der Listbox das alle Filme ausgibt, ist auch eine Suchleiste, mitwelche man bestimmte Filme
+    suchen kann. Auf der unteren Seite der Übersicht werden, die Details jedes Filmes angezeigt werden, welche momentan in der Liste ausgewählt ist. 
+    """
 
     class Main_Window(tk.Frame):
         def __init__(self, master, controler, user):
@@ -122,10 +135,16 @@ class View(tk.Tk):
             self.list_Films(self.controler.get_Json_Film_Names())
             self.list_recommended_Films(user)
         
+        """
+        Filme der Userliste unter dem user und favoritefilms hinzufügen.
+        """
         def film_add_to_liked(self, user):
             self.controler.write_to_Json(user, self.film_listbox)
             self.list_recommended_Films(user)
 
+        """
+        Funktion für das suchen nach den Filmen auf youtube durch das auslesen der Url für den jeweiligen Film
+        """
         def perform_film_action(self):
             if self.current_selected_film and "youtubeTrailerUrl" in self.current_selected_film:
                 trailer_url = self.current_selected_film["youtubeTrailerUrl"]
@@ -135,14 +154,19 @@ class View(tk.Tk):
                     print("Error", f"Could not open trailer link: {e}")
             else:
                 print("No Trailer", "No trailer link available for the selected film.")
-
-
+        
+        """
+        Für das löschen des Inhaltes der Scuhleiste
+        """
         def clear_search(self):
             films = self.controler.get_Json_Film_Names()
             self.search_entry.delete(0, tk.END)
             self.film_listbox(films)
             self.clear_film_details()
-
+        
+        """
+        für das filtern der Filme die das suchwort beinhalten und die generelle Film Listbox neu ausgibt
+        """
         def filter_films(self, event = None):
             search_term = self.search_entry.get().lower()
             films = self.controler.get_Json_Film_Names()
@@ -154,6 +178,9 @@ class View(tk.Tk):
             print(filtered_films)   
             self.list_Films(filtered_films)
         
+        """
+        Die Funktion wird nach dem selektieren eines Filmes in der Recommended Listbox die Detail übersicht auf der Unteren Seite aktualisieren
+        """
         def on_recommended_select(self, event = None):
             try:
                 selected_indices = self.recommended_listbox.curselection()
@@ -173,6 +200,10 @@ class View(tk.Tk):
                     self.clear_film_details(True)
             except Exception as e:
                 print(e)
+        
+        """
+        Die Funktion wird nach dem selektieren eines Filmes in der generellen Film Listbox die Detail übersicht auf der Unteren Seite aktualisieren
+        """
 
         def on_film_select(self, event = None):
             try:
@@ -196,6 +227,9 @@ class View(tk.Tk):
             except Exception as e:
                 print(e)
         
+        """
+        Die Funktion löscht den Inhalt der Detail übersicht auf der Unteren Seite der Übersicht
+        """
         def clear_film_details(self, boolean_recommended):
             self.film_name_label.config(text="Name: ")
             self.film_description_label.config(text="Beschreibung: ")
@@ -206,17 +240,26 @@ class View(tk.Tk):
                 
             self.current_selected_film = None
 
+        """
+        Die Funktion listet die gegeben Filme in der generellen Listbox auf
+        """
         def list_Films(self, films):
             self.film_listbox.delete(0, tk.END) # Clear existing items
             for film in films:
                 self.film_listbox.insert(tk.END, film)
         
+        """
+        Die Funktion listet die gegeben Filme in der recommendet Listbox auf
+        """
         def list_recommended_Films(self, user):
             self.recommended_listbox.delete(0, tk.END) # Clear existing items
             Film_names = self.controler.get_Json_recommended_Film_Names(user)
             for film in Film_names:
                 self.recommended_listbox.insert(tk.END, film)
 
+    """
+    Die Klasse zeigt das Fenster für die hinzugefügten Filme zu
+    """
     class Favorites_Window(tk.Frame):
         def __init__(self, master,controler, user):
             super().__init__(master)
@@ -289,10 +332,16 @@ class View(tk.Tk):
             # Initial population of the listboxes (dummy data for demonstration)
             self.List_Produkts(self.user)
 
+        """
+        Die Funktion löscht den ausgewählten Film von der watched Listbox
+        """
         def remove_films(self, user):
             self.controler.remove_from_list(user, self.liked_films_listbox)
             self.List_Produkts(user)
         
+        """
+        Die Funktion listet alle Filme des users auf, welche dieser als angesehenen Film klassigiziert
+        """
         def List_Produkts(self, user):
             self.liked_films_listbox.delete(0, tk.END) # Clear existing items
             Film_names = self.controler.get_Json_user_Liked_Films(user)
