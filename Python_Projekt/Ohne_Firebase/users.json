@@ -4,9 +4,6 @@
         "name": "Tristan",
         "favorite_movies": [
             "Der Pate",
-            "Belyas",
-            "K.O.",
-            "Baywatch",
             "Mufasa: Der König der Löwen"
         ]
     },
@@ -16,7 +13,8 @@
         "favorite_movies": [
             "Parasite",
             "Karate Kid: Legends",
-            "Der König der Löwen"
+            "Der König der Löwen",
+            "Mufasa: Der König der Löwen"
         ]
     },
     {

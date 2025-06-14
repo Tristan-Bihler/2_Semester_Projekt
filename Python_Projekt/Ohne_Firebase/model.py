@@ -135,11 +135,14 @@ class Model():
     def get_recommendations(self, user):
         favorite_movies_names = []
         
+        #Lieblingsfilme der Nutzer in eine Variable gepseichert
         favorite_movies_names = self.get_json_data("favorite_movies", user)
 
+        #Überprüft ob es auch Daten hat, sonst unterbricht es hier die  Funktion
         if not favorite_movies_names:
             return []
 
+        #Alle Genre in den gespeicherten Filme rausfiltern
         liked_genres = []
         for liked_title in favorite_movies_names:
             for movie in self.loaded_film_data:
@@ -150,25 +153,33 @@ class Model():
                     #print(liked_genres)
                     break
         
+        #Die Genre zählen und in eine Dictionary aufbewahren
         genre_counts = Counter(liked_genres)
 
+        #Initliaiserung jeglicher Variablen
         recommendations_with_scores = {}
         recommended_films = []
         
+        #Für jeden Film mit dem selben Genre rausfiltern, solange es nicht innerhalb der schon ausgewählten Filme ist
         for movie in self.loaded_film_data:
             movie_title = movie["film_names"]
             if movie_title in favorite_movies_names:
-                continue
+                continue #Ist der Film in der Liste, dann überspringe den rest und führe die For Schleife weiter
 
             score = 0
-            for genre in movie["genres"]:
+            #Genre für jeden Film zhäeln und der score Liste hinzufügen 
+            for genre in movie["genres"]:   
                 score += genre_counts.get(genre, 0)
 
             if score > 0:
                 recommendations_with_scores[movie_title] = score
         
+        #Genre nach aufzählung sortieren und jeglichen Film zu dem Genre finden und der Dictionary hinzufügen
+        #Ergebnis ist eine nach genre gezählte und von höchstem bis zum niedrigsten Genre Wert der Dictionary hinzugefügt
         sorted_recommendations = sorted(recommendations_with_scores.items(), key=lambda item: item[1], reverse=True)
         #print(sorted_recommendations)
+
+        #Jeden Film der Dictionary, den Titel der recommended Liste hinzugefügt
         for movie in sorted_recommendations:
             recommended_films.append(movie[0])
         #print(recommended_films)
