@@ -20,7 +20,6 @@ class Model():
             if user != None:
                 for data_block in self.load_json_data(self.user_db_path):
                     if str(user).lower().strip() == str(data_block["name"]).lower().strip():
-                        print(data_block)
                         if isinstance(data_block, dict) and key in data_block:
                             for data_word in data_block[key]:
                                 data_list.append(str(data_word))
@@ -43,7 +42,6 @@ class Model():
                 else:
                     print(f"Warnung: Ungültiges Benutzerobjekt gefunden: {user}")
         
-        print(data_list)
         return data_list
 
     def load_json_data(self, path):
@@ -260,6 +258,3 @@ class Model():
         ]
 
         return recommended_films
-
-
-

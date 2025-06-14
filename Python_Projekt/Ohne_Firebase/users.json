@@ -1,7 +1,7 @@
 [
     {
         "id": "user001",
-        "name": "Tristan",
+        "name": "tristan",
         "favorite_movies": [
             "The Accountant 2",
             "Lilo & Stitch"
@@ -9,7 +9,7 @@
     },
     {
         "id": "user002",
-        "name": "Laura",
+        "name": "laura",
         "favorite_movies": [
             "Parasite",
             "Karate Kid: Legends",
@@ -19,14 +19,14 @@
     },
     {
         "id": "user003",
-        "name": "Carina",
+        "name": "carina",
         "favorite_movies": [
             "Lilo & Stitch"
         ]
     },
     {
         "id": "user004",
-        "name": "Semian",
+        "name": "semian",
         "favorite_movies": [
             "Pulp Fiction",
             "Forrest Gump",
@@ -37,13 +37,8 @@
         "id": "user_id",
         "name": "",
         "favorite_movies": [
-            "Predator: Killer of Killers",
-            "Blood & Sinners",
-            "Meg",
-            "Thunderbolts*",
-            "Jurassic World - Das gefallene Königreich",
-            "K.O.",
-            "Lilo & Stitch"
+            "STRAW",
+            "Der König der Löwen"
         ]
     }
 ]

@@ -1,5 +1,6 @@
 import tkinter as tk
 import webbrowser
+from tkinter import messagebox
 #-----------------------------------------------------View
 class View(tk.Tk):
     def __init__(self,controler):
@@ -30,20 +31,34 @@ class View(tk.Tk):
     class Login_Window(tk.Frame):
         def __init__(self, master, controler, user):
             super().__init__(master)
+            self.controler = controler
             self.master = master
             self.login_Label = tk.Label(self, text = "Einloggen")
             self.login_Label.pack()
             self.login_Entry = tk.Entry(self, text = "Benutzername")
             self.login_Entry.pack()
-            self.login_button = tk.Button(self, text= "Login", command = lambda : (controler.login(self.login_Entry, self.master)))
+            self.login_button = tk.Button(self, text= "Login", command = self.login)
             self.login_button.pack()
             self.signup_label = tk.Label(self, text = "Registrieren")
             self.signup_label.pack()
             self.signup_Entry = tk.Entry(self, text = "Registrieren")
             self.signup_Entry.pack()
-            self.signup_button = tk.Button(self, text = "Registrieren", command = lambda : (controler.signup(self.signup_Entry)))
+            self.signup_button = tk.Button(self, text = "Registrieren", command = self.signup)
             self.signup_button.pack()
-    
+        
+        def login(self):
+            try: 
+                self.controler.login(self.login_Entry, self.master)
+            
+            except Exception as e:
+                messagebox.showinfo(str(e))
+
+        def signup(self):
+            try: 
+                self.controler.signup(self.signup_Entry)
+            
+            except Exception as e:
+                messagebox.showinfo(str(e))
     """
     Die Visuelle übersicht für das Generelle Übersichtsfenster mit einer Listbox das alle Filme der Datenbank beinhaltet und
     der anderen Listbox die die vorgeschlagenen Filme beinhaltet. Über der Listbox das alle Filme ausgibt, ist auch eine Suchleiste, mitwelche man bestimmte Filme
@@ -146,7 +161,7 @@ class View(tk.Tk):
             self.trailer_button = tk.Button(self.details_frame, text="Link Trailer", state=tk.DISABLED, command = self.perform_film_action)
             self.trailer_button.grid(row=2, column=0, sticky=tk.SW, padx=10, pady=(10, 5))
 
-            self.add_film_button = tk.Button(self.details_frame, text = "Favoriten hinzufügen", command = lambda : (self.film_add_to_liked(user)))
+            self.add_film_button = tk.Button(self.details_frame, text = "Favoriten hinzufügen", state=tk.DISABLED, command = lambda : (self.film_add_to_liked(user)))
             self.add_film_button.grid(row=2, column=1, sticky=tk.SE, padx=10, pady=(10, 5))
 
 
@@ -161,7 +176,8 @@ class View(tk.Tk):
             try:
                 self.controler.write_to_Json(user, self.what_listbox)
                 self.list_recommended_Films(user)
-            except:
+            except Exception as e:
+                messagebox.showinfo(str(e))
                 print(Exception)
 
         """
@@ -210,18 +226,17 @@ class View(tk.Tk):
                 self.what_listbox = self.recommended_listbox
                 index = selected_indices[0]
                 selected_film_name = self.recommended_listbox.get(index)
-                selected_film_name = self.film_listbox.get(index)
                 selected_film_data = next((film for film in self.controler.get_Json() if film["film_names"] == selected_film_name), None)
-
 
                 if selected_film_data:
                     self.film_name_label.config(text=f"Name: {selected_film_data['film_names']}")
                     self.film_description_label.config(text=f"Beschreibung: {selected_film_data['beschreibung']}")
                     self.trailer_button.config(state=tk.NORMAL)
+                    self.add_film_button.config(state=tk.NORMAL)
                     self.current_selected_film = selected_film_data
 
             except Exception as e:
-                print("Error")
+                print(e)
         
         """
         Die Funktion wird nach dem selektieren eines Filmes in der generellen Film Listbox die Detail übersicht auf der Unteren Seite aktualisieren
@@ -230,7 +245,8 @@ class View(tk.Tk):
         def on_film_select(self, event = None):
             try:
                 selected_indices = self.film_listbox.curselection()
-                
+                selected_film_data = {}
+
                 index = selected_indices[0]
                 self.what_listbox = self.film_listbox
                 selected_film_name = self.film_listbox.get(index)
@@ -332,7 +348,7 @@ class View(tk.Tk):
             self.remove_liked_button.grid(row=1, column=0, columnspan=2, pady=5)  # Unterhalb der Listbox
 
             # --- Zweite Listbox (Meine Merkliste) ---
-            self.watchlist_listbox_label = tk.Label(self, text="Meine Merkliste:", font=("Arial", 12, "underline"))
+            self.watchlist_listbox_label = tk.Label(self, text="Empfeglungen basierend auf andere Nutzer ähnlichen Profiles:", font=("Arial", 12, "underline"))
             self.watchlist_listbox_label.grid(row=1, column=1, sticky=tk.SW, padx=5, pady=2)  # Rechte Spalte
 
             self.watchlist_listbox_frame = tk.Frame(self, bd=2, relief="groove")  # Rahmen
@@ -372,8 +388,7 @@ class View(tk.Tk):
             self.trailer_button = tk.Button(self.details_frame, text="Link Trailer", state=tk.DISABLED, command=self.perform_film_action)
             self.trailer_button.grid(row=2, column=0, sticky=tk.SW, padx=10, pady=(10, 5))
 
-            self.add_to_watchlist_button = tk.Button(self.details_frame, text="Zur Merkliste hinzufügen",
-                                                    command=lambda: self.add_film_to_watchlist(self.user))
+            self.add_to_watchlist_button = tk.Button(self.details_frame, text="Favoriten hinzufügen", state=tk.DISABLED, command=lambda: (self.film_add_to_liked(self.user)))
             self.add_to_watchlist_button.grid(row=2, column=1, sticky=tk.SE, padx=10, pady=(10, 5))
 
 
@@ -385,7 +400,16 @@ class View(tk.Tk):
         """
         Die Funktion löscht den ausgewählten Film von der watched Listbox
         """
-        
+        def film_add_to_liked(self, user):
+            try:
+                self.controler.write_to_Json(user, self.watchlist_listbox)
+                self.List_Films(user)
+                self.List_recommenden_colbrotative_Films(user)
+
+            except Exception as e:
+                messagebox.showinfo(str(e))
+                print(Exception)
+            
         def List_recommenden_colbrotative_Films(self, user):
             self.watchlist_listbox.delete(0, tk.END) # Clear existing items
             Film_names = self.controler.get_Json_recommended_Films_collarbotive(user)
@@ -396,7 +420,7 @@ class View(tk.Tk):
             try:
                 self.controler.remove_from_list(self.user, self.liked_films_listbox)
                 self.List_Films(self.user)
-            
+                self.List_recommenden_colbrotative_Films(self.user)
             except:
                 print(Exception)
 
@@ -405,20 +429,11 @@ class View(tk.Tk):
         Die Funktion listet alle Filme des users auf, welche dieser als angesehenen Film klassigiziert
         """
         def List_Films(self, user):
-            print("test")
             self.liked_films_listbox.delete(0, tk.END) # Clear existing items
             Film_names = self.controler.get_Json_user_Liked_Films(user)
             for film in Film_names:
                 self.liked_films_listbox.insert(tk.END, film)
         
-
-        def film_add_to_liked(self, user):
-            try:
-                self.controler.write_to_Json(user, self.film_listbox)
-                self.list_recommended_Films(user)
-            except:
-                print(Exception)
-
         """
         Funktion für das suchen nach den Filmen auf youtube durch das auslesen der Url für den jeweiligen Film
         """
@@ -432,39 +447,17 @@ class View(tk.Tk):
             else:
                 print("No Trailer", "No trailer link available for the selected film.")
         
-        """
-        Für das löschen des Inhaltes der Scuhleiste
-        """
-        def clear_search(self):
-            films = self.controler.get_Json_Film_Names()
-            self.search_entry.delete(0, tk.END)
-            self.film_listbox(films)
-            self.clear_film_details()
-        
-        """
-        für das filtern der Filme die das suchwort beinhalten und die generelle Film Listbox neu ausgibt
-        """
-        def filter_films(self, event = None):
-            search_term = self.search_entry.get().lower()
-            films = self.controler.get_Json_Film_Names()
-            filtered_films = []
-            for film in films:
-                if search_term in film.lower():
-                    filtered_films.append(film)
 
-            self.list_Films(filtered_films)
-        
         """
         Die Funktion wird nach dem selektieren eines Filmes in der Recommended Listbox die Detail übersicht auf der Unteren Seite aktualisieren
         """
         def on_watchlist_film_select(self, event = None):
             try:
-                selected_indices = self.recommended_listbox.curselection()
+                selected_indices = self.watchlist_listbox.curselection()
                 selected_film_data = {}
-
+                print(selected_indices)
                 index = selected_indices[0]
-                selected_film_name = self.recommended_listbox.get(index)
-                selected_film_name = self.film_listbox.get(index)
+                selected_film_name = self.watchlist_listbox.get(index)
                 selected_film_data = next((film for film in self.controler.get_Json() if film["film_names"] == selected_film_name), None)
 
 
@@ -472,11 +465,12 @@ class View(tk.Tk):
                     self.film_name_label.config(text=f"Name: {selected_film_data['film_names']}")
                     self.film_description_label.config(text=f"Beschreibung: {selected_film_data['beschreibung']}")
                     self.trailer_button.config(state=tk.NORMAL)
-                    self.current_selected_film = selected_film_data # Store for button action
-                else:
-                    self.clear_film_details(True)
+                    self.add_to_watchlist_button.config(state=tk.NORMAL)
+                    self.current_selected_film = selected_film_data
+
             except Exception as e:
-                print("Error")
+                print("on_watchlist_film_select: ")
+                print(e)
         
         """
         Die Funktion wird nach dem selektieren eines Filmes in der generellen Film Listbox die Detail übersicht auf der Unteren Seite aktualisieren
@@ -484,23 +478,20 @@ class View(tk.Tk):
 
         def on_liked_film_select(self, event = None):
             try:
-                selected_indices = self.film_listbox.curselection()
-                if not selected_indices:
-                    self.clear_film_details(False)
-                    return
-                
+                selected_indices = self.liked_films_listbox.curselection()
+                selected_film_data = {}
+                print(selected_indices)
                 index = selected_indices[0]
-                selected_film_name = self.film_listbox.get(index)
+                selected_film_name = self.liked_films_listbox.get(index)
                 selected_film_data = next((film for film in self.controler.get_Json()  if film["film_names"] == selected_film_name), None)
-
 
                 if selected_film_data:
                     self.film_name_label.config(text=f"Name: {selected_film_data['film_names']}")
                     self.film_description_label.config(text=f"Beschreibung: {selected_film_data['beschreibung']}")
                     self.trailer_button.config(state=tk.NORMAL)
-                    self.add_film_button.config(state=tk.NORMAL)
-                    self.current_selected_film = selected_film_data # Store for button action
-                else:
-                    self.clear_film_details(False)
+                    self.add_to_watchlist_button.config(state=tk.DISABLED)
+                    self.current_selected_film = selected_film_data
+
             except Exception as e:
+                print("on_liked_film_select: ")
                 print(e)
