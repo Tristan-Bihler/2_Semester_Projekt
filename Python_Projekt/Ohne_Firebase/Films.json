@@ -1,6 +1,6 @@
 [
     {
-        "name": "Predator: Killer of Killers",
+        "film_names": "Predator: Killer of Killers",
         "beschreibung": "Ein neuer, animierter Action-Abenteuerfilm aus dem Predator-Universum. Diese Anthologie folgt drei der unerschrockensten Kämpfer der Menschheit: einer Wikingerkriegerin, die ihren jungen Sohn auf einen blutigen Rachefeldzug führt, einem Ninja im feudalen Japan, der sich in einem brutalen Kampf um das Erbe der Familie gegen seinen Samurai-Bruder stellt, und einem Piloten aus dem Zweiten Weltkrieg, der in die Lüfte steigt, um einer außerirdischen Bedrohung für die Alliierten zu begegnen.",
         "genres": [
             "Animation",
@@ -10,7 +10,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Predator:%20Killer%20of%20Killers"
     },
     {
-        "name": "The Accountant 2",
+        "film_names": "The Accountant 2",
         "beschreibung": "Christian Wolff hat ein Talent dafür, komplizierte Probleme zu lösen. Als ein alter Weggefährte ermordet wird und eine kryptische Nachricht hinterlässt, in der es heißt, man solle „den Accountant finden“, ist Wolff gezwungen, sich des Falls anzunehmen. Bald erkennt er, dass drastische Schritte unumgänglich sind. Also zieht er seinen entfremdeten und hochgefährlichen Bruder Brax als Verstärkung heran. Gemeinsam mit Marybeth Medina, der stellvertretenden Direktorin des US-Finanzministeriums, decken sie eine tödliche Verschwörung auf. Dadurch geraten sie ins Visier eines skrupellosen Netzwerks von Killern, die vor nichts zurückschrecken, um ihre Geheimnisse zu vertuschen.",
         "genres": [
             "Mystery",
@@ -20,7 +20,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=The%20Accountant%202"
     },
     {
-        "name": "STRAW",
+        "film_names": "STRAW",
         "beschreibung": "Ein erschütternd schlechter Tag treibt eine hart arbeitende, alleinerziehende Mutter an den Rand ihrer Kräfte – und zu einer schockierenden Verzweiflungstat.",
         "genres": [
             "Thriller",
@@ -30,7 +30,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=STRAW"
     },
     {
-        "name": "Lilo & Stitch",
+        "film_names": "Lilo & Stitch",
         "beschreibung": "„Lilo & Stitch“ erzählt die herzerwärmende Geschichte eines hawaiianischen Mädchens und eines außerirdischen Wesens. Gemeinsam entdecken sie die Bedeutung von Familie, Freundschaft und Zusammenhalt.",
         "genres": [
             "Familie",
@@ -41,7 +41,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Lilo%20&%20Stitch"
     },
     {
-        "name": "The Amateur",
+        "film_names": "The Amateur",
         "beschreibung": "Charlie Heller ist ein brillanter, aber stark introvertierter Decoder für die CIA, der in einem Kellerbüro am Hauptsitz in Langley arbeitet. Sein Leben gerät aus den Fugen, nachdem seine Frau bei einem Terroranschlag in London getötet wird. Als seine Vorgesetzten sich weigern, Maßnahmen zu ergreifen, nimmt er die Sache selbst in die Hand und begibt sich auf eine gefährliche Reise rund um den Globus, um die Verantwortlichen aufzuspüren. Sein Intellekt dient ihm dabei als ultimative Waffe, um seine Verfolger abzuschütteln und seinen Racheplan in die Tat umzusetzen.",
         "genres": [
             "Thriller",
@@ -50,7 +50,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=The%20Amateur"
     },
     {
-        "name": "Mikaela",
+        "film_names": "Mikaela",
         "beschreibung": "",
         "genres": [
             "Action",
@@ -59,7 +59,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Mikaela"
     },
     {
-        "name": "K.O.",
+        "film_names": "K.O.",
         "beschreibung": "Ein Ex-MMA-Kämpfer muss den vermissten Sohn eines Gegners finden, den er vor Jahren versehentlich getötet hat, und gegen eine brutale Verbrecherbande in Marseille vorgehen.",
         "genres": [
             "Action",
@@ -69,7 +69,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=K.O."
     },
     {
-        "name": "Blood & Sinners",
+        "film_names": "Blood & Sinners",
         "beschreibung": "Beim Versuch, ihr von Problemen geplagtes Leben hinter sich zu lassen, kehren Zwillingsbrüder in ihre Heimatstadt zurück, um dort einen Neuanfang zu wagen. Doch schon bald müssen sie feststellen, dass bei ihrer Rückkehr ein noch größeres Übel auf sie wartet.",
         "genres": [
             "Horror",
@@ -78,7 +78,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Blood%20&%20Sinners"
     },
     {
-        "name": "Final Destination Bloodlines",
+        "film_names": "Final Destination Bloodlines",
         "beschreibung": "Immer wieder wird die Studentin Stefanie von einem schrecklichen Albtraum heimgesucht. Sie beschließt, in ihre Heimatstadt zurückzukehren. Dort hofft sie, die einzige Person zu finden, die den Teufelskreis durchbrechen und ihre gesamte Familie vor dem grausamen Tod bewahren kann, der sie alle unweigerlich erwartet …",
         "genres": [
             "Horror",
@@ -87,7 +87,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Final%20Destination%20Bloodlines"
     },
     {
-        "name": "Ein Minecraft Film",
+        "film_names": "Ein Minecraft Film",
         "beschreibung": "Vier Außenseiter werden durch ein geheimnisvolles Portal gezogen – mitten in ein skurriles kubisches Wunderland, das von der Vorstellungskraft lebt. Um wieder nach Hause zu kommen, begeben sie sich mit dem Handwerker Steve auf eine magische Reise. Es wird ein Abenteuer, das von allen Mut verlangt – auch den, sich wieder mit den Eigenschaften zu verbinden, die jeden von ihnen kreativ machen.",
         "genres": [
             "Familie",
@@ -98,7 +98,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Ein%20Minecraft%20Film"
     },
     {
-        "name": "From the World of John Wick: Ballerina",
+        "film_names": "From the World of John Wick: Ballerina",
         "beschreibung": "Nach einem regelrechten Blutbad ist die Familie Macarro praktisch ausgelöscht. Nur Eve lebt noch – und sie schwört Rache um jeden Preis. Mit diesem Plan vor Augen sucht sie Hilfe bei der Familie der Ruska-Roma, um sich dort an einer Ballettschule durch die Lehrerin Nogi zur kaltblütigen Killerin ausbilden zu lassen und sich dann auf die Suche nach denen zu machen, die ihre eigene Familie auf dem Gewissen haben. Doch das Ruska-Roma-Leben unter der strengen Herrschaft der Direktorin ist alles andere als ein Zuckerschlecken und der Weg zur Rache lang und steinig...",
         "genres": [
             "Action",
@@ -108,7 +108,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=From%20the%20World%20of%20John%20Wick:%20Ballerina"
     },
     {
-        "name": "Drachenzähmen leicht gemacht",
+        "film_names": "Drachenzähmen leicht gemacht",
         "beschreibung": "Auf der schroffen Insel Berk, wo seit Generationen eine erbitterte Feindschaft zwischen Wikingern und Drachen wütet, erweist sich Hicks als Außenseiter. Der einfallsreiche, jedoch unterschätzte Sohn von Häuptling Haudrauf widersetzt sich jahrhundertealten Traditionen, als er sich mit dem gefürchteten Nachtschatten-Drachen Ohnezahn anfreundet. Ihre außergewöhnliche Verbindung enthüllt nicht nur die wahre Natur der Drachen – sie stellt die Werteordnung aller Wikinger in Frage. Mit der ehrgeizigen und kämpferischen Astrid und dem schrulligen Waffenschmied Grobian an seiner Seite stellt sich Hicks einer Welt, die von Angst und Missverständnissen zerfressen ist. Als eine alte Bedrohung sowohl Wikinger als auch Drachen in Gefahr bringt, wird seine Freundschaft zu Ohnezahn zum Schlüssel für eine bessere Zukunft.",
         "genres": [
             "Action",
@@ -118,7 +118,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Drachenzähmen%20leicht%20gemacht"
     },
     {
-        "name": "The Roundup: Punishment",
+        "film_names": "The Roundup: Punishment",
         "beschreibung": "Während der Ermittlungen gegen die Betreiber einer App für Drogenhandel stoßen Detective Ma (Don Lee) und sein Team auf eine Verbindung zwischen einem Mordfall auf den Philippinen und einer illegalen Organisation für Onlineglücksspiel. Deren Anführer, IT-Genie Chang Dong-cheol, und sein Komplize, Ex-Elitesoldat Baek Chang-gi, stecken bereits in den Vorbereitungen für ihren nächsten großen Schachzug. Um ihre Pläne zu vereiteln, weitet Detective Ma die Operation aus und schmiedet dafür eine ungewöhnliche Allianz ...",
         "genres": [
             "Action",
@@ -130,8 +130,8 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=The%20Roundup:%20Punishment"
     },
     {
-        "name": "Shadow Force - Die letzte Mission",
-        "beschreibung": "Die Agenten Kyrah und Isaac waren die Anführer einer multinationalen Spezialeinheit namens Shadow Force – sie brachen aber die strengen Regeln der Organisation, als sie sich ineinander verliebten. Um ihren gemeinsamen Sohn vor der Vergeltung der ehemaligen Mitkämpfer und ihrem rachsüchtigen Boss zu schützen, gehen sie in den Untergrund. Gnadenlos werden sie mit einem hohen Kopfgeld gejagt und für ihre Familie geht es bei diesem Kampf um alles!",
+        "film_names": "Shadow Force - Die letzte Mission",
+        "beschreibung": "Die Agenten Kyrah und Isaac waren die Anführer einer multinationalen Spezialeinheit film_namesns Shadow Force – sie brachen aber die strengen Regeln der Organisation, als sie sich ineinander verliebten. Um ihren gemeinsamen Sohn vor der Vergeltung der ehemaligen Mitkämpfer und ihrem rachsüchtigen Boss zu schützen, gehen sie in den Untergrund. Gnadenlos werden sie mit einem hohen Kopfgeld gejagt und für ihre Familie geht es bei diesem Kampf um alles!",
         "genres": [
             "Action",
             "Thriller",
@@ -140,7 +140,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Shadow%20Force%20-%20Die%20letzte%20Mission"
     },
     {
-        "name": "A Working Man",
+        "film_names": "A Working Man",
         "beschreibung": "Levon Cade hat eine erfolgreiche Militärkarriere im Bereich Geheimoperationen hinter sich gelassen, um ein einfaches Leben als Arbeiter auf dem Bau zu führen. Als jedoch die Tochter seines Vorgesetzten, die für ihn wie eine Tochter ist, von einem Menschenhändlerring entführt wird, zieht er noch einmal in den Kampf. Bei seiner Suche stößt er auf eine Welt voller Korruption, die selbst seine schlimmsten Vorstellungen übertrifft.",
         "genres": [
             "Action",
@@ -150,7 +150,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=A%20Working%20Man"
     },
     {
-        "name": "Utopia",
+        "film_names": "Utopia",
         "beschreibung": "",
         "genres": [
             "Mystery",
@@ -161,7 +161,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Utopia"
     },
     {
-        "name": "Clown in a Cornfield",
+        "film_names": "Clown in a Cornfield",
         "beschreibung": "Eine brutale Mordserie erschüttert die Kleinstadt Kettle Springs, in der es schon lange Auseinandersetzungen zwischen den älteren Bewohnern und der Jugend gibt. Clown Frendo, der eigentlich die Werbefigur einer früher mal erfolgreichen Firma war, ist zum Leben erwacht und hat sich auf eine Seite geschlagen. Er glaubt, dass unartige Kinder für den Verfall seiner Stadt verantwortlich sind und macht Jagd auf diese. Bald gerät dabei auch die 17 Jahre alte Quinn, die erst kürzlich mit ihrem Vater nach Kettle Springs gezogen ist, in sein Visier.",
         "genres": [
             "Horror",
@@ -171,7 +171,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Clown%20in%20a%20Cornfield"
     },
     {
-        "name": "Jewel Thief - The Heist Begins",
+        "film_names": "Jewel Thief - The Heist Begins",
         "beschreibung": "In einem spannenden Kampf der Intelligenz und des Willens plant der Betrüger Rehan einen Diamantraub, während er versucht, seinen sadistischen Gegner Rajan zu überlisten.",
         "genres": [
             "Action",
@@ -180,7 +180,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Jewel%20Thief%20-%20The%20Heist%20Begins"
     },
     {
-        "name": "The Ugly Stepsister",
+        "film_names": "The Ugly Stepsister",
         "beschreibung": "Elvira hat genug vom Dasein im Schatten ihrer bildhübschen Stiefschwester Agnes. Um die Blicke von Prinz Julian, dem begehrtesten Junggesellen des gesamten Königreichs, auf sich zu ziehen, ist ihr jedes Mittel recht. Unter Einsatz von Blut, Schweiß und Tränen schreckt Elvira vor nichts zurück, um den Prinzen für sich zu gewinnen.",
         "genres": [
             "Horror",
@@ -191,8 +191,8 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=The%20Ugly%20Stepsister"
     },
     {
-        "name": "Mission: Impossible - The Final Reckoning",
-        "beschreibung": "Die Jagd ist noch nicht vorbei: Ethan Hunt und sein Team von der legendären Impossible Mission Force (IMF) sehen sich weiterhin einer extrem mächtigen und die Welt bedrohgenden künstlichen Intelligenz, die nur die „Entität\" genannt wird, gegenüber. Dafür müssen sie das den Namen „Sewastopol“ tragende russische U-Boot finden, dem eine Schlüsselrolle in diesem brodelnden Konflikt zukommt. Doch mit diesem Ziel sind Hunt und sein Team natürlich nicht alleine: Auch Gabriel, letztlich ein Handlanger der Entität, sucht fieberhaft nach der Sewastopol. Denn für ihn ist sie der Schlüssel, der sozusagen das Tor zur Hölle auf Erden öffnet, mit dem die Welt ins Chaos gestürzt werden kann. Gabriel scheint in diesem erbitterten Kampf eine Geheimwaffe in der Hinterhand zu haben, denn er und Hunt haben offenbar eine gemeinsame Vergangenheit, die den IMF-Agenten nun endgültig einholt...",
+        "film_names": "Mission: Impossible - The Final Reckoning",
+        "beschreibung": "Die Jagd ist noch nicht vorbei: Ethan Hunt und sein Team von der legendären Impossible Mission Force (IMF) sehen sich weiterhin einer extrem mächtigen und die Welt bedrohgenden künstlichen Intelligenz, die nur die „Entität\" genannt wird, gegenüber. Dafür müssen sie das den film_namesn „Sewastopol“ tragende russische U-Boot finden, dem eine Schlüsselrolle in diesem brodelnden Konflikt zukommt. Doch mit diesem Ziel sind Hunt und sein Team natürlich nicht alleine: Auch Gabriel, letztlich ein Handlanger der Entität, sucht fieberhaft nach der Sewastopol. Denn für ihn ist sie der Schlüssel, der sozusagen das Tor zur Hölle auf Erden öffnet, mit dem die Welt ins Chaos gestürzt werden kann. Gabriel scheint in diesem erbitterten Kampf eine Geheimwaffe in der Hinterhand zu haben, denn er und Hunt haben offenbar eine gemeinsame Vergangenheit, die den IMF-Agenten nun endgültig einholt...",
         "genres": [
             "Action",
             "Abenteuer",
@@ -201,7 +201,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Mission:%20Impossible%20-%20The%20Final%20Reckoning"
     },
     {
-        "name": "Warrior Queen",
+        "film_names": "Warrior Queen",
         "beschreibung": "",
         "genres": [
             "Action",
@@ -211,7 +211,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Warrior%20Queen"
     },
     {
-        "name": "Kayara",
+        "film_names": "Kayara",
         "beschreibung": "",
         "genres": [
             "Abenteuer",
@@ -221,7 +221,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Kayara"
     },
     {
-        "name": "The Last Stand of Ellen Cole",
+        "film_names": "The Last Stand of Ellen Cole",
         "beschreibung": "",
         "genres": [
             "Action",
@@ -230,7 +230,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=The%20Last%20Stand%20of%20Ellen%20Cole"
     },
     {
-        "name": "Schneewittchen",
+        "film_names": "Schneewittchen",
         "beschreibung": "Schneewittchen ist jung und schön. Deshalb wird ihre Stiefmutter, die böse Königin, regelrecht vom Neid zerfressen. Denn sie will um jeden Preis die schönste Frau im ganzen Land sein, doch wegen ihrer Stieftochter wird daraus eben nichts. Das lässt sie auch der magische Spiegel (Stimme im englischen Original: Patrick Page) regelmäßig wissen. Schneewittchens Leben bei der Königin wird deshalb immer unerträglicher. Also fasst sie sich eines Tages ein Herz und ergreift die Flucht. Ihr Weg führt sie tief in den Wald, wo sie schließlich auf ein Haus stößt und sich darin versteckt. Was sie jedoch nicht weiß: Dort leben die sieben Zwerge Pimpel, Chef, Seppel, Brummbär, Happy, Schlafmütz und Hatschi.",
         "genres": [
             "Familie",
@@ -239,7 +239,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Schneewittchen"
     },
     {
-        "name": "Warfare",
+        "film_names": "Warfare",
         "beschreibung": "Ein Platoon junger Navy Seals soll das Haus einer irakischen Familie besetzen, um ein aufständisches Gebiet abzusichern. Zuerst läuft alles nach Plan. Sie halten die Bewohner in Schach und verteilen sich in dem zweistöckigen Gebäude, um die Umgebung zu beobachten. Als sie eine bewaffnete Gruppe Männer bemerken, ist es schon zu spät.",
         "genres": [
             "Kriegsfilm",
@@ -248,7 +248,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Warfare"
     },
     {
-        "name": "Sikandar",
+        "film_names": "Sikandar",
         "beschreibung": "Ein unerschrockener junger Mann will sich nicht länger mit der um sich greifenden Korruption abfinden und für sein Volk kämpfen, das endgültig genug Ungerechtigkeiten erfahren hat.",
         "genres": [
             "Action",
@@ -257,7 +257,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Sikandar"
     },
     {
-        "name": "Párvulos: Hijos Del Apocalipsis",
+        "film_names": "Párvulos: Hijos Del Apocalipsis",
         "beschreibung": "",
         "genres": [
             "Horror"
@@ -265,7 +265,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Párvulos:%20Hijos%20Del%20Apocalipsis"
     },
     {
-        "name": "Woodwalkers",
+        "film_names": "Woodwalkers",
         "beschreibung": "Auf den ersten Blick sieht Carag aus wie ein ganz normaler Junge, doch hinter seinen leuchtenden Augen verbirgt sich ein unglaubliches Geheimnis: Carag ist ein Gestaltwandler. Als Berglöwe ist er in der Wildnis aufgewachsen und lebt nun in seiner Jungengestalt in der Menschenwelt. Erst als Carag in der Clearwater High aufgenommen wird, einem geheimen Internat für Woodwalker wie ihn, verspürt er ein Gefühl von Heimat. In Holly, einem frechen Rothörnchen, und Brandon, einem schüchternen Bison, findet er schnell Freunde. Und die kann Carag gut gebrauchen – denn die Welt der Woodwalker steckt voller Rätsel und Gefahren …",
         "genres": [
             "Familie",
@@ -274,7 +274,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Woodwalkers"
     },
     {
-        "name": "Fear Below",
+        "film_names": "Fear Below",
         "beschreibung": "Ein Team von Berufstauchern soll in Australien in den 1940er-Jahren ein versunkenes Auto in einem Fluss orten und bergen. Bei ihren Bemühungen werden sie von einem äußerst aggressiven Bullenhai gestört, der in den Gewässern jagt.",
         "genres": [
             "Horror",
@@ -285,7 +285,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Fear%20Below"
     },
     {
-        "name": "Thor: Tag der Entscheidung",
+        "film_names": "Thor: Tag der Entscheidung",
         "beschreibung": "Donnergott Thor wird auf der anderen Seite des Universums gefangengenommen. Ohne seinen nützlichen Hammer Mjölnir scheint eine Flucht nahezu ausgeschlossen. Dabei läuft ihm allmählich die Zeit davon. Denn die ebenso mächtige wie erbarmungslose Hela, die nach jahrtausendlanger Gefangenschaft aus ihrem Gefängnis freigekommen ist, macht sich daran, die Macht auf Thors Heimatwelt Asgard zu übernehmen. Um das zu verhindern, setzt Thor alles daran, nach Hause zurückzukehren. Zwischen ihm und seiner Freiheit stehen jedoch tödliche Gladiatorenkämpfe auf dem Planeten Sakaar, die Mülldeponie des Universums. Bei einem dieser Duelle trifft Thor auf den Ex-Avenger und seinen früheren Mitstreiter Hulk den beliebtesten und erfolgreichsten Kämpfer auf Sakaar…",
         "genres": [
             "Action",
@@ -295,7 +295,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Thor:%20Tag%20der%20Entscheidung"
     },
     {
-        "name": "లైలా",
+        "film_names": "లైలా",
         "beschreibung": "",
         "genres": [
             "Komödie",
@@ -304,7 +304,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=లైలా"
     },
     {
-        "name": "Vaiana 2",
+        "film_names": "Vaiana 2",
         "beschreibung": "Nachdem sie einen unerwarteten Ruf von ihren Vorfahren erhalten hat, reist Moana zu den weiten Meeren Ozeaniens und in gefährliche, längst vergessene Gewässer, um ein Abenteuer zu erleben, das sie so noch nie erlebt hat.",
         "genres": [
             "Animation",
@@ -315,7 +315,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Vaiana%202"
     },
     {
-        "name": "The Accountant",
+        "film_names": "The Accountant",
         "beschreibung": "Christian Wolff ist ein Mathematik-Genie, der mit Zahlen deutlich besser zurechtkommt als mit Menschen. Unter der Tarnung einer kleinstädtischen Steuerberatung arbeitet er als Buchhalter für einige der gefährlichsten Unterweltorganisationen der Welt. Die Steuerfahndungsabteilung des Finanzministeriums unter Leitung von Ray King kommt ihm auf die Spur – deshalb akzeptiert Christian den Auftrag eines legalen Kunden: einer Firma, die Pionierarbeit im Bereich der Robotik leistet: Dort hat nämlich eine Buchhalterin Unstimmigkeiten in Millionenhöhe entdeckt. Doch während Christian ins Labyrinth der Buchführung einsteigt und der Wahrheit immer näher kommt, steigt die Zahl der Todesfälle in seiner Umgebung.",
         "genres": [
             "Krimi",
@@ -325,7 +325,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=The%20Accountant"
     },
     {
-        "name": "Until Dawn",
+        "film_names": "Until Dawn",
         "beschreibung": "Ein Jahr nach dem mysteriösen Verschwinden ihrer Schwester Melanie begeben sich Clover und ihre Freunde auf der Suche nach Antworten in das abgelegene Tal, in dem sie verschwunden ist. Bei der Erkundung eines verlassenen Besucherzentrums werden sie von einem maskierten Killer verfolgt und einer nach dem anderen auf grausame Weise ermordet… Bis sie aufwachen und sich wieder am Anfang desselben Abends wiederfinden. Gefangen im Tal sind sie gezwungen, die gleiche Nacht immer wieder zu durchleben – nur ist die Bedrohung durch den Killer jedes Mal anders und noch schrecklicher als beim letzten Mal. Mit schwindender Hoffnung muss die Gruppe bald feststellen, dass sie nur noch eine begrenzte Anzahl von Toden verkraften kann und ihr einziger Ausweg darin besteht, bis zum Morgengrauen zu überleben.",
         "genres": [
             "Horror",
@@ -334,7 +334,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Until%20Dawn"
     },
     {
-        "name": "In the Lost Lands",
+        "film_names": "In the Lost Lands",
         "beschreibung": "Eine Königin, verzweifelt auf der Suche nach der Erfüllung ihres Liebesglücks, macht einen gewagten Schritt: Sie schickt die mächtige und gefürchtete Hexe Gray Alys, um ihr die magische Gabe zu verschaffen, sich in einen Werwolf zu verwandeln. Mit dem geheimnisvollen Jäger Boyce, der ihr im Kampf gegen düstere Kreaturen und gnadenlose Gegner zur Seite steht, durchstreift Gray Alys eine unheimliche und gefährliche Welt. Und nur sie weiß, dass jeder Wunsch, den sie erfüllt, ungeahnte Konsequenzen hat …",
         "genres": [
             "Action",
@@ -344,7 +344,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=In%20the%20Lost%20Lands"
     },
     {
-        "name": "Jurassic World - Das gefallene Königreich",
+        "film_names": "Jurassic World - Das gefallene Königreich",
         "beschreibung": "Vier Jahre nachdem der Freizeitpark Jurassic World geschlossen wurde, haben die Dinosaurier sich auf der kompletten Isla Nublar ausgebreitet. Zwar leben sie mittlerweile vom Menschen ungestört, doch ein bevorstehender Vulkanausbruch auf der Insel droht die Urzeittiere auszulöschen. Die ehemalige Parkmanagerin Claire will dies auf keinen Fall zulassen und bittet daher ihren Ex-Freund Owen Grady um Hilfe. Gemeinsam kehren sie auf die Insel zurück, um das erneute Aussterben der Dinosaurier zu verhindern. Während sich Owen auf die Suche nach seinen ehemaligen Raptoren-Schützlingen macht, stoßen die restlichen Expeditionsmitglieder während ihrer Rettungsmission auf eine Verschwörung.",
         "genres": [
             "Action",
@@ -355,7 +355,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Jurassic%20World%20-%20Das%20gefallene%20Königreich"
     },
     {
-        "name": "Thunderbolts*",
+        "film_names": "Thunderbolts*",
         "beschreibung": "Marvel Studios und eine Crew von Indie-Veteranen, die sich selbst verkauft haben, präsentieren Thunderbolts*, ein unkonventionelles Team bestehend aus der depressiven Attentäterin Yelena Belova zusammen mit den sonderbarsten Außenseitern des MCU. Neben einigen spannenden neuen Gesichtern, bringt der Film außerdem die Marvel-Cinematic-Universe-Charaktere Bucky Barnes, Red Guardian, John Walker, Taskmaster, Ghost und Valentina Allegra de Fontaine zurück auf die Leinwand",
         "genres": [
             "Action",
@@ -365,8 +365,8 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Thunderbolts*"
     },
     {
-        "name": "Lilo & Stitch",
-        "beschreibung": "Weil das Alien namens Stitch nur auf Zerstörung programmiert ist, soll der garstige Kerl eliminiert werden. Ihm gelingt die Flucht nach Hawaii, wo er von dem einsamen Mädchen Lilo aufgenommen wird, das Stitch für ein Hündchen hält. Zunächst hat Stich nur Mätzchen im Kopf, als aber außerirdische Kopfgeldjäger Jagd auf ihn machen, ist er gezwungen, sich mit Lilo zu arrangieren.",
+        "film_names": "Lilo & Stitch",
+        "beschreibung": "Weil das Alien film_namesns Stitch nur auf Zerstörung programmiert ist, soll der garstige Kerl eliminiert werden. Ihm gelingt die Flucht nach Hawaii, wo er von dem einsamen Mädchen Lilo aufgenommen wird, das Stitch für ein Hündchen hält. Zunächst hat Stich nur Mätzchen im Kopf, als aber außerirdische Kopfgeldjäger Jagd auf ihn machen, ist er gezwungen, sich mit Lilo zu arrangieren.",
         "genres": [
             "Animation",
             "Familie",
@@ -375,7 +375,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Lilo%20&%20Stitch"
     },
     {
-        "name": "Captain America: Brave New World",
+        "film_names": "Captain America: Brave New World",
         "beschreibung": "Einfache, freundschaftliche Meetings scheint es für Sam Wilson aka Captain America nicht zu geben. Denn das Treffen mit dem gerade erst ins Amt gewählten US-Präsidenten Thaddeus Ross verwickelt den Avenger mit dem ikonischen Vibranium-Schild in einen Konflikt globalen Ausmaßes. Doch noch ist Zeit, die Welt davor zu bewahren, ins absolute Chaos zu stürzen. Nur drängt die Zeit...",
         "genres": [
             "Action",
@@ -385,7 +385,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Captain%20America:%20Brave%20New%20World"
     },
     {
-        "name": "Guardians of the Galaxy Vol. 2",
+        "film_names": "Guardians of the Galaxy Vol. 2",
         "beschreibung": "Gerade erst sind in Guardians of the Galaxy aus Feinden Freunde geworden und schon machen die fünf Verbündeten gemeinsam das All unsicher. Peter Quill, Gamora, Rocket Raccoon, Groot und Drax the Destroyer bereisen als Weltraum-Abenteurer diesmal nicht nur bereits bekannte Orte, sondern stoßen auch in neue Winkel der Galaxie vor.  Nachdem die vergangenen Erlebnisse ihnen einige Rätsel aufgegeben haben, machen sie sich nun daran, diese zu lösen. ‚Star-Lord‘ Peter Quill hat beispielsweise gerade entdeckt, dass er nicht rein menschlicher Herkunft ist, und – auch wenn er es noch nicht weiß – rückt ein Zusammentreffen mit seinem Vater nun in greifbare Nähe.",
         "genres": [
             "Science Fiction",
@@ -395,7 +395,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Guardians%20of%20the%20Galaxy%20Vol.%202"
     },
     {
-        "name": "Krieg der Sterne",
+        "film_names": "Krieg der Sterne",
         "beschreibung": "Seit der Vernichtung der Jedi-Ritter steht die Galaxie unter der grausamen Herrschaft des Imperiums. Nur eine kleine Gruppe von Rebellen, angeführt von der schönen Prinzessin Leia, widersetzt sich der dunklen Macht. Als es ihnen gelingt, die geheimen Baupläne für den gefährlichen Todesstern zu entwenden, gerät das Imperium in Aufruhr. Durch Zufall gelangen die Pläne ausgerechnet in die Hände des Farmerjungen Luke Skywalker, der spürt, dass er sein bisheriges Leben hinter sich lassen muss. Gemeinsam mit dem weisen Obi-Wan Kenobi, den Weltraumabenteurern Han Solo und Chewbacca sowie den Droiden R2-D2 und C-3PO nimmt er den Kampf gegen das mächtige Imperium auf. Es beginnt ein Wettlauf gegen die Zeit, denn der Kampfstern kann nur vor seiner Fertigstellung zerstört werden...",
         "genres": [
             "Abenteuer",
@@ -405,7 +405,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Krieg%20der%20Sterne"
     },
     {
-        "name": "Avengers: Infinity War",
+        "film_names": "Avengers: Infinity War",
         "beschreibung": "Der mächtige Titan Thanos  hat es sich zur Aufgabe gemacht das halbe Universum auszulöschen. Um diesen perfiden Plan Realität werden zu lassen, benötigt er allerdings zuerst alle sechs Infinity-Steine, die ihm in Verbindung mit einem speziell gefertigten Handschuh, gottgleiche Kräfte verleihen. Da sich unglücklicherweise auch auf der Erde zwei dieser Steine befinden, betraut er seine treu ergebene Black Order mit deren Beschaffung. Sowohl die Avengers, als auch die Guardians of the Galaxy und Thor erfahren jedoch von Thanos' Plänen und stellen sich dem Schurken entgegen. Doch mit einen derart mächtigen Gegner hatte es bisher keiner von ihnen zu tun...",
         "genres": [
             "Abenteuer",
@@ -415,7 +415,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Avengers:%20Infinity%20War"
     },
     {
-        "name": "Karate Kid: Legends",
+        "film_names": "Karate Kid: Legends",
         "beschreibung": "Nach einer Familientragödie wird das Kung-Fu-Wunderkind Li Fong aus seinem Zuhause in Peking gerissen und muss mit seiner Mutter nach New York City ziehen. Li kämpft damit, seine Vergangenheit hinter sich zu lassen, während er versucht, Anschluss bei seinen neuen Klassenkameraden zu finden. Doch obwohl er nicht kämpfen will, scheint der Ärger ihn zu verfolgen. Als ein neuer Freund seine Hilfe braucht, nimmt Li an einem Karatewettbewerb teil – aber seine Fähigkeiten allein reichen nicht aus. Lis Kung-Fu-Lehrer Mr. Han holt das legendäre Karate Kid Daniel LaRusso zu Hilfe und Li lernt eine neue Art zu kämpfen, indem er die Stile der beiden Meister für den ultimativen Martial-Arts-Showdown miteinander vereint.",
         "genres": [
             "Action",
@@ -425,7 +425,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Karate%20Kid:%20Legends"
     },
     {
-        "name": "Culpa Mia - Meine Schuld",
+        "film_names": "Culpa Mia - Meine Schuld",
         "beschreibung": "Noah muss ihre Stadt, ihren Freund und ihre Freunde hinter sich lassen und in die Villa des neuen reichen Ehemanns ihrer Mutter ziehen. Dort lernt sie Nick, ihren neuen Stiefbruder, kennen. Sie verlieben sich heimlich unsterblich ineinander.",
         "genres": [
             "Liebesfilm",
@@ -434,7 +434,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Culpa%20Mia%20-%20Meine%20Schuld"
     },
     {
-        "name": "Exterritorial",
+        "film_names": "Exterritorial",
         "beschreibung": "Als ihr Sohn in einem US-Konsulat spurlos verschwindet, setzt die ehemalige Soldatin Sara alles daran, um ihn zu finden – und stößt dabei auf eine gefährliche Verschwörung.",
         "genres": [
             "Thriller",
@@ -443,7 +443,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Exterritorial"
     },
     {
-        "name": "Tin Soldier",
+        "film_names": "Tin Soldier",
         "beschreibung": "In einem besonderen Programm werden Veteranen der US-Armee für ihren weiteren Lebensweg ausgebildet. Doch die Regierung bekommt es langsam mit der Angst zu tun, was das einem Kult ähnelnde System mit seiner Armee aus schwer bewaffneten, bestens ausgebildeten und folgsamen Kampfmaschinen anrichten könnte..",
         "genres": [
             "Action",
@@ -452,7 +452,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Tin%20Soldier"
     },
     {
-        "name": "Parasite",
+        "film_names": "Parasite",
         "beschreibung": "Familie Kim ist ganz unten angekommen: Vater, Mutter, Sohn und Tochter hausen in einem grünlich-schummrigen Keller und sind sich für keinen Aushilfsjob zu schade. Erst als der Jüngste eine Anstellung als Nachhilfelehrer in der todschicken Villa der Familie Park antritt, steigen die Kims ein ins Karussell der Klassenkämpfe. Mit findigen Tricksereien, bemerkenswertem Talent und großem Mannschaftsgeist gelingt es ihnen, die bisherigen Bediensteten der Familie Park nach und nach loszuwerden. Bald schon sind die Kims unverzichtbar für ihre neuen Herrschaften. Doch dann löst ein unerwarteter Zwischenfall eine Kette von Ereignissen aus, die so unvorhersehbar wie unfassbar sind.",
         "genres": [
             "Komödie",
@@ -462,8 +462,8 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Parasite"
     },
     {
-        "name": "Drachenzähmen leicht gemacht",
-        "beschreibung": "Drachenzähmen leicht gemacht entführt seine Zuschauer auf eine faszinierende Wikinger-Insel, wo der Kampf gegen raffinierte Drachen zum Alltag gehört: Auf der kleinen Insel Berk, hoch oben im Norden, wird nicht lange gefackelt. Mordsstarke Wikinger müssen ihre Heimat vor wilden Drachen beschützen, die ihnen das Leben zur Hölle machen. Auch der schmächtige Teenager Hicks, Beiname „der Hüne“, ist Feuer und Flamme für die Drachenjagd – nur leider hat er im Umgang mit Waffen zwei linke Hände. Da sein Vater niemand Geringeres ist als Haudrauf „der Stoische“, Oberhaupt des Wikingerstammes und ein berühmter Drachenjäger, soll Hicks auf der Drachenschule nun auch die raue Kampfkunst der Wikinger erlernen. Doch ehe Hicks – der übrigens ein pfiffiger und begeisterter Tüftler ist – den gefürchteten Unterricht antreten kann, wird sein Dorf von einer wilden Drachen-Armada angegriffen.",
+        "film_names": "Drachenzähmen leicht gemacht",
+        "beschreibung": "Drachenzähmen leicht gemacht entführt seine Zuschauer auf eine faszinierende Wikinger-Insel, wo der Kampf gegen raffinierte Drachen zum Alltag gehört: Auf der kleinen Insel Berk, hoch oben im Norden, wird nicht lange gefackelt. Mordsstarke Wikinger müssen ihre Heimat vor wilden Drachen beschützen, die ihnen das Leben zur Hölle machen. Auch der schmächtige Teenager Hicks, Beifilm_names „der Hüne“, ist Feuer und Flamme für die Drachenjagd – nur leider hat er im Umgang mit Waffen zwei linke Hände. Da sein Vater niemand Geringeres ist als Haudrauf „der Stoische“, Oberhaupt des Wikingerstammes und ein berühmter Drachenjäger, soll Hicks auf der Drachenschule nun auch die raue Kampfkunst der Wikinger erlernen. Doch ehe Hicks – der übrigens ein pfiffiger und begeisterter Tüftler ist – den gefürchteten Unterricht antreten kann, wird sein Dorf von einer wilden Drachen-Armada angegriffen.",
         "genres": [
             "Fantasy",
             "Abenteuer",
@@ -473,7 +473,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Drachenzähmen%20leicht%20gemacht"
     },
     {
-        "name": "Der König der Löwen",
+        "film_names": "Der König der Löwen",
         "beschreibung": "Der König der Löwen, Mufasa, ist überglücklich, als die Löwin Sarabi einen Sohn zur Welt bringt: Simba. Seinem Onkel Scar ist der junge Thronfolger allerdings ein Dorn im Auge. Der kleine Löwe soll einst die Herrschaft über alle Tiere der Savanne innehaben und kann es, während er mit seiner Freundin Nala so einige Dummheiten anstellt, kaum erwarten, bis es so weit ist.  Doch durch Scars Intrigen verstirbt Mufasa und der junge Simba gibt sich die Schuld am Tod seines Vaters. Er ergreift die Flucht und landet im Dschungel, wo er vom Erdmännchen Timon und vom Warzenschwein Pumbaa aufgenommen wird. Sorgenfrei reift Simba zum erwachsenen Löwen, der gar nicht daran denkt, nach Hause zurückzukehren. Doch das Schicksal hat andere Pläne.",
         "genres": [
             "Abenteuer",
@@ -484,7 +484,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Der%20König%20der%20Löwen"
     },
     {
-        "name": "তান্ডব",
+        "film_names": "তান্ডব",
         "beschreibung": "",
         "genres": [
             "Action",
@@ -493,7 +493,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=তান্ডব"
     },
     {
-        "name": "Star Wars: Die letzten Jedi",
+        "film_names": "Star Wars: Die letzten Jedi",
         "beschreibung": "Die planetenvernichtende Starkiller-Basis der Ersten Ordnung ist zwar zerstört, die Neue Republik nach der vorherigen Zerstörung von fünf Welten aber massiv geschwächt. Sie steht am Abgrund und wird nur noch von Generalin Leias Widerstand verteidigt, für den auch Pilot Poe Dameron und der desertierte Ex-Sturmtruppler Finn kämpfen. Rey, mit den Erfahrungen ihres ersten großen Abenteuers in den Knochen, geht unterdessen bei Luke Skywalker auf dem Inselplaneten Ahch-To in die Lehre. Luke ist der letzte Jedi, der letzte Vertreter des Ordens, auf dem die Hoffnung ruht, dass Frieden in der Galaxis einkehrt. Doch die Erste Ordnung wirft ihren Schatten auch auf Luke und Rey: Der verlorene, ehemalige Schützling des alten Meisters, Kylo Ren, hat die finstere Mission noch längst nicht beendet, die ihm der sinistere Strippenzieher Snoke auftrug ...",
         "genres": [
             "Abenteuer",
@@ -503,7 +503,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Star%20Wars:%20Die%20letzten%20Jedi"
     },
     {
-        "name": "Poseída",
+        "film_names": "Poseída",
         "beschreibung": "",
         "genres": [
             "Horror",
@@ -512,7 +512,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Poseída"
     },
     {
-        "name": "용감한 시민",
+        "film_names": "용감한 시민",
         "beschreibung": "",
         "genres": [
             "Action",
@@ -522,7 +522,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=용감한%20시민"
     },
     {
-        "name": "Deep Cover",
+        "film_names": "Deep Cover",
         "beschreibung": "Kat ist eine Lehrerin für Improvisationskomik, die sich zu fragen beginnt, ob sie ihre Chance auf Erfolg verpasst hat. Als ein Undercover-Cop ihr die Rolle ihres Lebens anbietet, rekrutiert sie zwei ihrer Schüler, um die Londoner Unterwelt zu infiltrieren.",
         "genres": [
             "Action",
@@ -532,7 +532,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Deep%20Cover"
     },
     {
-        "name": "Deadpool 2",
+        "film_names": "Deadpool 2",
         "beschreibung": "Nach einem weiteren herben Schicksalsschlag ist Deadpool des Lebens überdrüssig und versucht sich mithilfe von Benzinkanistern und einer Zigarette umzubringen. Doch der unkaputtbare Antiheld wird von seinem X-Men-Kumpanen Colossus gerettet und mit auf das abgeschiedene Anwesen der Mutanten genommen. Durch einen Zwischenfall mit dem Teenager-Mutanten Russell lernt Deadpool den Superschurken Cable kennen, der es auf den wütenden Halbstarken abgesehen hat. Zunächst kann Deadpool die Situation entschärfen – doch dann landen Russell und er plötzlich im Knast. Nun stellt er sich seine eigene Superheldencrew zusammen und rekrutiert unter anderem Domino und Zeitgeist um es mit Cable aufzunehmen …",
         "genres": [
             "Action",
@@ -542,7 +542,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Deadpool%202"
     },
     {
-        "name": "Sonic the Hedgehog 3",
+        "film_names": "Sonic the Hedgehog 3",
         "beschreibung": "Sonic, Knuckles und Tails treffen auf einen neuen und überaus mächtigen Gegner: Shadow, ein mysteriöser Bösewicht, der über enorme, schier unvorstellbare Kräfte verfügt. Da ihre Fähigkeiten in jeder Hinsicht unterlegen sind, muss Team Sonic eine unerwartete Verbindung eingehen, um Shadow aufzuhalten und die Erde zu beschützen.",
         "genres": [
             "Action",
@@ -553,8 +553,8 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Sonic%20the%20Hedgehog%203"
     },
     {
-        "name": "Justice League",
-        "beschreibung": "Bruce Wayne alias Batman hat wieder Vertrauen in die Menschheit – auch dank Superman, der im Kampf gegen das Monster Doomsday wahre Selbstlosigkeit bewies und sich opferte. Als sich das mächtige außerweltliche Wesen Steppenwolf mit einer Armee Paradämonen anschickt, die Erde zu überfallen, wendet sich Batman an Diana Prince, besser bekannt unter dem Namen Wonder Woman, die gegen Doomsday eindrucksvoll zeigte, was sie kann. Gemeinsam rekrutieren sie ein Team von Superhelden, bestehend aus den Metamenschen, auf die die beiden bereits aufmerksam geworden sind: Aquaman, Cyborg und The Flash verbünden sich mit Batman und Wonder Woman, aber der Angriff auf die Erde scheint dennoch nicht mehr zu verhindern sein…",
+        "film_names": "Justice League",
+        "beschreibung": "Bruce Wayne alias Batman hat wieder Vertrauen in die Menschheit – auch dank Superman, der im Kampf gegen das Monster Doomsday wahre Selbstlosigkeit bewies und sich opferte. Als sich das mächtige außerweltliche Wesen Steppenwolf mit einer Armee Paradämonen anschickt, die Erde zu überfallen, wendet sich Batman an Diana Prince, besser bekannt unter dem film_namesn Wonder Woman, die gegen Doomsday eindrucksvoll zeigte, was sie kann. Gemeinsam rekrutieren sie ein Team von Superhelden, bestehend aus den Metamenschen, auf die die beiden bereits aufmerksam geworden sind: Aquaman, Cyborg und The Flash verbünden sich mit Batman und Wonder Woman, aber der Angriff auf die Erde scheint dennoch nicht mehr zu verhindern sein…",
         "genres": [
             "Action",
             "Abenteuer",
@@ -563,7 +563,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Justice%20League"
     },
     {
-        "name": "Doctor Strange in the Multiverse of Madness",
+        "film_names": "Doctor Strange in the Multiverse of Madness",
         "beschreibung": "Eigentlich wollte Doctor Strange nur seiner Ex-Freundin Christine zur Hochzeit gratulieren. Zum Feiern ist jedoch keine Zeit: Ein riesiges Monster droht, die Stadt in Schutt und Asche zu legen. Ziel des Wesens ist die Teenagerin America Chavez, welche die außergewöhnliche Gabe besitzt, zwischen Paralleluniversen reisen zu können. Zusammen mit dem Obersten Zauberer Wong versucht Strange das Mädchen zu beschützen und dafür zu sorgen, dass ihre mächtige aber zugleich gefährliche Fähigkeit nicht in die falschen Hände gerät.",
         "genres": [
             "Fantasy",
@@ -573,8 +573,8 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Doctor%20Strange%20in%20the%20Multiverse%20of%20Madness"
     },
     {
-        "name": "Die Legende von Ochi",
-        "beschreibung": "Die eigensinnige Yuri lebt mit ihrem Vater auf einer abgelegenen Insel namens Carpathia. Von klein auf schärft man ihr ein, sich vor den geheimnisvollen Tierwesen der Insel, den Ochi, zu fürchten. Doch als Yuri ein einsames Baby-Ochi findet, kommen ihr Zweifel an der Gefährlichkeit der Wesen. Sie lässt ihr Zuhause hinter sich, um das Ochi zurück zu seiner Familie zu bringen, und erlebt das größte Abenteuer ihres Lebens.",
+        "film_names": "Die Legende von Ochi",
+        "beschreibung": "Die eigensinnige Yuri lebt mit ihrem Vater auf einer abgelegenen Insel film_namesns Carpathia. Von klein auf schärft man ihr ein, sich vor den geheimnisvollen Tierwesen der Insel, den Ochi, zu fürchten. Doch als Yuri ein einsames Baby-Ochi findet, kommen ihr Zweifel an der Gefährlichkeit der Wesen. Sie lässt ihr Zuhause hinter sich, um das Ochi zurück zu seiner Familie zu bringen, und erlebt das größte Abenteuer ihres Lebens.",
         "genres": [
             "Familie",
             "Fantasy",
@@ -583,7 +583,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Die%20Legende%20von%20Ochi"
     },
     {
-        "name": "새엄마의 욕망",
+        "film_names": "새엄마의 욕망",
         "beschreibung": "",
         "genres": [
             "Drama",
@@ -592,7 +592,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=새엄마의%20욕망"
     },
     {
-        "name": "Baywatch",
+        "film_names": "Baywatch",
         "beschreibung": "Mitch Buchannon hat als charismatischer Anführer eines Teams von Rettungsschwimmern alle Hände voll zu tun. Vor allem ein Neuzugang bereitet ihm Sorgen: Matt Brody war einst olympischer Schwimmer, doch wurde nach einem Aufsehen erregenden Zwischenfall verbannt. Nun muss ihn Mitch als PR-Maßnahme in sein Team aufnehmen. Der Neuzugang stellt gleich mal Mitchs Autorität in Frage. Summer hat dagegen ein Auge auf den Neuankömmling geworfen. Allgemein stehen Liebe und Beziehung dem Team immer im Weg. Mitchs Ex Stephanie ist geschäftlich noch weiter seine Partnerin, doch als er sich neu verliebt, reagiert sie eifersüchtig. Und der trottelige Ronnie versucht verzweifelt, bei Sexbombe C.J. zu landen. All das muss aber bald beiseite gewischt werden, denn als Mitch und Matt einer kriminellen Verschwörung auf die Spur kommen, die ihren Strand bedroht, müssen sie alle zusammenarbeiten...",
         "genres": [
             "Komödie",
@@ -602,7 +602,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Baywatch"
     },
     {
-        "name": "Mufasa: Der König der Löwen",
+        "film_names": "Mufasa: Der König der Löwen",
         "beschreibung": "Der verwaiste Mufasa ist verloren und allein, bis er auf Taka, den Erben einer königlichen Blutlinie, trifft. Dies ist der Beginn einer sagenhaften Reise, welche die Verbundenheit der beiden auf die Probe stellt, als sie sich einem tödlichen Feind gegenübersehen.",
         "genres": [
             "Abenteuer",
@@ -612,7 +612,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Mufasa:%20Der%20König%20der%20Löwen"
     },
     {
-        "name": "Der Pate",
+        "film_names": "Der Pate",
         "beschreibung": "Don Vito Corleone ist der Kopf einer der einflußreichsten Mafia-Familien New Yorks. Als die anderen Familien der Stadt beschließen, neben Glücksspiel und Schutzgelderpressungen nun auch den Handel mit Drogen als Erwerbsquelle zu nutzen und sich Don Corleone diesem Vorhaben nicht anschließen möchte, wird er zum Ziel eines hinterhältigen Mordanschlags. Nun steht Vitos Sohn Michael in der Verantwortung, in die Fußstapfen seines Vaters zu treten, obwohl er mit den Geschäften der Familie bis dato nichts zu tun haben wollte.",
         "genres": [
             "Drama",
@@ -621,7 +621,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Der%20Pate"
     },
     {
-        "name": "Terminator",
+        "film_names": "Terminator",
         "beschreibung": "Ein Cyborg aus der Zukunft wird auf eine tödliche Mission in die heutige Gegenwart geschickt. Er soll Sarah Connor töten, eine junge Frau, die eine entscheidende Rolle für die Zukunft der Menschheit spielen wird. Sie hat nur eine Chance, Kyle Reese, ein Freiheitskämpfer, der ebenfalls aus der Zukunft kommt.",
         "genres": [
             "Action",
@@ -631,7 +631,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Terminator"
     },
     {
-        "name": "Bambi - Eine Lebensgeschichte aus dem Walde",
+        "film_names": "Bambi - Eine Lebensgeschichte aus dem Walde",
         "beschreibung": "Ein junges Rehkitz ist geboren, das nun von seiner Mutter und den Tieren des Waldes umgeben ist: seinem Freund, dem Raben, dem Kaninchen, dem Waschbären. Es entdeckt die Welt der Bäume und ihre Geheimnisse. Aber als der Herbst kommt und Bambi sich in offenes Gelände wagt, wird er von Jägern für immer von seiner Mutter getrennt. Von nun an muss das junge Rehkitz lernen, allein zu leben.",
         "genres": [
             "Abenteuer",
@@ -641,7 +641,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Bambi%20-%20Eine%20Lebensgeschichte%20aus%20dem%20Walde"
     },
     {
-        "name": "Belyas",
+        "film_names": "Belyas",
         "beschreibung": "",
         "genres": [
             "Drama"
@@ -649,7 +649,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Belyas"
     },
     {
-        "name": "Nuestros tiempos",
+        "film_names": "Nuestros tiempos",
         "beschreibung": "Dank ihres wissenschaftlichen Durchbruchs kann das Ehepaar Nora und Héctor aus dem Jahr 1966 nach 2025 reisen. Héctor hat Probleme, Nora kaum – aber zu welchem Preis?",
         "genres": [
             "Science Fiction",
@@ -659,7 +659,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Nuestros%20tiempos"
     },
     {
-        "name": "Blade Runner 2049",
+        "film_names": "Blade Runner 2049",
         "beschreibung": "Im Jahr 2023 wird die Herstellung von Replikanten – künstlichen Menschen, die zum Einsatz in den Weltall-Kolonien gezüchtet werden – nach mehreren schwerwiegenden Vorfällen verboten. Als der brillante Industrielle Niander Wallace ein neues, verbessertes Modell, den „Nexus 9“, vorstellt, wird die Produktion 2036 jedoch wieder erlaubt. Um ältere und somit nicht zugelassene Replikanten-Modelle, die sich auf der Erde verstecken, aufzuspüren und zu eliminieren, ist weiterhin die sogenannte „Blade Runner“-Einheit des LAPD im Einsatz, zu der auch K gehört. Bei seiner Arbeit stößt K auf ein düsteres, gut gehütetes Geheimnis von enormer Sprengkraft, das ihn auf die Spur eines ehemaligen Blade Runners bringt: Rick Deckard, der vor 30 Jahren aus Los Angeles verschwand ...",
         "genres": [
             "Science Fiction",
@@ -668,7 +668,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Blade%20Runner%202049"
     },
     {
-        "name": "Alien: Covenant",
+        "film_names": "Alien: Covenant",
         "beschreibung": "Der fremde Planet, den die Crew des Kolonisationsraumschiffs Covenant erforscht, wirkt paradiesisch: Doch als die Terraforming-Spezialistin Daniels und ihre Kollegen, darunter der Android Walter, Christopher und Tennessee, durch die bergige, bewaldete Landschaft laufen, fällt ihnen vor allem die merkwürdige, beunruhigende Stille auf: Kein Vogel ist zu hören – und auch kein anderes Tier. Bald schon merken die Entdecker, dass sie auf einem Planeten gelandet sind, der lebensfeindlicher kaum sein könnte. Blitzschnelle, hochintelligente und Säure-spritzende Aliens überfallen die Covenant-Crew, töten ein Mitglied nach dem anderen. Und dem Rest der Gruppe wird klar: So weit weg von der Heimat sind sie komplett auf sich allein gestellt...",
         "genres": [
             "Horror",
@@ -678,7 +678,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Alien:%20Covenant"
     },
     {
-        "name": "Sauvages - Tumult im Urwald",
+        "film_names": "Sauvages - Tumult im Urwald",
         "beschreibung": "Die elfjährige Keria lebt mit ihrem Vater in einem bäuerlichen Vorort einer Stadt in der Provinz Sarawak auf der Insel Borneo. Sie ist ein urbanes Mädchen, das stylische Haarschnitte und Hip-Hop-Musik liebt. Ihre Mutter starb, als sie noch sehr klein war. Keria hat keine Erinnerung mehr an sie, aber ihr Vater hat ihr erzählt, dass sie von einem Panther gefressen wurde.",
         "genres": [
             "Abenteuer",
@@ -689,7 +689,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Sauvages%20-%20Tumult%20im%20Urwald"
     },
     {
-        "name": "Die schwarze Witwe",
+        "film_names": "Die schwarze Witwe",
         "beschreibung": "Als ein Mann tot aufgefunden wird, lassen die Ermittlungen in diesem Thriller nach wahren Begebenheiten die perfekte Fassade seiner Witwe bröckeln und enthüllen ein Doppelleben.",
         "genres": [
             "Thriller",
@@ -698,7 +698,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Die%20schwarze%20Witwe"
     },
     {
-        "name": "Loco Por Ella",
+        "film_names": "Loco Por Ella",
         "beschreibung": "",
         "genres": [
             "Komödie"
@@ -706,7 +706,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Loco%20Por%20Ella"
     },
     {
-        "name": "Dune: Part Two",
+        "film_names": "Dune: Part Two",
         "beschreibung": "Paul Atreides begibt sich mithilfe von Chani und den Fremen auf einen Rachefeldzug gegen die Verschwörer, die seine Familie vernichtet haben. Der junge Paul steht vor der Wahl zwischen der Liebe seines Lebens und dem Schicksal des gesamten Universums. Mit allen Mitteln aber muss er versuchen, eine schreckliche Zukunft zu verhindern – eine Zukunft, die niemand außer ihm vorhersehen kann.",
         "genres": [
             "Science Fiction",
@@ -715,7 +715,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Dune:%20Part%20Two"
     },
     {
-        "name": "Der Super Mario Bros. Film",
+        "film_names": "Der Super Mario Bros. Film",
         "beschreibung": "Bei unterirdischen Reparaturarbeiten werden die Klempner Mario und Luigi durch eine geheimnisvolle Röhre in eine magische neue Welt gesaugt. Als die Brüder dort getrennt werden, begibt Mario sich auf eine gigantische Reise, um Luigi zu finden. Mit der Unterstützung des Pilzkönigreichbewohners Toad und dank eines Trainings von Princess Peach, der willensstarken Herrscherin des Pilzkönigreiches, entdeckt Mario dabei ungeahnte Kräfte in sich.",
         "genres": [
             "Familie",
@@ -726,7 +726,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Der%20Super%20Mario%20Bros.%20Film"
     },
     {
-        "name": "Verirrte Kugel 3",
+        "film_names": "Verirrte Kugel 3",
         "beschreibung": "Nach seiner Entlassung aus dem Gefängnis hat Lino nur ein Ziel: Rache für Charas. Gemeinsam mit Julia begibt er sich auf die Spur von Areski, der inzwischen nach Frankreich zurückgekehrt ist. Dort gerät dieser ins Visier von Kommandant Resz und dessen Team. Was folgt, ist eine rasante Verfolgung, in der alte Rechnungen, zerbrechliche Allianzen und explosive Begegnungen aufeinandertreffen. Während sich ehemalige Gegner gezwungen sehen, zusammenzuarbeiten, rückt ein gemeinsamer Feind in den Fokus. Die Jagd nach Gerechtigkeit führt sie durch ein Netz aus Verrat und riskanten Entscheidungen – stets mit dem Ziel, die Wahrheit ans Licht zu bringen.",
         "genres": [
             "Action",
@@ -737,7 +737,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Verirrte%20Kugel%203"
     },
     {
-        "name": "Meg",
+        "film_names": "Meg",
         "beschreibung": "Nachdem ein Tiefsee-U-Boot von einem ausgestorben geglaubten Riesenhai angegriffen wird, sinkt das Fahrzeug in den tiefsten Graben des Pazifik und liegt dort manövrierunfähig am Meeresgrund. Der Crew an Bord läuft allmählich die Zeit davon und daher engagiert der Meeresforscher Dr. Minway Zhang den erfahrenen Taucher Jonas Taylor. Taylor ist zwar Experte für Bergungen in der Tiefsee, allerdings ist er vor Jahren schon einmal mit dem urzeitlichen Riesenhai, einem mehr als 20 Meter langen Megalodon, aneinandergeraten. Doch gemeinsam mit Dr. Zhangs Tochter Suyin muss er nun seine Ängste überwinden und schwere Geschütze auffahren, um den eingeschlossenen Menschen zur Hilfe eilen zu können und die Weltmeere von der Schreckensherrschaft des Urzeitmonsters zu befreien…",
         "genres": [
             "Action",
@@ -747,7 +747,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Meg"
     },
     {
-        "name": "Logan - The Wolverine",
+        "film_names": "Logan - The Wolverine",
         "beschreibung": "In naher Zukunft schützt ein abgekämpfter Logan einen gebrochenen Professor X in einem Versteck nahe der mexikanischen Grenze. Doch Logans Versuche, sich vor der Welt und seinem Vermächtnis zu verstecken, misslingen, als ein junger Mutant, von dunklen Kräften verfolgt, bei ihnen Zuflucht sucht.",
         "genres": [
             "Action",
@@ -757,7 +757,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Logan%20-%20The%20Wolverine"
     },
     {
-        "name": "xXx - Triple X",
+        "film_names": "xXx - Triple X",
         "beschreibung": "Vin Diesel ist Xander “xXx” Cage, Extremsportler und Adrenalinjunkie. Der tätowierte Draufgänger führt seine berüchtigten, lebensgefährlichen Stunts am liebsten in gestohlenen Luxusschlitten durch und besitzt nicht den geringsten Respekt vor jeglicher Autorität, ganz besonders nicht vor staatlicher – was xXx zum idealen Kandidaten für die Geheimmission des NSA-Agenten Gibbons macht. Dieser droht xXx mit einer Gefängnisstrafe, sollte er sich nicht bereit erklären, die äußerst gefährliche Untergrund-Organisation “Anarchie 99” zu infiltrieren. Unter der Führung des ehemaligen Soldaten Yorgi plant diese die Weltmächte USA und Russland mithilfe einer biologischen Waffe gegeneinander auszuspielen. Ein Himmelfahrtskommando wie es im Buche steht – genau das Richtige für xXx.",
         "genres": [
             "Action",
@@ -768,7 +768,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=xXx%20-%20Triple%20X"
     },
     {
-        "name": "My Massive Cock",
+        "film_names": "My Massive Cock",
         "beschreibung": "",
         "genres": [
             "Dokumentarfilm"
@@ -776,7 +776,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=My%20Massive%20Cock"
     },
     {
-        "name": "John Wick: Kapitel 3",
+        "film_names": "John Wick: Kapitel 3",
         "beschreibung": "John Wick befindet sich auf der Flucht. Es sind nicht nur 14 Millionen Dollar auf seinen Kopf ausgesetzt, er hat auch die Regel aller Regeln gebrochen: er hat einen anderen Menschen im Bereich des Continental Hotels umgebracht. Eigentlich müsste er deswegen längst tot sein, doch Hotelmanager Winston gewährte ihm für eine Stunde Gnade, bevor alle Folgen eintreten und Wick offiziell aus der Killergemeinschaft ausgeschlossen wird. Wenn John überleben will, muss er sich seinen Weg aus New York City freikämpfen und irgendwo auf der Welt Zuflucht finden. Helfen kann ihm dabei nur seine alte Bekannte Sofia und die Frau, die ihn einst aufgezogen und beschützt hat...",
         "genres": [
             "Action",
@@ -786,7 +786,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=John%20Wick:%20Kapitel%203"
     },
     {
-        "name": "Culpa Tuya - Deine Schuld",
+        "film_names": "Culpa Tuya - Deine Schuld",
         "beschreibung": "Die Liebe zwischen Noah und Nick scheint unerschütterlich – trotz der Versuche ihrer Eltern, sie zu trennen. Aber sein Job und ihr Studienbeginn eröffnen neue Beziehungen, die ihre Liebe und die Familie Leister auf eine harte Probe stellen. Wenn so viele Menschen bereit sind, eine Beziehung zu zerstören, kann sie dann wirklich gut enden?",
         "genres": [
             "Liebesfilm",
@@ -795,7 +795,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Culpa%20Tuya%20-%20Deine%20Schuld"
     },
     {
-        "name": "Pulp Fiction",
+        "film_names": "Pulp Fiction",
         "beschreibung": "Vincent Vega und Jules Winnfield holen für ihren Boss Marsellus Wallace eine schwarze Aktentasche aus einer Wohnung ab. Drei Jungs, die ihnen dabei im Weg stehen, lassen ihr Leben. Die Killer machen sich mit einem vierten Jungen als Geisel auf den Weg ins Hauptquartier. Doch als das Auto über eine Straßenerhöhung schaukelt, erschießt Vincent aus Versehen die Geisel. Um den blutverspritzten Wagen zu reinigen, machen die beiden einen Abstecher zu Jules's Freund Jimmie, wo auf Befehl vom Boss ein Spezialist für schwierige Aufträge zu ihnen stößt: The Wolf...",
         "genres": [
             "Thriller",
@@ -804,7 +804,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Pulp%20Fiction"
     },
     {
-        "name": "Rosario",
+        "film_names": "Rosario",
         "beschreibung": "",
         "genres": [
             "Horror"
@@ -812,7 +812,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Rosario"
     },
     {
-        "name": "The Gorge",
+        "film_names": "The Gorge",
         "beschreibung": "Zwei Elite-Agenten positionieren sich an abgelegenen Wachtürmen auf gegenüberliegenden Seiten einer gewaltigen und streng geheimen Schlucht. Ihre Mission ist es, die Welt vor einem mysteriösen und unbekannten Übel zu bewahren, das tief im Inneren lauert. Während sie über den unendlichen Abgrund hinweg eine Verbindung zueinander aufbauen, sehen sie sich einer unsichtbaren Bedrohung aus der Tiefe gegenüber. Als eine katastrophale Gefahr naht, müssen sie ihre Kräfte vereinen und sowohl körperliche als auch geistige Stärke beweisen, um das dunkle Geheimnis in der Schlucht zu bewältigen, bevor es die Welt erreicht.",
         "genres": [
             "Liebesfilm",
@@ -822,7 +822,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=The%20Gorge"
     },
     {
-        "name": "Havoc",
+        "film_names": "Havoc",
         "beschreibung": "Ein desillusionierter Detektiv muss tief in die Unterwelt vordringen, um nach einem gescheiterten Drogenraub den Sohn eines mächtigen Mannes zu retten.",
         "genres": [
             "Action",
@@ -832,7 +832,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Havoc"
     },
     {
-        "name": "Zwei glorreiche Halunken",
+        "film_names": "Zwei glorreiche Halunken",
         "beschreibung": "Ein mysteriöser Fremder, der mexikanische Revolverschütze Tuco und Sentenza, ein sadistischer Krimineller, sind auf der Jagd nach einer Geldkassette. Inhalt: 200.000 Dollar. Die drei Desperados haben untereinander nichts gemeinsam - werden aber zu Komplizen, wenn es die Situation erfordert. Doch jeder verfolgt nur ein Ziel: die Geldkassette. Und keiner von ihnen ist bereit, zu teilen...",
         "genres": [
             "Western"
@@ -840,7 +840,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Zwei%20glorreiche%20Halunken"
     },
     {
-        "name": "Fear Street: Prom Queen",
+        "film_names": "Fear Street: Prom Queen",
         "beschreibung": "Wer wird 1988 an der Shadyside High Prom Queen? Für Außenseiterin Lori geht es bei dem Wettbewerb um alles, und zwar, bevor ein Mörder ins Spiel kommt.",
         "genres": [
             "Horror",
@@ -849,7 +849,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Fear%20Street:%20Prom%20Queen"
     },
     {
-        "name": "Mission: Impossible - Fallout",
+        "film_names": "Mission: Impossible - Fallout",
         "beschreibung": "Mit der Wiederbeschaffung gestohlenen Plutoniums beauftragt, stellt Ethan Hunt das Wohl seines Teams über die Vollendung der Mission, wodurch die Nuklearwaffen in die Hände der Apostel, einem tödlichen Netzwerk hochspezialisierter Terroristen, gelangen. Um den drohenden atomaren Holocaust zu verhindern, sind Ethan und sein IMF-Team zur Zusammenarbeit mit dem draufgängerisch agierenden CIA-Agenten Walker gezwungen. Es beginnt ein tödlicher Wettlauf gegen die Zeit ...",
         "genres": [
             "Action",
@@ -858,7 +858,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Mission:%20Impossible%20-%20Fallout"
     },
     {
-        "name": "Planet der Affen - Survival",
+        "film_names": "Planet der Affen - Survival",
         "beschreibung": "Der Krieg, den Koba mit den von der Seuche stark dezimierten Menschen angezettelt hat, ist in vollem Gange. Affen-Anführer Caesar geht es dabei gar nicht länger ums Gewinnen, er will lediglich einen Weg finden, wie er mit seinem Stamm in Frieden leben kann. Doch eine Spezialeinheit unter Führung des brutalen Colonel will Caesar um jeden Preis tot sehen und so werden im Urwald vor den Toren San Franciscos weiterhin blutige Gefechte ausgetragen, die in einem heimtückischen Anschlag auf das geheime Versteck der Affen gipfeln, das ein Verräter preisgegeben hat. Nun gärt in dem sonst friedliebenden Caesar das Bedürfnis nach Rache und mit seiner rechten Hand Rocket und einigen weiteren Getreuen macht er sich auf die beschwerliche Suche nach dem Colonel, fest entschlossen, keine Gnade mehr walten zu lassen.",
         "genres": [
             "Drama",
@@ -868,7 +868,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Planet%20der%20Affen%20-%20Survival"
     },
     {
-        "name": "Spider-Man: Homecoming",
+        "film_names": "Spider-Man: Homecoming",
         "beschreibung": "Nach seinem Aufeinandertreffen mit den Avengers ist Peter Parker alias Spider-Man wieder zurück in New York, wo er bei seiner Tante May wohnt. Seitdem er mit bzw. gegen die anderen Helden kämpfte, fragt er sich, ob er mit seinen herausragenden Fähigkeiten nicht mehr machen sollte, als nur die freundliche Spinne aus der Nachbarschaft zu sein, die den einen oder anderen Einbruch verhindert und Taschendiebe stoppt. Doch daneben muss der von seinem neuen Mentor Tony Stark geförderte Jugendliche auch noch den Alltag auf die Reihe bekommen, den Alltag als Teenager an einer Highschool, wo er sich in Liz verguckt hat. Blöd, dass ausgerechnet in dieser Situation ein Bösewicht für Unruhe sorgt, der technisch bestens ausgestattet ist und von Rachedurst getrieben: der Vogelmann Vulture.",
         "genres": [
             "Action",
@@ -879,7 +879,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Spider-Man:%20Homecoming"
     },
     {
-        "name": "Auslöschung",
+        "film_names": "Auslöschung",
         "beschreibung": "Als zwölftes Expeditionsteam der geheimen Organisation Southern Reach werden vier Wissenschaftlerinnen in ein Gebiet geschickt, das als Area X bekannt ist. Seit vor 30 Jahren ein unbekanntes Ereignis den Landstrich erschütterte, überwuchert dort nun die Natur die letzten Überbleibsel menschlicher Zivilisation. Doch ihr Auftrag ist nicht einfach: Die Gruppe soll nicht nur das Areal und seine Tier- und Pflanzenwelt erforschen, sondern auch die Ursachen für das mysteriöse Unglück aufdecken. Die Mitglieder der vorherigen elf Forscherteams starben entweder an Krebs, begingen Suizid oder verschwanden spurlos.",
         "genres": [
             "Science Fiction",
@@ -888,7 +888,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Auslöschung"
     },
     {
-        "name": "Die Schöne und das Biest",
+        "film_names": "Die Schöne und das Biest",
         "beschreibung": "Belle ist eine ebenso kluge wie anmutige junge Frau, die gemeinsam mit ihrem etwas verschrobenen Vater Maurice ein ruhiges und zufriedenes Leben in dem kleinen Dorf Villeneuve lebt. Ihr beschaulicher Alltag wird nur durch den selbstverliebten Schönling Gaston gestört, der Belle regelmäßig den Hof macht und sich auch durch ihre Ablehnung nicht abschrecken lässt. Da gerät Belles Vater während einer Reise in die Fänge des Biestes, das in einem verwunschenen Schloss in der Nähe des Dorfes wohnt. Das Biest war einst ein selbstsüchtiger Prinz, der dazu verflucht wurde, als hässliches Ungeheuer zu leben, bis er jemanden dazu bringen kann, ihn trotz seines abschreckenden Äußeren wahrlich zu lieben. Doch davon ahnt Belle noch nichts, als sie sich selbstlos anstatt ihres Vaters in die Gefangenschaft des Biestes begibt. Erst langsam freundet sie sich mit den ebenfalls verzauberten Bediensteten im Schloss an und beginnt zu ahnen, dass hinter der abscheulichen Fassade des Biestes noch mehr steckt.",
         "genres": [
             "Familie",
@@ -898,7 +898,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Die%20Schöne%20und%20das%20Biest"
     },
     {
-        "name": "Oppenheimer",
+        "film_names": "Oppenheimer",
         "beschreibung": "Als dem Physiker Julius Robert Oppenheimer während des Zweiten Weltkriegs die wissenschaftliche Leitung des Manhattan-Projekts übertragen wird, können er und seine Ehefrau Kitty sich nicht vorstellen, welche Auswirkungen Oppenheimers Arbeit nicht nur auf ihr Leben, sondern auf die ganze Welt haben wird. Im Los Alamos National Laboratory in New Mexico sollen er und sein Team unter der Aufsicht von Lt. Leslie Groves eine Nuklearwaffe entwickeln – was ihnen auch gelingt. Oppenheimer wird zum „Vater der Atombombe“ ausgerufen, doch dass seine tödliche Erfindung bald folgenschwer in Hiroshima und Nagasaki eingesetzt wird, lässt Oppenheimer Abstand von dem Projekt nehmen. Als der Krieg zu Ende geht, setzt sich Robert Oppenheimer als Berater der US-amerikanischen Atomenergiebehörde, die von Lewis Strauss mitbegründet wurde, für eine internationale Kontrolle von Kernenergie und gegen ein nukleares Wettrüsten ein – und gerät ins Visier des FBI.",
         "genres": [
             "Drama",
@@ -907,7 +907,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Oppenheimer"
     },
     {
-        "name": "Fountain of Youth",
+        "film_names": "Fountain of Youth",
         "beschreibung": "Ein brillanter Schatzsucher stellt ein Team für ein episches Abenteuer zusammen. Doch um den Gefahren dieses waghalsigen Unternehmens stets einen Schritt voraus zu sein, ist er dringend auf die Hilfe seiner klugen, aber entfremdeten Schwester angewiesen.",
         "genres": [
             "Abenteuer",
@@ -917,7 +917,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Fountain%20of%20Youth"
     },
     {
-        "name": "The Monkey",
+        "film_names": "The Monkey",
         "beschreibung": "Wann immer ihr Spielzeugaffe seine Trommelstäbe schwingt, kommt es im Umfeld der Zwillingsbrüder Hal und Bill zu den absurdesten Todesfällen. Um eine Katastrophe zu verhindern, schmeißen die beiden ihn kurzerhand weg. Als es Jahre später erneut zu rätselhaften Toden kommt, müssen sich die seither zerstrittenen Brüder zusammenraufen, um den verfluchten Affen aufzuspüren und endgültig zur Strecke zu bringen.",
         "genres": [
             "Horror",
@@ -926,7 +926,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=The%20Monkey"
     },
     {
-        "name": "Rust - Legende des Westens",
+        "film_names": "Rust - Legende des Westens",
         "beschreibung": "Der berüchtigte Gesetzlose Harland Rust befreit seinen entfremdeten Enkel Lucas aus dem Gefängnis, nachdem Lucas wegen eines versehentlichen Mordes zum Tode durch den Strang verurteilt wurde. Die beiden müssen dem legendären US-Marshal Wood Helm und dem Kopfgeldjäger Fenton „Preacher“ Lang entkommen, die ihnen dicht auf den Fersen sind. Tief vergrabene Geheimnisse steigen empor und eine unerwartete familiäre Bindung beginnt sich zu bilden, während das ungleiche Duo versucht, an der gnadenlosen amerikanischen Grenze zu überleben.",
         "genres": [
             "Western"
@@ -934,7 +934,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Rust%20-%20Legende%20des%20Westens"
     },
     {
-        "name": "Pandabeer in Afrika",
+        "film_names": "Pandabeer in Afrika",
         "beschreibung": "",
         "genres": [
             "Animation",
@@ -945,7 +945,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Pandabeer%20in%20Afrika"
     },
     {
-        "name": "Spider-Man: Across the Spider-Verse",
+        "film_names": "Spider-Man: Across the Spider-Verse",
         "beschreibung": "Brooklyns freundliche Spinne aus der Nachbarschaft ist zurück! Nachdem sich Miles Morales aka Spider-Man gerade erst an seine Rolle gewöhnt hat, wird er bereits in sein nächstes Abenteuer und quer durch das neu entdeckte Multiversum geschleudert. Um dessen Existenz zu schützen, muss sich Spider-Man zusammen mit Gwen Stacy und einem neuen Spider-Team einem Bösewicht stellen, der mächtiger ist als alles, was ihnen bisher begegnet ist. Nur mit vereinten Kräften ist es ihnen vielleicht möglich, die Welt zu retten. Doch welche ist die richtige Vorgehensweise, um der Bedrohung zu begegnen? Als die vielen Helden der Spider-People über diese Frage aneinander geraten, muss Miles seine eigene Rolle als Held neu definieren, um die Menschen zu retten, die er liebt.",
         "genres": [
             "Animation",
@@ -956,7 +956,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Spider-Man:%20Across%20the%20Spider-Verse"
     },
     {
-        "name": "Titan: Die OceanGate-Katastrophe",
+        "film_names": "Titan: Die OceanGate-Katastrophe",
         "beschreibung": "Bei einem Tiefseetauchgang zur Titanic im Jahr 2023 implodierte das Touristen-U-Boot „Titan“ der Firma OceanGate. Diese Dokumentation schildert den Verlauf der Tragödie.",
         "genres": [
             "Dokumentarfilm",
@@ -965,7 +965,7 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Titan:%20Die%20OceanGate-Katastrophe"
     },
     {
-        "name": "Ich - Einfach unverbesserlich 4",
+        "film_names": "Ich - Einfach unverbesserlich 4",
         "beschreibung": "Ein ehemaliger Erzschurke verwandelt sich in einen Vorstadtvater – eine Veränderung, die Gru widerfährt, nachdem er bei einem Klassentreffen auf seinen größten Widersacher stößt, ein Konflikt ausbricht und er sich gezwungen sieht, unterzutauchen. Doch die ungestörte Idylle findet ein jähes Ende, als Baby Gru Junior entführt wird. Zusammen mit seiner Familie begibt sich Gru auf eine abenteuerliche und verrückte Rettungsmission. Im Team sind auch die Minions, die durch ein Superserum in fünf Mega Minions mit einzigartigen Kräften verwandelt wurden und für noch mehr Chaos sorgen!",
         "genres": [
             "Animation",

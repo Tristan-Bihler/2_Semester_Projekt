@@ -8,10 +8,10 @@ class Controler():
     Zudem sollen instanzen der view und model klasse, für das rendern und bearbeiten der Daten, erstellt werden.
     """
     def __init__(self):
-        user_db_path = r"Python_Projekt\Ohne_Firebase\users.json"
-        films_db_path = r"Python_Projekt\Ohne_Firebase\Films.json"
+        self.user_db_path = r"Python_Projekt\Ohne_Firebase\users.json"
+        self.films_db_path = r"Python_Projekt\Ohne_Firebase\Films.json"
 
-        self.model = Model.Model(user_db_path, films_db_path)
+        self.model = Model.Model(self.user_db_path, self.films_db_path)
         self.view = View.View(self)
 
         self.view.mainloop()
@@ -24,9 +24,7 @@ class Controler():
         users = self.get_Json_User_Names()
         for user_ls in users:
             user = login_Entry.get()
-            user = user.strip()
-            print(user)
-            print(str(user_ls))
+            user = str(user).strip().lower()
 
             if user == str(user_ls).strip():
                 master.switch_frame(master.Main_Window, self, user)
@@ -55,22 +53,25 @@ class Controler():
     
     #Die Funktion entnimmt sich alle Film Namen
     def get_Json_Film_Names(self):
-        Film_names = self.model.get_films_from_json()
+        Film_names = self.model.get_json_data("film_names", None)
         return Film_names
     
-    #Doe Funktion entimmt alle User Namen der User Json
+    #Doe Funktion entnimmt alle User Namen der User Json
     def get_Json_User_Names(self):
-        Film_names = self.model.get_names_from_json()
-        return Film_names
+        user_name = self.model.get_json_data("name", None)
+        return user_name
     
     #Die Funktion entnimmt alle vorgeschlagenen Filme aus dem Algorythmus
     def get_Json_recommended_Film_Names(self, user):
         Film_names = self.model.get_recommendations(user)
         return Film_names
     
+    def get_Json_recommended_Films_collarbotive(self, user):
+        Film_names = self.model.get_user_base_recommendations(user, self.user_db_path, self.films_db_path)
+        return Film_names
     #Die Funktion entimmt alle gelikte Filmen aus der User json Datei
     def get_Json_user_Liked_Films(self, user):
-        Film_names = self.model.get_liked_films_from_jason(user)
+        Film_names = self.model.get_json_data("favorite_movies",user)
         return Film_names
     
     #Die Funktion scheibt die ausgewählten Titel auf die Ausgewählte Datei der Listbox

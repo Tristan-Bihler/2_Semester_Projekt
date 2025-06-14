@@ -3,16 +3,20 @@
         "id": "user001",
         "name": "Tristan",
         "favorite_movies": [
-            "K.O."
+            "Der Pate",
+            "Belyas",
+            "K.O.",
+            "Baywatch",
+            "Mufasa: Der König der Löwen"
         ]
     },
     {
         "id": "user002",
         "name": "Laura",
         "favorite_movies": [
-            "Matrix",
-            "Arrival",
-            "Get Out"
+            "Parasite",
+            "Karate Kid: Legends",
+            "Der König der Löwen"
         ]
     },
     {
@@ -35,14 +39,20 @@
         "id": "user_id",
         "name": "test",
         "favorite_movies": [
-            "The Roundup: Punishment"
+            "The Roundup: Punishment",
+            "Mikaela",
+            "The Accountant 2",
+            "K.O.",
+            "Drachenzähmen leicht gemacht"
         ]
     },
     {
         "id": "user_id",
         "name": "",
         "favorite_movies": [
-            "STRAW"
+            "STRAW",
+            "K.O.",
+            "A Working Man"
         ]
     },
     {
@@ -62,5 +72,10 @@
             "K.O.",
             "K.O."
         ]
+    },
+    {
+        "id": "user_id",
+        "name": "carinahalter",
+        "favorite_movies": []
     }
 ]

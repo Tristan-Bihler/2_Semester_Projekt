@@ -175,7 +175,6 @@ class View(tk.Tk):
                 if search_term in film.lower():
                     filtered_films.append(film)
 
-            print(filtered_films)   
             self.list_Films(filtered_films)
         
         """
@@ -184,22 +183,23 @@ class View(tk.Tk):
         def on_recommended_select(self, event = None):
             try:
                 selected_indices = self.recommended_listbox.curselection()
+                selected_film_data = {}
 
                 index = selected_indices[0]
                 selected_film_name = self.recommended_listbox.get(index)
-                print(selected_film_name)
-                selected_film_data = next((film for film in self.controler.get_Json()  if film["name"] == selected_film_name), None)
-                print(selected_film_data)
+                selected_film_name = self.film_listbox.get(index)
+                selected_film_data = next((film for film in self.controler.get_Json() if film["film_names"] == selected_film_name), None)
+
+
                 if selected_film_data:
-                    self.film_name_label.config(text=f"Name: {selected_film_data['name']}")
+                    self.film_name_label.config(text=f"Name: {selected_film_data['film_names']}")
                     self.film_description_label.config(text=f"Beschreibung: {selected_film_data['beschreibung']}")
                     self.trailer_button.config(state=tk.NORMAL)
                     self.current_selected_film = selected_film_data # Store for button action
-                    print("test")
                 else:
                     self.clear_film_details(True)
             except Exception as e:
-                print(e)
+                print("Error")
         
         """
         Die Funktion wird nach dem selektieren eines Filmes in der generellen Film Listbox die Detail übersicht auf der Unteren Seite aktualisieren
@@ -211,13 +211,14 @@ class View(tk.Tk):
                 if not selected_indices:
                     self.clear_film_details(False)
                     return
+                
                 index = selected_indices[0]
                 selected_film_name = self.film_listbox.get(index)
+                selected_film_data = next((film for film in self.controler.get_Json()  if film["film_names"] == selected_film_name), None)
 
-                selected_film_data = next((film for film in self.controler.get_Json()  if film["name"] == selected_film_name), None)
 
                 if selected_film_data:
-                    self.film_name_label.config(text=f"Name: {selected_film_data['name']}")
+                    self.film_name_label.config(text=f"Name: {selected_film_data['film_names']}")
                     self.film_description_label.config(text=f"Beschreibung: {selected_film_data['beschreibung']}")
                     self.trailer_button.config(state=tk.NORMAL)
                     self.add_film_button.config(state=tk.NORMAL)
@@ -234,9 +235,8 @@ class View(tk.Tk):
             self.film_name_label.config(text="Name: ")
             self.film_description_label.config(text="Beschreibung: ")
             
-            if boolean_recommended == False:
-                self.trailer_button.config(state=tk.DISABLED)
-                self.add_film_button.config(state=tk.DISABLED)
+            self.trailer_button.config(state=tk.DISABLED)
+            self.add_film_button.config(state=tk.DISABLED)
                 
             self.current_selected_film = None
 
@@ -330,19 +330,27 @@ class View(tk.Tk):
             self.add_to_watchlist_button.grid(row=1, column=0, columnspan=2, pady=5)
 
             # Initial population of the listboxes (dummy data for demonstration)
-            self.List_Produkts(self.user)
+            self.List_Films(self.user)
+            self.List_recommenden_colbrotative_Films(self.user)
+
 
         """
         Die Funktion löscht den ausgewählten Film von der watched Listbox
         """
-        def remove_films(self, user):
+        def List_Films(self, user):
             self.controler.remove_from_list(user, self.liked_films_listbox)
             self.List_Produkts(user)
+        
+        def List_recommenden_colbrotative_Films(self, user):
+            self.watchlist_listbox.delete(0, tk.END) # Clear existing items
+            Film_names = self.controler.get_Json_recommended_Films_collarbotive(user)
+            for film in Film_names:
+                self.watchlist_listbox.insert(tk.END, film)
         
         """
         Die Funktion listet alle Filme des users auf, welche dieser als angesehenen Film klassigiziert
         """
-        def List_Produkts(self, user):
+        def List_Films(self, user):
             self.liked_films_listbox.delete(0, tk.END) # Clear existing items
             Film_names = self.controler.get_Json_user_Liked_Films(user)
             for film in Film_names:
