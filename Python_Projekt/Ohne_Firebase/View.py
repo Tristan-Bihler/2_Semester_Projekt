@@ -282,7 +282,7 @@ class View(tk.Tk):
             self.Button.grid(row=0, column=3, sticky=tk.NW, padx=10, pady=10) # Placed top-left
 
             # --- First Listbox (Recommended Films) ---
-            self.liked_films_listbox_label = tk.Label(self, text="Empfohlene Filme:", font=("Arial", 12, "underline"))
+            self.liked_films_listbox_label = tk.Label(self, text="Meine Favoriten:", font=("Arial", 12, "underline"))
             self.liked_films_listbox_label.grid(row=1, column=0, sticky=tk.SW, padx=5, pady=2)
 
             self.liked_films_listbox_frame = tk.Frame(self, bd=2, relief="groove") # Added border for visual separation
