@@ -3,7 +3,8 @@
         "id": "user001",
         "name": "Tristan",
         "favorite_movies": [
-            "Predator: Killer of Killers"
+            "The Accountant 2",
+            "Lilo & Stitch"
         ]
     },
     {
@@ -30,6 +31,19 @@
             "Pulp Fiction",
             "Forrest Gump",
             "The Shawshank Redemption"
+        ]
+    },
+    {
+        "id": "user_id",
+        "name": "",
+        "favorite_movies": [
+            "Predator: Killer of Killers",
+            "Blood & Sinners",
+            "Meg",
+            "Thunderbolts*",
+            "Jurassic World - Das gefallene Königreich",
+            "K.O.",
+            "Lilo & Stitch"
         ]
     }
 ]

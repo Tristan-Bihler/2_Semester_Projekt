@@ -159,7 +159,7 @@ class View(tk.Tk):
         """
         def film_add_to_liked(self, user):
             try:
-                self.controler.write_to_Json(user, self.film_listbox)
+                self.controler.write_to_Json(user, self.what_listbox)
                 self.list_recommended_Films(user)
             except:
                 print(Exception)
@@ -183,7 +183,7 @@ class View(tk.Tk):
         def clear_search(self):
             films = self.controler.get_Json_Film_Names()
             self.search_entry.delete(0, tk.END)
-            self.film_listbox(films)
+            self.list_Films(films)
             self.clear_film_details()
         
         """
@@ -205,13 +205,9 @@ class View(tk.Tk):
         def on_recommended_select(self, event = None):
             try:
                 selected_indices = self.recommended_listbox.curselection()
-
-                if not selected_indices:
-                    self.clear_film_details(False)
-                    return
                 
                 selected_film_data = {}
-
+                self.what_listbox = self.recommended_listbox
                 index = selected_indices[0]
                 selected_film_name = self.recommended_listbox.get(index)
                 selected_film_name = self.film_listbox.get(index)
@@ -222,9 +218,8 @@ class View(tk.Tk):
                     self.film_name_label.config(text=f"Name: {selected_film_data['film_names']}")
                     self.film_description_label.config(text=f"Beschreibung: {selected_film_data['beschreibung']}")
                     self.trailer_button.config(state=tk.NORMAL)
-                    self.current_selected_film = selected_film_data # Store for button action
-                else:
-                    self.clear_film_details(True)
+                    self.current_selected_film = selected_film_data
+
             except Exception as e:
                 print("Error")
         
@@ -235,11 +230,9 @@ class View(tk.Tk):
         def on_film_select(self, event = None):
             try:
                 selected_indices = self.film_listbox.curselection()
-                if not selected_indices:
-                    self.clear_film_details(False)
-                    return
                 
                 index = selected_indices[0]
+                self.what_listbox = self.film_listbox
                 selected_film_name = self.film_listbox.get(index)
                 selected_film_data = next((film for film in self.controler.get_Json()  if film["film_names"] == selected_film_name), None)
 
@@ -250,15 +243,14 @@ class View(tk.Tk):
                     self.trailer_button.config(state=tk.NORMAL)
                     self.add_film_button.config(state=tk.NORMAL)
                     self.current_selected_film = selected_film_data # Store for button action
-                else:
-                    self.clear_film_details(False)
+
             except Exception as e:
                 print(e)
         
         """
         Die Funktion löscht den Inhalt der Detail übersicht auf der Unteren Seite der Übersicht
         """
-        def clear_film_details(self, boolean):
+        def clear_film_details(self):
             self.film_name_label.config(text="Name: ")
             self.film_description_label.config(text="Beschreibung: ")
             
