@@ -23,7 +23,7 @@ class Model():
                         print(data_block)
                         if isinstance(data_block, dict) and key in data_block:
                             for data_word in data_block[key]:
-                                data_list.append(str(data_word).lower())
+                                data_list.append(str(data_word))
                         else:
                             print(f"Warnung: Ungültiges Benutzerobjekt gefunden: {data_block}")
 
@@ -148,7 +148,7 @@ class Model():
             for movie in self.loaded_film_data:
                 #print(movie["name"])
                 #print(liked_title)
-                if str(movie["film_names"]).strip().lower() == str(liked_title).strip():
+                if str(movie["film_names"]).strip() == str(liked_title).strip():
                     liked_genres.extend(movie["genres"])
                     #print(liked_genres)
                     break
@@ -188,17 +188,6 @@ class Model():
 
     #--------------------------------------------------------------------
 
-
-    def load_data(self, users_filepath, films_filepath):
-        """Loads data from JSON files."""
-        with open(users_filepath, 'r', encoding='utf-8') as f:
-            users_data = json.load(f)
-
-        with open(films_filepath, 'r', encoding='utf-8') as f:
-            films_data = json.load(f)
-            
-        return users_data, films_data
-
     def create_film_genre_mapping(self, films_data):
         """Creates a dictionary mapping film_id to its genres."""
         film_genres = {}
@@ -227,13 +216,12 @@ class Model():
             return 0.0 # Avoid division by zero
         return intersection / union
 
-
-
-    def get_user_base_recommendations(self, target_user_id, users_filepath, films_filepath):
+    def get_user_base_recommendations(self, target_user_id):
         """
         Recommends films to a target user based on genre similarity to other users.
         """
-        users_data, films_data = self.load_data(users_filepath, films_filepath)
+        users_data = self.load_json_data(self.user_db_path)
+        films_data = self.load_json_data(self.films_db_path)
         film_genres_map = self.create_film_genre_mapping(films_data)
         user_genre_profiles = self.calculate_user_genre_profiles(users_data, film_genres_map)
 
@@ -247,7 +235,7 @@ class Model():
         similarities = []
         for user_id, genres in user_genre_profiles.items():
             if user_id == target_user_id:
-                continue # Don't compare a user to themselves
+                continue
             
             sim = self.jaccard_similarity(target_user_genres, genres)
             similarities.append((sim, user_id))

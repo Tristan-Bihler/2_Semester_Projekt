@@ -3,8 +3,7 @@
         "id": "user001",
         "name": "Tristan",
         "favorite_movies": [
-            "Der Pate",
-            "Mufasa: Der König der Löwen"
+            "Predator: Killer of Killers"
         ]
     },
     {
@@ -32,48 +31,5 @@
             "Forrest Gump",
             "The Shawshank Redemption"
         ]
-    },
-    {
-        "id": "user_id",
-        "name": "test",
-        "favorite_movies": [
-            "The Roundup: Punishment",
-            "Mikaela",
-            "The Accountant 2",
-            "K.O.",
-            "Drachenzähmen leicht gemacht"
-        ]
-    },
-    {
-        "id": "user_id",
-        "name": "",
-        "favorite_movies": [
-            "STRAW",
-            "K.O.",
-            "A Working Man"
-        ]
-    },
-    {
-        "id": "user_id",
-        "name": "user2",
-        "favorite_movies": []
-    },
-    {
-        "id": "user005",
-        "name": "maaax",
-        "favorite_movies": [
-            "The Accountant 2",
-            "The Roundup: Punishment",
-            "From the World of John Wick: Ballerina",
-            "A Working Man",
-            "K.O.",
-            "K.O.",
-            "K.O."
-        ]
-    },
-    {
-        "id": "user_id",
-        "name": "carinahalter",
-        "favorite_movies": []
     }
 ]

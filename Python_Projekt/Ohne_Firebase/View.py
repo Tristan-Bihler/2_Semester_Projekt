@@ -55,82 +55,101 @@ class View(tk.Tk):
             super().__init__(master)
             self.master = master
             self.user = user
-            self.recomended_films = None
+            self.recomended_films_data = None # Renamed to avoid conflict with the Label widget
             self.controler = controler
 
-            self.grid_rowconfigure(0, weight=0)
-            self.grid_rowconfigure(1, weight=0)
-            self.grid_rowconfigure(2, weight=1)
-            self.grid_rowconfigure(3, weight=0)
+            # Configure row and column weights for better resizing behavior
+            self.grid_rowconfigure(0, weight=0) # For main title
+            self.grid_rowconfigure(1, weight=0) # For favorites button
+            self.grid_rowconfigure(2, weight=1) # For the two main listbox frames (available films and recommended films)
+            self.grid_rowconfigure(3, weight=0) # For details frame
 
             self.grid_columnconfigure(0, weight=1)
             self.grid_columnconfigure(1, weight=1)
 
+            # Main title for the window
             self.Label = tk.Label(self, text="Film-Empfehlungen", font=("Arial", 16, "bold"))
             self.Label.grid(row=0, column=0, columnspan=2, pady=10)
 
+            # Button to go to Favorites Window
             self.favorites_button = tk.Button(self, text="Favoriten", command=lambda: master.switch_frame(master.Favorites_Window, controler, user))
             self.favorites_button.grid(row=1, column=1, padx=10, pady=5, sticky=tk.NE)
 
+            # --- Left Listbox (Available Films) ---
             self.film_listbox_frame = tk.Frame(self, bd=2, relief=tk.GROOVE)
             self.film_listbox_frame.grid(row=2, column=0, sticky=tk.NSEW, padx=10, pady=10)
-            self.film_listbox_frame.grid_rowconfigure(3, weight=1)
-            self.film_listbox_frame.grid_columnconfigure(0, weight=1)
+            self.film_listbox_frame.grid_rowconfigure(0, weight=0) # For label
+            self.film_listbox_frame.grid_rowconfigure(1, weight=0) # For search entry and button
+            self.film_listbox_frame.grid_rowconfigure(2, weight=1) # For the listbox itself
+            self.film_listbox_frame.grid_columnconfigure(0, weight=1) # For listbox and entry
 
             tk.Label(self.film_listbox_frame, text="Verfügbare Filme:", font=("Arial", 10, "bold")).grid(row=0, column=0, sticky=tk.NW, padx=5, pady=2)
             tk.Label(self.film_listbox_frame, text="Filmsuche:").grid(row=1, column=0, sticky=tk.W, padx=5)
             self.search_entry = tk.Entry(self.film_listbox_frame)
             self.search_entry.grid(row=1, column=0, sticky=tk.EW, padx=80, pady=5)
+            # Make sure you have a filter_films method in your class
             self.search_entry.bind("<KeyRelease>", self.filter_films)
 
             self.clear_search_button = tk.Button(self.film_listbox_frame, text="Löschen", command=self.clear_search)
             self.clear_search_button.grid(row=1, column=0, sticky=tk.E, padx=5, pady=5)
 
+            # Re-added film selection listbox and its scrollbar
             self.film_listbox_scrollbar = tk.Scrollbar(self.film_listbox_frame)
-            self.film_listbox_scrollbar.grid(row=3, column=1, sticky=tk.NS)
+            self.film_listbox_scrollbar.grid(row=2, column=1, sticky=tk.NS) # Changed row to 2
 
             self.film_listbox = tk.Listbox(self.film_listbox_frame,
                                         height=15,
                                         yscrollcommand=self.film_listbox_scrollbar.set,
                                         font=("Arial", 12))
-            self.film_listbox.grid(row=3, column=0, sticky=tk.NSEW, padx=5, pady=5)
+            self.film_listbox.grid(row=2, column=0, sticky=tk.NSEW, padx=5, pady=5) # Changed row to 2
             self.film_listbox_scrollbar.config(command=self.film_listbox.yview)
             self.film_listbox.bind("<<ListboxSelect>>", self.on_film_select)
 
-            # Right Listbox (Recommended Films)
+            # --- Right Listbox (Recommended Films) ---
             self.recommended_listbox_frame = tk.Frame(self, bd=2, relief=tk.GROOVE)
             self.recommended_listbox_frame.grid(row=2, column=1, sticky=tk.NSEW, padx=10, pady=10)
-            self.recommended_listbox_frame.grid_rowconfigure(0, weight=1)
+
+            # Configure rows within the frame: one for the label, one for the listbox
+            self.recommended_listbox_frame.grid_rowconfigure(0, weight=0) # For the label
+            self.recommended_listbox_frame.grid_rowconfigure(1, weight=1) # For the listbox
             self.recommended_listbox_frame.grid_columnconfigure(0, weight=1)
 
-            tk.Label(self.recommended_listbox_frame, text="Film Empfehlungen:", font=("Arial", 10, "bold")).grid(row=0, column=0, sticky=tk.NW, padx=5, pady=2)
+            self.recomended_films_label = tk.Label(self.recommended_listbox_frame, text="Empfehlende Filme:", font=("Arial", 10, "bold"))
+            self.recomended_films_label.grid(row=0, column=0, sticky=tk.NW, padx=5, pady=2) # Placed in row 0
 
             self.recommended_listbox_scrollbar = tk.Scrollbar(self.recommended_listbox_frame)
-            self.recommended_listbox_scrollbar.grid(row=0, column=1, sticky=tk.NS)
+            self.recommended_listbox_scrollbar.grid(row=1, column=1, sticky=tk.NS) # Placed in row 1
 
             self.recommended_listbox = tk.Listbox(self.recommended_listbox_frame,
                                                 height=15,
                                                 yscrollcommand=self.recommended_listbox_scrollbar.set,
                                                 font=("Arial", 12))
-            self.recommended_listbox.grid(row=0, column=0, sticky=tk.NSEW, padx=5, pady=5)
+            self.recommended_listbox.grid(row=1, column=0, sticky=tk.NSEW, padx=5, pady=5) # Placed in row 1
             self.recommended_listbox_scrollbar.config(command=self.recommended_listbox.yview)
             self.recommended_listbox.bind("<<ListboxSelect>>", self.on_recommended_select)
 
+            # --- Details Frame ---
             self.details_frame = tk.Frame(self, relief=tk.GROOVE, borderwidth=2)
             self.details_frame.grid(row=3, column=0, columnspan=2, sticky=tk.NSEW, padx=10, pady=10)
-            self.details_frame.grid_rowconfigure(0, weight=1) # Allow description to expand
+            self.details_frame.grid_rowconfigure(0, weight=0) # Film Name
+            self.details_frame.grid_rowconfigure(1, weight=1) # Description to expand
+            self.details_frame.grid_rowconfigure(2, weight=0) # Buttons
+            self.details_frame.grid_columnconfigure(0, weight=1) # For description and left button
+            self.details_frame.grid_columnconfigure(1, weight=0) # For right button
 
             self.film_name_label = tk.Label(self.details_frame, text="Name: Kein Film ausgewählt", font=("Arial", 14, "bold"))
             self.film_name_label.grid(row=0, column=0, sticky=tk.NW, padx=10, pady=(5, 0))
 
             self.film_description_label = tk.Label(self.details_frame, text="Beschreibung: Wähle zuerst einen Film aus, um die Beschreibung zu sehen.", font=("Arial", 10), wraplength=750, justify=tk.LEFT)
-            self.film_description_label.grid(row=1, column=0, sticky=tk.NSEW, padx=10, pady=(5, 10))
+            self.film_description_label.grid(row=1, column=0, columnspan=2, sticky=tk.NSEW, padx=10, pady=(5, 10))
 
-            self.trailer_button = tk.Button(self.details_frame, text="Link Trailer", command=self.perform_film_action, state=tk.DISABLED)
+            self.trailer_button = tk.Button(self.details_frame, text="Link Trailer", state=tk.DISABLED, command = self.perform_film_action)
             self.trailer_button.grid(row=2, column=0, sticky=tk.SW, padx=10, pady=(10, 5))
 
             self.add_film_button = tk.Button(self.details_frame, text = "Favoriten hinzufügen", command = lambda : (self.film_add_to_liked(user)))
             self.add_film_button.grid(row=2, column=1, sticky=tk.SE, padx=10, pady=(10, 5))
+
+
 
             self.list_Films(self.controler.get_Json_Film_Names())
             self.list_recommended_Films(user)
@@ -139,8 +158,11 @@ class View(tk.Tk):
         Filme der Userliste unter dem user und favoritefilms hinzufügen.
         """
         def film_add_to_liked(self, user):
-            self.controler.write_to_Json(user, self.film_listbox)
-            self.list_recommended_Films(user)
+            try:
+                self.controler.write_to_Json(user, self.film_listbox)
+                self.list_recommended_Films(user)
+            except:
+                print(Exception)
 
         """
         Funktion für das suchen nach den Filmen auf youtube durch das auslesen der Url für den jeweiligen Film
@@ -183,6 +205,11 @@ class View(tk.Tk):
         def on_recommended_select(self, event = None):
             try:
                 selected_indices = self.recommended_listbox.curselection()
+
+                if not selected_indices:
+                    self.clear_film_details(False)
+                    return
+                
                 selected_film_data = {}
 
                 index = selected_indices[0]
@@ -231,7 +258,7 @@ class View(tk.Tk):
         """
         Die Funktion löscht den Inhalt der Detail übersicht auf der Unteren Seite der Übersicht
         """
-        def clear_film_details(self, boolean_recommended):
+        def clear_film_details(self, boolean):
             self.film_name_label.config(text="Name: ")
             self.film_description_label.config(text="Beschreibung: ")
             
@@ -263,31 +290,37 @@ class View(tk.Tk):
     class Favorites_Window(tk.Frame):
         def __init__(self, master,controler, user):
             super().__init__(master)
+            self.master = master
             self.controler = controler
-            self.user = user # Ensure user is stored for later use
+            self.user = user  # Sicherstellen, dass der Benutzer für spätere Verwendung gespeichert wird
+            self.selected_liked_film = None # Speichert den ausgewählten Film aus der Favoritenliste
+            self.selected_watchlist_film = None # Speichert den ausgewählten Film aus der Merkliste
 
-            # Configure row and column weights for better resizing behavior
-            self.grid_rowconfigure(0, weight=0) # For labels and buttons
-            self.grid_rowconfigure(1, weight=1) # For the listbox frames
+            # Konfiguriere Zeilen- und Spaltengewichte für besseres Größenverhalten
+            self.grid_rowconfigure(0, weight=0)  # Für Überschrift und Zurück-Button
+            self.grid_rowconfigure(1, weight=0)  # Für Labels der Listboxen
+            self.grid_rowconfigure(2, weight=1)  # Für die Listbox-Frames
+            self.grid_rowconfigure(3, weight=0)  # Für den Details-Frame
             self.grid_columnconfigure(0, weight=1)
             self.grid_columnconfigure(1, weight=1)
 
-            # Main title for the window
+            # Haupttitel für das Fenster
             self.Label = tk.Label(self, text="Meine Favoriten", font=("Arial", 16, "bold"))
-            self.Label.grid(row=0, column=0, columnspan=2, pady=10) # Centered across both columns
+            self.Label.grid(row=0, column=0, columnspan=2, pady=10)  # Zentriert über beide Spalten
 
-            # Button to return to Main Window
+            # Button zur Rückkehr zum Hauptfenster
             self.Button = tk.Button(self, text="Zurück zum Hauptfenster",
                                     command=lambda: master.switch_frame(master.Main_Window, controler, user))
-            self.Button.grid(row=0, column=3, sticky=tk.NW, padx=10, pady=10) # Placed top-left
+            self.Button.grid(row=0, column=1, sticky=tk.NE, padx=10, pady=10) # Platziert oben rechts
 
-            # --- First Listbox (Recommended Films) ---
+            # --- Erste Listbox (Meine Favoriten) ---
             self.liked_films_listbox_label = tk.Label(self, text="Meine Favoriten:", font=("Arial", 12, "underline"))
             self.liked_films_listbox_label.grid(row=1, column=0, sticky=tk.SW, padx=5, pady=2)
 
-            self.liked_films_listbox_frame = tk.Frame(self, bd=2, relief="groove") # Added border for visual separation
+            self.liked_films_listbox_frame = tk.Frame(self, bd=2, relief="groove")  # Rahmen für visuelle Trennung
             self.liked_films_listbox_frame.grid(row=2, column=0, sticky=tk.NSEW, padx=5, pady=5)
             self.liked_films_listbox_frame.grid_rowconfigure(0, weight=1)
+            self.liked_films_listbox_frame.grid_rowconfigure(1, weight=0) # Für den Entfernen-Button
             self.liked_films_listbox_frame.grid_columnconfigure(0, weight=1)
 
             self.liked_films_listbox_scrollbar = tk.Scrollbar(self.liked_films_listbox_frame)
@@ -297,21 +330,23 @@ class View(tk.Tk):
                                                 height=15,
                                                 yscrollcommand=self.liked_films_listbox_scrollbar.set,
                                                 font=("Arial", 11),
-                                                selectmode=tk.SINGLE) # Allow single selection
+                                                selectmode=tk.SINGLE)  # Nur Einzelauswahl zulassen
             self.liked_films_listbox.grid(row=0, column=0, sticky=tk.NSEW)
             self.liked_films_listbox_scrollbar.config(command=self.liked_films_listbox.yview)
+            self.liked_films_listbox.bind("<<ListboxSelect>>", self.on_liked_film_select)
 
-            self.remove_liked_button = tk.Button(self.liked_films_listbox_frame, text="Aus Liste entfernen",
-                                                command=lambda: self.remove_films(self.user))
-            self.remove_liked_button.grid(row=1, column=0, columnspan=2, pady=5) # Below the listbox
+            self.remove_liked_button = tk.Button(self.liked_films_listbox_frame, text="Aus Favoriten entfernen",
+                                                command=self.remove_Film_from_liked_listbox)
+            self.remove_liked_button.grid(row=1, column=0, columnspan=2, pady=5)  # Unterhalb der Listbox
 
-            # --- Second Listbox (e.g., Liked Films / Watchlist) ---
+            # --- Zweite Listbox (Meine Merkliste) ---
             self.watchlist_listbox_label = tk.Label(self, text="Meine Merkliste:", font=("Arial", 12, "underline"))
-            self.watchlist_listbox_label.grid(row=1, column=1, sticky=tk.SW, padx=5, pady=2) # Right column
+            self.watchlist_listbox_label.grid(row=1, column=1, sticky=tk.SW, padx=5, pady=2)  # Rechte Spalte
 
-            self.watchlist_listbox_frame = tk.Frame(self, bd=2, relief="groove") # Added border
-            self.watchlist_listbox_frame.grid(row=2, column=1, sticky=tk.NSEW, padx=5, pady=5) # Right column
+            self.watchlist_listbox_frame = tk.Frame(self, bd=2, relief="groove")  # Rahmen
+            self.watchlist_listbox_frame.grid(row=2, column=1, sticky=tk.NSEW, padx=5, pady=5)  # Rechte Spalte
             self.watchlist_listbox_frame.grid_rowconfigure(0, weight=1)
+            self.watchlist_listbox_frame.grid_rowconfigure(1, weight=0) # Für den Entfernen-Button
             self.watchlist_listbox_frame.grid_columnconfigure(0, weight=1)
 
             self.watchlist_listbox_scrollbar = tk.Scrollbar(self.watchlist_listbox_frame)
@@ -324,12 +359,33 @@ class View(tk.Tk):
                                                 selectmode=tk.SINGLE)
             self.watchlist_listbox.grid(row=0, column=0, sticky=tk.NSEW)
             self.watchlist_listbox_scrollbar.config(command=self.watchlist_listbox.yview)
+            self.watchlist_listbox.bind("<<ListboxSelect>>", self.on_watchlist_film_select)
 
-            self.add_to_watchlist_button = tk.Button(self.watchlist_listbox_frame, text="Zur Merkliste hinzufügen",
-                                                    command=lambda: self.add_to_watchlist(self.user))
-            self.add_to_watchlist_button.grid(row=1, column=0, columnspan=2, pady=5)
 
-            # Initial population of the listboxes (dummy data for demonstration)
+            # --- Details Frame ---
+            self.details_frame = tk.Frame(self, relief=tk.GROOVE, borderwidth=2)
+            self.details_frame.grid(row=3, column=0, columnspan=2, sticky=tk.NSEW, padx=10, pady=10)
+            self.details_frame.grid_rowconfigure(0, weight=0)  # Film Name
+            self.details_frame.grid_rowconfigure(1, weight=1)  # Description to expand
+            self.details_frame.grid_rowconfigure(2, weight=0)  # Buttons
+            self.details_frame.grid_columnconfigure(0, weight=1)  # For description and left button
+            self.details_frame.grid_columnconfigure(1, weight=0)  # For right button
+
+            self.film_name_label = tk.Label(self.details_frame, text="Name: Kein Film ausgewählt", font=("Arial", 14, "bold"))
+            self.film_name_label.grid(row=0, column=0, sticky=tk.NW, padx=10, pady=(5, 0))
+
+            self.film_description_label = tk.Label(self.details_frame, text="Beschreibung: Wähle zuerst einen Film aus, um die Beschreibung zu sehen.", font=("Arial", 10), wraplength=750, justify=tk.LEFT)
+            self.film_description_label.grid(row=1, column=0, columnspan=2, sticky=tk.NSEW, padx=10, pady=(5, 10))
+
+            self.trailer_button = tk.Button(self.details_frame, text="Link Trailer", state=tk.DISABLED, command=self.perform_film_action)
+            self.trailer_button.grid(row=2, column=0, sticky=tk.SW, padx=10, pady=(10, 5))
+
+            self.add_to_watchlist_button = tk.Button(self.details_frame, text="Zur Merkliste hinzufügen",
+                                                    command=lambda: self.add_film_to_watchlist(self.user))
+            self.add_to_watchlist_button.grid(row=2, column=1, sticky=tk.SE, padx=10, pady=(10, 5))
+
+
+            # Initiales Füllen der Listboxen (Platzhalterdaten zur Demonstration)
             self.List_Films(self.user)
             self.List_recommenden_colbrotative_Films(self.user)
 
@@ -337,9 +393,6 @@ class View(tk.Tk):
         """
         Die Funktion löscht den ausgewählten Film von der watched Listbox
         """
-        def List_Films(self, user):
-            self.controler.remove_from_list(user, self.liked_films_listbox)
-            self.List_Produkts(user)
         
         def List_recommenden_colbrotative_Films(self, user):
             self.watchlist_listbox.delete(0, tk.END) # Clear existing items
@@ -347,11 +400,115 @@ class View(tk.Tk):
             for film in Film_names:
                 self.watchlist_listbox.insert(tk.END, film)
         
+        def remove_Film_from_liked_listbox(self):
+            try:
+                self.controler.remove_from_list(self.user, self.liked_films_listbox)
+                self.List_Films(self.user)
+            
+            except:
+                print(Exception)
+
+
         """
         Die Funktion listet alle Filme des users auf, welche dieser als angesehenen Film klassigiziert
         """
         def List_Films(self, user):
+            print("test")
             self.liked_films_listbox.delete(0, tk.END) # Clear existing items
             Film_names = self.controler.get_Json_user_Liked_Films(user)
             for film in Film_names:
                 self.liked_films_listbox.insert(tk.END, film)
+        
+
+        def film_add_to_liked(self, user):
+            try:
+                self.controler.write_to_Json(user, self.film_listbox)
+                self.list_recommended_Films(user)
+            except:
+                print(Exception)
+
+        """
+        Funktion für das suchen nach den Filmen auf youtube durch das auslesen der Url für den jeweiligen Film
+        """
+        def perform_film_action(self):
+            if self.current_selected_film and "youtubeTrailerUrl" in self.current_selected_film:
+                trailer_url = self.current_selected_film["youtubeTrailerUrl"]
+                try:
+                    webbrowser.open_new_tab(trailer_url)
+                except Exception as e:
+                    print("Error", f"Could not open trailer link: {e}")
+            else:
+                print("No Trailer", "No trailer link available for the selected film.")
+        
+        """
+        Für das löschen des Inhaltes der Scuhleiste
+        """
+        def clear_search(self):
+            films = self.controler.get_Json_Film_Names()
+            self.search_entry.delete(0, tk.END)
+            self.film_listbox(films)
+            self.clear_film_details()
+        
+        """
+        für das filtern der Filme die das suchwort beinhalten und die generelle Film Listbox neu ausgibt
+        """
+        def filter_films(self, event = None):
+            search_term = self.search_entry.get().lower()
+            films = self.controler.get_Json_Film_Names()
+            filtered_films = []
+            for film in films:
+                if search_term in film.lower():
+                    filtered_films.append(film)
+
+            self.list_Films(filtered_films)
+        
+        """
+        Die Funktion wird nach dem selektieren eines Filmes in der Recommended Listbox die Detail übersicht auf der Unteren Seite aktualisieren
+        """
+        def on_watchlist_film_select(self, event = None):
+            try:
+                selected_indices = self.recommended_listbox.curselection()
+                selected_film_data = {}
+
+                index = selected_indices[0]
+                selected_film_name = self.recommended_listbox.get(index)
+                selected_film_name = self.film_listbox.get(index)
+                selected_film_data = next((film for film in self.controler.get_Json() if film["film_names"] == selected_film_name), None)
+
+
+                if selected_film_data:
+                    self.film_name_label.config(text=f"Name: {selected_film_data['film_names']}")
+                    self.film_description_label.config(text=f"Beschreibung: {selected_film_data['beschreibung']}")
+                    self.trailer_button.config(state=tk.NORMAL)
+                    self.current_selected_film = selected_film_data # Store for button action
+                else:
+                    self.clear_film_details(True)
+            except Exception as e:
+                print("Error")
+        
+        """
+        Die Funktion wird nach dem selektieren eines Filmes in der generellen Film Listbox die Detail übersicht auf der Unteren Seite aktualisieren
+        """
+
+        def on_liked_film_select(self, event = None):
+            try:
+                selected_indices = self.film_listbox.curselection()
+                if not selected_indices:
+                    self.clear_film_details(False)
+                    return
+                
+                index = selected_indices[0]
+                selected_film_name = self.film_listbox.get(index)
+                selected_film_data = next((film for film in self.controler.get_Json()  if film["film_names"] == selected_film_name), None)
+
+
+                if selected_film_data:
+                    self.film_name_label.config(text=f"Name: {selected_film_data['film_names']}")
+                    self.film_description_label.config(text=f"Beschreibung: {selected_film_data['beschreibung']}")
+                    self.trailer_button.config(state=tk.NORMAL)
+                    self.add_film_button.config(state=tk.NORMAL)
+                    self.current_selected_film = selected_film_data # Store for button action
+                else:
+                    self.clear_film_details(False)
+            except Exception as e:
+                print(e)

@@ -67,7 +67,7 @@ class Controler():
         return Film_names
     
     def get_Json_recommended_Films_collarbotive(self, user):
-        Film_names = self.model.get_user_base_recommendations(user, self.user_db_path, self.films_db_path)
+        Film_names = self.model.get_user_base_recommendations(user)
         return Film_names
     #Die Funktion entimmt alle gelikte Filmen aus der User json Datei
     def get_Json_user_Liked_Films(self, user):
@@ -78,6 +78,10 @@ class Controler():
     def write_to_Json(self,user,Listbox):
         index = Listbox.curselection()
         liked_film = Listbox.get(index)
+        for movie in self.model.get_json_data("favorite_movies",user):
+            if movie == liked_film:
+                raise Exception("Film in der Liste schon vorhanden")
+            
         self.model.write_to_json(user, liked_film)
     
     #Die Funktion entfernt die ausgewähöte datei einer Listbox
