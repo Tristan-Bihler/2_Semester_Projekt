@@ -51,14 +51,15 @@ class View(tk.Tk):
                 self.controler.login(self.login_Entry, self.master)
             
             except Exception as e:
-                messagebox.showinfo(str(e))
+                print("test")
+                messagebox.showinfo(message = str(e))
 
         def signup(self):
             try: 
                 self.controler.signup(self.signup_Entry)
             
             except Exception as e:
-                messagebox.showinfo(str(e))
+                messagebox.showinfo(message = str(e))
     """
     Die Visuelle übersicht für das Generelle Übersichtsfenster mit einer Listbox das alle Filme der Datenbank beinhaltet und
     der anderen Listbox die die vorgeschlagenen Filme beinhaltet. Über der Listbox das alle Filme ausgibt, ist auch eine Suchleiste, mitwelche man bestimmte Filme
@@ -164,8 +165,6 @@ class View(tk.Tk):
             self.add_film_button = tk.Button(self.details_frame, text = "Favoriten hinzufügen", state=tk.DISABLED, command = lambda : (self.film_add_to_liked(user)))
             self.add_film_button.grid(row=2, column=1, sticky=tk.SE, padx=10, pady=(10, 5))
 
-
-
             self.list_Films(self.controler.get_Json_Film_Names())
             self.list_recommended_Films(user)
         
@@ -177,7 +176,7 @@ class View(tk.Tk):
                 self.controler.write_to_Json(user, self.what_listbox)
                 self.list_recommended_Films(user)
             except Exception as e:
-                messagebox.showinfo(str(e))
+                messagebox.showinfo(message = str(e))
                 print(Exception)
 
         """
@@ -407,7 +406,7 @@ class View(tk.Tk):
                 self.List_recommenden_colbrotative_Films(user)
 
             except Exception as e:
-                messagebox.showinfo(str(e))
+                messagebox.showinfo(message = str(e))
                 print(Exception)
             
         def List_recommenden_colbrotative_Films(self, user):

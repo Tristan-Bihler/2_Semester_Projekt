@@ -37,10 +37,13 @@
         "id": "user_id",
         "name": "",
         "favorite_movies": [
-            "STRAW",
             "Der König der Löwen",
             "K.O.",
-            "The Amateur"
+            "The Amateur",
+            "Predator: Killer of Killers",
+            "The Monkey",
+            "STRAW",
+            "The Accountant 2"
         ]
     },
     {
