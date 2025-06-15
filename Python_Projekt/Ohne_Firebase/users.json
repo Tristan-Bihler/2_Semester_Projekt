@@ -59,11 +59,13 @@
     },
     {
         "id": "user_id",
-        "name": "tel24",
+        "name": "maax",
         "favorite_movies": [
-            "Ein Minecraft Film",
+            "From the World of John Wick: Ballerina",
+            "A Working Man",
             "Lilo & Stitch",
-            "STRAW"
+            "John Wick: Kapitel 3",
+            "Vaiana 2"
         ]
     }
 ]
