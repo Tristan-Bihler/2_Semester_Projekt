@@ -187,14 +187,16 @@ class Model():
     #--------------------------------------------------------------------
 
     def create_film_genre_mapping(self, films_data):
-        """Creates a dictionary mapping film_id to its genres."""
+        """
+        Für jeden Film von films_data soll es zu jedem Film ein satz genres aus der film liste, für den film, film_genres hinzufügen
+        """
         film_genres = {}
         for film in films_data:
-            film_genres[film['film_names']] = set(film['genres']) # Using set for faster operations later
+            film_genres[film['film_names']] = set(film['genres']) #Film genres ist eine Dictionary, erkennt man an den {} klammern bei der initialisierung
         return film_genres
 
     def calculate_user_genre_profiles(self, users_data, film_genres_map):
-        """Calculates the genre profile (set of genres) for each user."""
+        """für jeden user in user_data, also der user Liste, soll es den namen des users und dessen lieblingsfilme rausschreiben und """
         user_genre_profiles = {}
         for user in users_data:
             user_id = str(user['name']).lower()
@@ -207,7 +209,7 @@ class Model():
         return user_genre_profiles
 
     def jaccard_similarity(self, set1, set2):
-        """Calculates the Jaccard similarity between two sets."""
+        """Überprüft wie ähnlich die beiden genres listen der user sind und gibt die ähnlichkeit durch return zurück"""
         intersection = len(set1.intersection(set2))
         union = len(set1.union(set2))
         if union == 0:
@@ -216,45 +218,63 @@ class Model():
 
     def get_user_base_recommendations(self, target_user_id):
         """
-        Recommends films to a target user based on genre similarity to other users.
+        Als erstes holt es sich die benötigten daten und wandelt diese für das Colabrativ_based_Algorythm um.
+        Als nächstes überprüft es, ob es den user überhaupt gibt -> Hilfreich für debugging
         """
+        #Daten Herholeb
         users_data = self.load_json_data(self.user_db_path)
         films_data = self.load_json_data(self.films_db_path)
+        #Daten Umwandeln
+        #Genre rausfiltern
         film_genres_map = self.create_film_genre_mapping(films_data)
+
+        #Es generiert für alle Nutzer eine Genre Lsite und fügt diese user_genres_profiles zu
         user_genre_profiles = self.calculate_user_genre_profiles(users_data, film_genres_map)
 
+        #Sinvoll für das Debugging -> Es kann ermittelt werden, ob der user doch nicht in der user user_genre_profiles ist
         if target_user_id not in user_genre_profiles:
             print(f"Error: Target user '{target_user_id}' not found.")
             return []
 
+        #Es entimmt das Genre Profil des momentanen Nutzers
         target_user_genres = user_genre_profiles[target_user_id]
+
         target_user_watched_films = next(user['favorite_movies'] for user in users_data if str(user['name']).lower() == target_user_id)
 
+        
         similarities = []
+        #Es überprüft, das der eigentliche Nutzer nicht in der Liste vorhanden ist, bzw ihn überspringt und die For loop bei dem nächsten user anfängt
         for user_id, genres in user_genre_profiles.items():
             if user_id == target_user_id:
-                continue
+                continue #Es gört hier auf und fängt bei dem nächsten User in der List wieder an
             
+            #Es überprüft die Ähnlichkeit der Genres des zu prüfenden Nutzers mit den momenanten eingelogten
             sim = self.jaccard_similarity(target_user_genres, genres)
+
+            #Es fügt das Errebnis der Ergebiss liste hinzu mit dem namen des users
             similarities.append((sim, user_id))
 
-        # Sort by similarity in descending order
+
+        # Die Ähnlichkeiten statistiken in absteigender Folge umsortieren
         similarities.sort(key=lambda x: x[0], reverse=True)
 
-        # Get the closest matching user (you can adjust this to get top N users)
+        # Wenn es keine ähnlichkeiten geben sollte, hört das programm hier auf
         if not similarities:
             print("No other users to compare with.")
             return []
 
+        #Hier wird der User mit den höchsten Ähnlichkeit entnommen werden und der Variable closest_match_user_id hinzugefügt werden
         closest_match_user_id = similarities[0][1]
         
-        # Get films from the closest matching user
+        #Es sollen jetzt die Filme für den Änlichsten User entnommen werden und weiter gegeben werden
         closest_match_user_films = next(user['favorite_movies'] for user in users_data if (user['name']).lower() == closest_match_user_id)
 
-        # Filter out films the target user has already watched
-        recommended_films = [
-            film_id for film_id in closest_match_user_films 
-            if film_id not in target_user_watched_films
-        ]
+        #print(closest_match_user_films)
+        #Die Ähnlichen filme, die der eingeloggte User nicht hat, der recommended_films Liste hinzufügen
+        recommended_films = []
+        for film_id in closest_match_user_films:
+            if film_id not in target_user_watched_films:
+                recommended_films.append(film_id)
 
+        #Die recommended films liste zurück an den controler geben
         return recommended_films
