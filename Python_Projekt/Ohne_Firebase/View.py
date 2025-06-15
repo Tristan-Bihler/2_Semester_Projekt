@@ -302,7 +302,7 @@ class View(tk.Tk):
             self.controler = controler
             self.user = user  # Sicherstellen, dass der Benutzer für spätere Verwendung gespeichert wird
             self.selected_liked_film = None # Speichert den ausgewählten Film aus der Favoritenliste
-            self.selected_watchlist_film = None # Speichert den ausgewählten Film aus der Merkliste
+            self.selected_colabrativ = None # Speichert den ausgewählten Film aus der Merkliste
 
             # Konfiguriere Zeilen- und Spaltengewichte für besseres Größenverhalten
             self.grid_rowconfigure(0, weight=0)  # Für Überschrift und Zurück-Button
@@ -348,26 +348,26 @@ class View(tk.Tk):
             self.remove_liked_button.grid(row=1, column=0, columnspan=2, pady=5)  # Unterhalb der Listbox
 
             # --- Zweite Listbox (Meine Merkliste) ---
-            self.watchlist_listbox_label = tk.Label(self, text="Empfeglungen basierend auf andere Nutzer ähnlichen Profiles:", font=("Arial", 12, "underline"))
-            self.watchlist_listbox_label.grid(row=1, column=1, sticky=tk.SW, padx=5, pady=2)  # Rechte Spalte
+            self.colabrativ_listbox_label = tk.Label(self, text="Empfeglungen basierend auf andere Nutzer ähnlichen Profiles:", font=("Arial", 12, "underline"))
+            self.colabrativ_listbox_label.grid(row=1, column=1, sticky=tk.SW, padx=5, pady=2)  # Rechte Spalte
 
-            self.watchlist_listbox_frame = tk.Frame(self, bd=2, relief="groove")  # Rahmen
-            self.watchlist_listbox_frame.grid(row=2, column=1, sticky=tk.NSEW, padx=5, pady=5)  # Rechte Spalte
-            self.watchlist_listbox_frame.grid_rowconfigure(0, weight=1)
-            self.watchlist_listbox_frame.grid_rowconfigure(1, weight=0) # Für den Entfernen-Button
-            self.watchlist_listbox_frame.grid_columnconfigure(0, weight=1)
+            self.colabrativ_listbox_frame = tk.Frame(self, bd=2, relief="groove")  # Rahmen
+            self.colabrativ_listbox_frame.grid(row=2, column=1, sticky=tk.NSEW, padx=5, pady=5)  # Rechte Spalte
+            self.colabrativ_listbox_frame.grid_rowconfigure(0, weight=1)
+            self.colabrativ_listbox_frame.grid_rowconfigure(1, weight=0) # Für den Entfernen-Button
+            self.colabrativ_listbox_frame.grid_columnconfigure(0, weight=1)
 
-            self.watchlist_listbox_scrollbar = tk.Scrollbar(self.watchlist_listbox_frame)
-            self.watchlist_listbox_scrollbar.grid(row=0, column=1, sticky=tk.NS)
+            self.colabrativ_listbox_scrollbar = tk.Scrollbar(self.colabrativ_listbox_frame)
+            self.colabrativ_listbox_scrollbar.grid(row=0, column=1, sticky=tk.NS)
 
-            self.watchlist_listbox = tk.Listbox(self.watchlist_listbox_frame,
+            self.colabrativ_listbox = tk.Listbox(self.colabrativ_listbox_frame,
                                                 height=15,
-                                                yscrollcommand=self.watchlist_listbox_scrollbar.set,
+                                                yscrollcommand=self.colabrativ_listbox_scrollbar.set,
                                                 font=("Arial", 11),
                                                 selectmode=tk.SINGLE)
-            self.watchlist_listbox.grid(row=0, column=0, sticky=tk.NSEW)
-            self.watchlist_listbox_scrollbar.config(command=self.watchlist_listbox.yview)
-            self.watchlist_listbox.bind("<<ListboxSelect>>", self.on_watchlist_film_select)
+            self.colabrativ_listbox.grid(row=0, column=0, sticky=tk.NSEW)
+            self.colabrativ_listbox_scrollbar.config(command=self.colabrativ_listbox.yview)
+            self.colabrativ_listbox.bind("<<ListboxSelect>>", self.on_colabrativ_select)
 
 
             # --- Details Frame ---
@@ -402,7 +402,7 @@ class View(tk.Tk):
         """
         def film_add_to_liked(self, user):
             try:
-                self.controler.write_to_Json(user, self.watchlist_listbox)
+                self.controler.write_to_Json(user, self.colabrativ_listbox)
                 self.List_Films(user)
                 self.List_recommenden_colbrotative_Films(user)
 
@@ -411,10 +411,10 @@ class View(tk.Tk):
                 print(Exception)
             
         def List_recommenden_colbrotative_Films(self, user):
-            self.watchlist_listbox.delete(0, tk.END) # Clear existing items
+            self.colabrativ_listbox.delete(0, tk.END) # Clear existing items
             Film_names = self.controler.get_Json_recommended_Films_collarbotive(user)
             for film in Film_names:
-                self.watchlist_listbox.insert(tk.END, film)
+                self.colabrativ_listbox.insert(tk.END, film)
         
         def remove_Film_from_liked_listbox(self):
             try:
@@ -451,13 +451,13 @@ class View(tk.Tk):
         """
         Die Funktion wird nach dem selektieren eines Filmes in der Recommended Listbox die Detail übersicht auf der Unteren Seite aktualisieren
         """
-        def on_watchlist_film_select(self, event = None):
+        def on_colabrativ_select(self, event = None):
             try:
-                selected_indices = self.watchlist_listbox.curselection()
+                selected_indices = self.colabrativ_listbox.curselection()
                 selected_film_data = {}
                 print(selected_indices)
                 index = selected_indices[0]
-                selected_film_name = self.watchlist_listbox.get(index)
+                selected_film_name = self.colabrativ_listbox.get(index)
                 selected_film_data = next((film for film in self.controler.get_Json() if film["film_names"] == selected_film_name), None)
 
 
@@ -469,7 +469,7 @@ class View(tk.Tk):
                     self.current_selected_film = selected_film_data
 
             except Exception as e:
-                print("on_watchlist_film_select: ")
+                print("on_colabrativ_select: ")
                 print(e)
         
         """
