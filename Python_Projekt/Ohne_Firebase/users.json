@@ -41,5 +41,16 @@
             "Der König der Löwen",
             "K.O."
         ]
+    },
+    {
+        "id": "user_id",
+        "name": "hanspeter",
+        "favorite_movies": [
+            "Drachenzähmen leicht gemacht",
+            "The Amateur",
+            "Ich - Einfach unverbesserlich 4",
+            "The Accountant 2",
+            "The Accountant"
+        ]
     }
 ]
