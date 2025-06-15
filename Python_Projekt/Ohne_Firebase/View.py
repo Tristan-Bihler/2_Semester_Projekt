@@ -347,7 +347,7 @@ class View(tk.Tk):
             self.remove_liked_button.grid(row=1, column=0, columnspan=2, pady=5)  # Unterhalb der Listbox
 
             # --- Zweite Listbox (Meine Merkliste) ---
-            self.colabrativ_listbox_label = tk.Label(self, text="Empfeglungen basierend auf andere Nutzer ähnlichen Profiles:", font=("Arial", 12, "underline"))
+            self.colabrativ_listbox_label = tk.Label(self, text="Empfehlungen basierend auf verhaltensähnliche Nutzerprofile:", font=("Arial", 12, "underline"))
             self.colabrativ_listbox_label.grid(row=1, column=1, sticky=tk.SW, padx=5, pady=2)  # Rechte Spalte
 
             self.colabrativ_listbox_frame = tk.Frame(self, bd=2, relief="groove")  # Rahmen

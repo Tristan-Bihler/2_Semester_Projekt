@@ -56,5 +56,16 @@
             "The Accountant 2",
             "The Accountant"
         ]
+    },
+    {
+        "id": "user_id",
+        "name": "maax",
+        "favorite_movies": [
+            "From the World of John Wick: Ballerina",
+            "A Working Man",
+            "Lilo & Stitch",
+            "John Wick: Kapitel 3",
+            "Vaiana 2"
+        ]
     }
 ]
