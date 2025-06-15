@@ -56,5 +56,14 @@
             "The Accountant 2",
             "The Accountant"
         ]
+    },
+    {
+        "id": "user_id",
+        "name": "tel24",
+        "favorite_movies": [
+            "Ein Minecraft Film",
+            "Lilo & Stitch",
+            "STRAW"
+        ]
     }
 ]
