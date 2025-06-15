@@ -29,12 +29,16 @@ class Controler():
 
                 if user == str(user_ls).strip():
                     master.switch_frame(master.Main_Window, self, user)
-                    break
+                    return
                 
                 else:
-                    print("Es gibt den User nicht")
-        except:
-            raise Exception("User exestirt nicht")
+                    pass
+                    #print("Es gibt den User nicht")
+
+            raise Exception("User exestiert nicht")
+        
+        except Exception as e:
+            raise e
     
     """
     Die Signup Funktion erstellt ein User mit den eingegeben Namen des eingabe Entries
@@ -95,7 +99,7 @@ class Controler():
             self.model.write_to_json(user, liked_film)
 
         except Exception as e:
-            print(e)
+            raise e
 
     #Die Funktion entfernt die ausgewähöte datei einer Listbox
     def remove_from_list(self, user, Listbox):
