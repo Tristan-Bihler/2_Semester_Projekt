@@ -1,14 +1,15 @@
 [
     {
-        "id": "user001",
         "name": "tristan",
         "favorite_movies": [
-            "The Accountant 2",
-            "Lilo & Stitch"
+            "K.O.",
+            "Shadow Force - Die letzte Mission",
+            "Utopia",
+            "The Roundup: Punishment",
+            "John Wick: Kapitel 3"
         ]
     },
     {
-        "id": "user002",
         "name": "laura",
         "favorite_movies": [
             "Parasite",
@@ -18,14 +19,12 @@
         ]
     },
     {
-        "id": "user003",
         "name": "carina",
         "favorite_movies": [
             "Lilo & Stitch"
         ]
     },
     {
-        "id": "user004",
         "name": "semian",
         "favorite_movies": [
             "Pulp Fiction",
@@ -34,7 +33,6 @@
         ]
     },
     {
-        "id": "user_id",
         "name": "",
         "favorite_movies": [
             "Exterritorial",
@@ -43,7 +41,6 @@
         ]
     },
     {
-        "id": "user_id",
         "name": "hanspeter",
         "favorite_movies": [
             "Drachenzähmen leicht gemacht",
@@ -54,14 +51,26 @@
         ]
     },
     {
-        "id": "user_id",
         "name": "maax",
         "favorite_movies": [
-            "From the World of John Wick: Ballerina",
-            "A Working Man",
+            "Drachenzähmen leicht gemacht",
+            "The Amateur",
             "Lilo & Stitch",
             "John Wick: Kapitel 3",
-            "Vaiana 2"
+            "Vaiana 2",
+            "Ein Minecraft Film"
+        ]
+    },
+    {
+        "name": "tel24",
+        "favorite_movies": [
+            "Final Destination Bloodlines",
+            "Warfare",
+            "John Wick: Kapitel 3",
+            "Drachenzähmen leicht gemacht",
+            "Vaiana 2",
+            "Ein Minecraft Film",
+            "Der König der Löwen"
         ]
     }
 ]

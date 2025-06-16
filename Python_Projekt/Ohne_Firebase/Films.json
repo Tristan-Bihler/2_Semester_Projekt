@@ -475,15 +475,6 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Der%20König%20der%20Löwen"
     },
     {
-        "film_names": "তান্ডব",
-        "beschreibung": "",
-        "genres": [
-            "Action",
-            "Thriller"
-        ],
-        "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=তান্ডব"
-    },
-    {
         "film_names": "Star Wars: Die letzten Jedi",
         "beschreibung": "Die planetenvernichtende Starkiller-Basis der Ersten Ordnung ist zwar zerstört, die Neue Republik nach der vorherigen Zerstörung von fünf Welten aber massiv geschwächt. Sie steht am Abgrund und wird nur noch von Generalin Leias Widerstand verteidigt, für den auch Pilot Poe Dameron und der desertierte Ex-Sturmtruppler Finn kämpfen. Rey, mit den Erfahrungen ihres ersten großen Abenteuers in den Knochen, geht unterdessen bei Luke Skywalker auf dem Inselplaneten Ahch-To in die Lehre. Luke ist der letzte Jedi, der letzte Vertreter des Ordens, auf dem die Hoffnung ruht, dass Frieden in der Galaxis einkehrt. Doch die Erste Ordnung wirft ihren Schatten auch auf Luke und Rey: Der verlorene, ehemalige Schützling des alten Meisters, Kylo Ren, hat die finstere Mission noch längst nicht beendet, die ihm der sinistere Strippenzieher Snoke auftrug ...",
         "genres": [
@@ -492,25 +483,6 @@
             "Science Fiction"
         ],
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Star%20Wars:%20Die%20letzten%20Jedi"
-    },
-    {
-        "film_names": "Poseída",
-        "beschreibung": "",
-        "genres": [
-            "Horror",
-            "Mystery"
-        ],
-        "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Poseída"
-    },
-    {
-        "film_names": "용감한 시민",
-        "beschreibung": "",
-        "genres": [
-            "Action",
-            "Drama",
-            "Komödie"
-        ],
-        "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=용감한%20시민"
     },
     {
         "film_names": "Deep Cover",
@@ -623,14 +595,6 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Bambi%20-%20Eine%20Lebensgeschichte%20aus%20dem%20Walde"
     },
     {
-        "film_names": "Belyas",
-        "beschreibung": "",
-        "genres": [
-            "Drama"
-        ],
-        "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Belyas"
-    },
-    {
         "film_names": "Nuestros tiempos",
         "beschreibung": "Dank ihres wissenschaftlichen Durchbruchs kann das Ehepaar Nora und Héctor aus dem Jahr 1966 nach 2025 reisen. Héctor hat Probleme, Nora kaum – aber zu welchem Preis?",
         "genres": [
@@ -681,7 +645,7 @@
     },
     {
         "film_names": "Loco Por Ella",
-        "beschreibung": "",
+        "beschreibung": "Loco Por Ella ist ein spanischer romantischer Comedy-Film aus dem Jahr 2021, der auf Deutsch unter dem Titel Crazy About Her bekannt ist. Der Film handelt von Adrián, der sich nach einer verrückten Nacht in Carla verliebt, die in einer psychiatrischen Klinik lebt. Um ihr nahe zu sein, lässt er sich freiwillig dort einweisen und lernt die verschiedenen Facetten psychischer Erkrankungen kennen. ",
         "genres": [
             "Komödie"
         ],

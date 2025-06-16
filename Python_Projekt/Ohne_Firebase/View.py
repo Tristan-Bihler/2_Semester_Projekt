@@ -22,7 +22,7 @@ class View(tk.Tk):
         self._frame.pack()
     
     """
-    Die Visuelle übersicht für das Login fenster mit verschiedenen Elementen
+    Die Visuelle Übersicht für das Login fenster mit verschiedenen Elementen.
     Der Loginbereich besteht aus zwei Labels für jeweils Einloggen und Registrieren,
     Zwei entry inwelchem der benutzer sein namen eingeben kann 
     und Zwei Buttons für jeweils dem ausführen der Einloggen oder Registrieren Funktion.
@@ -51,8 +51,9 @@ class View(tk.Tk):
                 self.controller.login(self.login_Entry, self.master)
             
             except Exception as e:
-                print("test")
                 messagebox.showinfo(message = str(e))
+                self.signup_Entry.delete(0, tk.END)
+                self.login_Entry.delete(0, tk.END)
 
         def signup(self):
             try: 
@@ -60,6 +61,8 @@ class View(tk.Tk):
             
             except Exception as e:
                 messagebox.showinfo(message = str(e))
+                self.signup_Entry.delete(0, tk.END)
+                self.login_Entry.delete(0, tk.END)
     """
     Die Visuelle übersicht für das Generelle Übersichtsfenster mit einer Listbox das alle Filme der Datenbank beinhaltet und
     der anderen Listbox die die vorgeschlagenen Filme beinhaltet. Über der Listbox das alle Filme ausgibt, ist auch eine Suchleiste, mitwelche man bestimmte Filme
@@ -88,7 +91,7 @@ class View(tk.Tk):
             self.favorites_button = tk.Button(self, text="Favoriten", command=lambda: master.switch_frame(master.Favorites_Window, controller, user))
             self.favorites_button.grid(row=1, column=1, padx=10, pady=5, sticky=tk.NE)
 
-            # --- Left Listbox (Available Films) ---
+            #Linke Listenbox (Alle Filme)
             self.film_listbox_frame = tk.Frame(self, bd=2, relief=tk.GROOVE)
             self.film_listbox_frame.grid(row=2, column=0, sticky=tk.NSEW, padx=10, pady=10)
             self.film_listbox_frame.grid_rowconfigure(0, weight=0)
@@ -116,7 +119,7 @@ class View(tk.Tk):
             self.film_listbox_scrollbar.config(command=self.film_listbox.yview)
             self.film_listbox.bind("<<ListboxSelect>>", self.on_film_select)
 
-            # --- Right Listbox (Recommended Films) ---
+            #Rechte Listenbox (Vorgeschlagene Filme)
             self.recommended_listbox_frame = tk.Frame(self, bd=2, relief=tk.GROOVE)
             self.recommended_listbox_frame.grid(row=2, column=1, sticky=tk.NSEW, padx=10, pady=10)
 
@@ -138,7 +141,7 @@ class View(tk.Tk):
             self.recommended_listbox_scrollbar.config(command=self.recommended_listbox.yview)
             self.recommended_listbox.bind("<<ListboxSelect>>", self.on_recommended_select)
 
-            # --- Details Frame ---
+            #Film Detail Übersicht
             self.details_frame = tk.Frame(self, relief=tk.GROOVE, borderwidth=2)
             self.details_frame.grid(row=3, column=0, columnspan=2, sticky=tk.NSEW, padx=10, pady=10)
             self.details_frame.grid_rowconfigure(0, weight=0)
@@ -167,8 +170,10 @@ class View(tk.Tk):
         """
         def film_add_to_liked(self, user):
             try:
-                self.controller.write_to_Json(user, self.what_listbox)
+                liked_film = self.controller.write_to_Json(user, self.what_listbox)
                 self.list_recommended_Films(user)
+                raise Exception(f"Der Film, {liked_film}, wurde der Favoritenliste hinzugefügt")
+
             except Exception as e:
                 messagebox.showinfo(message = str(e))
                 print(Exception)
@@ -405,7 +410,7 @@ class View(tk.Tk):
             
         def List_recommenden_colbrotative_Films(self, user):
             self.colabrativ_listbox.delete(0, tk.END) # Clear existing items
-            Film_names = self.controller.get_Json_recommended_Films_collarbotive(user)
+            Film_names = self.controller.get_Json_recommended_Films_collaborative(user)
             for film in Film_names:
                 self.colabrativ_listbox.insert(tk.END, film)
         

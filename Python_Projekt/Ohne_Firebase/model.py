@@ -113,7 +113,6 @@ class Model():
         
     def write_to_signup_json(self, user):
         new_user = {
-            "id": "user_id",
             "name": user,
             "favorite_movies": []
         }
@@ -185,7 +184,7 @@ class Model():
         return recommended_films
     
 
-    #--------------------------------------------------------------------Colabrativ Algorythm
+    #--------------------------------------------------------------------Colaborativ Algorythm
 
     def create_film_genre_mapping(self, films_data):
         """
@@ -219,7 +218,7 @@ class Model():
 
     def get_user_base_recommendations(self, target_user_id):
         """
-        Als erstes holt es sich die benötigten daten und wandelt diese für das Colabrativ_based_Algorythm um.
+        Als erstes holt es sich die benötigten daten und wandelt diese für das Colaborativ_based_Algorythm um.
         Als nächstes überprüft es, ob es den user überhaupt gibt -> Hilfreich für debugging
         """
         #Daten Herholen
@@ -277,5 +276,5 @@ class Model():
             if film_id not in target_user_watched_films:
                 recommended_films.append(film_id)
 
-        #Die recommended films liste zurück an den controler geben
+        #Die recommended films liste zurück an den controller geben
         return recommended_films
