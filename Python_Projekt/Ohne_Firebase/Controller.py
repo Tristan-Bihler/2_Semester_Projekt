@@ -2,7 +2,7 @@ import tkinter as tk
 import View
 import Model
 
-class Controler():
+class Controller():
     """
     Bei der Initialisierung sollen die relevanten Pfade aufeglistet und für spätere benutzung gespeichert werden.
     Zudem sollen instanzen der view und model klasse, für das rendern und bearbeiten der Daten, erstellt werden.
@@ -97,6 +97,7 @@ class Controler():
                     raise Exception("Film in der Liste schon vorhanden")
                 
             self.model.write_to_json(user, liked_film)
+            raise Exception(f"Film, {liked_film}, der Favoritenliste hinzugefügt")
 
         except Exception as e:
             raise e

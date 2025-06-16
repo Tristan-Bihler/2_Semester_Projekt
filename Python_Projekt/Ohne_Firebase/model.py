@@ -109,8 +109,8 @@ class Model():
                     json.dump(data, f, ensure_ascii=False, indent=4)
                 self.loaded_user_data = data
         else:
-            print(f"Error: Expected JSON data to be a list, but found type: {type(data)}")
-    
+            raise Exception("Daten sind fehlerhaft")
+        
     def write_to_signup_json(self, user):
         new_user = {
             "id": "user_id",
@@ -121,14 +121,14 @@ class Model():
             data = json.load(f)
 
         if not isinstance(data, list):
-            print(f"Warnung: Die Datei '{self.user_db_path}' enthält keine JSON-Liste. Initialisiere als leere Liste.")
             data = []
+            raise Exception("Datenbank nicht gefunden")
 
         data.append(new_user)
 
         with open(self.user_db_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
-        print(f"Benutzer '{user}' erfolgreich hinzugefügt.")
+        #print(f"Benutzer '{user}' erfolgreich hinzugefügt.")
     
 #-----------------------------------------------------------------Content based Algorythm
     def get_recommendations(self, user):
@@ -197,7 +197,7 @@ class Model():
         return film_genres
 
     def calculate_user_genre_profiles(self, users_data, film_genres_map):
-        """für jeden user in user_data, also der user Liste, soll es den namen des users und dessen lieblingsfilme rausschreiben und """
+        """für jeden user in user_data, also der user Liste, soll es den namen des users und dessen lieblingsfilme entnehmen"""
         user_genre_profiles = {}
         for user in users_data:
             user_id = str(user['name']).lower()
@@ -214,7 +214,7 @@ class Model():
         intersection = len(set1.intersection(set2))
         union = len(set1.union(set2))
         if union == 0:
-            return 0.0 # Avoid division by zero
+            return 0.0 # Somit es nicht ausversehen Durch 0 devidiert
         return intersection / union
 
     def get_user_base_recommendations(self, target_user_id):
@@ -222,7 +222,7 @@ class Model():
         Als erstes holt es sich die benötigten daten und wandelt diese für das Colabrativ_based_Algorythm um.
         Als nächstes überprüft es, ob es den user überhaupt gibt -> Hilfreich für debugging
         """
-        #Daten Herholeb
+        #Daten Herholen
         users_data = self.load_json_data(self.user_db_path)
         films_data = self.load_json_data(self.films_db_path)
         #Daten Umwandeln

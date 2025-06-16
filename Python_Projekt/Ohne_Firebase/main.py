@@ -11,8 +11,7 @@ Dies beinhaltet die Konzeption und Implementierung einer geeigneten Datenstruktu
 
 Wir haben uns für die konkrete Entwicklung eines Empfehlungssystems für einen Streaming-Dienst entschieden. Hierfür muss zum Beispiel ein Weg gefunden werden, um herauszufinden welche Filme einem ähnlichen Genre angehören und ob diese dem Nutzer gefallen können oder eher nicht. 
 Außerdem soll es eine Möglichkeit geben, dass Filme in einer Favoritenliste gespeichert werden könne und zusätzlich darauf Empfehlungen angezeigt werden.
-
 """
 
 if __name__ == "__main__":
-    controler = Controller.Controler()
+    controler = Controller.Controller()

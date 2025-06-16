@@ -3,19 +3,19 @@ import webbrowser
 from tkinter import messagebox
 #-----------------------------------------------------View
 class View(tk.Tk):
-    def __init__(self,controler):
+    def __init__(self,controller):
         super().__init__()
         #Window erstellen mit der 800 pixel breite und 600 pixel höhe, sowie dem namen Film Vorschlags Applikation 
         self.geometry("1000x800")
-        self.title("Film Vorschlags Applikation")
-        self.controller = controler
+        self.title("Film Empfehlungs Applikation")
+        self.controller = controller
         #Wechseln in das Login Fenster
         self._frame = None
-        self.switch_frame(self.Login_Window, controler, None)
+        self.switch_frame(self.Login_Window, controller, None)
         
     #Die Wechselfunktion für das Wechseln verschiedener ansichts Bereiche
-    def switch_frame(self, frame_class, controler, user):
-        new_frame = frame_class(self, controler, user)
+    def switch_frame(self, frame_class, controller, user):
+        new_frame = frame_class(self, controller, user)
         if self._frame is not None:
             self._frame.destroy()
         self._frame = new_frame
@@ -26,12 +26,12 @@ class View(tk.Tk):
     Der Loginbereich besteht aus zwei Labels für jeweils Einloggen und Registrieren,
     Zwei entry inwelchem der benutzer sein namen eingeben kann 
     und Zwei Buttons für jeweils dem ausführen der Einloggen oder Registrieren Funktion.
-    Diese Funktionen liegen in der Controler Datei
+    Diese Funktionen liegen in der controller Datei
     """
     class Login_Window(tk.Frame):
-        def __init__(self, master, controler, user):
+        def __init__(self, master, controller, user):
             super().__init__(master)
-            self.controler = controler
+            self.controller = controller
             self.master = master
             self.login_Label = tk.Label(self, text = "Einloggen")
             self.login_Label.pack()
@@ -48,7 +48,7 @@ class View(tk.Tk):
         
         def login(self):
             try: 
-                self.controler.login(self.login_Entry, self.master)
+                self.controller.login(self.login_Entry, self.master)
             
             except Exception as e:
                 print("test")
@@ -56,7 +56,7 @@ class View(tk.Tk):
 
         def signup(self):
             try: 
-                self.controler.signup(self.signup_Entry)
+                self.controller.signup(self.signup_Entry)
             
             except Exception as e:
                 messagebox.showinfo(message = str(e))
@@ -67,57 +67,52 @@ class View(tk.Tk):
     """
 
     class Main_Window(tk.Frame):
-        def __init__(self, master, controler, user):
+        def __init__(self, master, controller, user):
             super().__init__(master)
             self.master = master
             self.user = user
-            self.recomended_films_data = None # Renamed to avoid conflict with the Label widget
-            self.controler = controler
+            self.recomended_films_data = None
+            self.controller = controller
 
-            # Configure row and column weights for better resizing behavior
-            self.grid_rowconfigure(0, weight=0) # For main title
-            self.grid_rowconfigure(1, weight=0) # For favorites button
-            self.grid_rowconfigure(2, weight=1) # For the two main listbox frames (available films and recommended films)
-            self.grid_rowconfigure(3, weight=0) # For details frame
+            self.grid_rowconfigure(0, weight=0)
+            self.grid_rowconfigure(1, weight=0)
+            self.grid_rowconfigure(2, weight=1)
+            self.grid_rowconfigure(3, weight=0)
 
             self.grid_columnconfigure(0, weight=1)
             self.grid_columnconfigure(1, weight=1)
 
-            # Main title for the window
             self.Label = tk.Label(self, text="Film-Empfehlungen", font=("Arial", 16, "bold"))
             self.Label.grid(row=0, column=0, columnspan=2, pady=10)
 
-            # Button to go to Favorites Window
-            self.favorites_button = tk.Button(self, text="Favoriten", command=lambda: master.switch_frame(master.Favorites_Window, controler, user))
+            self.favorites_button = tk.Button(self, text="Favoriten", command=lambda: master.switch_frame(master.Favorites_Window, controller, user))
             self.favorites_button.grid(row=1, column=1, padx=10, pady=5, sticky=tk.NE)
 
             # --- Left Listbox (Available Films) ---
             self.film_listbox_frame = tk.Frame(self, bd=2, relief=tk.GROOVE)
             self.film_listbox_frame.grid(row=2, column=0, sticky=tk.NSEW, padx=10, pady=10)
-            self.film_listbox_frame.grid_rowconfigure(0, weight=0) # For label
-            self.film_listbox_frame.grid_rowconfigure(1, weight=0) # For search entry and button
-            self.film_listbox_frame.grid_rowconfigure(2, weight=1) # For the listbox itself
-            self.film_listbox_frame.grid_columnconfigure(0, weight=1) # For listbox and entry
+            self.film_listbox_frame.grid_rowconfigure(0, weight=0)
+            self.film_listbox_frame.grid_rowconfigure(1, weight=0)
+            self.film_listbox_frame.grid_rowconfigure(2, weight=1)
+            self.film_listbox_frame.grid_columnconfigure(0, weight=1)
 
             tk.Label(self.film_listbox_frame, text="Verfügbare Filme:", font=("Arial", 10, "bold")).grid(row=0, column=0, sticky=tk.NW, padx=5, pady=2)
             tk.Label(self.film_listbox_frame, text="Filmsuche:").grid(row=1, column=0, sticky=tk.W, padx=5)
             self.search_entry = tk.Entry(self.film_listbox_frame)
             self.search_entry.grid(row=1, column=0, sticky=tk.EW, padx=80, pady=5)
-            # Make sure you have a filter_films method in your class
             self.search_entry.bind("<KeyRelease>", self.filter_films)
 
             self.clear_search_button = tk.Button(self.film_listbox_frame, text="Löschen", command=self.clear_search)
             self.clear_search_button.grid(row=1, column=0, sticky=tk.E, padx=5, pady=5)
 
-            # Re-added film selection listbox and its scrollbar
             self.film_listbox_scrollbar = tk.Scrollbar(self.film_listbox_frame)
-            self.film_listbox_scrollbar.grid(row=2, column=1, sticky=tk.NS) # Changed row to 2
+            self.film_listbox_scrollbar.grid(row=2, column=1, sticky=tk.NS)
 
             self.film_listbox = tk.Listbox(self.film_listbox_frame,
                                         height=15,
                                         yscrollcommand=self.film_listbox_scrollbar.set,
                                         font=("Arial", 12))
-            self.film_listbox.grid(row=2, column=0, sticky=tk.NSEW, padx=5, pady=5) # Changed row to 2
+            self.film_listbox.grid(row=2, column=0, sticky=tk.NSEW, padx=5, pady=5)
             self.film_listbox_scrollbar.config(command=self.film_listbox.yview)
             self.film_listbox.bind("<<ListboxSelect>>", self.on_film_select)
 
@@ -125,33 +120,32 @@ class View(tk.Tk):
             self.recommended_listbox_frame = tk.Frame(self, bd=2, relief=tk.GROOVE)
             self.recommended_listbox_frame.grid(row=2, column=1, sticky=tk.NSEW, padx=10, pady=10)
 
-            # Configure rows within the frame: one for the label, one for the listbox
-            self.recommended_listbox_frame.grid_rowconfigure(0, weight=0) # For the label
-            self.recommended_listbox_frame.grid_rowconfigure(1, weight=1) # For the listbox
+            self.recommended_listbox_frame.grid_rowconfigure(0, weight=0)
+            self.recommended_listbox_frame.grid_rowconfigure(1, weight=1)
             self.recommended_listbox_frame.grid_columnconfigure(0, weight=1)
 
             self.recomended_films_label = tk.Label(self.recommended_listbox_frame, text="Empfehlende Filme:", font=("Arial", 10, "bold"))
-            self.recomended_films_label.grid(row=0, column=0, sticky=tk.NW, padx=5, pady=2) # Placed in row 0
+            self.recomended_films_label.grid(row=0, column=0, sticky=tk.NW, padx=5, pady=2)
 
             self.recommended_listbox_scrollbar = tk.Scrollbar(self.recommended_listbox_frame)
-            self.recommended_listbox_scrollbar.grid(row=1, column=1, sticky=tk.NS) # Placed in row 1
+            self.recommended_listbox_scrollbar.grid(row=1, column=1, sticky=tk.NS)
 
             self.recommended_listbox = tk.Listbox(self.recommended_listbox_frame,
                                                 height=15,
                                                 yscrollcommand=self.recommended_listbox_scrollbar.set,
                                                 font=("Arial", 12))
-            self.recommended_listbox.grid(row=1, column=0, sticky=tk.NSEW, padx=5, pady=5) # Placed in row 1
+            self.recommended_listbox.grid(row=1, column=0, sticky=tk.NSEW, padx=5, pady=5)
             self.recommended_listbox_scrollbar.config(command=self.recommended_listbox.yview)
             self.recommended_listbox.bind("<<ListboxSelect>>", self.on_recommended_select)
 
             # --- Details Frame ---
             self.details_frame = tk.Frame(self, relief=tk.GROOVE, borderwidth=2)
             self.details_frame.grid(row=3, column=0, columnspan=2, sticky=tk.NSEW, padx=10, pady=10)
-            self.details_frame.grid_rowconfigure(0, weight=0) # Film Name
-            self.details_frame.grid_rowconfigure(1, weight=1) # Description to expand
-            self.details_frame.grid_rowconfigure(2, weight=0) # Buttons
-            self.details_frame.grid_columnconfigure(0, weight=1) # For description and left button
-            self.details_frame.grid_columnconfigure(1, weight=0) # For right button
+            self.details_frame.grid_rowconfigure(0, weight=0)
+            self.details_frame.grid_rowconfigure(1, weight=1)
+            self.details_frame.grid_rowconfigure(2, weight=0)
+            self.details_frame.grid_columnconfigure(0, weight=1)
+            self.details_frame.grid_columnconfigure(1, weight=0)
 
             self.film_name_label = tk.Label(self.details_frame, text="Name: Kein Film ausgewählt", font=("Arial", 14, "bold"))
             self.film_name_label.grid(row=0, column=0, sticky=tk.NW, padx=10, pady=(5, 0))
@@ -165,7 +159,7 @@ class View(tk.Tk):
             self.add_film_button = tk.Button(self.details_frame, text = "Favoriten hinzufügen", state=tk.DISABLED, command = lambda : (self.film_add_to_liked(user)))
             self.add_film_button.grid(row=2, column=1, sticky=tk.SE, padx=10, pady=(10, 5))
 
-            self.list_Films(self.controler.get_Json_Film_Names())
+            self.list_Films(self.controller.get_Json_Film_Names())
             self.list_recommended_Films(user)
         
         """
@@ -173,7 +167,7 @@ class View(tk.Tk):
         """
         def film_add_to_liked(self, user):
             try:
-                self.controler.write_to_Json(user, self.what_listbox)
+                self.controller.write_to_Json(user, self.what_listbox)
                 self.list_recommended_Films(user)
             except Exception as e:
                 messagebox.showinfo(message = str(e))
@@ -196,7 +190,7 @@ class View(tk.Tk):
         Für das löschen des Inhaltes der Scuhleiste
         """
         def clear_search(self):
-            films = self.controler.get_Json_Film_Names()
+            films = self.controller.get_Json_Film_Names()
             self.search_entry.delete(0, tk.END)
             self.list_Films(films)
             self.clear_film_details()
@@ -206,7 +200,7 @@ class View(tk.Tk):
         """
         def filter_films(self, event = None):
             search_term = self.search_entry.get().lower()
-            films = self.controler.get_Json_Film_Names()
+            films = self.controller.get_Json_Film_Names()
             filtered_films = []
             for film in films:
                 if search_term in film.lower():
@@ -225,7 +219,7 @@ class View(tk.Tk):
                 self.what_listbox = self.recommended_listbox
                 index = selected_indices[0]
                 selected_film_name = self.recommended_listbox.get(index)
-                selected_film_data = next((film for film in self.controler.get_Json() if film["film_names"] == selected_film_name), None)
+                selected_film_data = next((film for film in self.controller.get_Json() if film["film_names"] == selected_film_name), None)
 
                 if selected_film_data:
                     self.film_name_label.config(text=f"Name: {selected_film_data['film_names']}")
@@ -249,7 +243,7 @@ class View(tk.Tk):
                 index = selected_indices[0]
                 self.what_listbox = self.film_listbox
                 selected_film_name = self.film_listbox.get(index)
-                selected_film_data = next((film for film in self.controler.get_Json()  if film["film_names"] == selected_film_name), None)
+                selected_film_data = next((film for film in self.controller.get_Json()  if film["film_names"] == selected_film_name), None)
                 print(selected_film_data)
 
                 if selected_film_data:
@@ -287,7 +281,7 @@ class View(tk.Tk):
         """
         def list_recommended_Films(self, user):
             self.recommended_listbox.delete(0, tk.END) # Clear existing items
-            Film_names = self.controler.get_Json_recommended_Film_Names(user)
+            Film_names = self.controller.get_Json_recommended_Film_Names(user)
             for film in Film_names:
                 self.recommended_listbox.insert(tk.END, film)
 
@@ -295,10 +289,10 @@ class View(tk.Tk):
     Die Klasse zeigt das Fenster für die hinzugefügten Filme zu
     """
     class Favorites_Window(tk.Frame):
-        def __init__(self, master,controler, user):
+        def __init__(self, master,controller, user):
             super().__init__(master)
             self.master = master
-            self.controler = controler
+            self.controller = controller
             self.user = user  # Sicherstellen, dass der Benutzer für spätere Verwendung gespeichert wird
             self.selected_liked_film = None # Speichert den ausgewählten Film aus der Favoritenliste
             self.selected_colabrativ = None # Speichert den ausgewählten Film aus der Merkliste
@@ -317,7 +311,7 @@ class View(tk.Tk):
 
             # Button zur Rückkehr zum Hauptfenster
             self.Button = tk.Button(self, text="Zurück zum Hauptfenster",
-                                    command=lambda: master.switch_frame(master.Main_Window, controler, user))
+                                    command=lambda: master.switch_frame(master.Main_Window, controller, user))
             self.Button.grid(row=0, column=1, sticky=tk.NE, padx=10, pady=10) # Platziert oben rechts
 
             # --- Erste Listbox (Meine Favoriten) ---
@@ -401,7 +395,7 @@ class View(tk.Tk):
         """
         def film_add_to_liked(self, user):
             try:
-                self.controler.write_to_Json(user, self.colabrativ_listbox)
+                self.controller.write_to_Json(user, self.colabrativ_listbox)
                 self.List_Films(user)
                 self.List_recommenden_colbrotative_Films(user)
 
@@ -411,13 +405,13 @@ class View(tk.Tk):
             
         def List_recommenden_colbrotative_Films(self, user):
             self.colabrativ_listbox.delete(0, tk.END) # Clear existing items
-            Film_names = self.controler.get_Json_recommended_Films_collarbotive(user)
+            Film_names = self.controller.get_Json_recommended_Films_collarbotive(user)
             for film in Film_names:
                 self.colabrativ_listbox.insert(tk.END, film)
         
         def remove_Film_from_liked_listbox(self):
             try:
-                self.controler.remove_from_list(self.user, self.liked_films_listbox)
+                self.controller.remove_from_list(self.user, self.liked_films_listbox)
                 self.List_Films(self.user)
                 self.List_recommenden_colbrotative_Films(self.user)
             except:
@@ -429,7 +423,7 @@ class View(tk.Tk):
         """
         def List_Films(self, user):
             self.liked_films_listbox.delete(0, tk.END) # Clear existing items
-            Film_names = self.controler.get_Json_user_Liked_Films(user)
+            Film_names = self.controller.get_Json_user_Liked_Films(user)
             for film in Film_names:
                 self.liked_films_listbox.insert(tk.END, film)
         
@@ -457,7 +451,7 @@ class View(tk.Tk):
                 print(selected_indices)
                 index = selected_indices[0]
                 selected_film_name = self.colabrativ_listbox.get(index)
-                selected_film_data = next((film for film in self.controler.get_Json() if film["film_names"] == selected_film_name), None)
+                selected_film_data = next((film for film in self.controller.get_Json() if film["film_names"] == selected_film_name), None)
 
 
                 if selected_film_data:
@@ -482,7 +476,7 @@ class View(tk.Tk):
                 print(selected_indices)
                 index = selected_indices[0]
                 selected_film_name = self.liked_films_listbox.get(index)
-                selected_film_data = next((film for film in self.controler.get_Json()  if film["film_names"] == selected_film_name), None)
+                selected_film_data = next((film for film in self.controller.get_Json()  if film["film_names"] == selected_film_name), None)
 
                 if selected_film_data:
                     self.film_name_label.config(text=f"Name: {selected_film_data['film_names']}")
