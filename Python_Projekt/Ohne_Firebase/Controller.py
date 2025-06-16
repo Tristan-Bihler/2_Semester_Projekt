@@ -70,6 +70,7 @@ class Controller():
     #Die get_Json Funktion holt die ganzen Daten einer Json Datei
     def get_Json(self):
         Film_names = self.model.loaded_film_data
+        print(Film_names)
         return Film_names
     
     #Die Funktion entnimmt sich alle Film Namen
@@ -118,7 +119,7 @@ class Controller():
         except Exception as e:
             raise e
 
-    #Die Funktion entfernt die ausgewähöte datei einer Listbox
+    #Die Funktion entfernt die ausgewählte datei der angegebenen Listbox
     def remove_from_list(self, user, Listbox):
         try:
             index = Listbox.curselection()

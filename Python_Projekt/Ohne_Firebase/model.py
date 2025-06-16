@@ -18,7 +18,7 @@ class Model():
         #Funktion für das laden der Daten mit einem key aus den Datenbanken
         data_list = []
 
-        #Lieblingsfilme Laden
+        #Abfrage ob der key den der Favoriten Filme entspricht
         if key == "favorite_movies":
             #Abfrage ob auch ein user vorhanden ist
             if user != None:
@@ -34,6 +34,7 @@ class Model():
             else:
                 raise Exception("Nutzer fehlt")
 
+        #Abfrage ob der key den der name entspricht, somit die Nutzernamen dann auch zurückgegeben werden können
         elif key == "name":
             if user == None:
                 for user in self.load_json_data(self.user_db_path):
@@ -42,7 +43,7 @@ class Model():
                     else:
                         print(f"Warnung: Ungültiges Benutzerobjekt gefunden: {user}")
 
-
+        #Abfrage ob der key den der Film Namen entspricht, somit die Filmnamen dann auch zurückgegeben werden können
         elif key == "film_names":
             for user in self.loaded_film_data:
                 if isinstance(user, dict) and key in user:
@@ -52,53 +53,62 @@ class Model():
         
         return data_list
 
+    #Alle möglichen Daten aus einer Json Datei laden
     def load_json_data(self, path):
         with open(path, 'r', encoding='utf-8') as f:
             data = json.load(f)
 
         return data
     
+    #Funktion für das löschen bestimmter Filme aus der Favoriten Liste des eingeloggten Nutzers
     def removed_liked_films_from_jason(self, user, filename):
         found_user = False
         movie_deleted = False
 
+        #Jeden Nutzer der Nutzerliste durchgehen
         for user_ls in self.loaded_user_data:
-            if str(user).lower().strip() == str(user_ls.get('name', '')).lower().strip():
+            #Den eingeloggten Nutzer in der Nutzerliste Finden
+            if str(user).lower().strip() == str(user_ls['name']).lower().strip():
                 found_user = True
+                #Die Favoriten Liste des Nutzers abgreifen
                 if 'favorite_movies' in user_ls and isinstance(user_ls['favorite_movies'], list):
+                    #Die Länge der Liste bestimmen
                     initial_count = len(user_ls['favorite_movies'])
+                    #Die geladene List den zu entfernenden Film finden und anschließend löschen.
                     user_ls['favorite_movies'] = [
                         movie for movie in user_ls['favorite_movies']
                         if str(movie).lower().strip() != str(filename).lower().strip()
                     ]
                     if len(user_ls['favorite_movies']) < initial_count:
                         movie_deleted = True
-                        print(f"Movie '{filename}' successfully deleted from {user}'s favorites.")
+                        #print(f"Movie '{filename}' successfully deleted from {user}'s favorites.")
                     else:
-                        print(f"Movie '{filename}' not found in {user}'s favorites.")
+                        raise Exception(f"{filename} nicht gefunden")
+                        #print(f"Movie '{filename}' not found in {user}'s favorites.")
                 else:
-                    print(f"User '{user}' has no 'favorite_movies' list or it's malformed.")
+                    raise Exception("Daten Falsch gegeben")
                 break
         
         if not found_user:
-            print(f"User '{user}' not found in the database.")
-            return False
+            raise Exception(f"{user} nicht gefunden")
 
         if movie_deleted:
             with open(self.user_db_path, 'w', encoding='utf-8') as f:
-                json.dump(self.loaded_user_data, f, ensure_ascii=False, indent=4)
+                json.dump(self.loaded_user_data, f, indent=4)#die argumente nach data macht die Json lesbarer
             return True
         else:
-            return False
+            raise Exception(f"{filename} konnte nicht gelöscht werden")
                 
     def write_to_json(self, user_name_to_find, liked_movies):
         with open(self.user_db_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
 
         user_found = False
-        if isinstance(data, list):
+        if isinstance(data, list):#Überprüfen dass data auch eine liste ist
+            #jeden Nutzer durchgehen und den eingeloggten nutzer finden
             for user in data:
                 if user.get("name").lower() == user_name_to_find:
+                    #Die gemochteten Filne den Favoriten Liste hinzufügen
                     #print(liked_movies)
                     liked_films = list(user.get("favorite_movies"))
                     #print(liked_films)
@@ -106,20 +116,24 @@ class Model():
                     #print(liked_films)
                     user["favorite_movies"] = liked_films
                     user_found = True
-                    print(f"User '{user_name_to_find}' updated successfully.")
+                    #print(f"User '{user_name_to_find}' updated successfully.")
                     break
             
+            #Wenn der nutzer in der Liste nicht gefunden wurdem den Fehler melden
             if not user_found:
-                print(f"User '{user_name_to_find}' not found in the file.")
+                raise Exception("Nutzer nicht geunden")
 
+            #Wenn der nutzer gefunden wurde, die Daten in die Nutzer Json laden
             if user_found:
                 with open(self.user_db_path, 'w', encoding='utf-8') as f:
-                    json.dump(data, f, ensure_ascii=False, indent=4)
+                    json.dump(data, f, indent=4)#die argumente nach data macht die Json lesbarer
                 self.loaded_user_data = data
         else:
             raise Exception("Daten sind fehlerhaft")
         
     def write_to_signup_json(self, user):
+        #Bei dem erstellen eines neuen nutzer eine Vorlage erstellen und die, mit den Nutzer Namen, in die User.json Datenbank reinschreiben
+        #Nutzer Block
         new_user = {
             "name": user,
             "favorite_movies": []
@@ -127,17 +141,22 @@ class Model():
         with open(self.user_db_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
 
+        #Überprügen ob die Datenbank auch gefunden wurde und den richtigen Tyo hat, in diesem Fall eine Liste
         if not isinstance(data, list):
             data = []
             raise Exception("Datenbank nicht gefunden")
 
+        #Den neuen Nutzer Block der Datenbank hinzufügen
         data.append(new_user)
 
+        #Die neue Daten in die Json schreiben, da wir alle daten rausschreiben und den nutzer hinzufügen, tun wir alle Daten auch wieder überscheiben
         with open(self.user_db_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=4)
+            json.dump(data, f, indent=4)#die argumente nach data macht die Json lesbarer
         #print(f"Benutzer '{user}' erfolgreich hinzugefügt.")
-    
-#-----------------------------------------------------------------Content based Algorythm
+
+
+
+#-----------------------------------------------------------------Content based Algorithmus
     def get_recommendations(self, user):
         favorite_movies_names = []
         
@@ -192,8 +211,8 @@ class Model():
         return recommended_films
     
 
-    #--------------------------------------------------------------------Colaborativ Algorythm
 
+    #--------------------------------------------------------------------Colaborativ Algorithmus
     def create_film_genre_mapping(self, films_data):
         """
         Für jeden Film von films_data soll es zu jedem Film ein satz genres aus der film liste, für den film, film_genres hinzufügen
@@ -206,11 +225,14 @@ class Model():
     def calculate_user_genre_profiles(self, users_data, film_genres_map):
         """für jeden user in user_data, also der user Liste, soll es den namen des users und dessen lieblingsfilme entnehmen"""
         user_genre_profiles = {}
+        #Jeden Nutzer durchgehen
         for user in users_data:
             user_id = str(user['name']).lower()
-            watched_films = user['favorite_movies']
+            liked_films = user['favorite_movies']
             user_genres = set()
-            for film_id in watched_films:
+            #Jeden Film in der Favoriten Liste des Users durchgehen
+            for film_id in liked_films:
+                #Falls der Film in der Genre Liste vorkommt, ---------
                 if film_id in film_genres_map:
                     user_genres.update(film_genres_map[film_id])
             user_genre_profiles[user_id] = user_genres
@@ -232,6 +254,7 @@ class Model():
         #Daten Herholen
         users_data = self.load_json_data(self.user_db_path)
         films_data = self.load_json_data(self.films_db_path)
+        
         #Daten Umwandeln
         #Genre rausfiltern
         film_genres_map = self.create_film_genre_mapping(films_data)
@@ -244,11 +267,23 @@ class Model():
             print(f"Error: Target user '{target_user_id}' not found.")
             return []
 
+        #jeden nutzer durchgehen
+        for user in users_data:
+            #Abfragen ob der momentane Json Block von dem eingeloggten Nutzer ist
+            if str(user['name']).lower() == target_user_id:
+                #Abfrage ob die List der Favoriten leer ist. Wenn ja soll es nichts zurückgeben und die Listbox nichts anzeigen.
+                if user['favorite_movies'] == []:
+                    return []
+
         #Es entimmt das Genre Profil des momentanen Nutzers
         target_user_genres = user_genre_profiles[target_user_id]
-
-        target_user_watched_films = next(user['favorite_movies'] for user in users_data if str(user['name']).lower() == target_user_id)
-
+        
+        #Jeden Nutzer durchgehen
+        for user in users_data:
+            #Abfrage ob der Json Block von dem Eingeloggten Nutzer ist
+            if str(user['name']).lower() == target_user_id:
+                # Die Liste der Favoriten des Users auf die Variable speichern für spätere nutzung
+                target_user_watched_films = user['favorite_movies']
         
         similarities = []
         #Es überprüft, das der eigentliche Nutzer nicht in der Liste vorhanden ist, bzw ihn überspringt und die For loop bei dem nächsten user anfängt
@@ -275,8 +310,10 @@ class Model():
         closest_match_user_id = similarities[0][1]
         
         #Es sollen jetzt die Filme für den Änlichsten User entnommen werden und weiter gegeben werden
-        closest_match_user_films = next(user['favorite_movies'] for user in users_data if (user['name']).lower() == closest_match_user_id)
-
+        for user in users_data:
+            if str(user['name']).lower() == closest_match_user_id:
+                closest_match_user_films = user['favorite_movies']
+                                                
         #print(closest_match_user_films)
         #Die Ähnlichen filme, die der eingeloggte User nicht hat, der recommended_films Liste hinzufügen
         recommended_films = []
