@@ -5,26 +5,34 @@ import sys
 #----------------------------------------------------Model
 class Model():
     def __init__(self, user_db_path, films_db_path):
+        #pfade für die Datenbanken festlegen
         self.user_db_path = user_db_path
         self.films_db_path = films_db_path
 
+        #Daten Laden sodass diese nicht während dem programm immerwieder geladen werden müssen
         self.loaded_user_data = self.load_json_data(self.user_db_path)
         self.loaded_film_data = self.load_json_data(self.films_db_path)
 
 
     def get_json_data(self, key, user):
+        #Funktion für das laden der Daten mit einem key aus den Datenbanken
         data_list = []
 
-        
+        #Lieblingsfilme Laden
         if key == "favorite_movies":
+            #Abfrage ob auch ein user vorhanden ist
             if user != None:
+                #Jeden Datenblock durchgehen
                 for data_block in self.load_json_data(self.user_db_path):
+                    #Abfrage des user namens mit dem name aus dem Datenblock und dem key name
                     if str(user).lower().strip() == str(data_block["name"]).lower().strip():
                         if isinstance(data_block, dict) and key in data_block:
                             for data_word in data_block[key]:
                                 data_list.append(str(data_word))
                         else:
                             print(f"Warnung: Ungültiges Benutzerobjekt gefunden: {data_block}")
+            else:
+                raise Exception("Nutzer fehlt")
 
         elif key == "name":
             if user == None:
