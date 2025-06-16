@@ -130,6 +130,7 @@ class Model():
             json.dump(data, f, ensure_ascii=False, indent=4)
         print(f"Benutzer '{user}' erfolgreich hinzugefügt.")
     
+#-----------------------------------------------------------------Content based Algorythm
     def get_recommendations(self, user):
         favorite_movies_names = []
         
@@ -184,7 +185,7 @@ class Model():
         return recommended_films
     
 
-    #--------------------------------------------------------------------
+    #--------------------------------------------------------------------Colabrativ Algorythm
 
     def create_film_genre_mapping(self, films_data):
         """

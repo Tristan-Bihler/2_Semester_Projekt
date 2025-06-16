@@ -16,4 +16,3 @@ Außerdem soll es eine Möglichkeit geben, dass Filme in einer Favoritenliste ge
 
 if __name__ == "__main__":
     controler = Controller.Controler()
-    

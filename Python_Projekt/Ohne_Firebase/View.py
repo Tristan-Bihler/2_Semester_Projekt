@@ -250,7 +250,7 @@ class View(tk.Tk):
                 self.what_listbox = self.film_listbox
                 selected_film_name = self.film_listbox.get(index)
                 selected_film_data = next((film for film in self.controler.get_Json()  if film["film_names"] == selected_film_name), None)
-
+                print(selected_film_data)
 
                 if selected_film_data:
                     self.film_name_label.config(text=f"Name: {selected_film_data['film_names']}")

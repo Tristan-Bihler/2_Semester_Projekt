@@ -51,7 +51,7 @@
     },
     {
         "film_names": "Mikaela",
-        "beschreibung": "",
+        "beschreibung": "Mikaela ist ein spanischer Actionthriller, der während eines starken Schneesturms spielt, der eine Autobahn lahmlegt. Eine Gruppe von Räubern nutzt die Gelegenheit, um einen Geldtransporter zu überfallen. Ein Polizist, der eigentlich nach Hause will, wird in die Situation hineingezogen und muss sich mit einem jungen Kollegen gegen die Räuber behaupten",
         "genres": [
             "Action",
             "Thriller"
@@ -151,7 +151,7 @@
     },
     {
         "film_names": "Utopia",
-        "beschreibung": "",
+        "beschreibung": "Der Film Utopia (2014) ist ein britischer Thriller, der von einer Gruppe von Verschwörungstheorie-Anhängern handelt, die in den Besitz eines Manuskripts gelangen, das angeblich katastrophale Ereignisse vorhersagt. Sie werden von einer Geheimorganisation gejagt, die versucht, die Enthüllungen zu unterdrücken. Der Film ist bekannt für seine visuelle Brillanz, seinen suggestiven Soundtrack und seine schrägen Charaktere.",
         "genres": [
             "Mystery",
             "Thriller",
@@ -202,7 +202,7 @@
     },
     {
         "film_names": "Warrior Queen",
-        "beschreibung": "",
+        "beschreibung": "Der Film Warrior Queen (1987) spielt im alten Pompeji zur Zeit des Vulkanausbruchs des Vesuvs. Er handelt von der Sklaven- und Prostitutionsthematik und stellt eine Kriegerkönigin in den Vordergrund, die versucht, die Missstände zu beenden und Sklaven zu befreien. Die Handlung beinhaltet Gladiatorenkämpfe, Ausschweifungen und eine Liebesgeschichte zwischen einem Sklaven und einer Sklavin.",
         "genres": [
             "Action",
             "Historie",
@@ -212,7 +212,7 @@
     },
     {
         "film_names": "Kayara",
-        "beschreibung": "",
+        "beschreibung": "Kayara ist ein animierter Abenteuerfilm aus dem Jahr 2025, der von Cesar Zelada geschrieben und inszeniert wurde. Die Geschichte dreht sich um Kayara, ein junges Mädchen, das davon träumt, als erste Frau in die exklusive Gruppe der Chasqui-Boten des Inkareichs aufgenommen zu werden. Kayara trotzt Traditionen und Geschlechterrollen, um ihr Ziel zu erreichen und verteidigt dabei die Goldene Stadt vor Gefahren. ",
         "genres": [
             "Abenteuer",
             "Animation",
@@ -222,7 +222,7 @@
     },
     {
         "film_names": "The Last Stand of Ellen Cole",
-        "beschreibung": "",
+        "beschreibung": "The Last Stand of Ellen Cole is a 2024 action film about an 80-year-old widow, Ellen Cole, who refuses to sell her Montana ranch to a land developer. The developer's attempts to intimidate her escalate into a fight for her home, but he underestimates her as she is revealed to be a trained killer. The film is a story of resistance and the lengths one woman will go to protect what is hers.",
         "genres": [
             "Action",
             "Abenteuer"
@@ -258,7 +258,7 @@
     },
     {
         "film_names": "Párvulos: Hijos Del Apocalipsis",
-        "beschreibung": "",
+        "beschreibung": "Párvulos: Hijos del Apocalipsis ist ein spanischsprachiger Zombie-Film, der eine postapokalyptische Welt zeigt, in der drei Brüder in einem abgelegenen Waldhaus ums Überleben kämpfen. Der Film erzählt die Geschichte von Salvador, Oliver und Benjamin, die ein dunkles Geheimnis in ihrem Keller verbergen, das sie am Leben erhält, aber auch ihre Existenz bedroht. Die Brüder müssen sich nicht nur mit Zombies auseinandersetzen, sondern auch mit anderen Überlebenden und einer religiös-extremistischen Gruppe.",
         "genres": [
             "Horror"
         ],
@@ -293,15 +293,6 @@
             "Science Fiction"
         ],
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Thor:%20Tag%20der%20Entscheidung"
-    },
-    {
-        "film_names": "లైలా",
-        "beschreibung": "",
-        "genres": [
-            "Komödie",
-            "Liebesfilm"
-        ],
-        "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=లైలా"
     },
     {
         "film_names": "Vaiana 2",
@@ -583,15 +574,6 @@
         "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=Die%20Legende%20von%20Ochi"
     },
     {
-        "film_names": "새엄마의 욕망",
-        "beschreibung": "",
-        "genres": [
-            "Drama",
-            "Liebesfilm"
-        ],
-        "youtubeTrailerUrl": "https://www.youtube.com/results?search_query=새엄마의%20욕망"
-    },
-    {
         "film_names": "Baywatch",
         "beschreibung": "Mitch Buchannon hat als charismatischer Anführer eines Teams von Rettungsschwimmern alle Hände voll zu tun. Vor allem ein Neuzugang bereitet ihm Sorgen: Matt Brody war einst olympischer Schwimmer, doch wurde nach einem Aufsehen erregenden Zwischenfall verbannt. Nun muss ihn Mitch als PR-Maßnahme in sein Team aufnehmen. Der Neuzugang stellt gleich mal Mitchs Autorität in Frage. Summer hat dagegen ein Auge auf den Neuankömmling geworfen. Allgemein stehen Liebe und Beziehung dem Team immer im Weg. Mitchs Ex Stephanie ist geschäftlich noch weiter seine Partnerin, doch als er sich neu verliebt, reagiert sie eifersüchtig. Und der trottelige Ronnie versucht verzweifelt, bei Sexbombe C.J. zu landen. All das muss aber bald beiseite gewischt werden, denn als Mitch und Matt einer kriminellen Verschwörung auf die Spur kommen, die ihren Strand bedroht, müssen sie alle zusammenarbeiten...",
         "genres": [
@@ -805,7 +787,7 @@
     },
     {
         "film_names": "Rosario",
-        "beschreibung": "",
+        "beschreibung": "Rosario ist ein US-amerikanischer Horrorfilm aus dem Jahr 2025, der von Felipe Vargas inszeniert wurde. Der Film erzählt die Geschichte von Rosario, die die Nacht mit der Leiche ihrer verstorbenen Großmutter verbringen muss, während sie von übernatürlichen Kräften angegriffen wird.",
         "genres": [
             "Horror"
         ],
@@ -935,7 +917,7 @@
     },
     {
         "film_names": "Pandabeer in Afrika",
-        "beschreibung": "",
+        "beschreibung": "Panda Bär in Afrika ist ein Animationsfilm, in dem ein junger Pandabär namens Ping von China nach Afrika reist, um seine entführte Freundin Jielong, ein Drachenmädchen, zu retten. Auf seiner Reise durch eine ihm völlig unbekannte Welt, voller neuer und gefährlicher Tiere, schließt er Freundschaften und kämpft für seine Freunde und sein Zuhause.",
         "genres": [
             "Animation",
             "Abenteuer",
