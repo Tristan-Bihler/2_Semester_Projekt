@@ -127,7 +127,7 @@ class View(tk.Tk):
             self.recommended_listbox_frame.grid_rowconfigure(1, weight=1)
             self.recommended_listbox_frame.grid_columnconfigure(0, weight=1)
 
-            self.recomended_films_label = tk.Label(self.recommended_listbox_frame, text="Empfehlende Filme:", font=("Arial", 10, "bold"))
+            self.recomended_films_label = tk.Label(self.recommended_listbox_frame, text="Empfohlene Filme:", font=("Arial", 10, "bold"))
             self.recomended_films_label.grid(row=0, column=0, sticky=tk.NW, padx=5, pady=2)
 
             self.recommended_listbox_scrollbar = tk.Scrollbar(self.recommended_listbox_frame)
@@ -159,7 +159,7 @@ class View(tk.Tk):
             self.trailer_button = tk.Button(self.details_frame, text="Link Trailer", state=tk.DISABLED, command = self.perform_film_action)
             self.trailer_button.grid(row=2, column=0, sticky=tk.SW, padx=10, pady=(10, 5))
 
-            self.add_film_button = tk.Button(self.details_frame, text = "Favoriten hinzufügen", state=tk.DISABLED, command = lambda : (self.film_add_to_liked(user)))
+            self.add_film_button = tk.Button(self.details_frame, text = "Zu Favoriten hinzufügen", state=tk.DISABLED, command = lambda : (self.film_add_to_liked(user)))
             self.add_film_button.grid(row=2, column=1, sticky=tk.SE, padx=10, pady=(10, 5))
 
             self.list_Films(self.controller.get_Json_Film_Names())
@@ -346,7 +346,7 @@ class View(tk.Tk):
             self.remove_liked_button.grid(row=1, column=0, columnspan=2, pady=5)  # Unterhalb der Listbox
 
             # --- Zweite Listbox (Meine Merkliste) ---
-            self.colabrativ_listbox_label = tk.Label(self, text="Empfehlungen basierend auf verhaltensähnliche Nutzerprofile:", font=("Arial", 12, "underline"))
+            self.colabrativ_listbox_label = tk.Label(self, text="Nutzern mit ähnlichen Interessen gefiel auch:", font=("Arial", 12, "underline"))
             self.colabrativ_listbox_label.grid(row=1, column=1, sticky=tk.SW, padx=5, pady=2)  # Rechte Spalte
 
             self.colabrativ_listbox_frame = tk.Frame(self, bd=2, relief="groove")  # Rahmen
@@ -386,7 +386,7 @@ class View(tk.Tk):
             self.trailer_button = tk.Button(self.details_frame, text="Link Trailer", state=tk.DISABLED, command=self.perform_film_action)
             self.trailer_button.grid(row=2, column=0, sticky=tk.SW, padx=10, pady=(10, 5))
 
-            self.add_to_watchlist_button = tk.Button(self.details_frame, text="Favoriten hinzufügen", state=tk.DISABLED, command=lambda: (self.film_add_to_liked(self.user)))
+            self.add_to_watchlist_button = tk.Button(self.details_frame, text="Zu Favoriten hinzufügen", state=tk.DISABLED, command=lambda: (self.film_add_to_liked(self.user)))
             self.add_to_watchlist_button.grid(row=2, column=1, sticky=tk.SE, padx=10, pady=(10, 5))
 
 
