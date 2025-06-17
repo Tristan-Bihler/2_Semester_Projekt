@@ -1,0 +1,82 @@
+[
+    {
+        "name": "tristan",
+        "favorite_movies": [
+            "K.O.",
+            "Shadow Force - Die letzte Mission",
+            "Utopia",
+            "The Roundup: Punishment",
+            "John Wick: Kapitel 3"
+        ]
+    },
+    {
+        "name": "laura",
+        "favorite_movies": [
+            "Parasite",
+            "Karate Kid: Legends",
+            "Der K\u00f6nig der L\u00f6wen",
+            "Mufasa: Der K\u00f6nig der L\u00f6wen",
+            "Vaiana 2"
+        ]
+    },
+    {
+        "name": "carina",
+        "favorite_movies": [
+            "Lilo & Stitch"
+        ]
+    },
+    {
+        "name": "semian",
+        "favorite_movies": [
+            "The Amateur",
+            "Blood & Sinners"
+        ]
+    },
+    {
+        "name": "",
+        "favorite_movies": [
+            "Predator: Killer of Killers",
+            "Vaiana 2",
+            "Final Destination Bloodlines",
+            "STRAW",
+            "The Accountant 2",
+            "The Amateur"
+        ]
+    },
+    {
+        "name": "hanspeter",
+        "favorite_movies": [
+            "Drachenz\u00e4hmen leicht gemacht",
+            "The Amateur",
+            "Ich - Einfach unverbesserlich 4",
+            "The Accountant 2",
+            "The Accountant"
+        ]
+    },
+    {
+        "name": "maax",
+        "favorite_movies": [
+            "Drachenz\u00e4hmen leicht gemacht",
+            "The Amateur",
+            "Lilo & Stitch",
+            "John Wick: Kapitel 3",
+            "Vaiana 2",
+            "Ein Minecraft Film"
+        ]
+    },
+    {
+        "name": "tel24",
+        "favorite_movies": [
+            "Predator: Killer of Killers",
+            "Mission: Impossible - The Final Reckoning",
+            "Der K\u00f6nig der L\u00f6wen",
+            "Ein Minecraft Film",
+            "Vaiana 2",
+            "Mufasa: Der K\u00f6nig der L\u00f6wen"
+        ]
+    },
+    {
+        "name": "test",
+        "favorite_movies": []
+    }
+]

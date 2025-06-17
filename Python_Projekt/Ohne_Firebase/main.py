@@ -12,7 +12,9 @@ Dies beinhaltet die Konzeption und Implementierung einer geeigneten Datenstruktu
 Wir haben uns für die konkrete Entwicklung eines Empfehlungssystems für einen Streaming-Dienst entschieden. Hierfür muss zum Beispiel ein Weg gefunden werden, um herauszufinden welche Filme einem ähnlichen Genre angehören und ob diese dem Nutzer gefallen können oder eher nicht. 
 Außerdem soll es eine Möglichkeit geben, dass Filme in einer Favoritenliste gespeichert werden könne und zusätzlich darauf Empfehlungen angezeigt werden.
 
+
 Wichtig, das Projekt muss aus dem Ordner Abgaben geöffnet werden, und nicht aus einem anderen. Sonst kann der Compiler die Pfade der Datenbanken nicht finden.
+
 
 In der Login-Übersicht kann sich der User unter „Login“ anmelden und unter „Registrieren“ einen Nutzer anlegen. Nach dem erfolgreichen Einloggen wird der Nutzer auf die Übersichtsseite weitergeleitet. Auf dieser kann der Nutzer auf der linken Seite die Filme sehen.
 
@@ -21,6 +23,12 @@ Nun kann der Nutzer einen Film auswählen. Die Applikation zeigt dann die Detail
 Nun kann der Nutzer oben rechts zur Favoritenseite wechseln und die Favoritenliste einsehen und gegebenfalls einzelne Filme entfernen. Zudem werden auf der rechten Seite Filme von ähnlichen Nutzerprofilen vorgeschlagen, welche wie gewohnt zur Favoritenliste hinzugefügt werden können.
 
 Das Ausloggen erfolgt nach dem Beenden der Applikation.
+
+
+Anmerkung:
+Die Films.Json Liste wurde mit Daten der TMDB API ausgefüllt.
+Die Applikation dient nur im Privaten sinne.
+https://developer.themoviedb.org/reference/intro/getting-started
 """
 
 if __name__ == "__main__":
