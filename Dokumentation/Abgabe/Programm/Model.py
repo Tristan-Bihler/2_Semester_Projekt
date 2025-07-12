@@ -5,11 +5,11 @@ import sys
 #----------------------------------------------------Model
 class Model():
     def __init__(self, user_db_path, films_db_path):
-        #Pfade für die Datenbanken festlegen
+        #Pfade für die Datenbanken
         self.user_db_path = user_db_path
         self.films_db_path = films_db_path
 
-        #Daten Laden sodass diese nicht während dem programm immerwieder geladen werden müssen
+        #Daten vorab laden sodass diese nicht während dem programm wieder geladen werden müssen
         self.loaded_user_data = self.load_json_data(self.user_db_path)
         self.loaded_film_data = self.load_json_data(self.films_db_path)
 
@@ -241,12 +241,12 @@ class Model():
         return user_genre_profiles
 
     def jaccard_similarity(self, set1, set2):
-        """Überprüft wie ähnlich die beiden genres listen der user sind und gibt die ähnlichkeit durch return zurück"""
-        intersection = len(set1.intersection(set2))
-        union = len(set1.union(set2))
+        """Überprüft wie ähnlich die beiden genres listen der user sind und gibt die ähnlichkeit, einer einfachen division anhand der gleichen Genres zu der Gesammtanzahl an Genres, durch return zurück"""
+        intersection = len(set1.intersection(set2)) #Tut nur die gleichen inhalte aus den Listen entnehmen und zusammenfügen, der Rest der genres schneidet es weg. Folgen bestimmt es dann noch die laenge.
+        union = len(set1.union(set2))#Tut alle Inhalte aus der Listen zusammenfügen, also alle Genres zusammenfügen und folgend die laenge der neuen Liste bestimmen.
         if union == 0:
-            return 0.0 # Somit es nicht ausversehen Durch 0 devidiert
-        return intersection / union
+            return 0.0 # Somit es nicht ausversehen Durch 0 dividierd
+        return intersection / union #Ähnlichkeit aus nur den Gleichen Genres zu allen Genres die es gibt.
 
     def get_user_base_recommendations(self, target_user_id):
         """
@@ -291,12 +291,12 @@ class Model():
         #Es überprüft, das der eigentliche Nutzer nicht in der Liste vorhanden ist, bzw ihn überspringt und die For loop bei dem nächsten user anfängt
         for user_id, genres in user_genre_profiles.items():
             if user_id == target_user_id:
-                continue #Es gört hier auf und fängt bei dem nächsten User in der List wieder an
+                continue #Es hört hier auf und fängt bei dem nächsten User in der List wieder an, da der momentane Nutzer nicht mit sich selbst vergleichen soll
             
             #Es überprüft die Ähnlichkeit der Genres des zu prüfenden Nutzers mit den momenanten eingelogten
             sim = self.jaccard_similarity(target_user_genres, genres)
 
-            #Es fügt das Errebnis der Ergebiss liste hinzu mit dem namen des users
+            #Es fügt das Errebniss der Ergebiss liste hinzu mit dem namen des users
             similarities.append((sim, user_id))
 
 

@@ -13,7 +13,7 @@ Wir haben uns für die konkrete Entwicklung eines Empfehlungssystems für einen 
 Außerdem soll es eine Möglichkeit geben, dass Filme in einer Favoritenliste gespeichert werden könne und zusätzlich darauf Empfehlungen angezeigt werden.
 
 
-Wichtig! Das Projekt muss in dem Ordner Programm geöffnet werden. Sonst kann der Controller die relative Pfade der Datenbanken nicht finden. 
+Wichtig! Das Projekt muss aus dem Ordner Programm geöffnet werden. Sonst kann der Controller die relative Pfade der Datenbanken nicht finden. 
 Andernfalls müssen die Pfade im Controller.py:
                             self.user_db_path = r"users.json"
                             self.films_db_path = r"Films.json"
